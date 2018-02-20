@@ -1,0 +1,11 @@
+############################################################
+# recorder
+############################################################
+purge_interval: 1
+purge_keep_days: 14
+exclude:
+    domains:
+        - updater
+        - automation
+        - device_tracker
+        - group

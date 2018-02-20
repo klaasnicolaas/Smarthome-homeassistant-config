@@ -1,0 +1,168 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Smart Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret homeassistant_elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Amsterdam
+  # Customization #
+  customize: !include customize.yaml
+  # Packages #
+  packages: !include_dir_named packages
+
+# Enables the frontend
+frontend:
+    javascript_version: latest
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  # api_password: !secret http_password
+  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+  base_url: !secret http_base_url
+  api_password: !secret http_api_password
+  login_attempts_threshold: 3
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+recorder: !include recorder.yaml
+
+influxdb:
+  host: 127.0.0.1
+  exclude:
+    domains:
+        - updater
+        - device_tracker
+  tags:
+    source: hass
+
+# View all events in a logbook
+logbook: 
+
+logger:
+    default: info
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  - platform: google
+
+# Cloud
+cloud:
+
+######################## INCLUDES ##########################
+# Groups #
+group: !include groups.yaml
+# Automation #
+automation: !include_dir_list automation/
+# scripts #
+script: !include scripts.yaml
+# Sensors #
+sensor: !include_dir_merge_list sensors/
+# Zones #
+zone: !include_dir_list zones/
+
+####################### GPS Logger ######################
+device_tracker: 
+    - platform: gpslogger
+      password: !secret device_tracker_password
+
+# panel_iframe:
+# configurator:
+#    title: Configurator
+#    icon: mdi:wrench
+#    url: http://hassio.local:3218
+
+# Z-Wave
+zwave:
+  usb_path: /dev/ttyACM0
+
+# MQTT Broker
+mqtt:
+  broker: 86.88.173.32
+  port: 1883
+ 
+# RFXCom 
+rfxtrx:
+  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1Y0NJGR-if00-port1
+  debug: False
+  
+# KlikAanKlikUit
+switch:
+    platform: rfxtrx
+    automatic_add: False
+    devices:
+        0b11000600fde6d201030070:
+            name: Lamp slaapkamer | Zolder
+        0b11001000fde6d202010f70:
+            name: LED slaapkamer | Zolder
+        0b11001100fde6d203010f70:
+            name: LED Bureau | Zolder
+
+# Scenes            
+scene:
+  name: Slaapkamer | Zolder
+  entities:
+    switch.lamp_slaapkamer__zolder: on
+    switch.led_slaapkamer__zolder: on
+
+# Google Calender    
+#google:
+#  client_id: 203061134220-lou6597g2u7une4ijl9e8lebbvrh88ju.apps.googleusercontent.com
+#  client_secret: ESa-YirfbKhWRvz2dczd2_ki
+#  track_new_calendar: False
+
+#################################### TELEGRAM #########################################
+
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_key
+    allowed_chat_ids:
+      - !secret telegram_chat_id
+      
+notify:
+  - name: Telegram
+    platform: telegram
+    chat_id: !secret telegram_chat_id
+
+########################## BINAIR SENSORS #######################################    
+binary_sensor:
+    - platform: template
+      sensors:
+        sensor_voordeur:
+          device_class: door
+          friendly_name: Voordeur
+          value_template: >
+            {{ states.sensor.fibaro_system_fgdw002_door_opening_sensor_2_access_control.state != '23' }}
+            
+###################################### IFTTT ####################################
+ifttt:
+    key: !secret ifttt_key 
+        

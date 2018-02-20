@@ -1,0 +1,13 @@
+############# BATTERY STATUS #############
+- platform: template
+  sensors:
+    battery_status:
+      friendly_name: "Battery Status"
+      value_template: >-
+        {%- set threshold = 25 -%}
+        {%- set domains = ['light', 'switch', 'sensor', 'zwave', 'binary_sensor', 'camera'] -%}
+        {%- for domain in domains -%}
+        {%- for item in states[domain] if ((item.attributes.battery_low is defined and item.attributes['battery_low'] == true) or (item.attributes.battery_level is defined and item.attributes['battery_level'] | int < threshold)) -%}
+            {{ item.name }}{%- if not loop.last %}, {% endif -%}
+        {%- endfor -%}
+        {%- endfor -%}

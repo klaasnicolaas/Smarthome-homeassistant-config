@@ -1,0 +1,82 @@
+################################## GROUPS ####################################
+# Slimme meter
+meter_readings:
+    name: Slimme Meter
+    entities:
+        - sensor.gas_consumption
+        - sensor.hourly_gas_consumption
+        - sensor.power_consumption
+        - sensor.power_consumption_low
+        - sensor.power_consumption_normal
+
+# Slaapkamer zolder groep
+slaapkamer_zolder:
+    name: Slaapkamer | Zolder
+    entities:
+        - switch.fibaro__wall_plug_switch
+        - switch.lamp_slaapkamer__zolder
+        - switch.led_bureau__zolder
+        - switch.led_slaapkamer__zolder
+        - sensor.fibaro__smoke_sensor__zolder_temperature
+
+# Gang begane grond groep
+begane_grond_gang:
+    name: Gang | Begane grond
+    entities:
+        - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
+        
+# Het weer
+omgeving:
+    name: Het Weer
+    entities:
+        - sun.sun
+        - sensor.br_humidity
+        - sensor.br_symbol
+        - sensor.br_temperature
+        - sensor.br_ground_temperature
+        - sensor.br_wind_speed
+        - sensor.br_precipitation
+        
+# Hal begane grond groep
+begane_grond_hal:
+    name: Hal | Begane grond
+    entities:
+        - binary_sensor.sensor_voordeur
+        - sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature
+
+
+# Temperaturen huis groep
+temperaturen:
+    name: Temperaturen
+    entities: 
+        - sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature
+        - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
+        - sensor.fibaro__smoke_sensor__zolder_temperature
+
+################################## VIEWS - TABS ##############################        
+# Zolder view
+slaapkamer_zolder_view:
+    name: Zolder
+    view: yes
+    entities:
+        - group.slaapkamer_zolder
+        
+# Begane grond view
+begane_grond_view:
+    name: Begane grond
+    view: yes
+    entities:
+        - group.begane_grond_gang
+        - group.begane_grond_hal
+        
+# Eerste verdieping view
+
+
+# Temperaturen in huis
+temperaturen_view:
+    name: Temperaturen in huis
+    view: yes
+    entities:
+        - group.temperaturen
+        
+################################################################################

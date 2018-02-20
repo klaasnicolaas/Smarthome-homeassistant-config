@@ -1,0 +1,17 @@
+# Weather
+- platform: yr
+
+# Slimme meter
+- platform: dsmr
+  port: /dev/ttyUSB1
+  dsmr_version: 4
+
+  # Buienradar
+- platform: buienradar
+  monitored_conditions:
+    - symbol
+    - humidity
+    - temperature
+    - windspeed
+    - groundtemperature
+    - precipitation
