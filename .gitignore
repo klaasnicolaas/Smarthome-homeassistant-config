@@ -1,13 +1,3 @@
-*
-!*.yaml
-!.gitignore
-!README.rst
-!.travis.yml
-!travis_secrets.yaml
-!TODO.md
-
-
-
 # Other
 *.uuid
 *.conf
