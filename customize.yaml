@@ -179,7 +179,7 @@ sensor.zwave_battery_front_door:
     friendly_name: Voordeur
 
 sensor.zwave_battery_smoke_sensor_begane_grond:
-    friendly_name: Smoke sensor begane grond
+    friendly_name: Smoke sensor | begane grond
 
 sensor.zwave_battery_smoke_sensor_slaapkamer_zolder:
-    friendly_name: Smoke sensor slaapkamer zolder
+    friendly_name: Smoke sensor | slaapkamer zolder

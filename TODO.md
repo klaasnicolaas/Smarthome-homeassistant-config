@@ -1,6 +1,6 @@
-## Todo
+## ToDo
 
-- [ ] Control lighting based on the sun
+- [ ] Control lighting based on the sun and gps location
 - [ ] Turn off all devices (lights) when everyone leaves home
 - [ ] Send notifications for package delivery
 - [ ] Notify if there is motion in house when no one is home
