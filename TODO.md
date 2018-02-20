@@ -25,3 +25,7 @@
 
 - [x] Sending telegram message if a door is open
 - [x] sending telegram message if phone battery level is under 25%
+- Analytics
+	- [x] Reading the battery percentages of all Z-wave devices 
+	- [x] Show info about up and download speed
+	- [x] Show info about the system version of Hassbian

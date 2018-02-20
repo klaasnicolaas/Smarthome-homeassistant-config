@@ -55,11 +55,27 @@ temperaturen:
 
 # Home Assistant stats group
 home_assistant_stats:
-    name: Home Assistant Statistieken
+    name: Home Assistant Info
     entities:
         - sensor.external_ip
         - sensor.ha_installed_version
-        - sensor.ha_uptime      
+        - sensor.ha_uptime
+
+# Internet group
+internet:
+    name: Internet
+    entities:
+        - sensor.speedtest_ping
+        - sensor.speedtest_download
+        - sensor.speedtest_upload
+
+# Batterij percentages
+batterij_percentages:
+    name: Batterij Percentages
+    entities:
+        - sensor.zwave_battery_front_door
+        - sensor.zwave_battery_smoke_sensor_begane_grond
+        - sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
 
 ################################## VIEWS - TABS ##############################        
 # Zolder view
@@ -93,5 +109,7 @@ statistieken_view:
     view: yes
     entities:
         - group.home_assistant_stats
+        - group.internet
+        - group.batterij_percentages
         
 ################################################################################
