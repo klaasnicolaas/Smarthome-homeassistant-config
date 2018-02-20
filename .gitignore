@@ -1,16 +1,9 @@
 *
 !*.yaml
-!scenes
-!automation
-!sensors
 !.gitignore
-secrets.yaml
-known_devices.yaml
-entity_registry.yaml
 !README.rst
 !.travis.yml
 !travis_secrets.yaml
-!notification
 !TODO.md
 
 
@@ -32,3 +25,6 @@ www
 zones
 deps
 tts
+secrets.yaml
+known_devices.yaml
+entity_registry.yaml
