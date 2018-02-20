@@ -9,6 +9,7 @@ known_devices.yaml
 entity_registry.yaml
 !README.rst
 !.travis.yml
+!travis_secrets.yaml
 
 
 
