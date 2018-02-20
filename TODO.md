@@ -1,6 +1,9 @@
 ## Todo
 
 - [ ] Control lighting based on the sun
+- [ ] Turn off all devices (lights) when everyone leaves home
+- [ ] Send notifications for package delivery
+- [ ] Notify if there is motion in house when no one is home
 - [ ] Lighting flashing when someone rings the doorbell
 - [ ] install door/window sensors
 - [ ] install motion sensors

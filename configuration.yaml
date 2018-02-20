@@ -90,6 +90,8 @@ sensor: !include_dir_merge_list sensors/
 zone: !include_dir_list zones/
 # Notify #
 notify: !include notify.yaml
+# Scenes #           
+scene: !include scenes.yaml
 
 ####################### GPS Logger ######################
 device_tracker: 
@@ -127,13 +129,6 @@ switch:
             name: LED slaapkamer | Zolder
         0b11001100fde6d203010f70:
             name: LED Bureau | Zolder
-
-# Scenes            
-scene:
-  name: Slaapkamer | Zolder
-  entities:
-    switch.lamp_slaapkamer__zolder: on
-    switch.led_slaapkamer__zolder: on
 
 # Google Calender    
 #google:

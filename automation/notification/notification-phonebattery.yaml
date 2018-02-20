@@ -1,6 +1,7 @@
 #  Send an alert if any tracked phone has a low battery. #
 
 alias: Phone battery
+hide_entity: true
 trigger:
   platform: numeric_state
   entity_id:

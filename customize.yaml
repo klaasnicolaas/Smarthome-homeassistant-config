@@ -174,7 +174,3 @@ sensor.external_ip:
 
 sensor.ha_installed_version:
     friendly_name: Hassbian versie
-    
-################## AUTOMATION NOTIFICATIONS ####################
-automation.phone_battery:
-    hidden: True
