@@ -88,6 +88,8 @@ script: !include scripts.yaml
 sensor: !include_dir_merge_list sensors/
 # Zones #
 zone: !include_dir_list zones/
+# Notify #
+notify: !include notify.yaml
 
 ####################### GPS Logger ######################
 device_tracker: 
@@ -146,11 +148,6 @@ telegram_bot:
     api_key: !secret telegram_key
     allowed_chat_ids:
       - !secret telegram_chat_id
-      
-notify:
-  - name: Telegram
-    platform: telegram
-    chat_id: !secret telegram_chat_id
 
 ########################## BINAIR SENSORS #######################################    
 binary_sensor:

@@ -59,10 +59,7 @@ home_assistant_stats:
     entities:
         - sensor.external_ip
         - sensor.ha_installed_version
-        - sensor.ha_uptime
-        - sensor.since_last_boot_templated
-        - sensor.speedtest_download
-        - sensor.speedtest_upload       
+        - sensor.ha_uptime      
 
 ################################## VIEWS - TABS ##############################        
 # Zolder view

@@ -153,6 +153,12 @@ sensor.fibaro__wall_plug_sourcenodeid:
 binary_sensor.fibaro_system_fgdw002_door_opening_sensor_2_sensor:
     friendly_name: Deur sensor - Hal | Begane grond
     
+sensor.fibaro_system_fgdw002_door_opening_sensor_2_burglar:
+    hidden: True
+
+sensor.fibaro_system_fgdw002_door_opening_sensor_2_heat:
+    hidden: True
+    
 sensor.fibaro_system_fgdw002_door_opening_sensor_2_power_management:
     hidden: True
     
@@ -161,3 +167,14 @@ sensor.fibaro_system_fgdw002_door_opening_sensor_2_sourcenodeid:
     
 sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature:
     friendly_name: Temperatuur - Hal | Begane grond
+
+####################### HOME ASSISTANT STATS ###################
+sensor.external_ip:
+    friendly_name: Externe IP adres
+
+sensor.ha_installed_version:
+    friendly_name: Hassbian versie
+    
+################## AUTOMATION NOTIFICATIONS ####################
+automation.phone_battery:
+    hidden: True
