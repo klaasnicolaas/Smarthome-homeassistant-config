@@ -53,6 +53,17 @@ temperaturen:
         - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
         - sensor.fibaro__smoke_sensor__zolder_temperature
 
+# Home Assistant stats group
+home_assistant_stats:
+    name: Home Assistant Statistieken
+    entities:
+        - sensor.external_ip
+        - sensor.ha_installed_version
+        - sensor.ha_uptime
+        - sensor.since_last_boot_templated
+        - sensor.speedtest_download
+        - sensor.speedtest_upload       
+
 ################################## VIEWS - TABS ##############################        
 # Zolder view
 slaapkamer_zolder_view:
@@ -78,5 +89,12 @@ temperaturen_view:
     view: yes
     entities:
         - group.temperaturen
+
+# Statistieken #
+statistieken_view:
+    name: HA Statistieken
+    view: yes
+    entities:
+        - group.home_assistant_stats
         
 ################################################################################
