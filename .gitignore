@@ -5,7 +5,6 @@
 !.travis.yml
 !travis_secrets.yaml
 !TODO.md
-!automation/notification/*
 
 
 
