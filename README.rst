@@ -1,4 +1,4 @@
-Smarthome - Home Assistant |Build Status|
+Smart Home - Home Assistant |Build Status|
 =============================================================
 
 Home Assistant is a home automation platform running on Python 3. It is able to track and control all devices at home and offer a platform for automating control.
@@ -10,6 +10,11 @@ Current Configuration
 
 Devices
 -------
+
+* FIBARO Smoke sensors
+* FIBARO Door sensors
+* KlikAanKlikUit devices (CaCu)
+* DSMR (Smart meter)
 
 Getting Help
 ------------
