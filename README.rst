@@ -13,7 +13,7 @@ Devices
 
 * FIBARO Smoke sensors
 * FIBARO Door sensors
-* KlikAanKlikUit devices (CaCu)
+* KlikAanKlikUit devices (CoCo)
 * DSMR (Smart meter)
 
 Getting Help
