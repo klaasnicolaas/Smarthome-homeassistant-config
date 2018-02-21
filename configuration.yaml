@@ -81,7 +81,7 @@ cloud:
 # Groups #
 group: !include groups.yaml
 # Automation #
-automation: !include_dir_list automation/
+automation: !include_dir_merge_list automation/
 # scripts #
 script: !include scripts.yaml
 # Sensors #

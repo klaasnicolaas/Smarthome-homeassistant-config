@@ -100,6 +100,7 @@ begane_grond_view:
 temperaturen_view:
     name: Temperaturen in huis
     view: yes
+    icon: mdi:temperature-celsius
     entities:
         - group.temperaturen
 
@@ -107,6 +108,7 @@ temperaturen_view:
 statistieken_view:
     name: HA Statistieken
     view: yes
+    icon: mdi:google-analytics
     entities:
         - group.home_assistant_stats
         - group.internet

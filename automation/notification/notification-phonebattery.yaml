@@ -1,15 +1,14 @@
 #  Send an alert if any tracked phone has a low battery. #
-
-alias: Phone battery
-hide_entity: true
-trigger:
-  platform: numeric_state
-  entity_id:
-  - device_tracker.ce10160afb463b3504
-  value_template: '{{ state.attributes.battery }}'
-  below: 25
-action:
-  service: notify.telegram
-  data_template:
-    message: >
-      {{ trigger.to_state.attributes.friendly_name }} zijn telefoon is bijna leeg: {{ trigger.to_state.attributes.battery }}%
+- alias: Phone battery
+  hide_entity: true
+  trigger:
+    platform: numeric_state
+    entity_id:
+    - device_tracker.ce10160afb463b3504
+    value_template: '{{ state.attributes.battery }}'
+    below: 25
+  action:
+    service: notify.telegram
+    data_template:
+      message: >
+        {{ trigger.to_state.attributes.friendly_name }} zijn telefoon is bijna leeg: {{ trigger.to_state.attributes.battery }}%

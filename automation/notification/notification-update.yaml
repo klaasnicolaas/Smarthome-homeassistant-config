@@ -1,11 +1,11 @@
 ############# Notification if there is a update ##########
-alias: 'HA Update Available Notifications'
-initial_state: 'on'
-hide_entity: true
-trigger:
-  platform: state
-  entity_id: updater.updater
-action:
-  service: notify.telegram
-  data:
-    message: 'Update voor Home Assistant beschikbaar.'
+- alias: 'HA Update Available Notifications'
+  initial_state: 'on'
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.telegram
+    data:
+      message: 'Update voor Home Assistant beschikbaar.'
