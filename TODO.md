@@ -2,12 +2,12 @@
 
 - [ ] Control lighting based on the sun and gps location
 - [ ] Turn off all devices (lights) when everyone leaves home
-- [ ] Send notifications for package delivery
+- [ ] Send notifications for package delivery (PostNL)
 - [ ] Notify if there is motion in house when no one is home
 - [ ] Lighting flashing when someone rings the doorbell
 - [ ] install door/window sensors
 - [ ] install motion sensors
-- [ ] Setup Motion Controlled Hallway Light
+- [ ] Setup Motion Controlled Lights
 - [ ] Investigate, install and configure new Xiaomi Hub and components
   - [ ] Xiaomi Hub
   - [ ] Xiaomi Smart Door Sensors
@@ -22,15 +22,16 @@
 - [ ] Purchase Alexa (Amazon) and integrate it
 - [ ] Purchase Google assistant and integrate it
 - [ ] Use an SSL certificate for extra security
-- [ ] See if it is possible to get data in HA via a PostNL API
 
 - [ ] Convince everyone that Home Automation is the best!
 
 ## Already working (automation)
 
 - [x] Sending telegram message if a door is open
-- [x] sending telegram message if phone battery level is under 25%
+- [x] Sending telegram message if phone battery level is under 25%
 - [x] Notification when there is a new update from HA
+- [x] Reading weather info from Buienradar
+- [x] Sending telegram message if a z-wave sensor had low battery
 
 - Analytics
 	- [x] Reading the battery percentages of all Z-wave devices 
