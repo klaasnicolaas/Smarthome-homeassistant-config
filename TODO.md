@@ -22,6 +22,7 @@
 - [ ] Purchase Alexa (Amazon) and integrate it
 - [ ] Purchase Google assistant and integrate it
 - [ ] Use an SSL certificate for extra security
+- [ ] See if it is possible to get data in HA via a PostNL API
 
 - [ ] Convince everyone that Home Automation is the best!
 

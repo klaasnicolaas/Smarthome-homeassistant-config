@@ -2,16 +2,16 @@
 alias: 'Telegram bot send message if voordeur is open'
 hide_entity: true
 trigger:
-    platform: state
-    entity_id: binary_sensor.sensor_voordeur
-    to: 'on'
+    platform: numeric_state
+    entity_id: sensor.fibaro_system_fgdw002_door_opening_sensor_2_access_control
+    below: 23
 condition:
     condition: and
     conditions:
        - condition: time
          after: '23:00:00'
-         before: '07:00:00'
+         before: '08:00:00'
 action:
     service: notify.telegram
     data:
-      message: 'Voordeur is open!'
+      message: 'Voordeur is open! met data: {{ states.sensor.fibaro_system_fgdw002_door_opening_sensor_2_access_control.state }}'
