@@ -6,13 +6,14 @@ Home Assistant is a home automation platform running on Python 3. It is able to 
 Current Configuration
 ---------------------
 
-* RaspberryPi 3 using the Hassbian -> (https://home-assistant.io/docs/installation/hassbian/). 
+* RaspberryPi 3 using the Hassbian installation -> (https://home-assistant.io/docs/installation/hassbian/). 
 
 Devices
 -------
 
 * FIBARO Smoke sensors
 * FIBARO Door sensors
+* FIBARO Wall plug
 * KlikAanKlikUit devices (CoCo)
 * DSMR (Smart meter)
 

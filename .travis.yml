@@ -7,3 +7,8 @@ install:
   - pip3 install homeassistant
 script:
   - hass -c . --script check_config
+notifications:
+    email:
+      - klaas_schoute@hotmail.com
+    on_success: never # default change 
+    on_failure: always # default always

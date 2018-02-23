@@ -104,16 +104,16 @@ device_tracker:
 #    icon: mdi:wrench
 #    url: http://hassio.local:3218
 
-# Z-Wave
+# Z-Wave Controller ####################################
 zwave:
   usb_path: /dev/ttyACM0
 
-# MQTT Broker
+# MQTT Broker ##########################################
 mqtt:
   broker: 86.88.173.32
   port: 1883
  
-# RFXCom 
+# RFXCom ###############################################
 rfxtrx:
   device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1Y0NJGR-if00-port1
   debug: False
