@@ -54,43 +54,43 @@ sensor.br_precipitation:
     friendly_name: Neerslag
  
 # FIBARO SMOKE SENSOR | Zolder #############################################
-binary_sensor.fibaro__smoke_sensor__zolder_sensor:
+binary_sensor.fibaro__smoke_sensor__slaapkamer_zolder_sensor:
     friendly_name: Rookmelder | Zolder
 
-sensor.fibaro__smoke_sensor__zolder_alarm_level:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_alarm_level:
     hidden: True
 
-sensor.fibaro__smoke_sensor__zolder_alarm_type:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_alarm_type:
     hidden: True
     
-sensor.fibaro__smoke_sensor__zolder_burglar:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_burglar:
     hidden: True
 
-sensor.fibaro__smoke_sensor__zolder_general:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_general:
     hidden: True
 
-sensor.fibaro__smoke_sensor__zolder_heat:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat:
     hidden: True
 
-sensor.fibaro__smoke_sensor__zolder_heat_2:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat_2:
     hidden: True
 
-sensor.fibaro__smoke_sensor__zolder_power_management:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_power_management:
     hidden: True
 
-sensor.fibaro__smoke_sensor__zolder_smoke:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke:
     hidden: True
 
-sensor.fibaro__smoke_sensor__zolder_smoke_2:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke_2:
     hidden: True
 
-sensor.fibaro__smoke_sensor__zolder_sourcenodeid:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_sourcenodeid:
     hidden: True
 
-sensor.fibaro__smoke_sensor__zolder_system:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_system:
     hidden: True
 
-sensor.fibaro__smoke_sensor__zolder_temperature:
+sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature:
     friendly_name: Temperatuur - Slaapkamer | Zolder
 
 # FIBARO SMOKE SENSOR | Begane grond ######################################33
@@ -150,22 +150,28 @@ sensor.fibaro__wall_plug_sourcenodeid:
     hidden: True
     
 # FIBARO DOOR SENSOR ####################################################
-binary_sensor.fibaro_system_fgdw002_door_opening_sensor_2_sensor:
+binary_sensor.fibaro__door_sensor__hal_begane_grond_sensor:
     friendly_name: Deur sensor - Hal | Begane grond
     
-sensor.fibaro_system_fgdw002_door_opening_sensor_2_burglar:
+sensor.fibaro__door_sensor__hal_begane_grond_alarm_level:
     hidden: True
 
-sensor.fibaro_system_fgdw002_door_opening_sensor_2_heat:
+sensor.fibaro__door_sensor__hal_begane_grond_alarm_type:
     hidden: True
     
-sensor.fibaro_system_fgdw002_door_opening_sensor_2_power_management:
+sensor.fibaro__door_sensor__hal_begane_grond_burglar:
+    hidden: True
+
+sensor.fibaro__door_sensor__hal_begane_grond_heat:
     hidden: True
     
-sensor.fibaro_system_fgdw002_door_opening_sensor_2_sourcenodeid:
+sensor.fibaro__door_sensor__hal_begane_grond_power_management:
     hidden: True
     
-sensor.fibaro_system_fgdw002_door_opening_sensor_2_temperature:
+sensor.fibaro__door_sensor__hal_begane_grond_sourcenodeid:
+    hidden: True
+    
+sensor.fibaro__door_sensor__hal_begane_grond_temperature:
     friendly_name: Temperatuur - Hal | Begane grond
 
 ####################### HOME ASSISTANT STATS ###################

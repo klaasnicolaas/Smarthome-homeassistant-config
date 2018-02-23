@@ -3,7 +3,7 @@
   hide_entity: true
   trigger:
       platform: numeric_state
-      entity_id: sensor.fibaro_system_fgdw002_door_opening_sensor_2_access_control
+      entity_id: sensor.fibaro__door_sensor__hal_begane_grond_access_control
       below: 23
   condition:
       condition: and
@@ -14,4 +14,4 @@
   action:
       service: notify.telegram
       data:
-        message: 'Voordeur is open! met data: {{ states.sensor.fibaro_system_fgdw002_door_opening_sensor_2_access_control.state }}'
+        message: 'Voordeur is open! met data: {{ states.sensor.fibaro__door_sensor__hal_begane_grond_access_control.state }}'

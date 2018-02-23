@@ -152,7 +152,7 @@ binary_sensor:
           device_class: door
           friendly_name: Voordeur
           value_template: >
-            {{ states.sensor.fibaro_system_fgdw002_door_opening_sensor_2_access_control.state < '23' }}
+            {{ states.sensor.fibaro__door_sensor__hal_begane_grond_access_control.state < '23' }}
             
 ###################################### IFTTT ####################################
 ifttt:
