@@ -19,7 +19,6 @@
 - [ ] Implement Guest mode to disable certain interior automations
 - [ ] Implement lights to be turned off if no one is home and no motion detection
 - [ ] Setup Night and Day theme - Also apply to Floorplan
-- [ ] Purchase Alexa (Amazon) and integrate it
 - [ ] Purchase Google assistant and integrate it
 - [ ] Use an SSL certificate for extra security
 
@@ -32,8 +31,10 @@
 - [x] Notification when there is a new update from HA
 - [x] Reading weather info from Buienradar
 - [x] Sending telegram message if a z-wave sensor had low battery
+- [x] Sending telegram message if smoke sensor detect fire
 
 - Analytics
 	- [x] Reading the battery percentages of all Z-wave devices 
 	- [x] Show info about up and download speed
 	- [x] Show info about the system version of Hassbian
+	- [x] Show info about installed python version. (build 0.65 will receive python 3.5.3 as a minimum requirement)
