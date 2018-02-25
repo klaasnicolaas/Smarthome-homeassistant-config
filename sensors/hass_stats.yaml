@@ -39,3 +39,8 @@
         {{ minutes }} minutes
       {%- endif -%}
     {%- endif -%}
+    
+- platform: command_line
+  name: Python Version
+  command: python3 --version
+  scan_interval: 86400

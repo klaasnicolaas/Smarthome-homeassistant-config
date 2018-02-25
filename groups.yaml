@@ -59,6 +59,7 @@ home_assistant_stats:
     entities:
         - sensor.external_ip
         - sensor.ha_installed_version
+        - sensor.python_version
         - sensor.ha_uptime
 
 # Internet group

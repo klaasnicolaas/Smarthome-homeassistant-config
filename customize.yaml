@@ -179,7 +179,10 @@ sensor.external_ip:
     friendly_name: Externe IP adres
 
 sensor.ha_installed_version:
-    friendly_name: Hassbian versie
+    friendly_name: Hassbian geinstalleerde versie
+    
+sensor.python_version:
+    friendly_name: Python geinstalleerde versie
     
 sensor.zwave_battery_front_door:
     friendly_name: Voordeur
