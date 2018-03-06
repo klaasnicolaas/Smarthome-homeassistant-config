@@ -2,10 +2,27 @@
 # recorder
 ############################################################
 purge_interval: 1
-purge_keep_days: 14
+purge_keep_days: 30
 exclude:
     domains:
         - updater
         - automation
         - device_tracker
         - group
+        - scene
+        - script
+    entities:
+        - sensor.br_ground_temperature
+        - sensor.br_humidity
+        - sensor.br_precipitation
+        - sensor.br_symbol
+        - sensor.br_temperature
+        - sensor.br_wind_speed
+        - sensor.external_ip
+        - sun.sun
+        - zone.home
+        - zone.huis_marlene
+        - zone.schiphol_airport
+        - zone.school
+        - zone.station_alkmaar
+        
