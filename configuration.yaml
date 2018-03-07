@@ -29,7 +29,7 @@ http:
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: !secret http_base_url
   api_password: !secret http_api_password
-  login_attempts_threshold: 3
+  login_attempts_threshold: 5
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -167,8 +167,7 @@ binary_sensor:
 ###################################### IFTTT ####################################
 ifttt:
     key: !secret ifttt_key 
-        
-        
+             
 ################################## COSTUM PANELS ##################################  
 # FLOORPLAN#
 panel_custom:
