@@ -60,7 +60,6 @@ home_assistant_stats:
         - sensor.external_ip
         - sensor.ha_installed_version
         - sensor.python_version
-        - sensor.ha_uptime
 
 # Internet group
 internet:
@@ -77,6 +76,12 @@ batterij_percentages:
         - sensor.zwave_battery_front_door
         - sensor.zwave_battery_smoke_sensor_begane_grond
         - sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
+        
+# Home Assistant Files
+filesizecheck:
+    name: Filesize Check
+    entities:
+        - sensor.homeassistant_v2db
 
 ################################## VIEWS - TABS ##############################        
 # Zolder view
@@ -114,5 +119,6 @@ statistieken_view:
         - group.home_assistant_stats
         - group.internet
         - group.batterij_percentages
+        - group.filesizecheck
         
 ################################################################################

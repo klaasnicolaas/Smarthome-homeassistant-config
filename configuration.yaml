@@ -14,6 +14,7 @@ homeassistant:
   customize: !include customize.yaml
   # Packages #
   packages: !include_dir_named packages
+  whitelist_external_dirs: /home/homeassistant/.homeassistant/
 
 # Enables the frontend
 frontend:
