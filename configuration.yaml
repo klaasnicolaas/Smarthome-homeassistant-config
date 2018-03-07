@@ -62,7 +62,7 @@ influxdb:
 # View all events in a logbook
 logbook: 
   exclude:
-    domains:
+    entities:
         - sensor.br_ground_temperature
         - sensor.br_humidity
         - sensor.br_precipitation
@@ -168,3 +168,12 @@ binary_sensor:
 ifttt:
     key: !secret ifttt_key 
         
+        
+################################## COSTUM PANELS ##################################  
+# FLOORPLAN#
+panel_custom:
+  - name: floorplan
+    sidebar_title: Floorplan
+    sidebar_icon: mdi:home
+    url_path: floorplan
+    config: !include floorplan.yaml
