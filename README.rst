@@ -29,3 +29,7 @@ Getting Help
 
 ..  |Build Status| image:: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master
     :target: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config
+
+.. image:: https://badges.greenkeeper.io/klaasnicolaas/Smarthome-homeassistant-config.svg
+   :alt: Greenkeeper badge
+   :target: https://greenkeeper.io/
