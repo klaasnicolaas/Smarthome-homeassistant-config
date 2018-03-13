@@ -3,7 +3,6 @@ python:
   - "3.6.4"
 before_install:
   - mv travis_secrets.yaml secrets.yaml
-  - mv travis_home-assistant_v2.db home-assistant_v2.db
 install:
   - pip3 install homeassistant
   - hass --version

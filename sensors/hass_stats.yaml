@@ -14,6 +14,6 @@
 - platform: filesize
   name: Filesize Database
   file_paths:
-    - /home/homeassistant/.homeassistant/home-assistant_v2.db
-    - /home/homeassistant/.homeassistant/home-assistant.log
-    - /home/homeassistant/.homeassistant/configuration.yaml
+      - !secret filesize_homeassistant_db
+      - !secret filesize_homeassistant_log
+      - !secret filesize_ozw_log
