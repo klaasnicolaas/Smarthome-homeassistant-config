@@ -30,5 +30,5 @@ Getting Help
 ..  |Build Status| image:: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master
     :target: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config
 
-..	|HA version| image: https://img.shields.io/badge/Home%20Assistant-0.65.3-038FC7.svg)
-	:target: https://home-assistant.io/
+..	|HA version| image:: https://img.shields.io/badge/Home%20Assistant-0.65.3-038FC7.svg
+	:target: https://home-assistant.io
