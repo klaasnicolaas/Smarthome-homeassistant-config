@@ -1,10 +1,13 @@
 # Other
 *.uuid
 *.conf
+*.db
 *.db-journal
 *.noload
+*.txt
 *.sqlite
 *.xml
+*.log
 *.backup
 .cloud
 .HA_VERSION
@@ -19,6 +22,3 @@ ip_bans.yaml
 /www/custom_ui/floorplan
 smartyone_nl.pem
 server.pem
-home-assistant_v2.db
-OZW_Log.txt
-home-assistant.log
