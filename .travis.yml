@@ -4,8 +4,8 @@ python:
 before_install:
   - mv travis_secrets.yaml secrets.yaml
   - touch /home/travis/build/klaasnicolaas/Smarthome-homeassistant-config/home-assistant_v2.db
-  -
-  -
+  - touch /home/travis/build/klaasnicolaas/Smarthome-homeassistant-config/home-assistant.log
+  - touch /home/travis/build/klaasnicolaas/Smarthome-homeassistant-config/OZW_Log.txt
 install:
   - pip3 install homeassistant
   - hass --version
