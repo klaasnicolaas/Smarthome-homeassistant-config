@@ -1,6 +1,7 @@
 # Other
 *.uuid
 *.conf
+*.db
 *.db-journal
 *.log
 *.noload
@@ -14,10 +15,10 @@ www
 zones
 deps
 tts
-ssl
 secrets.yaml
 known_devices.yaml
 entity_registry.yaml
 ip_bans.yaml
 /www/custom_ui/floorplan
-home-assistant_v2.db
+smartyone_nl.pem
+server.pem
