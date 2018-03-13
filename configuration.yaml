@@ -31,8 +31,6 @@ http:
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: !secret http_base_url
   api_password: !secret http_api_password
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
   trusted_networks: 
     - !secret intern_ip
     - 127.0.0.1
