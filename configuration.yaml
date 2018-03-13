@@ -13,10 +13,10 @@ homeassistant:
   # Customization #
   customize: !include customize.yaml
   # Packages #
-  packages: !include_dir_named packages
+  # packages: !include_dir_named packages
   # Whitelist #
-  whitelist_external_dirs:
-    - !secret whitelist_dir_config
+  #whitelist_external_dirs:
+    #- !secret whitelist_dir_config
 
 # Enables the frontend
 frontend:
