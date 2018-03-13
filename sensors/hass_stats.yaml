@@ -1,6 +1,6 @@
-###################################################
-## * Special HASS related sensors - Thanks @torn8o
-###################################################
+##################################
+## * Special HASS related sensors
+##################################
 
 - platform: version
   name: HA Installed Version
@@ -15,3 +15,5 @@
   name: Filesize Database
   file_paths:
     - /home/homeassistant/.homeassistant/home-assistant_v2.db
+    - /home/homeassistant/.homeassistant/home-assistant.log
+    - /home/homeassistant/.homeassistant/configuration.yaml

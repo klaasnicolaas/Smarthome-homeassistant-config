@@ -82,6 +82,8 @@ filesizecheck:
     name: Filesize Check
     entities:
         - sensor.homeassistant_v2db
+        - sensor.homeassistantlog
+        - sensor.configurationyaml
 
 ################################## VIEWS - TABS ##############################               
 # Begane grond view
