@@ -3,8 +3,8 @@ python:
   - "3.6.4"
 before_install:
   - mv travis_secrets.yaml secrets.yaml
-  - mv test.pem smartyone_nl.pem
-  - mv testserver.pem server.pem
+  - mv /ssl/test.pem smartyone_nl.pem
+  - mv /ssl/testserver.pem server.pem
 install:
   - pip3 install homeassistant
   - hass --version
