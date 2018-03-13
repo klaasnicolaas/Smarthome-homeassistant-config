@@ -12,8 +12,11 @@ homeassistant:
   time_zone: Europe/Amsterdam
   # Customization #
   customize: !include customize.yaml
+  # Packages #
+  # packages: !include_dir_named packages/
   # Whitelist #
-  whitelist_external_dirs: /home/homeassistant/.homeassistant/
+  whitelist_external_dirs: 
+    - !secret whitelist_config_dir
 
 # Enables the frontend
 frontend:
