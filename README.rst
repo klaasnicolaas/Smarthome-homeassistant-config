@@ -1,4 +1,4 @@
-Smart Home - Home Assistant |Build Status||HA version|
+Smart Home - Home Assistant |Build Status| |HA version|
 =============================================================
 
 Home Assistant is a home automation platform running on Python 3. It is able to track and control all devices at home and offer a platform for automating control.
@@ -31,3 +31,4 @@ Getting Help
     :target: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config
 
 ..	|HA version| image: https://img.shields.io/badge/Home%20Assistant-0.65.3-038FC7.svg)
+	:target: https://home-assistant.io/
