@@ -6,6 +6,8 @@ before_install:
   - touch /home/travis/build/klaasnicolaas/Smarthome-homeassistant-config/home-assistant_v2.db
   - touch /home/travis/build/klaasnicolaas/Smarthome-homeassistant-config/home-assistant.log
   - touch /home/travis/build/klaasnicolaas/Smarthome-homeassistant-config/OZW_Log.txt
+  - touch /home/travis/build/klaasnicolaas/Smarthome-homeassistant-config/ssl/test.pem
+  - touch /home/travis/build/klaasnicolaas/Smarthome-homeassistant-config/ssl/testserver.pem
 install:
   - pip3 install homeassistant
   - hass --version
