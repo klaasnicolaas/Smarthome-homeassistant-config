@@ -83,14 +83,7 @@ filesizecheck:
     entities:
         - sensor.homeassistant_v2db
 
-################################## VIEWS - TABS ##############################        
-# Zolder view
-slaapkamer_zolder_view:
-    name: Zolder
-    view: yes
-    entities:
-        - group.slaapkamer_zolder
-        
+################################## VIEWS - TABS ##############################               
 # Begane grond view
 begane_grond_view:
     name: Begane grond
@@ -100,7 +93,16 @@ begane_grond_view:
         - group.begane_grond_hal
         
 # Eerste verdieping view
+eerste_verdieping_view:
+    name: Eerste verdieping
+    view: yes
 
+# Zolder view
+slaapkamer_zolder_view:
+    name: Zolder
+    view: yes
+    entities:
+        - group.slaapkamer_zolder
 
 # Temperaturen in huis
 temperaturen_view:

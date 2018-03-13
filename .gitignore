@@ -15,6 +15,7 @@ www
 zones
 deps
 tts
+ssl
 secrets.yaml
 known_devices.yaml
 entity_registry.yaml

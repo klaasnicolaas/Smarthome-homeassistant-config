@@ -14,6 +14,7 @@ homeassistant:
   customize: !include customize.yaml
   # Packages #
   packages: !include_dir_named packages
+  # Whitelist #
   whitelist_external_dirs: /home/homeassistant/.homeassistant/
 
 # Enables the frontend
@@ -29,6 +30,8 @@ http:
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: !secret http_base_url
   api_password: !secret http_api_password
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
   trusted_networks: 
     - !secret intern_ip
     - 127.0.0.1
@@ -167,6 +170,12 @@ binary_sensor:
           value_template: >
             {{ states.sensor.fibaro__door_sensor__hal_begane_grond_access_control.state < '23' }}
             
+
+###################################### MEDIA PLAYER ####################################
+media_player:
+    - platform: cast
+      host: !secret woonkamer_cast
+           
 ###################################### IFTTT ####################################
 ifttt:
     key: !secret ifttt_key 
