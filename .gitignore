@@ -1,7 +1,6 @@
 # Other
 *.uuid
 *.conf
-*.db
 *.db-journal
 *.log
 *.noload
@@ -21,3 +20,4 @@ known_devices.yaml
 entity_registry.yaml
 ip_bans.yaml
 /www/custom_ui/floorplan
+home-assistant_v2.db
