@@ -3,7 +3,7 @@ python:
   - "3.6.4"
 before_install:
   - mv travis_secrets.yaml secrets.yaml
-  - touch /home/homeassistant/.homeassistant/home-assistant_v2.db
+  - touch home-assistant_v2.db
   - touch ./home-assistant.log
   - touch ./OZW_Log.txt
 install:
