@@ -1,6 +1,3 @@
-# Weather
-- platform: yr
-
 # Slimme meter
 - platform: dsmr
   port: /dev/ttyUSB1

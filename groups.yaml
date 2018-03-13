@@ -36,6 +36,7 @@ omgeving:
         - sensor.br_ground_temperature
         - sensor.br_wind_speed
         - sensor.br_precipitation
+        - sensor.buienradar_precipitation_forecast_average
         
 # Hal begane grond groep
 begane_grond_hal:
@@ -44,7 +45,6 @@ begane_grond_hal:
         - binary_sensor.sensor_voordeur
         - sensor.fibaro__door_sensor__hal_begane_grond_temperature
 
-
 # Temperaturen huis groep
 temperaturen:
     name: Temperaturen
@@ -52,38 +52,6 @@ temperaturen:
         - sensor.fibaro__door_sensor__hal_begane_grond_temperature
         - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
         - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
-
-# Home Assistant stats group
-home_assistant_stats:
-    name: Home Assistant Info
-    entities:
-        - sensor.external_ip
-        - sensor.ha_installed_version
-        - sensor.python_version
-
-# Internet group
-internet:
-    name: Internet
-    entities:
-        - sensor.speedtest_ping
-        - sensor.speedtest_download
-        - sensor.speedtest_upload
-
-# Batterij percentages
-batterij_percentages:
-    name: Batterij Percentages
-    entities:
-        - sensor.zwave_battery_front_door
-        - sensor.zwave_battery_smoke_sensor_begane_grond
-        - sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
-        
-# Home Assistant Files
-filesizecheck:
-    name: Filesize Check
-    entities:
-        - sensor.homeassistant_v2db
-        - sensor.homeassistantlog
-        - sensor.configurationyaml
 
 ################################## VIEWS - TABS ##############################               
 # Begane grond view
@@ -113,16 +81,5 @@ temperaturen_view:
     icon: mdi:temperature-celsius
     entities:
         - group.temperaturen
-
-# Statistieken #
-statistieken_view:
-    name: HA Statistieken
-    view: yes
-    icon: mdi:google-analytics
-    entities:
-        - group.home_assistant_stats
-        - group.internet
-        - group.batterij_percentages
-        - group.filesizecheck
         
 ################################################################################

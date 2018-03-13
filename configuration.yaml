@@ -152,14 +152,6 @@ switch:
 #  client_secret: ESa-YirfbKhWRvz2dczd2_ki
 #  track_new_calendar: False
 
-#################################### TELEGRAM #########################################
-
-telegram_bot:
-  - platform: polling
-    api_key: !secret telegram_key
-    allowed_chat_ids:
-      - !secret telegram_chat_id
-
 ########################## BINAIR SENSORS #######################################    
 binary_sensor:
     - platform: template
