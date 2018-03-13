@@ -3,6 +3,9 @@ python:
   - "3.6.4"
 before_install:
   - mv travis_secrets.yaml secrets.yaml
+  - touch /home/travis/build/klaasnicolaas/Smarthome-homeassistant-config/home-assistant_v2.db
+  -
+  -
 install:
   - pip3 install homeassistant
   - hass --version
