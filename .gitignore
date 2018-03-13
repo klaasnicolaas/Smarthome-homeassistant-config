@@ -22,3 +22,5 @@ ip_bans.yaml
 /www/custom_ui/floorplan
 smartyone_nl.pem
 server.pem
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
