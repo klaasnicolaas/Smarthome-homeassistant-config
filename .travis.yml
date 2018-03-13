@@ -5,6 +5,7 @@ before_install:
   - mv travis_secrets.yaml secrets.yaml
   - mv ./dummy/test.pem smartyone_nl.pem
   - mv ./dummy/testserver.pem server.pem
+  - mv ./dummy/travis_home-assistant_v2.db home-assistant_v2.db
 install:
   - pip3 install homeassistant
   - hass --version
