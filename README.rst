@@ -36,4 +36,3 @@ Getting Help
 
 ..	|HA version| image:: https://img.shields.io/badge/Home%20Assistant-0.65.3-038FC7.svg
 	:target: https://home-assistant.io
-	
