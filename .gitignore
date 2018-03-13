@@ -20,5 +20,4 @@ secrets.yaml
 known_devices.yaml
 entity_registry.yaml
 ip_bans.yaml
-floorplan.yaml
 /www/custom_ui/floorplan
