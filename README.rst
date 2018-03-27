@@ -13,9 +13,14 @@ Devices
 
 * FIBARO Smoke sensors
 * FIBARO Door sensors
+* FIBARO Motion sensors
 * FIBARO Wall plug
 * KlikAanKlikUit devices (CoCo)
 * DSMR (Smart meter)
+* Google Chromecast
+
+* Raspberry Pi 3
+
 
 Getting Help
 ------------
@@ -34,5 +39,5 @@ Getting Help
     :alt: Greenkeeper badge
     :target: https://greenkeeper.io/
 
-..	|HA version| image:: https://img.shields.io/badge/Home%20Assistant-0.65.3-038FC7.svg
+..	|HA version| image:: https://img.shields.io/badge/Home%20Assistant-0.65.5-blue.svg
 	:target: https://home-assistant.io
