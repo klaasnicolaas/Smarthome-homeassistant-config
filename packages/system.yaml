@@ -70,26 +70,6 @@ homeassistant:
       friendly_name:  Mislukte inlogpogingen
       icon: mdi:alert
 
-    sensor.network_out_eth0:
-      <<: *customize
-      friendly_name: Bytes verzonden
-      icon: mdi:upload-network
-
-    sensor.network_in_eth0:
-      <<: *customize
-      friendly_name: Bytes ontvangen
-      icon: mdi:download-network
-
-    sensor.packets_out_eth0:
-      <<: *customize
-      friendly_name: Pakketten verzonden
-      icon: mdi:upload-network
-
-    sensor.packets_in_eth0:
-      <<: *customize
-      friendly_name: Pakketten ontvangen
-      icon: mdi:download-network
-
     sensor.myipopendnscom:
       <<: *customize
       friendly_name: Publiek IP-adres
@@ -150,7 +130,7 @@ binary_sensor:
   - platform: template
     sensors:
       db_large:
-        value_template: '{{ states.sensor.homeassistant_v2db.state | float > 100 }}'
+        value_template: '{{ states.sensor.homeassistant_v2db.state | float > 5000 }}'
 
 ################################################
 ## Sensor
@@ -166,14 +146,6 @@ sensor:
       - type: disk_free
         arg: /
       - type: last_boot
-      - type: network_in
-        arg: 'eth0'
-      - type: network_out
-        arg: 'eth0'
-      - type: packets_in
-        arg: 'eth0'
-      - type: packets_out
-        arg: 'eth0'
   - platform: command_line
     name: CPU Temperature
     command: "/bin/cat /sys/class/thermal/thermal_zone0/temp"
@@ -229,7 +201,6 @@ group:
       - group.host_storage
       - group.host_network
       - group.host_info
-      - group.host_internet
       - group.host_batterij_zwave
   host_performance:
     # Systeeminformatie
@@ -252,10 +223,9 @@ group:
   host_network:
     name: Host Network
     entities:
-      - sensor.network_out_eth0
-      - sensor.network_in_eth0
-      - sensor.packets_out_eth0
-      - sensor.packets_in_eth0
+      - sensor.speedtest_ping
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
       - sensor.myipopendnscom
       - sensor.ssl_certificate_expiry
   host_info:
@@ -273,12 +243,6 @@ group:
       - sensor.zwave_battery_front_door
       - sensor.zwave_battery_smoke_sensor_begane_grond
       - sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
-  host_internet:
-    name: Internet
-    entities:
-      - sensor.speedtest_ping
-      - sensor.speedtest_download
-      - sensor.speedtest_upload
 ################################################
 ## Alert
 ################################################

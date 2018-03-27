@@ -183,3 +183,7 @@ sensor.zwave_battery_smoke_sensor_begane_grond:
 
 sensor.zwave_battery_smoke_sensor_slaapkamer_zolder:
     friendly_name: Smoke sensor | slaapkamer zolder
+    
+####################### MEDIA PLAYER ###########################
+media_player.32pfs640212:
+    friendly_name: TV - Woonkamer

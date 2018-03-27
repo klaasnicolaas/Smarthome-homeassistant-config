@@ -126,7 +126,7 @@ zwave:
 
 # MQTT Broker ##########################################
 mqtt:
-  broker: 86.88.173.32
+  broker: !secret mqtt_broker_ip
   port: 1883
  
 # RFXCom ###############################################
@@ -161,13 +161,7 @@ binary_sensor:
           friendly_name: Voordeur
           value_template: >
             {{ states.sensor.fibaro__door_sensor__hal_begane_grond_access_control.state < '23' }}
-            
-
-###################################### MEDIA PLAYER ####################################
-media_player:
-    - platform: cast
-      host: !secret woonkamer_cast
-           
+                   
 ###################################### IFTTT ####################################
 ifttt:
     key: !secret ifttt_key 

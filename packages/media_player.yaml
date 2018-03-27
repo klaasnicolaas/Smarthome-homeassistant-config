@@ -1,0 +1,7 @@
+#################################################################
+################### VARIOUS MEDIA PLAYERS #######################
+
+media_player:
+    ### Chromecast TV ###
+    - platform: cast
+      host: !secret woonkamer_cast

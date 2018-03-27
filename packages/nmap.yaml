@@ -1,0 +1,6 @@
+device_tracker:    
+  - platform: nmap_tracker
+    home_interval: 10
+    hosts:
+      - !secret nmap_device_1
+      - !secret nmap_device_2
