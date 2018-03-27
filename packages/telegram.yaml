@@ -6,6 +6,6 @@ telegram_bot:
       - !secret telegram_chat_id
 
 notify:
-  - name: telegram
+  - name: Telegram
     platform: telegram
     chat_id: !secret telegram_chat_id
