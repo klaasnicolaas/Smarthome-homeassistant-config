@@ -33,6 +33,24 @@ sensor.power_consumption_normal:
 
 sensor.power_tariff:
     hidden: True
+
+sensor.voltage_sags_phase_l2:
+    hidden: True
+    
+sensor.voltage_sags_phase_l3:    
+    hidden: True
+    
+sensor.voltage_swells_phase_l2:
+    hidden: True
+    
+sensor.voltage_swells_phase_l3:
+    hidden: True
+    
+sensor.power_production_phase_l2:
+    hidden: True
+ 
+sensor.power_production_phase_l3:
+    hidden: True
     
 # Buienradar ##########################################################    
 sensor.br_humidity:
@@ -148,6 +166,10 @@ sensor.fibaro__wall_plug_power_management:
     
 sensor.fibaro__wall_plug_sourcenodeid:
     hidden: True
+    
+switch.fibaro__wall_plug_switch:
+    friendly_name: 3D Printer
+    icon: mdi:printer-3d
     
 # FIBARO DOOR SENSOR ####################################################
 binary_sensor.fibaro__door_sensor__hal_begane_grond_sensor:
