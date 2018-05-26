@@ -22,13 +22,14 @@
 - [ ] Purchase Google assistant and integrate it
 - [ ] Adding the chromecasts that are in the house (I'm working on it)
 - [ ] Make a smart mirror and integrate it
+- [ ] Make it possible to control the blinds
 
 - [ ] Convince everyone that Home Automation is the best!
 
 ## Already working (automation)
 
 - [x] Sending telegram message if a door is open
-- [x] Sending telegram message if phone battery level is under 25%
+- [x] Sending telegram message if phone battery level is under 25% (at the moment this is disabled)
 - [x] Notification when there is a new update from HA
 - [x] Reading weather info from Buienradar
 - [x] Sending telegram message if a z-wave sensor had low battery
