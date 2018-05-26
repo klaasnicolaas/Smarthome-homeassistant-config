@@ -2,7 +2,6 @@
 
 - [ ] Control lighting based on the sun and gps location
 - [ ] Turn off all devices (lights) when everyone leaves home
-- [ ] Send notifications for package delivery (PostNL)
 - [ ] Notify if there is motion in house when no one is home
 - [ ] Lighting flashing when someone rings the doorbell
 - [ ] install door/window sensors 
@@ -23,6 +22,7 @@
 - [ ] Adding the chromecasts that are in the house (I'm working on it)
 - [ ] Make a smart mirror and integrate it
 - [ ] Make it possible to control the blinds
+- [ ] Operateperate the garden lighting and fountain
 
 - [ ] Convince everyone that Home Automation is the best!
 
@@ -36,6 +36,7 @@
 - [x] Sending telegram message if smoke sensor detect fire
 - [x] Use an SSL certificate for extra security
 - [x] Sending telegram message if it starts to rain within a hour
+- [x] Send notifications for package delivery (PostNL)
 
 - Analytics
 	- [x] Reading the battery percentages of all Z-wave devices 
