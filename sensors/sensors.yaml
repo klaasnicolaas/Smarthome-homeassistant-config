@@ -3,7 +3,7 @@
   port: /dev/ttyUSB1
   dsmr_version: 4
 
-  # Buienradar
+# Buienradar
 - platform: buienradar
   monitored_conditions:
     - symbol
@@ -12,3 +12,8 @@
     - windspeed
     - groundtemperature
     - precipitation
+    
+# PostNL
+- platform: postnl
+  username: !secret username_postnl
+  password: !secret password_postnl
