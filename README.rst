@@ -18,7 +18,8 @@ Devices
 * KlikAanKlikUit devices (CoCo)
 * DSMR (Smart meter)
 * Google Chromecast
-
+* Philips TV
+* Water fountain in the garden
 * Raspberry Pi 3
 
 
@@ -35,5 +36,5 @@ Getting Help
 ..  |Build Status| image:: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master
     :target: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config
 
-..	|HA version| image:: https://img.shields.io/badge/Home%20Assistant-0.69.1-blue.svg
+..	|HA version| image:: https://img.shields.io/badge/Home%20Assistant-0.72.0-blue.svg
 	:target: https://home-assistant.io

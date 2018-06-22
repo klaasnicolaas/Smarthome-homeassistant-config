@@ -22,7 +22,7 @@
 - [ ] Adding the chromecasts that are in the house (I'm working on it)
 - [ ] Make a smart mirror and integrate it
 - [ ] Make it possible to control the blinds
-- [ ] Operateperate the garden lighting and fountain
+- [ ] Operateperate the garden lighting
 
 - [ ] Convince everyone that Home Automation is the best!
 
@@ -37,6 +37,7 @@
 - [x] Use an SSL certificate for extra security
 - [x] Sending telegram message if it starts to rain within a hour
 - [x] Send notifications for package delivery (PostNL)
+- [x] Operate the water fountain
 
 - Analytics
 	- [x] Reading the battery percentages of all Z-wave devices 
