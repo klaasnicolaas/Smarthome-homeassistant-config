@@ -13,7 +13,6 @@ meter_readings:
 slaapkamer_zolder:
     name: Slaapkamer | Zolder
     entities:
-        - switch.fibaro__wall_plug_switch
         - switch.lamp_slaapkamer__zolder
         - switch.led_bureau__zolder
         - switch.led_slaapkamer__zolder
@@ -52,6 +51,12 @@ temperaturen:
         - sensor.fibaro__door_sensor__hal_begane_grond_temperature
         - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
         - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+        
+# Tuin
+tuin:
+    name: Tuin
+    entities:
+        - switch.fibaro__wall_plug_switch 
 
 ################################## VIEWS - TABS ##############################               
 # Begane grond view
@@ -73,6 +78,13 @@ slaapkamer_zolder_view:
     view: yes
     entities:
         - group.slaapkamer_zolder
+        
+# Tuin 
+tuin_view:
+    name: Tuin
+    view: yes
+    entities:
+        - group.tuin
 
 # Temperaturen in huis
 temperaturen_view:

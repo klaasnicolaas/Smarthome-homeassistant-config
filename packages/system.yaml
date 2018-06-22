@@ -125,7 +125,7 @@ binary_sensor:
   - platform: template
     sensors:
       cpu_hot:
-        value_template: '{{ states.sensor.cpu_temperature.state | float > 60 }}'
+        value_template: '{{ states.sensor.cpu_temperature.state | float > 65 }}'
         friendly_name: 'CPU heet'
   - platform: template
     sensors:
@@ -259,7 +259,7 @@ alert:
       - telegram
   cpu_hot:
     name: Temperatuur CPU is hoog
-    entity_id: binary_sensor.cpu_high
+    entity_id: binary_sensor.cpu_hot
     state: 'on'
     repeat: 5 # minutes
     can_acknowledge: True

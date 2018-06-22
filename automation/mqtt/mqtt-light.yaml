@@ -1,0 +1,9 @@
+# first test to turn on a light with the cube
+- alias: 'Cube Light - Turn on'
+  trigger:
+    platform: mqtt
+    topic: home/zolder/switch/set
+    payload: 'on'
+  action:
+    service: switch.turn_on
+    entity_id: switch.lamp_slaapkamer__zolder

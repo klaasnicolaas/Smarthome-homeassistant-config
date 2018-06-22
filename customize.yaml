@@ -168,8 +168,8 @@ sensor.fibaro__wall_plug_sourcenodeid:
     hidden: True
     
 switch.fibaro__wall_plug_switch:
-    friendly_name: ANET A6 - 3D Printer
-    icon: mdi:printer-3d
+    friendly_name: Waterornament - Tuin
+    icon: mdi:water-pump
     
 # FIBARO DOOR SENSOR ####################################################
 binary_sensor.fibaro__door_sensor__hal_begane_grond_sensor:
