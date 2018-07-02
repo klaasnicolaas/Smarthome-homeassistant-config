@@ -20,7 +20,8 @@ Devices
 * Google Chromecast
 * Philips TV
 * Water fountain in the garden
-* Raspberry Pi 3
+* Yeelights
+* Teclast P80 Pro
 
 
 Getting Help

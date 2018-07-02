@@ -193,7 +193,7 @@ light:
     payload_off: "OFF"
     optimistic: false
     retain: true
-    
+
 #cover:
 #  - platform: mqtt
 #    name: "Living Room 0"
