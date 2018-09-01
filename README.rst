@@ -7,7 +7,7 @@ Current Configuration
 ---------------------
 
 * RaspberryPi 3 using the Hassbian installation -> (https://home-assistant.io/docs/installation/hassbian/). 
-* Using also the Lovelace UI
+* Using also the Lovelace UI -> (https://www.home-assistant.io/lovelace/).
 
 Devices
 -------
@@ -25,6 +25,13 @@ Devices
 * Teclast P80 Pro
 * Google home (mini)
 
+Apps
+----
+
+* HomeAssist (for android) -> (https://play.google.com/store/apps/details?id=com.axzae.homeassistant&hl=nl)
+* Home Assistant (for iOS) -> (https://www.home-assistant.io/docs/ecosystem/ios/)
+* Home Assistant (As web app) -> (https://www.home-assistant.io/docs/frontend/mobile/)
+
 Getting Help
 ------------
 
@@ -38,5 +45,5 @@ Getting Help
 ..  |Build Status| image:: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master
     :target: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config
 
-..	|HA version| image:: https://img.shields.io/badge/Home%20Assistant-0.72.0-blue.svg
+..	|HA version| image:: https://img.shields.io/badge/Home%20Assistant-0.77.2-blue.svg
 	:target: https://home-assistant.io
