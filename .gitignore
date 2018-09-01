@@ -15,6 +15,7 @@ www
 zones
 deps
 tts
+.storage
 secrets.yaml
 known_devices.yaml
 entity_registry.yaml
@@ -24,3 +25,4 @@ smartyone_nl.pem
 server.pem
 home-assistant_v2.db-shm
 home-assistant_v2.db-wal
+google_calendars.yaml
