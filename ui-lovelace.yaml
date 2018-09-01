@@ -58,9 +58,9 @@ views:
       - type: media-control
         entity: media_player.32pfs640212
       - type: media-control
-        entity: media_player.googlehome2898
+        entity: media_player.slaapkamer_zolder__mini
       - type: media-control
-        entity: media_player.slaapkamer_zolder_2
+        entity: media_player.woonkamer__mini
       # Device tracker kaart
       - type: map
         entities:
@@ -128,5 +128,3 @@ views:
   - icon: mdi:server
     title: Systeeminformatie
     cards:
-    
-## TEST 123

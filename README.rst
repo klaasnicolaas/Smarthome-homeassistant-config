@@ -6,8 +6,18 @@ Home Assistant is a home automation platform running on Python 3. It is able to 
 Current Configuration
 ---------------------
 
-* RaspberryPi 3 using the Hassbian installation -> (https://home-assistant.io/docs/installation/hassbian/). 
+* RaspberryPi 3B using the Hassbian installation -> (https://home-assistant.io/docs/installation/hassbian/). 
 * Using also the Lovelace UI -> (https://www.home-assistant.io/lovelace/).
+
+Hardware
+--------
+
+I use a raspberry pi 3rd generation to run home assistant. In addition, I use a Z-wave stick to control devices that use the z-wave protocol and an RFX module for controlling devices that work on the 433mhz frequency band. Because the raspberry pi is hanging in the meter closet, the smart meter is also read via a P1 cable.
+
+* Raspberry PI 3B
+* Aeotec USB Z-Stick - Z-Wave Plus -> (https://aeotec.com/z-wave-usb-stick)
+* RFXCOM RFXtrx433E -> (http://www.rfxcom.com/store/Transceivers/14103)
+* P1 cable -> (https://www.sossolutions.nl/slimme-meter-kabel)
 
 Devices
 -------
@@ -32,7 +42,7 @@ Apps
 * Home Assistant (for iOS) -> (https://www.home-assistant.io/docs/ecosystem/ios/)
 * Home Assistant (As web app) -> (https://www.home-assistant.io/docs/frontend/mobile/)
 
-Getting Help
+Needing help?
 ------------
 
 * Home Assistant Homepage -(https://home-assistant.io/)
