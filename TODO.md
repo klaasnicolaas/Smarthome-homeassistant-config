@@ -18,11 +18,10 @@
 - [ ] Implement Guest mode to disable certain interior automations
 - [ ] Implement lights to be turned off if no one is home and no motion detection
 - [ ] Setup Night and Day theme - Also apply to Floorplan
-- [ ] Purchase Google assistant and integrate it
 - [ ] Adding the chromecasts that are in the house (I'm working on it)
 - [ ] Make a smart mirror and integrate it
 - [ ] Make it possible to control the blinds
-- [ ] Operateperate the garden lighting
+- [ ] Operate the garden lighting
 
 - [ ] Convince everyone that Home Automation is the best!
 
@@ -38,6 +37,10 @@
 - [x] Sending telegram message if it starts to rain within a hour
 - [x] Send notifications for package delivery (PostNL)
 - [x] Operate the water fountain
+- [x] Purchase Google assistant and integrate it
+- [x] Make use of WOL and turn on computers via home assistant
+- [x] Start to using the new UI: LoveLace
+- [x] Google calendar integration
 
 - Analytics
 	- [x] Reading the battery percentages of all Z-wave devices 

@@ -1,4 +1,10 @@
 ################################## GROUPS ####################################
+# Wake on LAN apparaten
+wol_apparaten:
+    name: Wake on LAN apparaten
+    entities:
+        - switch.computer_klaas
+
 # Slimme meter
 meter_readings:
     name: Slimme Meter
@@ -19,8 +25,8 @@ slaapkamer_zolder:
         - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
 
 # Gang begane grond groep
-begane_grond_gang:
-    name: Gang | Begane grond
+begane_grond_trappengang:
+    name: Trappengang | Begane grond
     entities:
         - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
         
@@ -64,7 +70,7 @@ begane_grond_view:
     name: Begane grond
     view: yes
     entities:
-        - group.begane_grond_gang
+        - group.begane_grond_trappengang
         - group.begane_grond_hal
         
 # Eerste verdieping view
@@ -81,8 +87,11 @@ slaapkamer_zolder_view:
         - switch.led_bureau__zolder
         - switch.led_slaapkamer__zolder
         - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
-        - light.yeelight_ct2_7c49eb19d785
+        - light.vliering_achter__zolder_auto
+        - light.vliering_voor__zolder_auto
         - light.yeelight_ct2_7c49eb19d5f5
+        - light.yeelight_ct2_7c49eb19d785
+        - switch.computer_klaas
         
 # Tuin 
 tuin_view:
@@ -98,7 +107,7 @@ temperaturen_view:
     view: yes
     icon: mdi:temperature-celsius
     entities:
-#       - group.temperaturen
+        - group.temperaturen
         - sensor.fibaro__door_sensor__hal_begane_grond_temperature
         - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
         - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature

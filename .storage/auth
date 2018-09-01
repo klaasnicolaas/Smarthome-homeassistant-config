@@ -1,0 +1,73 @@
+{
+    "data": {
+        "credentials": [
+            {
+                "auth_provider_id": null,
+                "auth_provider_type": "homeassistant",
+                "data": {
+                    "username": "klaas"
+                },
+                "id": "431810d12d874180b8c95e49a64688e9",
+                "user_id": "df20c19fa00140af947d51cd5d27b680"
+            }
+        ],
+        "refresh_tokens": [
+            {
+                "access_token_expiration": 1800.0,
+                "client_id": "https://smartyone.nl:8123/",
+                "created_at": "2018-08-31T23:23:28.294673+00:00",
+                "id": "3f87b9dc20f041e39c4fbf720e76ee2e",
+                "jwt_key": "db2e687cccbfe1d606d5462c997eb34674f9efa306f0a3751bf1706446413d42cdff3709a4a39323f8feb8a4e85b4b7f24220e889e021ecf3d3f6d740454d127",
+                "token": "ba94fcca1811a115255827451fff498708612d3fcfd4eafa25376b4cbbb3e8fa81be2a4aef92b46fc39c5545e6f245a985b894a817f233e31d2c109b7afb3872",
+                "user_id": "df20c19fa00140af947d51cd5d27b680"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_id": "https://smartyone.nl:8123/",
+                "created_at": "2018-08-29T23:04:33.171763+00:00",
+                "id": "3bf4730bf277454d92e91b5b5f3800c8",
+                "jwt_key": "f1d6e6927f203569dd75972f731e3a76efe1f906d47dde6cb9d2547dee128ea53c240c1ab5d07abd591ee94e6fe54ec09a23cbef16a5bf3259cab706336324d5",
+                "token": "709207cd071b9db5e655151ea36c9237a174315a90dba4d3081f32a15fea7bdd81d61e1abee0f23ecef00dfe8566de7e3c3dad7cd0c8ec22ab150c64b25f2611",
+                "user_id": "df20c19fa00140af947d51cd5d27b680"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_id": "https://smartyone.nl:8123/",
+                "created_at": "2018-08-31T23:19:59.522546+00:00",
+                "id": "42513dd479964ac69616023b7a8a158b",
+                "jwt_key": "6d3405b2abf40f3a1f58c0b4303b05991922d19b728ccbdc7b4e82b258b243b9f8439bdcd502bbeeb3f11e8b1defe7e4adfb24109aa00931806d5b28c89eb30f",
+                "token": "dd1562dc0be1a16732d211ffa6514d8a91ce44a5b1682b342a704ea68521a1d35edfa39a4d540c5a45b13e3dd27b84a4bd435facdcb46d18509ec93f6191a75b",
+                "user_id": "df20c19fa00140af947d51cd5d27b680"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_id": "https://smartyone.nl:8123/",
+                "created_at": "2018-08-31T23:21:41.367280+00:00",
+                "id": "e83f8efea7314a4483e88d2afadee977",
+                "jwt_key": "b2ac83494212523e3d7f0f10f3a6ed8f20c7c694a24431d22187be70b27ccfa55373c22794babb507ecd23a5b421c00665e7230e4cc1d714e4c32134f966a4b6",
+                "token": "1581de2e0039d10a9a634d90f9ea86e4f97baf0620edefe03c4abe7524b89e0aa2c2e8ff59ead4a4df2bc35e7f733d5729b96967c03b6df2ac8bfe7acef6e442",
+                "user_id": "df20c19fa00140af947d51cd5d27b680"
+            },
+            {
+                "access_token_expiration": 1800.0,
+                "client_id": "https://smartyone.nl:8123/",
+                "created_at": "2018-08-31T23:22:44.131113+00:00",
+                "id": "a18f0e41d150475d84b39cb49d327811",
+                "jwt_key": "225e2c098a731e18f7854e0f5e62cd63f6d218ed7dc720980b4902ec025ff7d591026aea8e0922a65f63f000e1b2683dad8448f587425cc250045782c42c2a45",
+                "token": "806ec790851ceb8cdbeb787b4915eb426bd187933bf7d8f599c737d14844bb77098de827a028c438e554030f87a107e098a7ca2eb62739b651bb910f18b51284",
+                "user_id": "df20c19fa00140af947d51cd5d27b680"
+            }
+        ],
+        "users": [
+            {
+                "id": "df20c19fa00140af947d51cd5d27b680",
+                "is_active": true,
+                "is_owner": true,
+                "name": "Klaas Schoute",
+                "system_generated": false
+            }
+        ]
+    },
+    "key": "auth",
+    "version": 1
+}

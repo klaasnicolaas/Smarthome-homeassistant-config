@@ -7,6 +7,7 @@ Current Configuration
 ---------------------
 
 * RaspberryPi 3 using the Hassbian installation -> (https://home-assistant.io/docs/installation/hassbian/). 
+* Using also the Lovelace UI
 
 Devices
 -------
@@ -22,7 +23,7 @@ Devices
 * Water fountain in the garden
 * Yeelights
 * Teclast P80 Pro
-
+* Google home (mini)
 
 Getting Help
 ------------

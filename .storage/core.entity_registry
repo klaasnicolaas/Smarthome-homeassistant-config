@@ -1,0 +1,520 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "binary_sensor.fibaro__smoke_sensor__gang_begane_grond_sensor",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594110017536"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_temperature",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594110033938"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082497"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082513"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082529"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_smoke",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082561"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_heat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082609"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_burglar",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082657"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082673"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_system",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111082689"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_general",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111787009"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_smoke_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111787025"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__gang_begane_grond_heat_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "4-72057594111787073"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__door_sensor__hal_begane_grond_alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859713"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__door_sensor__hal_begane_grond_alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859729"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "binary_sensor.fibaro__door_sensor__hal_begane_grond_sensor",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594126794752"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__door_sensor__hal_begane_grond_temperature",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594126811154"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__door_sensor__hal_begane_grond_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859745"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__door_sensor__hal_begane_grond_heat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859825"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__door_sensor__hal_begane_grond_access_control",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859857"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__door_sensor__hal_begane_grond_burglar",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859873"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__door_sensor__hal_begane_grond_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "5-72057594127859889"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_alarm_type",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144636929"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_alarm_level",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144636945"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "binary_sensor.fibaro__smoke_sensor__slaapkamer_zolder_sensor",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594143571968"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594143588370"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_sourcenodeid",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144636961"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144636993"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144637041"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_burglar",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144637089"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_power_management",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144637105"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_system",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594144637121"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_general",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594145341441"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594145341457"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "6-72057594145341505"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "media_player.32pfs640212",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "14340ad5-3e8a-2cc6-633c-100a6a456c9b"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.br_humidity",
+                "name": null,
+                "platform": "buienradar",
+                "unique_id": "52.6298544.753652humidity"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.br_temperature",
+                "name": null,
+                "platform": "buienradar",
+                "unique_id": "52.6298544.753652temperature"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.br_symbol",
+                "name": null,
+                "platform": "buienradar",
+                "unique_id": "52.6298544.753652symbol"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.br_wind_speed",
+                "name": null,
+                "platform": "buienradar",
+                "unique_id": "52.6298544.753652windspeed"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.br_ground_temperature",
+                "name": null,
+                "platform": "buienradar",
+                "unique_id": "52.6298544.753652groundtemperature"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.br_precipitation",
+                "name": null,
+                "platform": "buienradar",
+                "unique_id": "52.6298544.753652precipitation"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.buienradar_precipitation_forecast_average",
+                "name": null,
+                "platform": "buienradar",
+                "unique_id": "52.6298544.753652precipitation_forecast_average"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "zwave.aeotec_zw090_zstick_gen5_eu",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-1"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "zwave.fibaro__smoke_sensor__gang_begane_grond",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-4"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "zwave.fibaro__door_sensor__hal_begane_grond",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-5"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "zwave.fibaro__smoke_sensor__slaapkamer_zolder",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-6"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "zwave.aeotec_zw117_range_extender_6",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-7"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "zwave.fibaro__wall_plug__1_",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "node-9"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__wall_plug__1_power_3",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193920066"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__wall_plug__1_power_4",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193936514"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__wall_plug__1_exporting_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193936896"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__wall_plug__1_sourcenodeid_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594194968609"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__wall_plug__1_power_management_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594194968753"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__wall_plug__1_switch",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193723392"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__wall_plug__1_alarm_type_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594194968577"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__wall_plug__1_alarm_level_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594194968593"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.fibaro__wall_plug__1_energy_2",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193936386"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "switch.fibaro__wall_plug_1_switch",
+                "name": null,
+                "platform": "zwave",
+                "unique_id": "9-72057594193723392"
+            },
+            {
+                "config_entry_id": "2c96b6034417463ca0fa238344b929c7",
+                "device_id": null,
+                "entity_id": "media_player.slaapkamer_zolder",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "2158d8cd-80d5-3738-b6d5-4955c5314c7c"
+            },
+            {
+                "config_entry_id": "2c96b6034417463ca0fa238344b929c7",
+                "device_id": null,
+                "entity_id": "media_player.slaapkamer_zolder_2",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "4cfef257-e5d9-67b9-c85e-d2cdb60da3a3"
+            },
+            {
+                "config_entry_id": "2c96b6034417463ca0fa238344b929c7",
+                "device_id": null,
+                "entity_id": "media_player.googlehome2898",
+                "name": null,
+                "platform": "cast",
+                "unique_id": "19ce2894-6d3e-733b-046a-e8dcc4ddb6a2"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.ipadje_battery_state",
+                "name": null,
+                "platform": "ios",
+                "unique_id": "state_ipadje"
+            },
+            {
+                "config_entry_id": null,
+                "device_id": null,
+                "entity_id": "sensor.ipadje_battery_level",
+                "name": null,
+                "platform": "ios",
+                "unique_id": "level_ipadje"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}

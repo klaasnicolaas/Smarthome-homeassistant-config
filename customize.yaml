@@ -149,7 +149,7 @@ sensor.fibaro__smoke_sensor__gang_begane_grond_system:
     hidden: True
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_temperature:
-    friendly_name: Temperatuur - Gang | Begane grond
+    friendly_name: Temperatuur - Trappengang | Begane grond
     
 # FIBARO WALL PLUG ######################################################
 switch.fibaro__wall_plug_1_switch:

@@ -90,9 +90,6 @@ sun:
 tts:
   - platform: google
 
-# Cloud
-cloud:
-
 ######################## INCLUDES ##########################
 # Groups #
 group: !include groups.yaml
@@ -138,21 +135,27 @@ rfxtrx:
   
 # KlikAanKlikUit
 switch:
-    platform: rfxtrx
-    automatic_add: False
-    devices:
-        0b11000600fde6d201030070:
-            name: Lamp slaapkamer | Zolder
-        0b11001000fde6d202010f70:
-            name: LED slaapkamer | Zolder
-        0b11001100fde6d203010f70:
-            name: LED Bureau | Zolder
+    - platform: rfxtrx
+      automatic_add: False
+      devices:
+          0b11000600fde6d201030070:
+              name: Lamp slaapkamer | Zolder
+          0b11001000fde6d202010f70:
+              name: LED slaapkamer | Zolder
+          0b11001100fde6d203010f70:
+              name: LED Bureau | Zolder
+    #### WAKE ON LAN ####
+    - platform: wake_on_lan
+      mac_address: !secret mac_addres_pc_klaas
+      name: Computer Klaas
+      host: !secret host_ip_pc_klaas
+    
 
-# Google Calender    
-#google:
-#  client_id: 203061134220-lou6597g2u7une4ijl9e8lebbvrh88ju.apps.googleusercontent.com
-#  client_secret: ESa-YirfbKhWRvz2dczd2_ki
-#  track_new_calendar: False
+################################## GOOGLE CALENDAR ##################################    
+google:
+  client_id: !secret google_calendar_client_id
+  client_secret: !secret google_calendar_secret_key
+  track_new_calendar: true
 
 ########################## BINAIR SENSORS #######################################    
 binary_sensor:
@@ -193,6 +196,13 @@ light:
     payload_off: "OFF"
     optimistic: false
     retain: true
+  # Yeelight
+  - platform: yeelight
+#    devices:
+#      192.168.2.15:
+#        name: Vliering voor | Zolder (auto)
+#      192.168.2.16:
+#        name: Vliering achter | Zolder (auto)
 
 #cover:
 #  - platform: mqtt
@@ -206,3 +216,21 @@ light:
 #    tilt_max: 180
 #    tilt_min: 80
 #    tilt_invert_state: True
+
+################################## GOOGLE ASSISTANT ##################################
+#google_assistant:
+#  project_id: smarty-home
+#  client_id: lkjsdfgklsdnblksdjr
+#  access_token: lkjsdnflkvnlksjdrnlkjtnl
+cloud:
+  google_actions:
+      filter:
+        include_domains:
+            - switch
+            - light
+            - scene
+      entity_config:
+        light.bedroom_light:
+          name: bedroom lights
+          room: bedroom
+          

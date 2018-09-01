@@ -1,5 +1,6 @@
 # Garden Fontain - Turns on op zonnige dagen na 16:00 of als ik of mams thuis is na 16:00 (doordeweeks)
 - alias: 'Waterornament aan - doordeweeks'
+  initial_state: 'off'
   trigger:
     # Starten als het 4 uur is of als iemand thuis komt
     - platform: time

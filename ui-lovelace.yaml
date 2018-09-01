@@ -1,0 +1,130 @@
+## LOVELACE UI ##
+
+resources:
+  - url: /local/plan-coordinates.js?v=2
+    type: js
+  - url: /local/custom_ui/calendar-card/calendar-card.js?v=1.0.1
+    type: module
+  - url: https://unpkg.com/moment@2.22.2/moment.js
+    type: js
+
+title: My Smart Home
+views:
+  # Home
+  - title: Home
+    cards:
+      # Wie is er thuis?
+      - type: entity-filter
+        title: Wie is thuis?
+        entities:
+          - device_tracker.samsunggalaxys7edgelan
+          - device_tracker.19216825
+          - device_tracker.ce10160afb463b3504
+        state_filter:
+          - home
+        card:
+          type: glance
+          column_width: 30%
+          title: Wie is thuis?
+          show_state: false
+#          show_name: false
+      - type: entity-filter
+        title: Welke lichten staan aan?
+        entities:
+          - entity: light.yeelight_ct2_7c49eb19d5f5
+            tap_action: toggle
+          - entity: light.yeelight_ct2_7c49eb19d785
+            tap_action: toggle
+          - entity: switch.lamp_slaapkamer__zolder
+            tap_action: toggle
+          - entity: switch.led_bureau__zolder
+            tap_action: toggle
+          - entity: switch.led_slaapkamer__zolder
+            tap_action: toggle
+          - entity: light.vliering_achter__zolder_auto
+            tap_action: toggle
+          - entity: light.vliering_voor__zolder_auto
+            tap_action: toggle
+#          - entity: switch.....
+#            name: Hall
+#            tap_action: toggle
+        state_filter:
+          - "on"
+        card:
+          type: glance
+          title: Welke lichten staan aan?
+          column_width: 50%
+          show_state: false
+      - type: media-control
+        entity: media_player.32pfs640212
+      - type: media-control
+        entity: media_player.googlehome2898
+      - type: media-control
+        entity: media_player.slaapkamer_zolder_2
+      # Device tracker kaart
+      - type: map
+        entities:
+          - zone.home
+          - zone.huis_marlene
+          - zone.schiphol_airport
+          - zone.school
+          - zone.station_alkmaar
+          - device_tracker.ce10160afb463b3504
+      - type: "custom:calendar-card"
+        name: "Agenda"
+        showProgressBar: true
+        entities:
+          - calendar.agenda_marlene
+          - calendar.feestdagen_in_nederland
+          - calendar.prive_agenda
+          - calendar.rooster_klaas
+    
+  # Begane grond
+  - title: Begane grond
+    cards:
+      - type: entities
+        title: Trappengang | Begane grond
+        entities:
+          - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
+      - type: entities
+        title: Hal | Begane grond
+        entities:
+          - binary_sensor.sensor_voordeur
+          - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+          
+
+    
+  # Eerste verdieping
+  - title: Eerste verdieping
+    cards:
+    
+  # Zolder
+  - title: Zolder
+    cards:
+    
+  # Tuin
+  - title: Tuin
+    cards:
+    
+  # Temperaturen in huis
+  - icon: mdi:temperature-celsius
+    title: Temperaturen in huis
+    cards:
+      - type: history-graph
+        hours_to_show: 168
+        refresh_interval: 3600
+        entities:
+          - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
+          - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+          - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+
+    
+  # Automatisering
+  - icon: mdi:home-automation
+    title: Automatisering
+    cards:
+    
+  # Systeeminformatie
+  - icon: mdi:server
+    title: Systeeminformatie
+    cards:
