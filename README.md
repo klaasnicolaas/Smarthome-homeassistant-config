@@ -17,8 +17,7 @@ automating control.
 |:---:|:---:|
 | This shows whether the configuration in this repo is valid. [Version I'm running.](.HA_VERSION) | This shows how up to date this repo is |
 | [![GitHub stars](https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg)](https://github.com/klaasnicolaas/Smarthome-homeassistant-config/stargazers) 
-| Please :star: this repo if you find it useful, like these people have. 
-| [![HA version](https://img.shields.io/badge/Home%20Assistant-0.79.2-blue.svg)](https://home-assistant.io) |
+| Please :star: this repo if you find it useful, like these people have. | [![HA version](https://img.shields.io/badge/Home%20Assistant-0.79.2-blue.svg)](https://home-assistant.io) |
 | This is the version that I am currently running with Home Assistant |
 
 ## Hardware
