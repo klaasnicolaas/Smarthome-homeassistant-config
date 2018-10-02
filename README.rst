@@ -42,7 +42,7 @@ Apps
 * Home Assistant (for iOS) -> (https://www.home-assistant.io/docs/ecosystem/ios/)
 * Home Assistant (As web app) -> (https://www.home-assistant.io/docs/frontend/mobile/)
 
-Needing help?
+Needing Help?
 ------------
 
 * Home Assistant Homepage -(https://home-assistant.io/)

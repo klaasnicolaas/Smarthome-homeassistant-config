@@ -1,7 +1,7 @@
 # Slimme meter
 - platform: dsmr
-  port: /dev/ttyUSB1
-  dsmr_version: 4
+  port: /dev/ttyUSB0
+  dsmr_version: 5
 
 # Buienradar
 - platform: buienradar

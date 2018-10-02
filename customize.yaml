@@ -32,25 +32,37 @@ sensor.power_consumption_normal:
     friendly_name: Stroom verbuik | Hoog tarief
 
 sensor.power_tariff:
-    hidden: True
+    hidden: true
 
 sensor.voltage_sags_phase_l2:
-    hidden: True
+    hidden: true
     
 sensor.voltage_sags_phase_l3:    
-    hidden: True
+    hidden: true
     
 sensor.voltage_swells_phase_l2:
-    hidden: True
+    hidden: true
     
 sensor.voltage_swells_phase_l3:
-    hidden: True
+    hidden: true
+
+sensor.power_production:   
+    hidden: true
+  
+sensor.power_production_low:  
+    hidden: true
     
+sensor.power_production_normal:
+    hidden: true
+  
+sensor.power_production_phase_l1:
+    hidden: true
+   
 sensor.power_production_phase_l2:
-    hidden: True
+    hidden: true
  
 sensor.power_production_phase_l3:
-    hidden: True
+    hidden: true
     
 # Buienradar ##########################################################    
 sensor.br_humidity:
@@ -76,37 +88,37 @@ binary_sensor.fibaro__smoke_sensor__slaapkamer_zolder_sensor:
     friendly_name: Rookmelder | Zolder
 
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_alarm_level:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_alarm_type:
-    hidden: True
+    hidden: true
     
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_burglar:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_general:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat_2:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_power_management:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke_2:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_sourcenodeid:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_system:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature:
     friendly_name: Temperatuur - Slaapkamer | Zolder
@@ -116,37 +128,37 @@ binary_sensor.fibaro__smoke_sensor__gang_begane_grond_sensor:
     friendly_name: Rookmelder | Begane grond
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_alarm_level:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_alarm_type:
-    hidden: True
+    hidden: true
     
 sensor.fibaro__smoke_sensor__gang_begane_grond_burglar:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_general:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_heat:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_heat_2:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_power_management:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_smoke:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_smoke_2:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_sourcenodeid:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_system:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__smoke_sensor__gang_begane_grond_temperature:
     friendly_name: Temperatuur - Trappengang | Begane grond
@@ -157,52 +169,52 @@ switch.fibaro__wall_plug_1_switch:
     icon: mdi:water-pump
     
 sensor.fibaro__wall_plug__1_alarm_level_2:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__wall_plug__1_alarm_type_2:
-    hidden: True
+    hidden: true
 
 #sensor.fibaro__wall_plug__1_energy_2:
 
 sensor.fibaro__wall_plug__1_exporting_2:
-    hidden: True
+    hidden: true
 
 #sensor.fibaro__wall_plug__1_power_3:
 
 #sensor.fibaro__wall_plug__1_power_4:
 
 sensor.fibaro__wall_plug__1_power_management_2:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__wall_plug__1_sourcenodeid_2:
-    hidden: True
+    hidden: true
 
 # FIBARO DOOR SENSOR ####################################################
 binary_sensor.fibaro__door_sensor__hal_begane_grond_sensor:
     friendly_name: Deur sensor - Hal | Begane grond
     
 sensor.fibaro__door_sensor__hal_begane_grond_alarm_level:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__door_sensor__hal_begane_grond_alarm_type:
-    hidden: True
+    hidden: true
     
 sensor.fibaro__door_sensor__hal_begane_grond_burglar:
-    hidden: True
+    hidden: true
 
 sensor.fibaro__door_sensor__hal_begane_grond_heat:
-    hidden: True
+    hidden: true
     
 sensor.fibaro__door_sensor__hal_begane_grond_power_management:
-    hidden: True
+    hidden: true
     
 sensor.fibaro__door_sensor__hal_begane_grond_sourcenodeid:
-    hidden: True
+    hidden: true
     
 sensor.fibaro__door_sensor__hal_begane_grond_temperature:
     friendly_name: Temperatuur - Hal | Begane grond
 
-####################### HOME ASSISTANT STATS ###################
+# HOME ASSISTANT STATS ####################################################
 sensor.zwave_battery_front_door:
     friendly_name: Voordeur
 
@@ -212,13 +224,24 @@ sensor.zwave_battery_smoke_sensor_begane_grond:
 sensor.zwave_battery_smoke_sensor_slaapkamer_zolder:
     friendly_name: Smoke sensor | slaapkamer zolder
     
-####################### MEDIA PLAYER ###########################
+# MEDIA PLAYER ####################################################
 media_player.32pfs640212:
     friendly_name: TV - Woonkamer
 
-####################### YEELIGHT ###########################
+# YEELIGHT ####################################################
 light.yeelight_ct2_7c49eb19d5f5:
     friendly_name: Vliering achter | Zolder
 
 light.yeelight_ct2_7c49eb19d785:
     friendly_name: Vliering voor | Zolder
+    
+# WAKE ON LAN ####################################################
+switch.computer_klaas:
+    icon: mdi:desktop-classic
+    
+# AUTOMATION ####################################################
+automation.telegram_bot_send_message_if_voordeur_is_open:
+    friendly_name: Telegram - voordeur
+    
+automation.telegram_bot_send_message_if_voordeur_is_open__vakantie_mode:
+    friendly_name: Telegram - voordeur (vakantie mode)

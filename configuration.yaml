@@ -33,7 +33,8 @@ http:
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
   trusted_networks: 
-    - !secret intern_ip
+    - !secret intern_ip_1
+    - !secret intern_ip_2
     - 127.0.0.1
   login_attempts_threshold: 5
 
@@ -55,15 +56,6 @@ conversation:
 history:
 
 recorder: !include recorder.yaml
-
-influxdb:
-  host: 127.0.0.1
-  exclude:
-    domains:
-        - updater
-        - device_tracker
-  tags:
-    source: hass
 
 # View all events in a logbook
 logbook: 
@@ -122,15 +114,15 @@ zwave:
   usb_path: /dev/ttyACM0
 
 # MQTT Broker ##########################################
-mqtt:
-  broker: !secret mqtt_broker_ip
-  port: 1883
-  username: !secret mqtt_broker_user
-  password: !secret mqtt_broker_pass
+#mqtt:
+#  broker: !secret mqtt_broker_ip
+#  port: 1883
+#  username: !secret mqtt_broker_user
+#  password: !secret mqtt_broker_pass
  
 # RFXCom ###############################################
 rfxtrx:
-  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1Y0NJGR-if00-port1
+  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1Y0NJGR-if00-port0
   debug: False
   
 # KlikAanKlikUit
@@ -184,25 +176,25 @@ panel_custom:
 
 ################################## LIGHTS ##################################      
 light:
-  - platform: mqtt
-    name: "Luxaflex Zolder"
-    state_topic: "blind/zolder/state"
-    command_topic: "blind/zolder/command"
-    brightness_state_topic: "blind/zolder/state"
-    brightness_command_topic: "blind/zolder/level"
-    brightness_scale: 100
-    qos: 0
-    payload_on: "ON"
-    payload_off: "OFF"
-    optimistic: false
-    retain: true
+#  - platform: mqtt
+#    name: "Luxaflex Zolder"
+#    state_topic: "blind/zolder/state"
+#    command_topic: "blind/zolder/command"
+#    brightness_state_topic: "blind/zolder/state"
+#    brightness_command_topic: "blind/zolder/level"
+#    brightness_scale: 100
+#    qos: 0
+#    payload_on: "ON"
+#    payload_off: "OFF"
+#    optimistic: false
+#    retain: true
   # Yeelight
   - platform: yeelight
-#    devices:
-#      192.168.2.15:
-#        name: Vliering voor | Zolder (auto)
-#      192.168.2.16:
-#        name: Vliering achter | Zolder (auto)
+    devices:
+      192.168.0.10:
+        name: Vliering voor | Zolder (auto)
+      192.168.0.9:
+        name: Vliering achter | Zolder (auto)
 
 #cover:
 #  - platform: mqtt

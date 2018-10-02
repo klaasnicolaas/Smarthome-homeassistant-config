@@ -2,7 +2,7 @@ device_tracker:
   - platform: nmap_tracker
     home_interval: 15
     track_new_devices: yes
-    consider_home: 120
+    consider_home: 180
     hosts:
       - !secret nmap_device_1
       - !secret nmap_device_2

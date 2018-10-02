@@ -89,8 +89,6 @@ slaapkamer_zolder_view:
         - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
         - light.vliering_achter__zolder_auto
         - light.vliering_voor__zolder_auto
-        - light.yeelight_ct2_7c49eb19d5f5
-        - light.yeelight_ct2_7c49eb19d785
         - switch.computer_klaas
         
 # Tuin 
@@ -137,11 +135,12 @@ automatisering_view:
         - automation.smoke_sensor_open__gang__begane_grond_no_burglar
         - automation.smoke_sensor_open__slaapkamer__zolder_burglar_detection
         - automation.smoke_sensor_open__slaapkamer__zolder_no_burglar
-        - automation.telegram_bot_send_message_if_voordeur_is_open
         - automation.telegram_bot_that_reply_pong_to_ping
         - automation.update_available_notification
         - automation.waterornament_aan__doordeweeks
         - automation.waterornament_uit__doordeweeks
+        - automation.telegram_bot_send_message_if_voordeur_is_open
+        - automation.telegram_bot_send_message_if_voordeur_is_open__vakantie_mode
         
         
 ################################################################################

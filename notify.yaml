@@ -1,3 +1,14 @@
-  - name: Telegram
-    platform: telegram
-    chat_id: !secret telegram_chat_id
+# Telegram Klaas
+- name: telegram_klaas
+  platform: telegram
+  chat_id: !secret telegram_chat_id_klaas
+
+# Telegram Grietje
+- name: telegram_grietje
+  platform: telegram
+  chat_id: !secret telegram_chat_id_grietje
+  
+# Telegram Thuis groep
+- name: telegram_thuis
+  platform: telegram
+  chat_id: !secret telegram_chat_id_homegroup

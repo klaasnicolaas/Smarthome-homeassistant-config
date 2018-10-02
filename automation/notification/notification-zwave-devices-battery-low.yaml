@@ -9,7 +9,7 @@
     for:
       seconds: 30
   action:
-    service: notify.telegram
+    service: notify.telegram_klaas
     data:
       message: 'Batterij van de voordeur sensor is bijna leeg, Percentage: {{ states.sensor.zwave_battery_front_door.state }}%'
 
@@ -23,7 +23,7 @@
     for:
       seconds: 30    
   action:
-    service: notify.telegram
+    service: notify.telegram_klaas
     data:
       message: 'Batterij van de rookmelder op de begane grond is bijna leeg, Percentage: {{ states.sensor.zwave_battery_smoke_sensor_begane_grond.state }}%'
 
@@ -37,6 +37,6 @@
     for:
       seconds: 30
   action:
-    service: notify.telegram
+    service: notify.telegram_klaas
     data:
       message: 'Batterij van de rookmelder op kamer zolder is bijna leeg, Percentage: {{ states.sensor.zwave_battery_smoke_sensor_slaapkamer_zolder.state }}%'
