@@ -10,5 +10,4 @@ cd /home/homeassistant/.homeassistant
 git add .
 git commit -a -m "$1"
 git push origin master
-thuis
 exit
