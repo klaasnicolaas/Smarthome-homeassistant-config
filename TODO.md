@@ -41,8 +41,9 @@
 - [x] Make use of WOL and turn on computers via home assistant
 - [x] Start to using the new UI: LoveLace
 - [x] Google calendar integration
+- [x] Write data to an external database. This also speeds up the collection process in the log and history tab
 
-- Analytics
+- Analytics 
 	- [x] Reading the battery percentages of all Z-wave devices 
 	- [x] Show info about up and download speed
 	- [x] Show info about the system version of Hassbian

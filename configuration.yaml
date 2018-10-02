@@ -55,6 +55,7 @@ conversation:
 # Enables support for tracking state changes over time
 history:
 
+# Record states and write it to a place
 recorder: !include recorder.yaml
 
 # View all events in a logbook
@@ -114,11 +115,11 @@ zwave:
   usb_path: /dev/ttyACM0
 
 # MQTT Broker ##########################################
-#mqtt:
-#  broker: !secret mqtt_broker_ip
-#  port: 1883
-#  username: !secret mqtt_broker_user
-#  password: !secret mqtt_broker_pass
+mqtt:
+  broker: !secret mqtt_broker_ip
+  port: 1883
+  username: !secret mqtt_broker_user
+  password: !secret mqtt_broker_pass
  
 # RFXCom ###############################################
 rfxtrx:

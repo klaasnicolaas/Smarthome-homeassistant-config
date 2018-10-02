@@ -18,6 +18,13 @@ homeassistant:
         homebridge_hidden: false
 
     ################################################
+    ## Input Text
+    ################################################
+    input_text.github_message:
+      <<: *customize
+      icon: mdi:pencil
+    
+    ################################################
     ## Binary Sensor
     ################################################
 
@@ -70,7 +77,7 @@ homeassistant:
       friendly_name:  Mislukte inlogpogingen
       icon: mdi:alert
 
-    sensor.myipopendnscom:
+    sensor.myip:
       <<: *customize
       friendly_name: Publiek IP-adres
       icon: mdi:network
@@ -87,7 +94,7 @@ homeassistant:
     sensor.python_version:
       <<: *customize
       friendly_name: Python geinstalleerde versie
-  ################################################
+    ################################################
     ## Group
     ################################################
 
@@ -111,6 +118,28 @@ homeassistant:
       <<: *customize
       friendly_name: Netwerk
       icon: mdi:network
+      
+    ################################################
+    ## Script
+    ################################################
+    
+    script.github_push:
+      <<: *customize
+      icon: mdi:github-circle
+      friendly_name: Push to Github
+      
+    script.quick_reboot:
+      <<: *customize
+      icon: mdi:server-network
+      can_cancel: false
+      friendly_name: Reboot Raspberry Pi
+      
+    script.quick_restart:
+      <<: *customize
+      icon: mdi:home-assistant
+      can_cancel: false
+      friendly_name: Restart Homeassistant
+    
 
 ################################################
 ## Binary Sensor
@@ -187,6 +216,27 @@ sensor:
     name: Python Version
     command: python3 --version
     scan_interval: 86400
+  ###### Latest github Commit
+  - platform: command_line
+    command: "python /home/homeassistant/.homeassistant/extras/shell/latest_commit.py"
+    name: 'Latest Github Commit'
+    scan_interval: 60
+################################################
+## Input boolean
+################################################
+
+input_boolean:
+  maintenance_mode:
+    name: Onderhouds Mode
+    icon: mdi:auto-fix
+################################################
+## Input text
+################################################
+  
+input_text:
+  github_message:
+    name: Commit Message
+    initial: Push from local
 ################################################
 ## Group
 ################################################
@@ -202,6 +252,7 @@ group:
       - group.host_network
       - group.host_info
       - group.host_batterij_zwave
+      - group.host_maintenance
   host_performance:
     # Systeeminformatie
     name: System Performance
@@ -226,7 +277,7 @@ group:
       - sensor.speedtest_ping
       - sensor.speedtest_download
       - sensor.speedtest_upload
-      - sensor.myipopendnscom
+      - sensor.myip
       - sensor.ssl_certificate_expiry
   host_info:
     name: Home Assistant Info
@@ -243,6 +294,29 @@ group:
       - sensor.zwave_battery_front_door
       - sensor.zwave_battery_smoke_sensor_begane_grond
       - sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
+  host_maintenance:
+    name: Onderhoud
+    control: hidden
+    entities:
+      - input_boolean.maintenance_mode
+      - script.quick_restart
+      - script.quick_reboot
+      - sensor.latest_github_commit
+      - input_text.github_message
+      - script.github_push
+      
+################################################
+## Shell Command
+################################################
+
+shell_command:
+    
+    github_push: /home/homeassistant/.homeassistant/extras/bash/send-to-github.sh "{{ states('input_text.github_message') }}"
+    
+    quick_restart: sudo systemctl restart home-assistant@homeassistant.service
+    
+    quick_reboot: sudo reboot
+    
 ################################################
 ## Alert
 ################################################
@@ -257,6 +331,7 @@ alert:
     skip_first: False
     notifiers:
       - telegram_klaas
+  
   cpu_hot:
     name: Temperatuur CPU is hoog
     entity_id: binary_sensor.cpu_hot
@@ -266,6 +341,7 @@ alert:
     skip_first: False
     notifiers:
       - telegram_klaas
+  
   db_large:
     name: Database Large
     entity_id: binary_sensor.db_large
@@ -279,7 +355,49 @@ alert:
     skip_first: false
     notifiers:
       - telegram_klaas
+      
+  maintenance_mode_alert:
+    name: Onderhouds Mode staat al aan voor een lange tijd
+    done_message: Maintenance Mode de-activated
+    entity_id: input_boolean.maintenance_mode
+    repeat:
+      - 60
+    skip_first: true
+    notifiers:
+      - telegram_klaas
 
+################################################
+## Script
+################################################
+
+script:
+  github_push:    
+    alias: ' '
+    sequence:
+      - condition: template
+        value_template: "{{ not is_state('input_text.github_message' , '' ) }}"
+      - service: shell_command.github_push
+      - service: persistent_notification.create
+        data:
+          notification_id: "Github_push_alert"
+          title: "Github"
+          message: "You have pushed your local files to github, you must merge the branches on github then sync the master branch here."
+          
+  quick_restart:
+    alias: ' '
+    sequence:
+      - service: homeassistant.turn_on
+        entity_id: input_boolean.maintenance_mode
+      - delay: 00:00:02
+      - service: shell_command.quick_restart
+      
+  quick_reboot:
+    alias: ' '
+    sequence:
+      - service: homeassistant.turn_on
+        entity_id: input_boolean.maintenance_mode
+      - delay: 00:00:02
+      - service: shell_command.quick_reboot
 ################################################
 ## Automation
 ################################################
