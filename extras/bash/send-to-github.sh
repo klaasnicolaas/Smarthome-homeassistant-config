@@ -8,7 +8,7 @@
 
 cd /home/homeassistant/.homeassistant
 git add .
-git checkout -b master
-git commit -m "$1"
+git commit -a -m "$1"
 git push origin master
+thuis
 exit
