@@ -24,9 +24,7 @@ valid. [Version I'm running.](.HA\_VERSION) |
 |:---:|:---:|
 | [![LastCommit](<https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/commits/master>) | This shows how up to date this repo is |
 | [![GitHubstars](<https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/stargazers>) | [![GitHub issues](https://img.shields.io/github/issues/mf-social/Home-Assistant.svg)](https://github.com/mf-social/Home-Assistant/issues) |
-| Please :star: this repo if you find it useful, like these people have. | This is like my TODO list |
-|[![HAversion](<https://img.shields.io/badge/Home%20Assistant-0.79.2-blue.svg>)](<https://home-assistant.io>)| [![contributions welcome](https://img.shields.io/badge/contributions-welcome-blue.svg?style=flat)](https://github.com/mf-social/Home-Assistant/pulls) |
-| This tells you you can use anything you like from this repo for your project, gratis! | If you have any ideas, they're always welcome.  Either submit an issue or a PR, or drop me a message! |
+| [![HAversion](<https://img.shields.io/badge/Home%20Assistant-0.79.2-blue.svg>)](<https://home-assistant.io>) | This is like my TODO list |
 
 
 ## Hardware
