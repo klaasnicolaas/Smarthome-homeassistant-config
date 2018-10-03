@@ -14,7 +14,7 @@ automating control.
 ## Information
 
 | [![TravisCI](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master>)](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config>) | This shows whether the configuration in this repo is
-valid. [Version I'm running.](.HA\_VERSION)|
+valid. [Version I'm running.](.HA\_VERSION) |
 |:---:|:---:|
 | [![LastCommit](<https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/commits/master>) | This shows how up to date this repo is |
 | [![GitHub
