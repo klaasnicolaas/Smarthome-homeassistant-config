@@ -22,8 +22,7 @@ valid. [Version I'm running.](.HA\_VERSION) |
 
 
 
-| [![TravisCI](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master>)](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config>) | This shows whether the configuration in this repo is
-valid. [Version I'm running.](.HA\_VERSION)|
+| [![TravisCI](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master>)](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config>) | [![LastCommit](https://img.shields.io/github/last-commit/mf-social/Home-Assistant.svg?color=blue&style=plasticr)](https://github.com/mf-social/Home-Assistant/commits/master)|
 |:---:|:---:|
 | [![LastCommit](<https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/commits/master>) | This shows how up to date this repo is |
 | [![GitHubstars](<https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/stargazers>) | [![GitHub issues](https://img.shields.io/github/issues/mf-social/Home-Assistant.svg)](https://github.com/mf-social/Home-Assistant/issues) |
