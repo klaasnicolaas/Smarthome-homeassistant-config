@@ -13,17 +13,10 @@ automating control.
 
 ## Information
 
-| [![TravisCI](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master>)](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config>) | This shows whether the configuration in this repo is
-valid. [Version I'm running.](.HA\_VERSION) |
-|:---:|:---:|
-| [![LastCommit](<https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/commits/master>) | This shows how up to date this repo is |
-| [![GitHubstars](<https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/stargazers>) | Please :star: this repo if you find it useful, like these people have |
-| [![HAversion](<https://img.shields.io/badge/Home%20Assistant-0.79.2-blue.svg>)](<https://home-assistant.io>) | This is the version that I am currently running with Home Assistant |
-
 | [![TravisCI](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master>)](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config>) | [![LastCommit](<https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/commits/master>)|
 |:---:|:---:|
 | This shows whether the configuration in this repo is valid. [Version I'm running.](.HA_VERSION) | This shows how up to date this repo is |
-| [![GitHub stars](https://img.shields.io/github/stars/mf-social/Home-Assistant.svg)](https://github.com/mf-social/Home-Assistant/stargazers) | [![GitHub issues](https://img.shields.io/github/issues/mf-social/Home-Assistant.svg)](https://github.com/mf-social/Home-Assistant/issues) |
+| [![GitHubstars](<https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/stargazers>) | [![HAversion](<https://img.shields.io/badge/Home%20Assistant-0.79.2-blue.svg>)](<https://home-assistant.io>) |
 | Please :star: this repo if you find it useful, like these people have. | This is the version that I am currently running with Home Assistant |
 
 
