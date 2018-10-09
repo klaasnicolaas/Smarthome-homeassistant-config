@@ -12,6 +12,9 @@ exclude:
         - group
         - scene
         - script
+        - weblink
+        - calendar
+        - media_player
     entities:
         - sensor.br_ground_temperature
         - sensor.br_humidity
@@ -26,4 +29,9 @@ exclude:
         - zone.schiphol_airport
         - zone.school
         - zone.station_alkmaar
+        - sensor.ssl_certificate_expiry
+        - sensor.postnl
+        - sensor.myip
+        - sensor.power_consumption_phase_l2
+        - sensor.power_consumption_phase_l3
         

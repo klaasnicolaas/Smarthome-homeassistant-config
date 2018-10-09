@@ -37,6 +37,8 @@ http:
     - !secret intern_ip_2
     - 127.0.0.1
   login_attempts_threshold: 5
+  
+websocket_api:
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -61,6 +63,11 @@ recorder: !include recorder.yaml
 # View all events in a logbook
 logbook: 
   exclude:
+    domains:
+        - updater
+        - calendar
+        - media_player
+        - weblink
     entities:
         - sensor.br_ground_temperature
         - sensor.br_humidity
@@ -68,7 +75,11 @@ logbook:
         - sensor.br_symbol
         - sensor.br_temperature
         - sensor.br_wind_speed
-        - sensor.external_ip
+        - sensor.ssl_certificate_expiry
+        - sensor.postnl
+        - sensor.myip
+        - sensor.power_consumption_phase_l2
+        - sensor.power_consumption_phase_l3
 
 logger:
     default: info
@@ -113,6 +124,7 @@ device_tracker:
 # Z-Wave Controller ####################################
 zwave:
   usb_path: /dev/ttyACM0
+  network_key: !secret network_key
 
 # MQTT Broker ##########################################
 mqtt:

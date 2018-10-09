@@ -33,7 +33,7 @@
 - [x] Reading weather info from Buienradar
 - [x] Sending telegram message if a z-wave sensor had low battery
 - [x] Sending telegram message if smoke sensor detect fire
-- [x] Use an SSL certificate for extra security
+- [x] Use an SSL certificate for extra security and sensor to show how many days to expire
 - [x] Sending telegram message if it starts to rain within a hour
 - [x] Send notifications for package delivery (PostNL)
 - [x] Operate the water fountain
@@ -42,6 +42,7 @@
 - [x] Start to using the new UI: LoveLace
 - [x] Google calendar integration
 - [x] Write data to an external database. This also speeds up the collection process in the log and history tab
+- [x] Commit to github by filling in a text box and pressing the button, so easily! 
 
 - Analytics 
 	- [x] Reading the battery percentages of all Z-wave devices 

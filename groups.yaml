@@ -49,12 +49,15 @@ begane_grond_hal:
     entities:
         - binary_sensor.sensor_voordeur
         - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+        - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
+        - sensor.fibaro__motion_sensor__hal_begane_grond_luminance
 
 # Temperaturen huis groep
 temperaturen:
     name: Temperaturen
     entities: 
         - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+        - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
         - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
         - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
         
@@ -107,6 +110,7 @@ temperaturen_view:
     entities:
         - group.temperaturen
         - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+        - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
         - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
         - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
 

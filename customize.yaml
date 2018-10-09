@@ -212,11 +212,24 @@ sensor.fibaro__door_sensor__hal_begane_grond_sourcenodeid:
     hidden: true
     
 sensor.fibaro__door_sensor__hal_begane_grond_temperature:
-    friendly_name: Temperatuur - Hal | Begane grond
+    friendly_name: Temperatuur (deur sensor) - Hal | Begane grond
+
+# FIBARO MOTION SENSOR ####################################################
+binary_sensor.fibaro__motion_sensor__hal_begane_grond_sensor:
+    friendly_name: Bewegings sensor - Hal | Begane grond
+
+sensor.fibaro__motion_sensor__hal_begane_grond_temperature:
+    friendly_name: Temperatuur (bewegings sensor) - Hal | Begane grond
+    
+sensor.fibaro__motion_sensor__hal_begane_grond_luminance:
+    friendly_name: Lichtsterkte (bewegings sensor) - Hal | Begane grond
 
 # HOME ASSISTANT STATS ####################################################
-sensor.zwave_battery_front_door:
-    friendly_name: Voordeur
+sensor.zwave_battery_door_sensor_hal_begane_grond:
+    friendly_name: Door sensor | begane grond
+    
+sensor.zwave_battery_motion_sensor_hal_begane_grond:
+    friendly_name: Motion sensor | begane grond
 
 sensor.zwave_battery_smoke_sensor_begane_grond:
     friendly_name: Smoke sensor | begane grond

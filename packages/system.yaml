@@ -3,6 +3,10 @@
 ################################################
 
 homeassistant:
+  customize_glob:
+    weblink.*:
+      icon: mdi:web
+  
   customize:
     ################################################
     ## Node Anchors
@@ -90,6 +94,10 @@ homeassistant:
     sensor.ha_installed_version:
       <<: *customize
       friendly_name: Hassbian geinstalleerde versie
+      
+    sensor.ha_upstream:
+      <<: *customize
+      friendly_name: Hassbian nieuwste versie
     
     sensor.python_version:
       <<: *customize
@@ -141,6 +149,16 @@ homeassistant:
       friendly_name: Restart Homeassistant
     
 
+################################################
+## Weblink
+################################################
+
+weblink:
+  entities:
+    - name: Github
+      url: https://github.com/klaasnicolaas/Smarthome-homeassistant-config
+    - name: Router
+      url: !secret weblink_router
 ################################################
 ## Binary Sensor
 ################################################
@@ -221,6 +239,11 @@ sensor:
     command: "python /home/homeassistant/.homeassistant/extras/shell/latest_commit.py"
     name: 'Latest Github Commit'
     scan_interval: 60
+  ###### Home Assistant updates
+  - platform: scrape
+    name: HA upstream
+    resource: https://pypi.org/project/homeassistant/#history
+    select: 'a[href^="/project/homeassistant/0"]'
 ################################################
 ## Input boolean
 ################################################
@@ -229,10 +252,11 @@ input_boolean:
   maintenance_mode:
     name: Onderhouds Mode
     icon: mdi:auto-fix
+
 ################################################
 ## Input text
 ################################################
-  
+
 input_text:
   github_message:
     name: Commit Message
@@ -285,13 +309,15 @@ group:
       - sensor.last_boot
       - sensor.ha_uptime
       - sensor.ha_installed_version
+      - sensor.ha_upstream
       - sensor.python_version
       - updater.updater
       - sensor.bad_login
   host_batterij_zwave:
     name: Batterij Percentages
     entities:
-      - sensor.zwave_battery_front_door
+      - sensor.zwave_battery_door_sensor_hal_begane_grond
+      - sensor.zwave_battery_motion_sensor_hal_begane_grond
       - sensor.zwave_battery_smoke_sensor_begane_grond
       - sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
   host_maintenance:
@@ -304,6 +330,8 @@ group:
       - sensor.latest_github_commit
       - input_text.github_message
       - script.github_push
+      - weblink.github
+      - weblink.router
       
 ################################################
 ## Shell Command
@@ -404,14 +432,16 @@ script:
 
 automation:
   - alias: 'Update Available Notification'
+    initial_state: true
     hide_entity: true
     trigger:
       - platform: state
-        entity_id: updater.updater
+        entity_id: sensor.ha_upstream
     action:
+      - delay: '00:10:00'
       - service: notify.telegram_klaas
         data:
-          message: 'Update voor Home Assistant beschikbaar.'
+          message: 'Update voor Home Assistant beschikbaar, versie: {{ states.sensor.ha_upstream.state }}'
 
 ################################################
 ## Notify
