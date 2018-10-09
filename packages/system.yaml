@@ -156,7 +156,7 @@ homeassistant:
 weblink:
   entities:
     - name: Github
-      url: https://github.com/klaasnicolaas/Smarthome-homeassistant-config
+      url: "https://github.com/klaasnicolaas/Smarthome-homeassistant-config"
     - name: Router
       url: !secret weblink_router
 ################################################
