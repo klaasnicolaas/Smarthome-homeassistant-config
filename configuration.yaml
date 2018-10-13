@@ -56,6 +56,20 @@ conversation:
 
 # Enables support for tracking state changes over time
 history:
+  exclude:
+    domains:
+        - updater
+        - calendar
+        - media_player
+        - weblink  
+    entities:
+        - sensor.ssl_certificate_expiry
+        - sensor.postnl
+        - sensor.myip
+        - sensor.power_consumption_phase_l2
+        - sensor.power_consumption_phase_l3
+        - sensor.voltage_sags_phase_l1
+        - sensor.voltage_swells_phase_l1
 
 # Record states and write it to a place
 recorder: !include recorder.yaml
@@ -63,11 +77,6 @@ recorder: !include recorder.yaml
 # View all events in a logbook
 logbook: 
   exclude:
-    domains:
-        - updater
-        - calendar
-        - media_player
-        - weblink
     entities:
         - sensor.br_ground_temperature
         - sensor.br_humidity
@@ -75,11 +84,6 @@ logbook:
         - sensor.br_symbol
         - sensor.br_temperature
         - sensor.br_wind_speed
-        - sensor.ssl_certificate_expiry
-        - sensor.postnl
-        - sensor.myip
-        - sensor.power_consumption_phase_l2
-        - sensor.power_consumption_phase_l3
 
 logger:
     default: info
@@ -171,6 +175,13 @@ binary_sensor:
           friendly_name: Voordeur
           value_template: >
             {{ states.sensor.fibaro__door_sensor__hal_begane_grond_access_control.state < '23' }}
+    - platform: template
+      sensors:
+        sensor_beweging_hal_begane_grond:
+           device_class: motion
+           friendly_name: Bewegingsmelder - Hal | Begane grond
+           value_template: >
+            {{ states.sensor.fibaro__motion_sensor__hal_begane_grond_burglar.state == '8' }}
     - platform: workday
       country: NL
       workdays: [ mon, tue, wed, thu, fri ]

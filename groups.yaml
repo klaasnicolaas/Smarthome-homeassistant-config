@@ -49,6 +49,7 @@ begane_grond_hal:
     entities:
         - binary_sensor.sensor_voordeur
         - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+        - binary_sensor.sensor_beweging_hal_begane_grond
         - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
         - sensor.fibaro__motion_sensor__hal_begane_grond_luminance
 
