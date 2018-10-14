@@ -36,6 +36,10 @@ homeassistant:
       <<: *customize
       friendly_name: Database groot
 
+    binary_sensor.home_assistant:
+      <<: *customize
+      friendly_name: Home Assistant status
+
     ################################################
     ## Sensor
     ################################################
@@ -78,7 +82,7 @@ homeassistant:
 
     sensor.bad_login:
       <<: *customize
-      friendly_name:  Mislukte inlogpogingen
+      friendly_name: Mislukte inlogpogingen
       icon: mdi:alert
 
     sensor.myip:
@@ -86,9 +90,9 @@ homeassistant:
       friendly_name: Publiek IP-adres
       icon: mdi:network
 
-    sensor.ha_uptime:
+    sensor.ha_runtime:
       <<: *customize
-      friendly_name: Sinds laatste start HA
+      friendly_name: Uptime sinds laatste start HA
       icon: mdi:clock
       
     sensor.ha_installed_version:
@@ -102,6 +106,35 @@ homeassistant:
     sensor.python_version:
       <<: *customize
       friendly_name: Python geinstalleerde versie
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_state:
+      <<: *customize
+      friendly_name: Travis Ci laatste build status
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_finished_at:
+      <<: *customize
+      friendly_name: Travis Ci laatste build datum
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_duration:
+      <<: *customize
+      hidden: true
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_id:
+      <<: *customize
+      hidden: true
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_started_at:
+      <<: *customize
+      hidden: true
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_state:
+      <<: *customize
+      hidden: true
+
+    sensor.last_boot:
+      <<: *customize
+      friendly_name: Laatste (re)boot Raspberry Pi
+
     ################################################
     ## Group
     ################################################
@@ -178,7 +211,9 @@ binary_sensor:
     sensors:
       db_large:
         value_template: '{{ states.sensor.homeassistant_v2db.state | float > 5000 }}'
-
+  ##### Uptime robot
+  - platform: uptimerobot
+    api_key: !secret uptime_robot_key
 ################################################
 ## Sensor
 ################################################
@@ -207,24 +242,46 @@ sensor:
   - platform: dnsip
   - platform: command_line
     # https://home-assistant.io/components/sensor.command_line/
-    name: "HA Uptime"
-    command: echo "$(($(date +%s) - $(date -d "$(head -n1 /config/home-assistant.log | cut -d' ' -f-2)" +%s)))"
-    scan_interval: 720 # seconds
+    name: "HA runtime"
+    command: echo "$(($(date +%s) - $(date --date="`systemctl show home-assistant.service -p ActiveEnterTimestamp | awk -F'=' '{print $2}'`" "+%s")))"
+    scan_interval: 60
     value_template: >-
       {% set uptime = value | int %}
-      {% set seconds = uptime % 60 %}
       {% set minutes = ((uptime % 3600) / 60) | int %}
       {% set hours = ((uptime % 86400) / 3600) | int %}
       {% set days = (uptime / 86400) | int %}
-      {% if days > 0 %}
-        {% if days == 1 %}
-          1 day
-        {% else %}
-          {{ days }} days
-        {% endif %}
-        {{ ', ' }}
-      {% endif %}
-      {{ '%02d' % hours }}:{{ '%02d' % minutes }}
+
+      {%- if uptime < 60 -%}
+        Less than a minute
+      {%- else -%}
+        {%- if days > 0 -%}
+          {%- if days == 1 -%}
+            1 day
+          {%- else -%}
+            {{ days }} days
+          {%- endif -%}
+        {%- endif -%}
+        {%- if hours > 0 -%}
+          {%- if days > 0 -%}
+            {{ ', ' }}
+          {%- endif -%}
+          {%- if hours == 1 -%}
+            1 hour
+          {%- else -%}
+            {{ hours }} hours
+          {%- endif -%}
+        {%- endif -%}
+        {%- if minutes > 0 -%}
+          {%- if days > 0 or hours > 0 -%}
+            {{ ', ' }}
+          {%- endif -%}
+          {%- if minutes == 1 -%}
+            1 minute
+          {%- else -%}
+            {{ minutes }} minutes
+          {%- endif -%}
+        {%- endif -%}
+      {%- endif -%}
   - platform: cert_expiry
     host: !secret cert_expiry_host
   - platform: version
@@ -244,6 +301,9 @@ sensor:
     name: HA upstream
     resource: https://pypi.org/project/homeassistant/#history
     select: 'a[href^="/project/homeassistant/0"]'
+  ##### Travis Ci
+  - platform: travisci
+    api_key: !secret travisci_key
 ################################################
 ## Input boolean
 ################################################
@@ -307,12 +367,15 @@ group:
     name: Home Assistant Info
     entities:
       - sensor.last_boot
-      - sensor.ha_uptime
+      - sensor.ha_runtime
+      - binary_sensor.home_assistant
       - sensor.ha_installed_version
       - sensor.ha_upstream
       - sensor.python_version
       - updater.updater
       - sensor.bad_login
+      - sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_finished_at
+      - sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_state
   host_batterij_zwave:
     name: Batterij Percentages
     entities:

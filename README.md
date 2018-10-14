@@ -6,7 +6,7 @@ automating control.
 
 ## Current Configuration
 
--   RaspberryPi 3B using the Hassbian installation -\>
+-   RaspberryPi 3B+ using the Hassbian installation -\>
     (<https://home-assistant.io/docs/installation/hassbian/>).
 -   Using also the Lovelace UI -\>
     (<https://www.home-assistant.io/lovelace/>).
@@ -16,8 +16,10 @@ automating control.
 | [![TravisCI](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master>)](<https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config>) | [![LastCommit](<https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/commits/master>)|
 |:---:|:---:|
 | This shows whether the configuration in this repo is valid. [Version I'm running.](.HA_VERSION) | This shows how up to date this repo is |
-| [![GitHubstars](<https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/stargazers>) | [![HAversion](<https://img.shields.io/badge/Home%20Assistant-0.79.2-blue.svg>)](<https://home-assistant.io>) |
+| [![GitHubstars](<https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg>)](<https://github.com/klaasnicolaas/Smarthome-homeassistant-config/stargazers>) | [![HAversion](<https://img.shields.io/badge/Home%20Assistant-0.80.0-blue.svg>)](<https://home-assistant.io>) |
 | Please :star: this repo if you find it useful, like these people have. | This is the version that I am currently running with Home Assistant |
+| [![Uptime Robot status](https://img.shields.io/uptimerobot/status/m781145866-63b6526d17827ec6eebe586f.svg)](https://uptimerobot.com/) |  |
+| I use Uptime Robot to monitor my instance from outside in case of crashes |  |
 
 
 ## Hardware

@@ -42,7 +42,9 @@
 - [x] Start to using the new UI: LoveLace
 - [x] Google calendar integration
 - [x] Write data to an external database. This also speeds up the collection process in the log and history tab
-- [x] Commit to github by filling in a text box and pressing the button, so easily! 
+- [x] Commit to github by filling in a text box and pressing the button, so easily!
+- [x] Integration with Uptime Robot, so I get notified when the Pi is down.
+- [x] Integration with Travis Ci.
 
 - Analytics 
 	- [x] Reading the battery percentages of all Z-wave devices 

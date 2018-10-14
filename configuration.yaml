@@ -160,12 +160,6 @@ switch:
       host: !secret host_ip_pc_klaas
     
 
-################################## GOOGLE CALENDAR ##################################    
-google:
-  client_id: !secret google_calendar_client_id
-  client_secret: !secret google_calendar_secret_key
-  track_new_calendar: true
-
 ########################## BINAIR SENSORS #######################################    
 binary_sensor:
     - platform: template
@@ -235,9 +229,8 @@ light:
 
 ################################## GOOGLE ASSISTANT ##################################
 #google_assistant:
-#  project_id: smarty-home
-#  client_id: lkjsdfgklsdnblksdjr
-#  access_token: lkjsdnflkvnlksjdrnlkjtnl
+#  project_id: !secret google_assistant_project_id
+
 cloud:
   google_actions:
       filter:
@@ -247,6 +240,14 @@ cloud:
             - scene
       entity_config:
         light.bedroom_light:
-          name: bedroom lights
-          room: bedroom
+          name: slaapkamer lampen
+          aliases:
+            - slaapkamer lichten
+            - slaapkamer zolder lampen
+          room: slaapkamer
           
+################################## GOOGLE CALENDAR ##################################    
+google:
+  client_id: !secret google_calendar_client_id
+  client_secret: !secret google_calendar_secret_key
+  track_new_calendar: true
