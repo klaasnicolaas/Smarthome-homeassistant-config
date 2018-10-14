@@ -116,6 +116,7 @@ scene: !include_dir_merge_list scenes/
 
 ####################### GPS Logger ######################
 device_tracker: 
+    # GPS Logger
     - platform: gpslogger
       password: !secret device_tracker_password
 
@@ -209,9 +210,9 @@ light:
   # Yeelight
   - platform: yeelight
     devices:
-      192.168.0.10:
+      !secret yeelight_1:
         name: Vliering voor | Zolder (auto)
-      192.168.0.9:
+      !secret yeelight_2:
         name: Vliering achter | Zolder (auto)
 
 #cover:
