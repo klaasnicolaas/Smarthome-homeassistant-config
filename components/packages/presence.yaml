@@ -1,0 +1,247 @@
+################################################
+## Packages Presence
+################################################
+
+homeassistant:
+  customize:
+    ################################################
+    ## Node Anchors
+    ################################################
+
+    package.node_anchors:
+      customize: &customize
+        package: 'presence'
+    
+    ################################################
+    ## Sensor
+    ################################################
+    
+    sensor.klaas_status:
+      <<: *customize
+      entity_picture: /local/klaas.jpg
+    
+    sensor.grietje_status:
+      <<: *customize
+      entity_picture: /local/grietje.jpg
+    
+    ################################################
+    ## Input Select
+    ################################################
+    
+    input_select.klaas_status_dropdown:
+      <<: *customize
+      hidden: true
+    
+    input_select.grietje_status_dropdown:
+      <<: *customize
+      hidden: true
+      
+    ################################################
+    ## Automation
+    ################################################
+    
+    automation.markeer_persoon_als_lang_weg:
+      <<: *customize
+      hidden: true
+    
+    automation.markeer_persoon_als_net_aangekomen:
+      <<: *customize
+      hidden: true
+    
+    automation.markeer_persoon_als_net_vertrokken:
+      <<: *customize
+      hidden: true
+    
+    automation.markeer_persoon_als_thuis:
+      <<: *customize
+      hidden: true
+    
+    automation.markeer_persoon_als_weg:
+      <<: *customize
+      hidden: true
+    
+################################################
+## Input Select
+################################################
+input_select:
+  #Aanwezigheids opties Klaas
+  klaas_status_dropdown:
+    name: Klaas
+    options:
+      - Thuis
+      - Net Aangekomen
+      - Net Vertrokken
+      - Weg
+      - Lang Weg
+    initial: Thuis
+    
+    #Aanwezigheids opties Grietje
+  grietje_status_dropdown:
+    name: Grietje
+    options:
+      - Thuis
+      - Net Aangekomen
+      - Net Vertrokken
+      - Weg
+      - Lang Weg
+    initial: Thuis
+
+################################################
+## Sensor
+################################################
+sensor:
+  - platform: template
+    sensors:
+      klaas_status:
+        value_template: '{{ states.input_select.klaas_status_dropdown.state }}'
+        friendly_name: 'Klaas'
+      grietje_status:
+        value_template: '{{ states.input_select.grietje_status_dropdown.state }}'
+        friendly_name: 'Grietje'
+ 
+################################################
+## Group
+################################################ 
+group:
+  personen_status:
+    name: Personen Status
+    entities:
+      - sensor.klaas_status
+      - sensor.grietje_status
+      
+################################################
+## Automation
+################################################
+automation:
+  - alias: Markeer persoon als net aangekomen
+    trigger:
+      # Klaas
+      - platform: state
+        entity_id: device_tracker.samsunggalaxys7edgelan 
+        from: 'not_home'
+        to: 'home'
+      # Grietje
+      - platform: state
+        entity_id: device_tracker.19216825
+        from: 'not_home'
+        to: 'home'
+    action:
+      - service: input_select.select_option
+        data_template:
+          entity_id: >
+            {% if trigger.entity_id == 'device_tracker.samsunggalaxys7edgelan' %}
+              input_select.klaas_status_dropdown
+            {% else %}
+              input_select.grietje_status_dropdown
+            {% endif %}
+          option: >
+            {% if trigger.entity_id == 'device_tracker.samsunggalaxys7edgelan' %}
+              {% if states.input_select.klaas_status_dropdown.state == 'Net Vertrokken' %}
+                Thuis
+              {% else %}
+                Net Aangekomen
+              {% endif %}
+            {% else %}
+              {% if states.input_select.grietje_status_dropdown.state == 'Net Vertrokken' %}
+                Thuis
+              {% else %}
+                Net Aangekomen
+              {% endif %}
+            {% endif %}
+  
+  - alias: Markeer persoon als thuis
+    trigger:
+      - platform: state
+        entity_id: input_select.klaas_status_dropdown
+        to: 'Net Aangekomen'
+        for:
+          minutes: 5
+      - platform: state
+        entity_id: input_select.grietje_status_dropdown
+        to: 'Net Aangekomen'
+        for:
+          minutes: 5
+      - platform: state
+        entity_id: input_select.klaas_status_dropdown
+        from: 'Net Vertrokken'
+        to: 'Net Aangekomen'
+      - platform: state
+        entity_id: input_select.grietje_status_dropdown
+        from: 'Net Vertrokken'
+        to: 'Net Aangekomen'
+    action:
+      - service: input_select.select_option
+        data_template:
+          entity_id: >
+            {% if trigger.entity_id == 'input_select.klaas_status_dropdown' %}
+              input_select.klaas_status_dropdown
+            {% else %}
+              input_select.grietje_status_dropdown
+            {% endif %}
+          option: Thuis
+  - alias: Markeer persoon als net vertrokken
+    trigger:
+        # Klaas
+      - platform: state
+        entity_id: device_tracker.samsunggalaxys7edgelan
+        from: 'home'
+        to: 'not_home'
+        # Grietje
+      - platform: state
+        entity_id: device_tracker.19216825
+        from: 'home'
+        to: 'not_home'
+    action:
+      - service: input_select.select_option
+        data_template:
+          entity_id: >
+            {% if trigger.entity_id == 'device_tracker.samsunggalaxys7edgelan' %}
+              input_select.klaas_status_dropdown
+            {% else %}
+              input_select.grietje_status_dropdown
+            {% endif %}
+          option: Net Vertrokken
+  - alias: Markeer persoon als weg
+    trigger:
+      - platform: state
+        entity_id: input_select.klaas_status_dropdown
+        to: 'Net Vertrokken'
+        for:
+          minutes: 5
+      - platform: state
+        entity_id: input_select.grietje_status_dropdown
+        to: 'Net Vertrokken'
+        for:
+          minutes: 5
+    action:
+      - service: input_select.select_option
+        data_template:
+          entity_id: >
+            {% if trigger.entity_id == 'input_select.klaas_status_dropdown' %}
+              input_select.klaas_status_dropdown
+            {% else %}
+              input_select.grietje_status_dropdown
+            {% endif %}
+          option: Weg
+  - alias: Markeer persoon als lang weg
+    trigger:
+      - platform: state
+        entity_id: input_select.klaas_status_dropdown
+        to: 'Weg'
+        for:
+          hours: 24
+      - platform: state
+        entity_id: input_select.grietje_status_dropdown
+        to: 'Weg'
+        for:
+          hours: 24
+    action:
+      - service: input_select.select_option
+        data_template:
+          entity_id: >
+            {% if trigger.entity_id == 'input_select.klaas_status_dropdown' %}
+              input_select.klaas_status_dropdown
+            {% else %}
+              input_select.grietje_status_dropdown
+            {% endif %}
+          option: Lang Weg

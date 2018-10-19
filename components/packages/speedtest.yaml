@@ -1,0 +1,21 @@
+# package: speedtest.yaml
+
+homeassistant:
+  customize:
+    sensor.speedtest_download:
+      friendly_name: "Downloadsnelheid"
+      icon: mdi:download
+    sensor.speedtest_upload:
+      friendly_name: "Uploadsnelheid"
+      icon: mdi:upload
+    sensor.speedtest_ping:
+      friendly_name: "Reactietijd"
+      icon: mdi:timer
+
+sensor:
+  - platform: speedtest
+    server_id: 13218 # AS4ALL, Amsterdam
+    monitored_conditions:
+      - ping
+      - download
+      - upload

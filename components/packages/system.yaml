@@ -1,0 +1,516 @@
+################################################
+## Packages System
+################################################
+
+homeassistant:
+  customize_glob:
+    weblink.*:
+      icon: mdi:web
+  
+  customize:
+    ################################################
+    ## Node Anchors
+    ################################################
+
+    package.node_anchors:
+      customize: &customize
+        package: 'system'
+
+      expose: &expose
+        <<: *customize
+        haaska_hidden: false
+        homebridge_hidden: false
+
+    ################################################
+    ## Input Text
+    ################################################
+    input_text.github_message:
+      <<: *customize
+      icon: mdi:pencil
+    
+    ################################################
+    ## Binary Sensor
+    ################################################
+
+    binary_sensor.db_large:
+      <<: *customize
+      friendly_name: Database groot
+
+    binary_sensor.home_assistant:
+      <<: *customize
+      friendly_name: Home Assistant status
+
+    ################################################
+    ## Sensor
+    ################################################
+
+    sensor.processor_use:
+      <<: *customize
+      friendly_name: Processorgebruik
+
+    sensor.memory_use_percent:
+      <<: *customize
+      friendly_name: Geheugengebruik
+
+    sensor.disk_free_:
+      <<: *customize
+      friendly_name: Beschikbare opslag
+
+    sensor.disk_use_percent_:
+      <<: *customize
+      friendly_name: Gebruikte opslag
+
+    sensor.homeassistant_v2db:
+      <<: *customize
+      friendly_name: Home Assistant Database
+
+    sensor.homeassistantlog:
+      <<: *customize
+      friendly_name: Home Assistant Logbestand
+
+    sensor.ozw_logtxt:
+      <<: *customize
+      friendly_name: Home Assistant OZW Logbestand
+      
+    sensor.configurationyaml:
+      <<: *customize
+      friendly_name: Home Assistant Configuration
+
+    sensor.cpu_temperature:
+      <<: *customize
+      friendly_name: Processortemperatuur
+
+    sensor.bad_login:
+      <<: *customize
+      friendly_name: Mislukte inlogpogingen
+      icon: mdi:alert
+
+    sensor.myip:
+      <<: *customize
+      friendly_name: Publiek IP-adres
+      icon: mdi:network
+
+    sensor.ha_runtime:
+      <<: *customize
+      friendly_name: Uptime sinds laatste start HA
+      icon: mdi:clock
+      
+    sensor.ha_installed_version:
+      <<: *customize
+      friendly_name: Hassbian geinstalleerde versie
+      
+    sensor.ha_upstream:
+      <<: *customize
+      friendly_name: Hassbian nieuwste versie
+    
+    sensor.python_version:
+      <<: *customize
+      friendly_name: Python geinstalleerde versie
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_state:
+      <<: *customize
+      friendly_name: Travis Ci laatste build status
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_finished_at:
+      <<: *customize
+      friendly_name: Travis Ci laatste build datum
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_duration:
+      <<: *customize
+      hidden: true
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_id:
+      <<: *customize
+      hidden: true
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_started_at:
+      <<: *customize
+      hidden: true
+
+    sensor.klaasnicolaassmarthomehomeassistantconfig_state:
+      <<: *customize
+      hidden: true
+
+    sensor.last_boot:
+      <<: *customize
+      friendly_name: Laatste (re)boot Raspberry Pi
+
+    ################################################
+    ## Group
+    ################################################
+
+    group.host_view:
+      <<: *customize
+      friendly_name: Systeeminformatie
+      icon: mdi:server
+      order: 80
+    
+    group.host_performance:
+      <<: *customize
+      friendly_name: Prestaties
+      icon: mdi:memory
+
+    group.host_storage:
+      <<: *customize
+      friendly_name: Opslag
+      icon: mdi:harddisk
+
+    group.host_network:
+      <<: *customize
+      friendly_name: Netwerk
+      icon: mdi:network
+      
+    ################################################
+    ## Script
+    ################################################
+    
+    script.github_push:
+      <<: *customize
+      icon: mdi:github-circle
+      friendly_name: Push to Github
+      
+    script.quick_reboot:
+      <<: *customize
+      icon: mdi:server-network
+      can_cancel: false
+      friendly_name: Reboot Raspberry Pi
+      
+    script.quick_restart:
+      <<: *customize
+      icon: mdi:home-assistant
+      can_cancel: false
+      friendly_name: Restart Homeassistant
+    
+
+################################################
+## Weblink
+################################################
+
+weblink:
+  entities:
+    - name: Github
+      url: https://github.com/klaasnicolaas/Smarthome-homeassistant-config
+    - name: Router
+      url: !secret weblink_router
+################################################
+## Binary Sensor
+################################################
+
+binary_sensor:
+  - platform: template
+    sensors:
+      cpu_high:
+        value_template: '{{ states.sensor.processor_use.state | float > 80 }}'
+        friendly_name: 'CPU hoog'
+  - platform: template
+    sensors:
+      cpu_hot:
+        value_template: '{{ states.sensor.cpu_temperature.state | float > 65 }}'
+        friendly_name: 'CPU heet'
+  - platform: template
+    sensors:
+      db_large:
+        value_template: '{{ states.sensor.homeassistant_v2db.state | float > 5000 }}'
+  ##### Uptime robot
+  - platform: uptimerobot
+    api_key: !secret uptime_robot_key
+################################################
+## Sensor
+################################################
+
+sensor:
+  - platform: systemmonitor
+    resources:
+      - type: memory_use_percent
+      - type: processor_use
+      - type: disk_use_percent
+        arg: /
+      - type: disk_free
+        arg: /
+      - type: last_boot
+  - platform: command_line
+    name: CPU Temperature
+    command: "/bin/cat /sys/class/thermal/thermal_zone0/temp"
+    unit_of_measurement: "°C"
+    value_template: '{{ value | multiply(0.001) | round(1) }}'
+  - platform: filesize
+    file_paths:
+      - !secret filesize_homeassistant_db
+      - !secret filesize_homeassistant_log
+      - !secret filesize_ozw_log
+      - !secret filesize_configuration
+  - platform: dnsip
+  - platform: command_line
+    # https://home-assistant.io/components/sensor.command_line/
+    name: "HA runtime"
+    command: echo "$(($(date +%s) - $(date --date="`systemctl show home-assistant.service -p ActiveEnterTimestamp | awk -F'=' '{print $2}'`" "+%s")))"
+    scan_interval: 60
+    value_template: >-
+      {% set uptime = value | int %}
+      {% set minutes = ((uptime % 3600) / 60) | int %}
+      {% set hours = ((uptime % 86400) / 3600) | int %}
+      {% set days = (uptime / 86400) | int %}
+
+      {%- if uptime < 60 -%}
+        Less than a minute
+      {%- else -%}
+        {%- if days > 0 -%}
+          {%- if days == 1 -%}
+            1 day
+          {%- else -%}
+            {{ days }} days
+          {%- endif -%}
+        {%- endif -%}
+        {%- if hours > 0 -%}
+          {%- if days > 0 -%}
+            {{ ', ' }}
+          {%- endif -%}
+          {%- if hours == 1 -%}
+            1 hour
+          {%- else -%}
+            {{ hours }} hours
+          {%- endif -%}
+        {%- endif -%}
+        {%- if minutes > 0 -%}
+          {%- if days > 0 or hours > 0 -%}
+            {{ ', ' }}
+          {%- endif -%}
+          {%- if minutes == 1 -%}
+            1 minute
+          {%- else -%}
+            {{ minutes }} minutes
+          {%- endif -%}
+        {%- endif -%}
+      {%- endif -%}
+  - platform: cert_expiry
+    host: !secret cert_expiry_host
+  - platform: version
+    name: HA Installed Version
+    scan_interval: 86400
+  - platform: command_line
+    name: Python Version
+    command: python3 --version
+    scan_interval: 86400
+  ###### Latest github Commit
+  - platform: command_line
+    command: "python /home/homeassistant/.homeassistant/extras/shell/latest_commit.py"
+    name: 'Latest Github Commit'
+    scan_interval: 60
+  ###### Home Assistant updates
+  - platform: scrape
+    name: HA upstream
+    resource: https://pypi.org/project/homeassistant/#history
+    select: 'a[href^="/project/homeassistant/0"]'
+  ##### Travis Ci
+  - platform: travisci
+    api_key: !secret travisci_key
+################################################
+## Input boolean
+################################################
+
+input_boolean:
+  maintenance_mode:
+    name: Onderhouds Mode
+    icon: mdi:auto-fix
+
+################################################
+## Input text
+################################################
+
+input_text:
+  github_message:
+    name: Commit Message
+    initial: Push from local
+################################################
+## Group
+################################################
+
+group:
+  host_view:
+    name: Host
+    view: yes
+    entities:
+      - sensor.bad_login
+      - group.host_performance
+      - group.host_storage
+      - group.host_network
+      - group.host_info
+      - group.host_batterij_zwave
+      - group.host_maintenance
+  host_performance:
+    # Systeeminformatie
+    name: System Performance
+    entities:
+      - sensor.processor_use
+      - sensor.memory_use_percent
+      - sensor.cpu_temperature
+      - binary_sensor.cpu_high
+      - binary_sensor.cpu_hot
+  host_storage:
+    name: System Storage
+    entities:
+      - sensor.disk_use_percent_
+      - sensor.disk_free_
+      - sensor.homeassistant_v2db
+      - sensor.homeassistantlog
+      - sensor.ozw_logtxt
+      - sensor.configurationyaml
+  host_network:
+    name: Host Network
+    entities:
+      - sensor.speedtest_ping
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.myip
+      - sensor.ssl_certificate_expiry
+  host_info:
+    name: Home Assistant Info
+    entities:
+      - sensor.last_boot
+      - sensor.ha_runtime
+      - binary_sensor.home_assistant
+      - sensor.ha_installed_version
+      - sensor.ha_upstream
+      - sensor.python_version
+      - updater.updater
+      - sensor.bad_login
+      - sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_finished_at
+      - sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_state
+  host_batterij_zwave:
+    name: Batterij Percentages
+    entities:
+      - sensor.zwave_battery_door_sensor_hal_begane_grond
+      - sensor.zwave_battery_motion_sensor_hal_begane_grond
+      - sensor.zwave_battery_smoke_sensor_begane_grond
+      - sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
+  host_maintenance:
+    name: Onderhoud
+    control: hidden
+    entities:
+      - input_boolean.maintenance_mode
+      - script.quick_restart
+      - script.quick_reboot
+      - sensor.latest_github_commit
+      - input_text.github_message
+      - script.github_push
+      - weblink.github
+      - weblink.router
+      
+################################################
+## Shell Command
+################################################
+
+shell_command:
+    
+    github_push: /home/homeassistant/.homeassistant/extras/bash/send-to-github.sh "{{ states('input_text.github_message') }}"
+    
+    quick_restart: sudo systemctl restart home-assistant@homeassistant.service
+    
+    quick_reboot: sudo reboot
+    
+################################################
+## Alert
+################################################
+
+alert:
+  cpu_high:
+    name: Gebruik CPU is hoog
+    entity_id: binary_sensor.cpu_high
+    state: 'on'
+    repeat: 5 # minutes
+    can_acknowledge: True
+    skip_first: False
+    notifiers:
+      - telegram_klaas
+  
+  cpu_hot:
+    name: Temperatuur CPU is hoog
+    entity_id: binary_sensor.cpu_hot
+    state: 'on'
+    repeat: 5 # minutes
+    can_acknowledge: True
+    skip_first: False
+    notifiers:
+      - telegram_klaas
+  
+  db_large:
+    name: Database Large
+    entity_id: binary_sensor.db_large
+    state: 'on'
+    repeat: # minutes
+      - 15
+      - 30
+      - 60
+      - 120
+    can_acknowledge: true
+    skip_first: false
+    notifiers:
+      - telegram_klaas
+      
+  maintenance_mode_alert:
+    name: Onderhouds Mode staat al aan voor een lange tijd
+    done_message: Maintenance Mode de-activated
+    entity_id: input_boolean.maintenance_mode
+    repeat:
+      - 60
+    skip_first: true
+    notifiers:
+      - telegram_klaas
+
+################################################
+## Script
+################################################
+
+script:
+  github_push:    
+    alias: ' '
+    sequence:
+      - condition: template
+        value_template: "{{ not is_state('input_text.github_message' , '' ) }}"
+      - service: shell_command.github_push
+      - service: persistent_notification.create
+        data:
+          notification_id: "Github_push_alert"
+          title: "Github"
+          message: "You have pushed your local files to github, you must merge the branches on github then sync the master branch here."
+          
+  quick_restart:
+    alias: ' '
+    sequence:
+      - service: homeassistant.turn_on
+        entity_id: input_boolean.maintenance_mode
+      - delay: 00:00:02
+      - service: shell_command.quick_restart
+      
+  quick_reboot:
+    alias: ' '
+    sequence:
+      - service: homeassistant.turn_on
+        entity_id: input_boolean.maintenance_mode
+      - delay: 00:00:02
+      - service: shell_command.quick_reboot
+################################################
+## Automation
+################################################
+
+automation:
+  - alias: 'Update Available Notification'
+    initial_state: true
+    hide_entity: true
+    trigger:
+      - platform: state
+        entity_id: sensor.ha_upstream
+    action:
+      - delay: '00:10:00'
+      - service: notify.telegram_klaas
+        data:
+          message: 'Update voor Home Assistant beschikbaar, versie: {{ states.sensor.ha_upstream.state }}'
+
+################################################
+## Notify
+################################################
+
+notify:
+    - name: telegram_klaas
+      platform: telegram
+      chat_id: !secret telegram_chat_id_klaas
