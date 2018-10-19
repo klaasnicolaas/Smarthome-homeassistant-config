@@ -12,6 +12,8 @@ homeassistant:
   time_zone: Europe/Amsterdam
   # Customization #
   customize: !include_dir_merge_named customizations/entities
+  # Lets me custimize all entities in a domain
+  customize_domain: !include_dir_merge_named customizations/domains
   # Packages #
   packages: !include_dir_named components/packages
   # Whitelist #
@@ -75,12 +77,7 @@ scene: !include_dir_merge_list scenes/
 
 ################################## COSTUM PANELS ##################################  
 # FLOORPLAN#
-panel_custom:
-  - name: floorplan
-    sidebar_title: Floorplan
-    sidebar_icon: mdi:home
-    url_path: floorplan
-    config: !include floorplan.yaml
+
 
 ################################## COVERS ##################################
 #cover:
