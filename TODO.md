@@ -29,6 +29,7 @@
 - [x] Remap the google assistant cloud component
 - [x] Remap the lights component
 - [x] Remap the device tracker component
+- [x] Remap the rfxtrx and ifttt component
 
 ## Already working (automation)
 

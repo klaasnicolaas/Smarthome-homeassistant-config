@@ -127,11 +127,6 @@ mqtt:
   username: !secret mqtt_broker_user
   password: !secret mqtt_broker_pass
  
-# RFXCom ###############################################
-rfxtrx:
-  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1Y0NJGR-if00-port0
-  debug: False
-  
 # KlikAanKlikUit
 switch:
     - platform: rfxtrx
@@ -169,9 +164,6 @@ binary_sensor:
     - platform: workday
       country: NL
       workdays: [ mon, tue, wed, thu, fri ]
-###################################### IFTTT ####################################
-ifttt:
-    key: !secret ifttt_key 
              
 ################################## COSTUM PANELS ##################################  
 # FLOORPLAN#

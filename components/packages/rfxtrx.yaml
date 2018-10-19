@@ -1,0 +1,9 @@
+---
+# The rfxtrx component supports RFXtrx devices by RFXCOM which communicate in the frequency range of 433.92 MHz.
+#
+# https://www.home-assistant.io/components/rfxtrx/
+#
+
+rfxtrx:
+  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1Y0NJGR-if00-port0
+  debug: False
