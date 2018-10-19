@@ -1,0 +1,63 @@
+- platform: template
+  sensors:
+    zwave_battery_smoke_sensor_begane_grond:
+      value_template: '{{ states.zwave.fibaro__smoke_sensor__gang_begane_grond.attributes.battery_level|default(0) }}'
+      unit_of_measurement: "%"
+      icon_template: >
+        {% set battery_level = states.zwave.fibaro__smoke_sensor__gang_begane_grond.attributes.battery_level | default(0) | int %}
+        {% set battery_round = (battery_level / 10) |int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+        
+- platform: template
+  sensors:
+    zwave_battery_smoke_sensor_slaapkamer_zolder:
+      value_template: '{{ states.zwave.fibaro__smoke_sensor__slaapkamer_zolder.attributes.battery_level|default(0) }}'
+      unit_of_measurement: "%"
+      icon_template: >
+        {% set battery_level = states.zwave.fibaro__smoke_sensor__slaapkamer_zolder.attributes.battery_level | default(0) | int %}
+        {% set battery_round = (battery_level / 10) |int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+        
+- platform: template
+  sensors:
+    zwave_battery_door_sensor_hal_begane_grond:
+      value_template: '{{ states.zwave.fibaro__door_sensor__hal_begane_grond.attributes.battery_level|default(0) }}'
+      unit_of_measurement: "%"
+      icon_template: >
+        {% set battery_level = states.zwave.fibaro__door_sensor__hal_begane_grond.attributes.battery_level | default(0) | int %}
+        {% set battery_round = (battery_level / 10) |int * 10 %}
+        {% if battery_round >= 100 %}
+          mdi:battery
+        {% elif battery_round > 0 %}
+          mdi:battery-{{ battery_round }}
+        {% else %}
+          mdi:battery-alert
+        {% endif %}
+        
+- platform: template
+  sensors:
+    zwave_battery_motion_sensor_hal_begane_grond:
+        value_template: '{{ states.zwave.fibaro__motion_sensor__hal_begane_grond.attributes.battery_level|default(0) }}'
+        unit_of_measurement: "%"
+        icon_template: >
+            {% set battery_level = states.zwave.fibaro__motion_sensor__hal_begane_grond.attributes.battery_level | default(0) | int %}
+            {% set battery_round = (battery_level / 10) |int * 10 %}
+            {% if battery_round >= 100 %}
+              mdi:battery
+            {% elif battery_round > 0 %}
+              mdi:battery-{{ battery_round }}
+            {% else %}
+              mdi:battery-alert
+            {% endif %}

@@ -22,20 +22,6 @@ homeassistant:
 # Enables configuration UI
 config:
 
-http:
-  # Secrets are defined in the file secrets.yaml
-  # api_password: !secret http_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  base_url: !secret http_base_url
-  api_password: !secret http_api_password
-  ssl_certificate: !secret ssl_certificate
-  ssl_key: !secret ssl_key
-  trusted_networks: 
-    - !secret intern_ip_1
-    - !secret intern_ip_2
-    - 127.0.0.1
-  login_attempts_threshold: 5
-  
 websocket_api:
 
 logger:
@@ -44,10 +30,6 @@ logger:
 ######################## INCLUDES ##########################
 # Automation #
 automation: !include_dir_merge_list automation/
-# Sensors #
-sensor: !include_dir_merge_list sensors/
-# Zones #
-zone: !include_dir_list zones/
 # Scenes #           
 scene: !include_dir_merge_list scenes/
 

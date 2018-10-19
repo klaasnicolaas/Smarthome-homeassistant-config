@@ -44,6 +44,9 @@
 - [x] Remap the customize component
 - [x] Remap the panels component
 - [x] Remap the updater component
+- [x] Remap the http component
+- [x] Remap the sensor component
+- [x] Remap the zone component
 
 ## Already working (automation)
 
