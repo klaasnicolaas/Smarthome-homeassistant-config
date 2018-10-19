@@ -126,11 +126,6 @@ device_tracker:
 #    icon: mdi:wrench
 #    url: http://hassio.local:3218
 
-# Z-Wave Controller ####################################
-zwave:
-  usb_path: /dev/ttyACM0
-  network_key: !secret network_key
-
 # MQTT Broker ##########################################
 mqtt:
   broker: !secret mqtt_broker_ip

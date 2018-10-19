@@ -1,0 +1,19 @@
+---
+# Activates the Z-Wave component. I have several Z-Wave based devices in my
+# Home Assistant system. I use a Aeotec Z-Stick (gen 5) as my controller device.
+#
+# https://www.home-assistant.io/docs/z-wave/installation
+
+zwave:
+  # The USB port where the Aeotech Z-Stick is connected to.
+  usb_path: /dev/ttyACM0
+
+  # If a Z-Wave devices support it, I will add it as a secure node.
+  # This defines my secure network key
+  network_key: !secret zwave_network_key
+
+  # This will trigger autohealing of the Z-Wave network at midnight.
+  autoheal: true
+
+  # The time period in milliseconds between polls of a nodes value (default: 60000)
+  polling_interval: 60000
