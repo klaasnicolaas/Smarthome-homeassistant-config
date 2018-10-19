@@ -11,7 +11,7 @@ homeassistant:
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Amsterdam
   # Customization #
-  customize: !include customize.yaml
+  customize: !include_dir_merge_named customizations/entities
   # Packages #
   packages: !include_dir_named components/packages
   # Whitelist #
