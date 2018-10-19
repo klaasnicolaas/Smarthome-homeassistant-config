@@ -75,13 +75,6 @@ scene: !include_dir_merge_list scenes/
 #    icon: mdi:wrench
 #    url: http://hassio.local:3218
 
-# MQTT Broker ##########################################
-mqtt:
-  broker: !secret mqtt_broker_ip
-  port: 1883
-  username: !secret mqtt_broker_user
-  password: !secret mqtt_broker_pass
- 
 ################################## COSTUM PANELS ##################################  
 # FLOORPLAN#
 panel_custom:
