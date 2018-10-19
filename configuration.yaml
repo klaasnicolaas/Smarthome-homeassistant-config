@@ -114,12 +114,6 @@ notify: !include notify.yaml
 # Scenes #           
 scene: !include_dir_merge_list scenes/
 
-####################### GPS Logger ######################
-device_tracker: 
-    # GPS Logger
-    - platform: gpslogger
-      password: !secret device_tracker_password
-
 # panel_iframe:
 # configurator:
 #    title: Configurator

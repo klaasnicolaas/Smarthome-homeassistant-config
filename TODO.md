@@ -28,6 +28,7 @@
 ## Big project - restructure folders, files and code
 - [x] Remap the google assistant cloud component
 - [x] Remap the lights component
+- [x] Remap the device tracker component
 
 ## Already working (automation)
 
