@@ -1,0 +1,15 @@
+---
+# The rfxtrx platform support switches that communicate in the frequency range of 433.92 MHz.
+#
+# https://www.home-assistant.io/components/switch.rfxtrx/
+#
+
+platform: rfxtrx
+automatic_add: False
+devices:
+  0b11000600fde6d201030070:
+      name: Lamp slaapkamer | Zolder
+  0b11001000fde6d202010f70:
+      name: LED slaapkamer | Zolder
+  0b11001100fde6d203010f70:
+      name: LED Bureau | Zolder

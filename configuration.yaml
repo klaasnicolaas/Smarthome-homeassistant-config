@@ -127,24 +127,6 @@ mqtt:
   username: !secret mqtt_broker_user
   password: !secret mqtt_broker_pass
  
-# KlikAanKlikUit
-switch:
-    - platform: rfxtrx
-      automatic_add: False
-      devices:
-          0b11000600fde6d201030070:
-              name: Lamp slaapkamer | Zolder
-          0b11001000fde6d202010f70:
-              name: LED slaapkamer | Zolder
-          0b11001100fde6d203010f70:
-              name: LED Bureau | Zolder
-    #### WAKE ON LAN ####
-    - platform: wake_on_lan
-      mac_address: !secret mac_addres_pc_klaas
-      name: Computer Klaas
-      host: !secret host_ip_pc_klaas
-    
-
 ########################## BINAIR SENSORS #######################################    
 binary_sensor:
     - platform: template

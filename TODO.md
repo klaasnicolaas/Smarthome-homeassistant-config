@@ -30,6 +30,7 @@
 - [x] Remap the lights component
 - [x] Remap the device tracker component
 - [x] Remap the rfxtrx and ifttt component
+- [x] Remap the switches component from config.yaml
 
 ## Already working (automation)
 
