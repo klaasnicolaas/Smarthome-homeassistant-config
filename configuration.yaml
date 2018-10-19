@@ -54,36 +54,8 @@ discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
-# Enables support for tracking state changes over time
-history:
-  exclude:
-    domains:
-        - updater
-        - calendar
-        - media_player
-        - weblink  
-    entities:
-        - sensor.ssl_certificate_expiry
-        - sensor.postnl
-        - sensor.myip
-        - sensor.power_consumption_phase_l2
-        - sensor.power_consumption_phase_l3
-        - sensor.voltage_sags_phase_l1
-        - sensor.voltage_swells_phase_l1
-
 # Record states and write it to a place
 recorder: !include recorder.yaml
-
-# View all events in a logbook
-logbook: 
-  exclude:
-    entities:
-        - sensor.br_ground_temperature
-        - sensor.br_humidity
-        - sensor.br_precipitation
-        - sensor.br_symbol
-        - sensor.br_temperature
-        - sensor.br_wind_speed
 
 logger:
     default: info

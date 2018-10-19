@@ -1,0 +1,17 @@
+---
+# The logbook component provides a different perspective on the history of
+# your house by showing all the changes that happened to your house in
+# reverse chronological order.
+#
+# https://www.home-assistant.io/components/logbook/
+#
+
+logbook: 
+  exclude:
+    entities:
+        - sensor.br_ground_temperature
+        - sensor.br_humidity
+        - sensor.br_precipitation
+        - sensor.br_symbol
+        - sensor.br_temperature
+        - sensor.br_wind_speed
