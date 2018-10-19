@@ -69,16 +69,6 @@ zone: !include_dir_list zones/
 # Scenes #           
 scene: !include_dir_merge_list scenes/
 
-# panel_iframe:
-# configurator:
-#    title: Configurator
-#    icon: mdi:wrench
-#    url: http://hassio.local:3218
-
-################################## COSTUM PANELS ##################################  
-# FLOORPLAN#
-
-
 ################################## COVERS ##################################
 #cover:
 #  - platform: mqtt

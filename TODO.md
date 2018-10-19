@@ -42,6 +42,7 @@
 - [x] Remap the MQTT component
 - [x] Remap the group component
 - [x] Remap the customize component
+- [ ] Remap the floorplan and panels component
 
 ## Already working (automation)
 

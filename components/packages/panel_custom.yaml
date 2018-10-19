@@ -7,9 +7,4 @@
 # https://www.home-assistant.io/components/panel_custom/
 #
 
-panel_custom:
-  - name: floorplan
-    sidebar_title: Floorplan
-    sidebar_icon: mdi:home
-    url_path: floorplan
-    config: !include ../../panels/custom/floorplan.yaml
+panel_custom: !include_dir_merge_named ../../panels/custom
