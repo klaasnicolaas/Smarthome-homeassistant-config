@@ -54,9 +54,6 @@ discovery:
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
 
-# Record states and write it to a place
-recorder: !include recorder.yaml
-
 logger:
     default: info
 

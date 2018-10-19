@@ -1,0 +1,43 @@
+---
+# The recorder component is storing details in a database which
+# then are handled by the history component.
+#
+# https://www.home-assistant.io/components/recorder/
+#
+recorder:
+    # How often (in days) the purge task runs
+    purge_interval: 1
+
+    # The number of days of history to keep in the recorder database
+    purge_keep_days: 7
+    db_url: !secret mariadb_external_url
+    exclude:
+        domains:
+            - updater
+            - automation
+            - device_tracker
+            - group
+            - scene
+            - script
+            - weblink
+            - calendar
+            - media_player
+        entities:
+            - sensor.br_ground_temperature
+            - sensor.br_humidity
+            - sensor.br_precipitation
+            - sensor.br_symbol
+            - sensor.br_temperature
+            - sensor.br_wind_speed
+            - sensor.external_ip
+            - sun.sun
+            - zone.home
+            - zone.huis_marlene
+            - zone.schiphol_airport
+            - zone.school
+            - zone.station_alkmaar
+            - sensor.ssl_certificate_expiry
+            - sensor.postnl
+            - sensor.myip
+            - sensor.power_consumption_phase_l2
+            - sensor.power_consumption_phase_l3

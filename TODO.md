@@ -32,6 +32,7 @@
 - [x] Remap the rfxtrx and ifttt component
 - [x] Remap the switches component from config.yaml
 - [x] Remap the history and logbook component
+- [x] Remap the recorder component
 
 ## Already working (automation)
 
