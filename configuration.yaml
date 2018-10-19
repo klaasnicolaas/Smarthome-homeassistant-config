@@ -68,8 +68,6 @@ script: !include scripts.yaml
 sensor: !include_dir_merge_list sensors/
 # Zones #
 zone: !include_dir_list zones/
-# Notify #
-notify: !include notify.yaml
 # Scenes #           
 scene: !include_dir_merge_list scenes/
 

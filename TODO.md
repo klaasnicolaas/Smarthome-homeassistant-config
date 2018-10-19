@@ -35,7 +35,8 @@
 - [x] Remap the recorder component
 - [x] Remap the sun and map component
 - [x] Remap the media player and cast component
-- [ ] Remap the frontend component
+- [x] Remap the frontend component
+- [x] Remap the notify component
 
 ## Already working (automation)
 
