@@ -17,10 +17,6 @@ homeassistant:
   # Whitelist #
   whitelist_external_dirs: !secret whitelist_dir_config
 
-# Enables the frontend
-frontend:
-    javascript_version: latest
-
 # Enables configuration UI
 config:
 
