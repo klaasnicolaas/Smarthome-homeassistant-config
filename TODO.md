@@ -4,7 +4,7 @@
 - [ ] Turn off all devices (lights) when everyone leaves home
 - [ ] Notify if there is motion in house when no one is home
 - [ ] Lighting flashing when someone rings the doorbell
-- [ ] install door/window sensors 
+- [ ] install door/window sensors
 - [ ] install motion sensors
 - [ ] Setup Motion Controlled Lights
 - [ ] Investigate, install and configure new Xiaomi Hub and components
@@ -34,6 +34,7 @@
 - [x] Remap the history and logbook component
 - [x] Remap the recorder component
 - [x] Remap the sun and map component
+- [x] Remap the media player and cast component
 
 ## Already working (automation)
 
