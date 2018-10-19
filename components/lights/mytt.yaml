@@ -1,0 +1,19 @@
+---
+# Light platform MQTT
+# In this file I add al my mqtt lights, mayby in the future I will split this in rooms or levels.
+#
+# https://www.home-assistant.io/components/light/
+#
+
+#- platform: mqtt
+#  name: "Luxaflex Zolder"
+#  state_topic: "blind/zolder/state"
+#  command_topic: "blind/zolder/command"
+#  brightness_state_topic: "blind/zolder/state"
+#  brightness_command_topic: "blind/zolder/level"
+#  brightness_scale: 100
+#  qos: 0
+#  payload_on: "ON"
+#  payload_off: "OFF"
+#  optimistic: false
+#  retain: true

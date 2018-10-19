@@ -1,4 +1,4 @@
-## ToDo
+## ToDo list
 
 - [ ] Control lighting based on the sun and gps location
 - [ ] Turn off all devices (lights) when everyone leaves home
@@ -24,6 +24,10 @@
 - [ ] Operate the garden lighting
 
 - [ ] Convince everyone that Home Automation is the best!
+
+## Big project - restructure folders, files and code
+- [x] Remap the google assistant cloud component
+- [x] Remap the lights component
 
 ## Already working (automation)
 

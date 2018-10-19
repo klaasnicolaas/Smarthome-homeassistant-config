@@ -193,28 +193,7 @@ panel_custom:
     url_path: floorplan
     config: !include floorplan.yaml
 
-################################## LIGHTS ##################################      
-light:
-#  - platform: mqtt
-#    name: "Luxaflex Zolder"
-#    state_topic: "blind/zolder/state"
-#    command_topic: "blind/zolder/command"
-#    brightness_state_topic: "blind/zolder/state"
-#    brightness_command_topic: "blind/zolder/level"
-#    brightness_scale: 100
-#    qos: 0
-#    payload_on: "ON"
-#    payload_off: "OFF"
-#    optimistic: false
-#    retain: true
-  # Yeelight
-  - platform: yeelight
-    devices:
-      !secret yeelight_1:
-        name: Vliering voor | Zolder (auto)
-      !secret yeelight_2:
-        name: Vliering achter | Zolder (auto)
-
+################################## COVERS ##################################
 #cover:
 #  - platform: mqtt
 #    name: "Living Room 0"
@@ -232,21 +211,6 @@ light:
 #google_assistant:
 #  project_id: !secret google_assistant_project_id
 
-cloud:
-  google_actions:
-      filter:
-        include_domains:
-            - switch
-            - light
-            - scene
-      entity_config:
-        light.bedroom_light:
-          name: slaapkamer lampen
-          aliases:
-            - slaapkamer lichten
-            - slaapkamer zolder lampen
-          room: slaapkamer
-          
 ################################## GOOGLE CALENDAR ##################################    
 google:
   client_id: !secret google_calendar_client_id

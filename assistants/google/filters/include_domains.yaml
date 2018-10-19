@@ -1,0 +1,10 @@
+---
+# Provides a list of domains to include in Google Assistant.
+#
+# https://www.nabucasa.com/config/google_assistant
+#
+
+include_domains:
+  - switch
+  - light
+  - scene
