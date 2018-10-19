@@ -62,8 +62,6 @@ tts:
 group: !include groups.yaml
 # Automation #
 automation: !include_dir_merge_list automation/
-# scripts #
-script: !include scripts.yaml
 # Sensors #
 sensor: !include_dir_merge_list sensors/
 # Zones #

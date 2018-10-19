@@ -38,6 +38,7 @@
 - [x] Remap the frontend component
 - [x] Remap the notify component
 - [x] Remap the binary sensor component
+- [x] Remap the scripts component
 
 ## Already working (automation)
 
