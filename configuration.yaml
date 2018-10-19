@@ -58,8 +58,6 @@ tts:
   - platform: google
 
 ######################## INCLUDES ##########################
-# Groups #
-group: !include groups.yaml
 # Automation #
 automation: !include_dir_merge_list automation/
 # Sensors #

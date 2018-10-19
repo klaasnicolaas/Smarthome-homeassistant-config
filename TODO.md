@@ -40,6 +40,7 @@
 - [x] Remap the binary sensor component
 - [x] Remap the scripts component
 - [x] Remap the MQTT component
+- [ ] Remap the group component
 
 ## Already working (automation)
 

@@ -1,0 +1,151 @@
+################################## GROUPS ####################################
+# Wake on LAN apparaten
+wol_apparaten:
+    name: Wake on LAN apparaten
+    entities:
+        - switch.computer_klaas
+
+# Slimme meter
+meter_readings:
+    name: Slimme Meter
+    entities:
+        - sensor.gas_consumption
+        - sensor.hourly_gas_consumption
+        - sensor.power_consumption
+        - sensor.power_consumption_low
+        - sensor.power_consumption_normal
+
+# Slaapkamer zolder groep
+slaapkamer_zolder:
+    name: Slaapkamer | Zolder
+    entities:
+        - switch.lamp_slaapkamer__zolder
+        - switch.led_bureau__zolder
+        - switch.led_slaapkamer__zolder
+        - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+
+# Gang begane grond groep
+begane_grond_trappengang:
+    name: Trappengang | Begane grond
+    entities:
+        - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
+        
+# Het weer
+omgeving:
+    name: Het Weer
+    entities:
+        - sun.sun
+        - sensor.br_humidity
+        - sensor.br_symbol
+        - sensor.br_temperature
+        - sensor.br_ground_temperature
+        - sensor.br_wind_speed
+        - sensor.br_precipitation
+        - sensor.buienradar_precipitation_forecast_average
+        
+# Hal begane grond groep
+begane_grond_hal:
+    name: Hal | Begane grond
+    entities:
+        - binary_sensor.sensor_voordeur
+        - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+        - binary_sensor.sensor_beweging_hal_begane_grond
+        - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
+        - sensor.fibaro__motion_sensor__hal_begane_grond_luminance
+
+# Temperaturen huis groep
+temperaturen:
+    name: Temperaturen
+    entities: 
+        - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+        - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
+        - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
+        - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+        
+# Tuin
+tuin:
+    name: Tuin
+    entities:
+        - switch.fibaro__wall_plug_1_switch 
+
+################################## VIEWS - TABS ##############################               
+# Begane grond view
+begane_grond_view:
+    name: Begane grond
+    view: yes
+    entities:
+        - group.begane_grond_trappengang
+        - group.begane_grond_hal
+        
+# Eerste verdieping view
+eerste_verdieping_view:
+    name: Eerste verdieping
+    view: yes
+
+# Zolder view
+slaapkamer_zolder_view:
+    name: Zolder
+    view: yes
+    entities:
+        - switch.lamp_slaapkamer__zolder
+        - switch.led_bureau__zolder
+        - switch.led_slaapkamer__zolder
+        - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+        - light.vliering_achter__zolder_auto
+        - light.vliering_voor__zolder_auto
+        - switch.computer_klaas
+        
+# Tuin 
+tuin_view:
+    name: Tuin
+    view: yes
+    entities:
+#        - group.tuin
+         - switch.fibaro__wall_plug_1_switch
+
+# Temperaturen in huis
+temperaturen_view:
+    name: Temperaturen in huis
+    view: yes
+    icon: mdi:temperature-celsius
+    entities:
+        - group.temperaturen
+        - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+        - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
+        - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
+        - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+
+# Automatisering
+automatisering_view:
+    name: Automatisering
+    view: yes
+    icon: mdi:home-automation
+    entities:
+        - automation.battery_low_alert__front_door
+        - automation.battery_low_alert__smoke_sensor__begane_grond
+        - automation.battery_low_alert__smoke_sensor__kamer_zolder
+        - automation.cube_light__turn_on
+        - automation.door_sensor_open__hal__begane_grond_burglar_detection
+        - automation.door_sensor_open__slaapkamer__zolder_no_burglar
+        - automation.fibaro_sensor__gang__begane_grond_heat_detection
+        - automation.fibaro_sensor__gang__begane_grond_no_heat
+        - automation.fibaro_sensor__gang__begane_grond_no_smoke
+        - automation.fibaro_sensor__gang__begane_grond_smoke_detection
+        - automation.fibaro_sensor__slaapkamer__zolder_heat_detection
+        - automation.fibaro_sensor__slaapkamer__zolder_no_heat
+        - automation.fibaro_sensor__slaapkamer__zolder_no_smoke
+        - automation.fibaro_sensor__slaapkamer__zolder_smoke_detection
+        - automation.rain_alarm
+        - automation.smoke_sensor_open__gang__begane_grond_burglar_detection
+        - automation.smoke_sensor_open__gang__begane_grond_no_burglar
+        - automation.smoke_sensor_open__slaapkamer__zolder_burglar_detection
+        - automation.smoke_sensor_open__slaapkamer__zolder_no_burglar
+        - automation.telegram_bot_that_reply_pong_to_ping
+        - automation.update_available_notification
+        - automation.waterornament_aan__doordeweeks
+        - automation.waterornament_uit__doordeweeks
+        - automation.telegram_bot_send_message_if_voordeur_is_open
+        - automation.telegram_bot_send_message_if_voordeur_is_open__vakantie_mode
+        
+        
+################################################################################
