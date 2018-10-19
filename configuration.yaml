@@ -27,12 +27,6 @@ websocket_api:
 logger:
     default: info
 
-######################## INCLUDES ##########################
-# Automation #
-automation: !include_dir_merge_list automation/
-# Scenes #           
-scene: !include_dir_merge_list scenes/
-
 ################################## COVERS ##################################
 #cover:
 #  - platform: mqtt

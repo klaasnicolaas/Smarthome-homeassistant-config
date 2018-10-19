@@ -47,6 +47,8 @@
 - [x] Remap the http component
 - [x] Remap the sensor component
 - [x] Remap the zone component
+- [x] Remap the scene component
+- [x] Remap the automation component
 
 ## Already working (automation)
 
