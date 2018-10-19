@@ -33,6 +33,7 @@
 - [x] Remap the switches component from config.yaml
 - [x] Remap the history and logbook component
 - [x] Remap the recorder component
+- [x] Remap the sun and map component
 
 ## Already working (automation)
 
