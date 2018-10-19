@@ -38,26 +38,8 @@ http:
   
 websocket_api:
 
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
-  include_used_components: true
-
-# Discover some devices automatically
-discovery:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-conversation:
-
 logger:
     default: info
-
-# Text to speech
-tts:
-  - platform: google
 
 ######################## INCLUDES ##########################
 # Automation #

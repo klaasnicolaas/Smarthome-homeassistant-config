@@ -1,0 +1,7 @@
+---
+# The conversation component allows you to converse with Home Assistant.
+#
+# https://www.home-assistant.io/components/conversation/
+#
+
+conversation:
