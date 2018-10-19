@@ -84,26 +84,6 @@ mqtt:
   username: !secret mqtt_broker_user
   password: !secret mqtt_broker_pass
  
-########################## BINAIR SENSORS #######################################    
-binary_sensor:
-    - platform: template
-      sensors:
-        sensor_voordeur:
-          device_class: door
-          friendly_name: Voordeur
-          value_template: >
-            {{ states.sensor.fibaro__door_sensor__hal_begane_grond_access_control.state < '23' }}
-    - platform: template
-      sensors:
-        sensor_beweging_hal_begane_grond:
-           device_class: motion
-           friendly_name: Bewegingsmelder - Hal | Begane grond
-           value_template: >
-            {{ states.sensor.fibaro__motion_sensor__hal_begane_grond_burglar.state == '8' }}
-    - platform: workday
-      country: NL
-      workdays: [ mon, tue, wed, thu, fri ]
-             
 ################################## COSTUM PANELS ##################################  
 # FLOORPLAN#
 panel_custom:

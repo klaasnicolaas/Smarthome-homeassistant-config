@@ -37,6 +37,7 @@
 - [x] Remap the media player and cast component
 - [x] Remap the frontend component
 - [x] Remap the notify component
+- [x] Remap the binary sensor component
 
 ## Already working (automation)
 

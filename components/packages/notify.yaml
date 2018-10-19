@@ -1,7 +1,8 @@
 ---
-# This offers a map on the frontend to display the location of tracked devices.
+# The notify component makes it possible to send notifications to a wide variety of platforms. 
+# Please check the sidebar for a full list of platforms that are supported.
 #
-# https://www.home-assistant.io/components/map/
+# https://www.home-assistant.io/components/notify/
 #
 
 notify: !include_dir_merge_list ../notify

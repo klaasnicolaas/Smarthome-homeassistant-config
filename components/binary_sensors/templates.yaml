@@ -1,0 +1,20 @@
+---
+# The template platform supports sensors which break out state_attributes from other entities.
+#
+# https://www.home-assistant.io/components/sensor.template/
+#
+
+- platform: template
+  sensors:
+    sensor_voordeur:
+      device_class: door
+      friendly_name: Voordeur
+      value_template: >
+        {{ states.sensor.fibaro__door_sensor__hal_begane_grond_access_control.state < '23' }}
+- platform: template
+  sensors:
+    sensor_beweging_hal_begane_grond:
+      device_class: motion
+      friendly_name: Bewegingsmelder - Hal | Begane grond
+      value_template: >
+        {{ states.sensor.fibaro__motion_sensor__hal_begane_grond_burglar.state == '8' }}
