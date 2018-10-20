@@ -1,0 +1,31 @@
+############## Notification door ####################
+- alias: 'Telegram bot send message if voordeur is open'
+  hide_entity: true
+  initial_state: 'on'
+  trigger:
+      platform: numeric_state
+      entity_id: sensor.fibaro__door_sensor__hal_begane_grond_access_control
+      below: 23
+  condition:
+      condition: and
+      conditions:
+        - condition: time
+          after: '22:00:00'
+          before: '08:00:00'
+  action:
+    service: notify.telegram_thuis
+    data:
+      message: 'Voordeur is open! met data: {{ states.sensor.fibaro__door_sensor__hal_begane_grond_access_control.state }}'
+
+############## Notification door (vakantie mode) ####################        
+- alias: 'Telegram bot send message if voordeur is open - Vakantie Mode'
+  hide_entity: false
+  initial_state: 'off'
+  trigger:
+      platform: numeric_state
+      entity_id: sensor.fibaro__door_sensor__hal_begane_grond_access_control
+      below: 23
+  action:
+    service: notify.telegram_thuis
+    data:
+      message: 'Voordeur is open in de vakantie! met data: {{ states.sensor.fibaro__door_sensor__hal_begane_grond_access_control.state }}'

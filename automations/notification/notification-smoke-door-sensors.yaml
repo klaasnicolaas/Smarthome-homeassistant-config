@@ -1,0 +1,245 @@
+##########################################################
+############ SMOKE SENSOR TRIGGER SMOKE ON ###############
+##########################################################
+## Fibaro smoke sensor - gang - begane grond
+- alias: Fibaro Sensor - gang - begane grond SMOKE DETECTION
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_smoke
+  condition:
+        - condition: state
+          entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_smoke
+          state: '3'
+  action:
+    - service: notify.telegram_thuis
+      data:
+        title: 'Fibaro Smoke Sensor - Gang - Begane Grond: BRANDALARM'
+        message: '******* Rookmelder begane grond - gaat af! *******'
+        
+## Fibaro smoke sensor - slaapkamer - zolder
+- alias: Fibaro Sensor - slaapkamer - zolder SMOKE DETECTION
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke
+  condition:
+        - condition: state
+          entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke
+          state: '3'
+  action:
+    - service: notify.telegram_thuis
+      data:
+        title: 'Fibaro Smoke Sensor - Slaapkamer - Zolder: BRANDALARM '
+        message: '******* Rookmelder zolder - gaat af! *******'
+        
+############################################################
+############ FIBARO SENSOR TRIGGER SMOKE OFF ###############
+############################################################
+## Fibaro smoke sensor - gang - begane grond
+- alias: Fibaro Sensor - gang - begane grond NO SMOKE
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_smoke
+    from: '3'
+  action:
+    service: notify.telegram_thuis
+    data:
+      title: 'Fibaro Smoke Sensor - Gang - Begane Grond: BRANDALARM '
+      message: '******* Rookmelder begane grond - gestopt (handmatig of automatisch) *******'
+
+## Fibaro smoke sensor - slaapkamer - zolder     
+- alias: Fibaro Sensor - slaapkamer - zolder NO SMOKE
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke
+    from: '3'
+  action:
+    service: notify.telegram_thuis
+    data:
+      title: 'Fibaro Smoke Sensor - Slaapkamer - Zolder: BRANDALARM '
+      message: '******* Rookmelder zolder - gestopt (handmatig of automatisch) *******'
+      
+
+##########################################################
+############ FIBARO SENSOR TRIGGER HEAT ON ###############
+##########################################################
+## Fibaro Smoke (heat) sensor - gang - begane grond
+- alias: Fibaro Sensor - gang - begane grond HEAT DETECTION
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_heat_2
+  condition:
+        - condition: state
+          entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_heat_2
+          state: '255'
+  action:
+    - service: notify.telegram_thuis
+      data:
+        title: 'Fibaro Heat Sensor - Gang - Begane Grond: HITTE ALARM '
+        message: '******* Warmtemelder begane grond - gaat af *******'
+        
+## Fibaro Smoke (heat) sensor - slaapkamer - zolder
+- alias: Fibaro Sensor - slaapkamer - zolder HEAT DETECTION
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat_2
+  condition:
+        - condition: state
+          entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat_2
+          state: '255'
+  action:
+    - service: notify.telegram_thuis
+      data:
+        title: 'Fibaro Heat Sensor - Slaapkamer - Zolder: HITTE ALARM '
+        message: '******* Warmtemelder zolder - gaat af *******'
+        
+###########################################################
+############ FIBARO SENSOR TRIGGER HEAT OFF ###############
+###########################################################
+## Fibaro Smoke (heat) sensor - gang - begane grond
+- alias: Fibaro Sensor - gang - begane grond NO HEAT
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_heat_2
+    from: '255'
+  action:
+    service: notify.telegram_thuis
+    data:
+      title: 'Fibaro Heat Sensor - Gang - Begane Grond: HITTE ALARM '
+      message: '******* Warmtemelder begane grond - gestopt (handmatig of automatisch) *******'
+
+## Fibaro Smoke (heat) sensor - slaapkamer - zolder     
+- alias: Fibaro Sensor - slaapkamer - zolder NO HEAT
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat_2
+    from: '255'
+  action:
+    service: notify.telegram_thuis
+    data:
+      title: 'Fibaro Heat Sensor - Slaapkamer - Zolder: HITTE ALARM '
+      message: '******* Warmtemelder zolder - gestopt (handmatig of automatisch) *******'
+
+############################################################      
+############ SMOKE SENSOR TRIGGER BURGLAR ON ###############
+############################################################
+## Fibaro smoke (burglar) sensor - gang - begane grond
+- alias: Smoke Sensor Open - gang - begane grond BURGLAR DETECTION
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_burglar
+  condition:
+      condition: or
+      conditions:
+        - condition: state
+          entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_burglar
+          state: '3'
+        - condition: state
+          entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_burglar
+          state: '8'
+  action:
+    - service: notify.telegram_thuis
+      data:
+        title: 'Fibaro Smoke Sensor - Gang - Begane Grond: INBRAAK ALARM '
+        message: '******* Rookmelder gang - is verwijderd!! *******'
+        
+## Fibaro smoke (burglar) sensor - slaapkamer - zolder 
+- alias: Smoke Sensor Open - slaapkamer - zolder BURGLAR DETECTION
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_burglar
+  condition:
+      condition: or
+      conditions:
+        - condition: state
+          entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_burglar
+          state: '3'
+        - condition: state
+          entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_burglar
+          state: '8'
+  action:
+    - service: notify.telegram_thuis
+      data:
+        title: 'Fibaro Smoke Sensor - Slaapkamer - Zolder: INBRAAK ALARM '
+        message: '******* Rookmelder slaapkamer - is verwijderd!! *******'
+        
+## Fibaro door (burglar) sensor - hal - begane grond 
+- alias: Door Sensor Open - hal - begane grond BURGLAR DETECTION
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__door_sensor__hal_begane_grond_burglar
+  condition:
+      condition: or
+      conditions:
+        - condition: state
+          entity_id: sensor.fibaro__door_sensor__hal_begane_grond_burglar
+          state: '3'
+        - condition: state
+          entity_id: sensor.fibaro__door_sensor__hal_begane_grond_burglar
+          state: '8'
+  action:
+    - service: notify.telegram_thuis
+      data:
+        title: 'Fibaro Door Sensor - Hal - Begane Grond: INBRAAK ALARM '
+        message: '******* Deursensor hal - kap verwijderd!! *******'
+
+#############################################################        
+############ SMOKE SENSOR TRIGGER BURGLAR OFF ###############
+#############################################################
+## Fibaro smoke (burglar) sensor - gang - begane grond
+- alias: Smoke Sensor Open - gang - begane grond NO BURGLAR
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_burglar
+  condition:
+        - condition: state
+          entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_burglar
+          state: '0'
+  action:
+    - service: notify.telegram_thuis
+      data:
+        title: 'Fibaro Smoke Sensor - Gang - Begane Grond: INBRAAK ALARM '
+        message: '******* Rookmelder gang - zit er weer op *******'
+        
+## Fibaro smoke (burglar) sensor - slaapkamer - zolder 
+- alias: Smoke Sensor Open - slaapkamer - zolder NO BURGLAR
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_burglar
+  condition:
+        - condition: state
+          entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_burglar
+          state: '0'
+  action:
+    - service: notify.telegram_thuis
+      data:
+        title: 'Fibaro Smoke Sensor - Slaapkamer - Zolder: INBRAAK ALARM '
+        message: '******* Rookmelder slaapkamer - zit er weer op *******'
+
+## Fibaro door (burglar) sensor - hal - begane grond 
+- alias: Door Sensor Open - slaapkamer - zolder NO BURGLAR
+  hide_entity: true
+  trigger:
+    platform: state
+    entity_id: sensor.fibaro__door_sensor__hal_begane_grond_burglar
+  condition:
+        - condition: state
+          entity_id: sensor.fibaro__door_sensor__hal_begane_grond_burglar
+          state: '0'          
+  action:
+    - service: notify.telegram_thuis
+      data:
+        title: 'Fibaro Door Sensor - Hal - Begane Grond: INBRAAK ALARM '
+        message: '******* Deursensor hal - Kapje zit er weer op *******'

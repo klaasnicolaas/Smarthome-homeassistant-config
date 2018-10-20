@@ -21,7 +21,6 @@ secrets.yaml
 known_devices.yaml
 entity_registry.yaml
 ip_bans.yaml
-/www/custom_ui/floorplan
 smartyone_nl.pem
 server.pem
 home-assistant_v2.db-shm
