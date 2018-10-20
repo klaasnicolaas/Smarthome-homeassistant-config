@@ -47,6 +47,7 @@ omgeving:
 begane_grond_hal:
     name: Hal | Begane grond
     entities:
+        - switch.deurbel
         - binary_sensor.sensor_voordeur
         - sensor.fibaro__door_sensor__hal_begane_grond_temperature
         - binary_sensor.sensor_beweging_hal_begane_grond
@@ -91,8 +92,8 @@ slaapkamer_zolder_view:
         - switch.led_bureau__zolder
         - switch.led_slaapkamer__zolder
         - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
-        - light.vliering_achter__zolder_auto
-        - light.vliering_voor__zolder_auto
+        - light.vliering_achter__zolder_manual
+        - light.vliering_voor__zolder_manual
         - switch.computer_klaas
         
 # Tuin 
