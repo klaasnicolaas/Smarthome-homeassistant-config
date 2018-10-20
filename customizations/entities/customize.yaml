@@ -263,3 +263,7 @@ automation.telegram_bot_send_message_if_voordeur_is_open:
     
 automation.telegram_bot_send_message_if_voordeur_is_open__vakantie_mode:
     friendly_name: Telegram - voordeur (vakantie mode)
+
+#  #############
+switch.deurbel:
+    icon: mdi:doorbell-video

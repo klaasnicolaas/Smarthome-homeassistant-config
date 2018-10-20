@@ -1,0 +1,9 @@
+- alias: Deurbel Melding
+  trigger:
+    - platform: event
+      event_type: button_pressed
+      event_data: {"entity_id": "switch.deurbel"}
+  action:
+    - service: notify.telegram_klaas
+      data:
+        message: 'Iemand staat voor de deur!'

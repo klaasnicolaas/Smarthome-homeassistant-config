@@ -12,13 +12,11 @@
   - [ ] Xiaomi Smart Door Sensors
   - [ ] Xiaomi Smart Human Body Sensors
   - [ ] Xiami Smart Wireless Switch
-- [ ] Setup and wallmount Android Tablet with Dashboard
+- [ ] Setup and wallmount Android Tablet with Dashboard (we have one)
   - [ ] Add a guest mode to the dashboard
 - [ ] Build own Floorplan with additional functionality (I'm working on it)
 - [ ] Implement Guest mode to disable certain interior automations
 - [ ] Implement lights to be turned off if no one is home and no motion detection
-- [ ] Setup Night and Day theme - Also apply to Floorplan
-- [ ] Adding the chromecasts that are in the house (I'm working on it)
 - [ ] Make a smart mirror and integrate it
 - [ ] Make it possible to control the blinds
 - [ ] Operate the garden lighting
@@ -50,7 +48,7 @@
 - [x] Remap the scene component
 - [x] Remap the automation component
 
-## Already working (automation)
+## Already working
 
 - [x] Sending telegram message if a door is open
 - [x] Sending telegram message if phone battery level is under 25% (at the moment this is disabled)
@@ -70,9 +68,13 @@
 - [x] Commit to github by filling in a text box and pressing the button, so easily!
 - [x] Integration with Uptime Robot, so I get notified when the Pi is down.
 - [x] Integration with Travis Ci.
+- [x] Using themes for day and night.
+- [x] Doorbell integration and automation.
+- [x] Setup HTML5 push notifications
+- [x] Adding the chromecasts that are in the house
 
 - Analytics 
-	- [x] Reading the battery percentages of all Z-wave devices 
+	- [x] Reading the battery percentages of all Z-wave devices
 	- [x] Show info about up and download speed
 	- [x] Show info about the system version of Hassbian
 	- [x] Show info about installed python version

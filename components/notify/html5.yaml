@@ -1,0 +1,4 @@
+- platform: html5
+  name: html_notify
+  gcm_api_key: !secret html5_server_key
+  gcm_sender_id: !secret html5_sender_id
