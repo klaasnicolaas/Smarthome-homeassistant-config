@@ -31,6 +31,12 @@ sensor.power_consumption_low:
 sensor.power_consumption_normal:
     friendly_name: Stroom verbuik | Hoog tarief
 
+sensor.power_consumption_phase_l2:
+    hidden: true
+
+sensor.power_consumption_phase_l3:
+    hidden: true
+
 sensor.power_tariff:
     hidden: true
 
@@ -171,17 +177,17 @@ switch.fibaro__wall_plug_1_switch:
 sensor.fibaro__wall_plug__1_alarm_level_2:
     hidden: true
 
+sensor.fibaro__wall_plug_1_alarm_level:
+    hidden: true
+
+sensor.fibaro__wall_plug_1_alarm_type:
+    hidden: true
+
 sensor.fibaro__wall_plug__1_alarm_type_2:
     hidden: true
 
-#sensor.fibaro__wall_plug__1_energy_2:
-
 sensor.fibaro__wall_plug__1_exporting_2:
     hidden: true
-
-#sensor.fibaro__wall_plug__1_power_3:
-
-#sensor.fibaro__wall_plug__1_power_4:
 
 sensor.fibaro__wall_plug__1_power_management_2:
     hidden: true
@@ -224,19 +230,18 @@ sensor.fibaro__motion_sensor__hal_begane_grond_temperature:
 sensor.fibaro__motion_sensor__hal_begane_grond_luminance:
     friendly_name: Lichtsterkte (bewegings sensor) - Hal | Begane grond
 
-# HOME ASSISTANT STATS ####################################################
-sensor.zwave_battery_door_sensor_hal_begane_grond:
-    friendly_name: Door sensor | begane grond
-    
-sensor.zwave_battery_motion_sensor_hal_begane_grond:
-    friendly_name: Motion sensor | begane grond
+sensor.fibaro__motion_sensor__hal_begane_grond_sourcenodeid:
+    hidden: true
 
-sensor.zwave_battery_smoke_sensor_begane_grond:
-    friendly_name: Smoke sensor | begane grond
+sensor.fibaro__motion_sensor__hal_begane_grond_general:
+    hidden: true
 
-sensor.zwave_battery_smoke_sensor_slaapkamer_zolder:
-    friendly_name: Smoke sensor | slaapkamer zolder
-    
+sensor.fibaro__motion_sensor__hal_begane_grond_alarm_type:
+    hidden: true
+
+sensor.fibaro__motion_sensor__hal_begane_grond_alarm_level:
+    hidden: true
+
 # MEDIA PLAYER ####################################################
 media_player.32pfs640212:
     friendly_name: TV - Woonkamer

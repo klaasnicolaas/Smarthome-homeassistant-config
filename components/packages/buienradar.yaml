@@ -39,6 +39,12 @@ sensor:
     timeframe: 60
     monitored_conditions:
       - precipitation_forecast_average
+      - symbol
+      - humidity
+      - temperature
+      - windspeed
+      - groundtemperature
+      - precipitation
 
 ################################################
 ## Automation

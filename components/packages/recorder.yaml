@@ -9,7 +9,7 @@ recorder:
     purge_interval: 1
 
     # The number of days of history to keep in the recorder database
-    purge_keep_days: 7
+    purge_keep_days: 14
     db_url: !secret mariadb_external_url
     exclude:
         domains:
@@ -22,6 +22,7 @@ recorder:
             - weblink
             - calendar
             - media_player
+            - sun
         entities:
             - sensor.br_ground_temperature
             - sensor.br_humidity
@@ -30,7 +31,6 @@ recorder:
             - sensor.br_temperature
             - sensor.br_wind_speed
             - sensor.external_ip
-            - sun.sun
             - zone.home
             - zone.huis_marlene
             - zone.schiphol_airport
