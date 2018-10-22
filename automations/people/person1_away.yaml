@@ -1,0 +1,54 @@
+- alias: 'Persoon 1 weg'
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id:
+        - device_tracker.samsunggalaxys7edgelan
+        - device_tracker.samsung_galaxy_s7_edge
+#        - device_tracker.ce10160afb463b3504
+      to: 'not_home'
+    - platform: state
+      entity_id:
+        - device_tracker.samsunggalaxys7edgelan
+        - device_tracker.samsung_galaxy_s7_edge
+#        - device_tracker.ce10160afb463b3504
+      to: 'not_home'
+      for:
+        minutes: 5
+    - platform: homeassistant
+      event: start
+  condition:
+    - condition: state
+      entity_id: input_boolean.person1_home
+      state: 'on'
+    # No more than one tracker puts the person at home
+    - condition: numeric_state
+      entity_id: group.group_person1
+      below: 2
+      value_template: "{{ dict((states|selectattr('entity_id', 'in', state_attr('group.person_person1', 'entity_id'))|list)|groupby('state'))['home']|count }}"
+    # Either a door was opened in the last 10 minutes, a door is open, or they've been gone for at least 4 minutes
+    - condition: or
+      conditions:
+      # A door was opened in the last 10 minutes
+      - condition: template
+        value_template: "{{ (as_timestamp(now()) - as_timestamp(states.binary_sensor.fibaro__motion_sensor__hal_begane_grond_sensor.last_updated)) | int < 600 }}"
+      # A door is currently open
+      - condition: state
+        entity_id: binary_sensor.fibaro__motion_sensor__hal_begane_grond_sensor
+        state: 'on'
+      - condition: and
+        conditions:
+        # WiFi and BT away for at least 4 minutes
+        - condition: state
+          entity_id: device_tracker.samsunggalaxys7edgelan
+          state: 'not_home'
+          for:
+            minutes: 4
+        - condition: state
+          entity_id: device_tracker.samsung_galaxy_s7_edge
+          state: 'not_home'
+          for:
+            minutes: 4
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.person1_home

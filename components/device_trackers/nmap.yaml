@@ -5,8 +5,8 @@
 #
 
 platform: nmap_tracker
-home_interval: 15
 track_new_devices: yes
+interval_seconds: 30
 consider_home: 180
 hosts:
   - !secret nmap_device_1

@@ -15,7 +15,6 @@ recorder:
         domains:
             - updater
             - automation
-            - device_tracker
             - group
             - scene
             - script

@@ -14,7 +14,7 @@
   - [ ] Xiami Smart Wireless Switch
 - [ ] Setup and wallmount Android Tablet with Dashboard (we have one)
   - [ ] Add a guest mode to the dashboard
-- [ ] Build own Floorplan with additional functionality (I'm working on it)
+- [ ] Build own Floorplan with additional functionality
 - [ ] Implement Guest mode to disable certain interior automations
 - [ ] Implement lights to be turned off if no one is home and no motion detection
 - [ ] Make a smart mirror and integrate it

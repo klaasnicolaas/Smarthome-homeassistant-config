@@ -46,7 +46,7 @@ logger:
 #  project_id: !secret google_assistant_project_id
 
 ################################## GOOGLE CALENDAR ##################################    
-google:
-  client_id: !secret google_calendar_client_id
-  client_secret: !secret google_calendar_secret_key
-  track_new_calendar: true
+#google:
+#  client_id: !secret google_calendar_client_id
+#  client_secret: !secret google_calendar_secret_key
+#  track_new_calendar: true

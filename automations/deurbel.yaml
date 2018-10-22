@@ -1,3 +1,4 @@
+# Als er op de deurbel word gedrukt, stuur dan een telegram bericht en als we thuis zijn ook een spraak bericht.
 - alias: Deurbel Melding
   trigger:
     - platform: event
@@ -7,3 +8,11 @@
     - service: notify.telegram_klaas
       data:
         message: 'Iemand staat voor de deur!'
+    - condition: state
+      entity_id: device_tracker.ce10160afb463b3504
+      state: 'home'
+    - service: tts.google_say
+      entity_id: media_player.slaapkamer_zolder__mini
+      data:
+        message: 'Ding dong, er staat iemand bij de voordeur'
+        cache: true

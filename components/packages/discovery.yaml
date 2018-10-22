@@ -5,3 +5,5 @@
 #
 
 discovery:
+  ignore:
+    - google_cast

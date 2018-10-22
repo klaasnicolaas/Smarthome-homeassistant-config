@@ -117,9 +117,9 @@ automation:
     trigger:
       # Klaas
       - platform: state
-        entity_id: device_tracker.samsunggalaxys7edgelan 
-        from: 'not_home'
-        to: 'home'
+        entity_id: binary_sensor.klaas_thuis
+        from: 'off'
+        to: 'on'
       # Grietje
       - platform: state
         entity_id: device_tracker.19216825
@@ -129,13 +129,13 @@ automation:
       - service: input_select.select_option
         data_template:
           entity_id: >
-            {% if trigger.entity_id == 'device_tracker.samsunggalaxys7edgelan' %}
+            {% if trigger.entity_id == 'binary_sensor.klaas_thuis' %}
               input_select.klaas_status_dropdown
             {% else %}
               input_select.grietje_status_dropdown
             {% endif %}
           option: >
-            {% if trigger.entity_id == 'device_tracker.samsunggalaxys7edgelan' %}
+            {% if trigger.entity_id == 'binary_sensor.klaas_thuis' %}
               {% if states.input_select.klaas_status_dropdown.state == 'Net Vertrokken' %}
                 Thuis
               {% else %}
@@ -183,9 +183,9 @@ automation:
     trigger:
         # Klaas
       - platform: state
-        entity_id: device_tracker.samsunggalaxys7edgelan
-        from: 'home'
-        to: 'not_home'
+        entity_id: binary_sensor.klaas_thuis
+        from: 'on'
+        to: 'off'
         # Grietje
       - platform: state
         entity_id: device_tracker.19216825
@@ -195,7 +195,7 @@ automation:
       - service: input_select.select_option
         data_template:
           entity_id: >
-            {% if trigger.entity_id == 'device_tracker.samsunggalaxys7edgelan' %}
+            {% if trigger.entity_id == 'binary_sensor.klaas_thuis' %}
               input_select.klaas_status_dropdown
             {% else %}
               input_select.grietje_status_dropdown

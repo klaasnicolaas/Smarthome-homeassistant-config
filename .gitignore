@@ -9,12 +9,13 @@
 *.xml
 *.log
 *.backup
+*.mp3
 .cloud
 .HA_VERSION
 www
 zones
 deps
-tts
+tmp
 .storage
 .google.token
 secrets.yaml

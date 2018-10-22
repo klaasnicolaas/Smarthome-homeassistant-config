@@ -1,0 +1,1 @@
+input_boolean: !include_dir_named ../input_booleans

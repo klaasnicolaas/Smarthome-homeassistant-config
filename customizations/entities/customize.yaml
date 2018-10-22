@@ -249,9 +249,10 @@ media_player.32pfs640212:
 # YEELIGHT ####################################################
 light.yeelight_ct2_7c49eb19d5f5:
     friendly_name: Vliering achter | Zolder
+    hidden: true
 
-light.yeelight_ct2_7c49eb19d785:
-    friendly_name: Vliering voor | Zolder
+#light.yeelight_ct2_7c49eb19d785:
+#    friendly_name: Vliering voor | Zolder
     
 # WAKE ON LAN ####################################################
 switch.computer_klaas:
@@ -267,3 +268,9 @@ automation.telegram_bot_send_message_if_voordeur_is_open__vakantie_mode:
 #  #############
 switch.deurbel:
     icon: mdi:doorbell-video
+
+group.all_automations:
+    hidden: false
+
+sensor.season:
+    friendly_name: Seizoen

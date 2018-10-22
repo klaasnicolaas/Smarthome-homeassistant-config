@@ -42,6 +42,7 @@ omgeving:
         - sensor.br_wind_speed
         - sensor.br_precipitation
         - sensor.buienradar_precipitation_forecast_average
+        - sensor.season
         
 # Hal begane grond groep
 begane_grond_hal:
@@ -67,7 +68,14 @@ temperaturen:
 tuin:
     name: Tuin
     entities:
-        - switch.fibaro__wall_plug_1_switch 
+        - switch.fibaro__wall_plug_1_switch
+
+person_person1:
+    name: Person1
+    entities:
+      - device_tracker.samsunggalaxys7edgelan
+      - device_tracker.samsung_galaxy_s7_edge
+      - device_tracker.ce10160afb463b3504
 
 ################################## VIEWS - TABS ##############################               
 # Begane grond view
@@ -95,6 +103,8 @@ slaapkamer_zolder_view:
         - light.vliering_achter__zolder_manual
         - light.vliering_voor__zolder_manual
         - switch.computer_klaas
+        - scene.slaapkamer__zolder__on
+        - scene.slaapkamer__zolder__off
         
 # Tuin 
 tuin_view:
@@ -122,31 +132,7 @@ automatisering_view:
     view: yes
     icon: mdi:home-automation
     entities:
-        - automation.battery_low_alert__front_door
-        - automation.battery_low_alert__smoke_sensor__begane_grond
-        - automation.battery_low_alert__smoke_sensor__kamer_zolder
-        - automation.cube_light__turn_on
-        - automation.door_sensor_open__hal__begane_grond_burglar_detection
-        - automation.door_sensor_open__slaapkamer__zolder_no_burglar
-        - automation.fibaro_sensor__gang__begane_grond_heat_detection
-        - automation.fibaro_sensor__gang__begane_grond_no_heat
-        - automation.fibaro_sensor__gang__begane_grond_no_smoke
-        - automation.fibaro_sensor__gang__begane_grond_smoke_detection
-        - automation.fibaro_sensor__slaapkamer__zolder_heat_detection
-        - automation.fibaro_sensor__slaapkamer__zolder_no_heat
-        - automation.fibaro_sensor__slaapkamer__zolder_no_smoke
-        - automation.fibaro_sensor__slaapkamer__zolder_smoke_detection
-        - automation.rain_alarm
-        - automation.smoke_sensor_open__gang__begane_grond_burglar_detection
-        - automation.smoke_sensor_open__gang__begane_grond_no_burglar
-        - automation.smoke_sensor_open__slaapkamer__zolder_burglar_detection
-        - automation.smoke_sensor_open__slaapkamer__zolder_no_burglar
-        - automation.telegram_bot_that_reply_pong_to_ping
-        - automation.update_available_notification
-        - automation.waterornament_aan__doordeweeks
-        - automation.waterornament_uit__doordeweeks
-        - automation.telegram_bot_send_message_if_voordeur_is_open
-        - automation.telegram_bot_send_message_if_voordeur_is_open__vakantie_mode
+        - group.all_automations
         
         
 ################################################################################
