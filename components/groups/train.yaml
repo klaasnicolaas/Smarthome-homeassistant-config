@@ -1,0 +1,7 @@
+trein_reizen:
+  name: Treintijden Trajecten
+  entities:
+    - sensor.alkmaar__leiden
+    - sensor.schiphol_airport__leiden
+    - sensor.leiden__alkmaar
+    - sensor.leiden__schiphol_airport

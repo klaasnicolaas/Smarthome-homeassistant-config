@@ -6,13 +6,6 @@
 
 - platform: template
   sensors:
-    sensor_voordeur:
-      device_class: door
-      friendly_name: Voordeur
-      value_template: >
-        {{ states.sensor.fibaro__door_sensor__hal_begane_grond_access_control.state < '23' }}
-- platform: template
-  sensors:
     sensor_beweging_hal_begane_grond:
       device_class: motion
       friendly_name: Bewegingsmelder - Hal | Begane grond

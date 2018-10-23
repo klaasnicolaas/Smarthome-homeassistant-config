@@ -1,21 +1,24 @@
 ## Experimental sensor for home/away detection
 - platform: 'bayesian'
-  prior: 0.6
+  prior: 0.65
   name: 'Klaas Thuis'
-  probability_threshold: 0.90
+  probability_threshold: 0.9
   observations:
     # Wifi
     - entity_id: device_tracker.samsunggalaxys7edgelan
-      prob_given_true: 0.8
+      prob_given_true: 0.9
+      prob_given_false: 0.2
       platform: 'state'
       to_state: 'home'
     # Bluetooth
     - entity_id: device_tracker.samsung_galaxy_s7_edge
-      prob_given_true: 0.8
+      prob_given_true: 0.9
+      prob_given_false: 0.3
       platform: 'state'
       to_state: 'home'
     # GPS
     - entity_id: device_tracker.ce10160afb463b3504
       prob_given_true: 0.9
+      prob_given_false: 0.1
       platform: 'state'
       to_state: 'home'

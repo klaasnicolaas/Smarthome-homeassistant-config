@@ -1,0 +1,17 @@
+# Nederlandse Spoorwegen #
+- platform: nederlandse_spoorwegen
+  email: !secret ns_email
+  password: !secret ns_password
+  routes:
+    - name: Alkmaar - Leiden
+      from: Amr
+      to: Ledn
+    - name: Leiden - Alkmaar
+      from: Ledn
+      to: Amr
+    - name: Schiphol Airport - Leiden
+      from: Shl
+      to: Ledn
+    - name: Leiden - Schiphol Airport
+      from: Ledn
+      to: Shl

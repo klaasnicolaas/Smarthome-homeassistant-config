@@ -122,7 +122,7 @@ automation:
         to: 'on'
       # Grietje
       - platform: state
-        entity_id: device_tracker.19216825
+        entity_id: binary_sensor.grietje_thuis
         from: 'not_home'
         to: 'home'
     action:
@@ -188,7 +188,7 @@ automation:
         to: 'off'
         # Grietje
       - platform: state
-        entity_id: device_tracker.19216825
+        entity_id: binary_sensor.grietje_thuis
         from: 'home'
         to: 'not_home'
     action:

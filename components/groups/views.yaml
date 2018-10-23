@@ -1,0 +1,66 @@
+################################## VIEWS - TABS ##############################               
+# Begane grond view
+begane_grond_view:
+    name: Begane grond
+    view: yes
+    entities:
+        - group.begane_grond_trappengang
+        - group.begane_grond_hal
+        
+# Eerste verdieping view
+eerste_verdieping_view:
+    name: Eerste verdieping
+    view: yes
+
+# Zolder view
+slaapkamer_zolder_view:
+    name: Zolder
+    view: yes
+    entities:
+        - switch.lamp_slaapkamer__zolder
+        - switch.led_bureau__zolder
+        - switch.led_slaapkamer__zolder
+        - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+        - light.vliering_achter__zolder_manual
+        - light.vliering_voor__zolder_manual
+        - switch.computer_klaas
+        - scene.slaapkamer__zolder__on
+        - scene.slaapkamer__zolder__off
+        
+# Tuin 
+tuin_view:
+  name: Tuin
+  view: yes
+  entities:
+#        - group.tuin
+        - switch.fibaro__wall_plug_1_switch
+
+reizen_view:
+  name: Reizen
+  view: yes
+  icon: mdi:train
+  entities:
+    - group.trein_reizen
+
+# Temperaturen in huis
+temperaturen_view:
+  name: Temperaturen in huis
+  view: yes
+  icon: mdi:temperature-celsius
+  entities:
+      - group.temperaturen
+      - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+      - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
+      - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
+      - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+
+# Automatisering
+automatisering_view:
+  name: Automatisering
+  view: yes
+  icon: mdi:home-automation
+  entities:
+      - group.all_automations
+        
+        
+################################################################################
