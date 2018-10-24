@@ -123,8 +123,8 @@ automation:
       # Grietje
       - platform: state
         entity_id: binary_sensor.grietje_thuis
-        from: 'not_home'
-        to: 'home'
+        from: 'off'
+        to: 'on'
     action:
       - service: input_select.select_option
         data_template:
@@ -189,8 +189,8 @@ automation:
         # Grietje
       - platform: state
         entity_id: binary_sensor.grietje_thuis
-        from: 'home'
-        to: 'not_home'
+        from: 'on'
+        to: 'off'
     action:
       - service: input_select.select_option
         data_template:

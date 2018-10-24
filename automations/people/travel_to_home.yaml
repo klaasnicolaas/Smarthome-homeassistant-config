@@ -1,0 +1,20 @@
+# Als ik van school naar huis ga stuur dan een bericht hoelaat ik thuis kom.
+- alias: travel from school to home
+  trigger:
+    - platform: zone
+      entity_id: device_tracker.ce10160afb463b3504
+      zone: zone.hogeschool_leiden
+      event: leave
+  condition:
+    - condition: time
+      after: '11:00:00'
+      weekday:
+        - mon
+        - wed
+    - condition: zone
+      entity_id: device_tracker.ce10160afb463b3504
+      zone: zone.station_leiden
+  action:
+    service: notify.telegram_klaas
+    data:
+      meesage: 'Klaas is in Alkmaar om: {{ states.sensor.leiden__alkmaar.attributes.arrival_time_actual }} via de route: {{ states.sensor.leiden__alkmaar.attributes.route }}'

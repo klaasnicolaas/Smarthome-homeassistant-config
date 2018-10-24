@@ -37,6 +37,7 @@
 
 # Garden Fontain - Turns off 3 hours before sunset and if people are home (doordeweeks)
 - alias: 'Waterornament uit - doordeweeks'
+  initial_state: 'off'
   trigger:
     - platform: sun
       event: sunset
