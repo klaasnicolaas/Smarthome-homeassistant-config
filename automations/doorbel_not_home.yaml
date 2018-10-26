@@ -1,0 +1,15 @@
+# Als er op de deurbel word gedrukt, stuur dan een telegram bericht en als we thuis zijn ook een spraak bericht.
+- alias: Deurbel Melding
+  initial_state: 'on'
+  trigger:
+    - platform: event
+      event_type: button_pressed
+      event_data: {"entity_id": "switch.deurbel"}
+  condition:
+    - condition: state
+      entity_id: binary_sensor.klaas_thuis
+      state: 'off'
+  action:
+    - service: notify.telegram_klaas
+      data:
+        message: 'Iemand staat voor de deur!'

@@ -11,11 +11,11 @@
       platform: 'state'
       to_state: 'home'
     # Bluetooth
-    - entity_id: device_tracker.samsung_galaxy_s7_edge
-      prob_given_true: 0.9
-      prob_given_false: 0.3
-      platform: 'state'
-      to_state: 'home'
+    #- entity_id: device_tracker.samsung_galaxy_s7_edge
+    #  prob_given_true: 0.9
+    #  prob_given_false: 0.3
+    #  platform: 'state'
+    #  to_state: 'home'
     # GPS
     - entity_id: device_tracker.ce10160afb463b3504
       prob_given_true: 0.9

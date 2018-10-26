@@ -5,13 +5,11 @@
     - platform: event
       event_type: button_pressed
       event_data: {"entity_id": "switch.deurbel"}
-  action:
-    - service: notify.telegram_klaas
-      data:
-        message: 'Iemand staat voor de deur!'
+  condition:
     - condition: state
       entity_id: binary_sensor.klaas_thuis
       state: 'on'
+  action:
     - service: tts.google_say
       entity_id: media_player.slaapkamer_zolder__mini
       data:
