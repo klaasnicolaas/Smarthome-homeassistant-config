@@ -19,8 +19,6 @@ stages:
     - touch ./OZW_Log.txt
   script:
     - hass --script check_config -c .
-  tags:
-    - test
 
 # Preflight jobs
 shellcheck:
