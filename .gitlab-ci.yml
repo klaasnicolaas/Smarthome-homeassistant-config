@@ -1,6 +1,14 @@
 stages:
+  - preflight
   - test
 
+# Generic preflight template
+.preflight: &preflight
+  stage: preflight
+  tags:
+    - preflight
+
+# Generic test template
 test:
   stage: test
   image: homeassistant/amd64-homeassistant
@@ -11,3 +19,32 @@ test:
     - touch ./OZW_Log.txt
   script:
     - hass --script check_config -c .
+  tags:
+    - test
+
+# Preflight jobs
+shellcheck:
+  <<: *preflight
+  image:
+    name: koalaman/shellcheck-alpine:stable
+    entrypoint: [""]
+  before_script:
+    - shellcheck --version
+    - apk --no-cache add grep
+    - |
+      find . -type f -print0 | \
+        xargs -0 sed -i 's:#!/usr/bin/with-contenv bash:#!/bin/bash:g'
+  script:
+    - |
+      for file in $(grep -IRl "#\!\(/usr/bin/env \|/bin/\)" --exclude-dir ".git" "${ADDON_TARGET}"); do
+        if ! shellcheck $file; then
+          export FAILED=1
+        else
+          echo "$file OK"
+        fi
+      done
+      if [ "${FAILED}" = "1" ]; then
+        exit 1
+      fi
+
+# Test jobs
