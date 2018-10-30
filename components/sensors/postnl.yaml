@@ -1,3 +1,4 @@
+---
   # PostNL
 - platform: postnl
   username: !secret username_postnl

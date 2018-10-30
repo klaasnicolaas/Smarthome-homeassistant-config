@@ -11,4 +11,3 @@
       friendly_name: Bewegingsmelder - Hal | Begane grond
       value_template: >
         {{ states.sensor.fibaro__motion_sensor__hal_begane_grond_burglar.state == '8' }}
-        
