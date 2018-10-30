@@ -6,5 +6,8 @@ test:
   image: homeassistant/amd64-homeassistant
   before_script:
     - cp travis_secrets.yaml secrets.yaml
+    - touch ./home-assistant_v2.db
+    - touch ./home-assistant.log
+    - touch ./OZW_Log.txt
   script:
     - hass --script check_config -c .
