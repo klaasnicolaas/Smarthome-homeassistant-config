@@ -6,4 +6,4 @@
 #
 
 ifttt:
-  key: !secret ifttt_key 
+  key: !secret ifttt_key

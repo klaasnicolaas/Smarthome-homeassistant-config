@@ -1,3 +1,4 @@
+---
 # first test to turn on a light with the cube
 - alias: 'Cube Light - Turn on'
   trigger:

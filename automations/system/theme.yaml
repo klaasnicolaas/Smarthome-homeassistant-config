@@ -1,3 +1,4 @@
+---
 - alias: 'Set HA theme for day and night'
   trigger:
     - platform: homeassistant

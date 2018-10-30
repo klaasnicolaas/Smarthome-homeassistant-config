@@ -1,3 +1,4 @@
+---
 ############## Notification door ####################
 - alias: 'Telegram bot send message if voordeur is open'
   hide_entity: true

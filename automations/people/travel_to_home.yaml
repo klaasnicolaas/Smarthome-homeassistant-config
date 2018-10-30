@@ -1,3 +1,4 @@
+---
 # Als ik van school naar huis ga stuur dan een bericht hoelaat ik thuis kom.
 - alias: Travel from school to home
   trigger:

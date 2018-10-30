@@ -9,14 +9,14 @@ switch.led_bureau__zolder:
 switch.led_slaapkamer__zolder:
   icon: mdi:lightbulb-on-outline
 
-# Het weer ###########################################################    
+# Het weer ###########################################################
 sun.sun:
   friendly_name: Zon
 
 sensor.yr_symbol:
   friendly_name: Weer cijfer
 
-# Slimme meter #######################################################   
+# Slimme meter #######################################################
 sensor.gas_consumption:
   friendly_name: Gas verbruik
 
@@ -71,11 +71,11 @@ sensor.power_production_phase_l2:
 sensor.power_production_phase_l3:
   hidden: true
 
-# Buienradar ##########################################################    
+# Buienradar ##########################################################
 sensor.br_humidity:
   friendly_name: Vochtigheid
 
-sensor.br_symbol: 
+sensor.br_symbol:
   friendly_name: Weerverwachting
 
 sensor.br_temperature:
@@ -252,7 +252,7 @@ light.yeelight_ct2_7c49eb19d5f5:
   friendly_name: Vliering achter | Zolder
   hidden: true
 
-#light.yeelight_ct2_7c49eb19d785:
+# light.yeelight_ct2_7c49eb19d785:
 #    friendly_name: Vliering voor | Zolder
 
 # WAKE ON LAN ####################################################

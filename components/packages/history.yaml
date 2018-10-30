@@ -8,16 +8,16 @@
 history:
   exclude:
     domains:
-        - updater
-        - calendar
-        - media_player
-        - weblink  
+      - updater
+      - calendar
+      - media_player
+      - weblink
     entities:
-        - sensor.ssl_certificate_expiry
-        - sensor.postnl
-        - sensor.myip
-        - sensor.power_consumption_phase_l2
-        - sensor.power_consumption_phase_l3
-        - sensor.voltage_sags_phase_l1
-        - sensor.voltage_swells_phase_l1
-        - binary_sensor.workday_sensor
+      - sensor.ssl_certificate_expiry
+      - sensor.postnl
+      - sensor.myip
+      - sensor.power_consumption_phase_l2
+      - sensor.power_consumption_phase_l3
+      - sensor.voltage_sags_phase_l1
+      - sensor.voltage_swells_phase_l1
+      - binary_sensor.workday_sensor

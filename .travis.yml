@@ -1,3 +1,4 @@
+---
 language: python
 # Existing Python versions
 python:
@@ -21,7 +22,7 @@ install:
 script:
   - hass -c . --script check_config
 notifications:
-    email:
-      - klaas_schoute@hotmail.com
-    on_success: never # default change 
-    on_failure: always # default always
+  email:
+    - klaas_schoute@hotmail.com
+  on_success: never # default change 
+  on_failure: always # default always

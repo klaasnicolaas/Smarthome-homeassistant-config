@@ -26,7 +26,7 @@ http:
     - !secret intern_ip_2
     - !secret intern_ip_3
     - 127.0.0.1
-  
+
   # Enables additional IP filtering.
   ip_ban_enabled: false
 

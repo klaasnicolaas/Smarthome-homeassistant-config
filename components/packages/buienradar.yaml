@@ -1,3 +1,4 @@
+---
 ################################################
 ## Packages / Weather
 ################################################
@@ -57,7 +58,7 @@ automation:
       - platform: state
         entity_id: sensor.buienradar_precipitation_forecast_average
         from: '0'
-    condition: 
+    condition:
       - condition: numeric_state
         entity_id: sensor.buienradar_precipitation_forecast_average
         above: '1'
