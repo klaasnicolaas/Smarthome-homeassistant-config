@@ -1,2 +1,3 @@
 rules "~MD026"
-code_blocks "false"
+
+style: "/home/homeassistant/.homeassistant/markdown.style.rb"
