@@ -20,34 +20,7 @@
 - [ ] Make a smart mirror and integrate it
 - [ ] Make it possible to control the blinds
 - [ ] Operate the garden lighting
-
 - [ ] Convince everyone that Home Automation is the best!
-
-## Big project - restructure folders, files and code
-
-- [x] Remap the google assistant cloud component
-- [x] Remap the lights component
-- [x] Remap the device tracker component
-- [x] Remap the rfxtrx and ifttt component
-- [x] Remap the switches component from config.yaml
-- [x] Remap the history and logbook component
-- [x] Remap the recorder component
-- [x] Remap the sun and map component
-- [x] Remap the media player and cast component
-- [x] Remap the frontend component
-- [x] Remap the notify component
-- [x] Remap the binary sensor component
-- [x] Remap the scripts component
-- [x] Remap the MQTT component
-- [x] Remap the group component
-- [x] Remap the customize component
-- [x] Remap the panels component
-- [x] Remap the updater component
-- [x] Remap the http component
-- [x] Remap the sensor component
-- [x] Remap the zone component
-- [x] Remap the scene component
-- [x] Remap the automation component
 
 ## Already working
 

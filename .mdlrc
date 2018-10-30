@@ -1,1 +1,2 @@
 rules "~MD026"
+code_blocks: false
