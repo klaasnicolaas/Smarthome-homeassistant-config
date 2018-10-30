@@ -9,7 +9,7 @@ stages:
     - preflight
 
 # Generic test template
-test:
+.test: &test
   stage: test
   image: homeassistant/amd64-homeassistant
   before_script:
