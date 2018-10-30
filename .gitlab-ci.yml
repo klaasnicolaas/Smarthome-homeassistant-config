@@ -48,3 +48,22 @@ shellcheck:
       fi
 
 # Test jobs
+latest:
+  <<: *test
+  image:
+    name: homeassistant/home-assistant:latest
+    entrypoint: [""]
+
+rc:
+  <<: *test
+  image:
+    name: homeassistant/home-assistant:rc
+    entrypoint: [""]
+  allow_failure: true
+
+dev:
+  <<: *test
+  image:
+    name: homeassistant/home-assistant:dev
+    entrypoint: [""]
+  allow_failure: true
