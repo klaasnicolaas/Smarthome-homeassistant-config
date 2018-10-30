@@ -1,3 +1,4 @@
+---
 # Garden Fontain - Turns on op zonnige dagen na 16:00 of als ik of mams thuis is na 16:00 (doordeweeks)
 - alias: 'Waterornament aan - doordeweeks'
   initial_state: 'off'
@@ -34,7 +35,6 @@
     - service: homeassistant.turn_on
       entity_id: switch.fibaro__wall_plug_1_switch
 
-
 # Garden Fontain - Turns off 3 hours before sunset and if people are home (doordeweeks)
 - alias: 'Waterornament uit - doordeweeks'
   initial_state: 'off'
@@ -43,7 +43,7 @@
       event: sunset
       offset: '-03:00:00'
   condition:
-      # het moet een werkdag zijn
+  # het moet een werkdag zijn
     - condition: state
       entity_id: binary_sensor.workday_sensor
       state: 'on'

@@ -48,7 +48,7 @@ views:
             tap_action: toggle
           - entity: light.vliering_voor__zolder_auto
             tap_action: toggle
-          # - entity: switch.....
+          # - entity: switch
             # name: Hall
             # tap_action: toggle
         state_filter:
@@ -79,11 +79,11 @@ views:
       - type: media-control
         entity: media_player.32pfs640212
 
-      # Google home mini - slaapkamer 
+      # Google home mini - slaapkamer
       - type: media-control
         entity: media_player.slaapkamer_zolder__mini
 
-      # Google home mini - woonkamer 
+      # Google home mini - woonkamer
       - type: media-control
         entity: media_player.woonkamer__mini
 
@@ -133,7 +133,7 @@ views:
       # Overzicht temperatuur en computer status
       - type: glance
         title: Slaapkamer
-        entities: 
+        entities:
           - entity: switch.computer_klaas
             tap_action: toggle
           - entity: sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
@@ -177,7 +177,7 @@ views:
   - icon: mdi:temperature-celsius
     title: Temperaturen grafiek
     cards:
-      # Toont met een grafiek de temperaturen in huis 
+      # Toont met een grafiek de temperaturen in huis
       - type: history-graph
         hours_to_show: 168
         refresh_interval: 3600

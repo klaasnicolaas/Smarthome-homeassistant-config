@@ -182,12 +182,12 @@ automation:
           option: Thuis
   - alias: Markeer persoon als net vertrokken
     trigger:
-        # Klaas
+      # Klaas
       - platform: state
         entity_id: binary_sensor.klaas_thuis
         from: 'on'
         to: 'off'
-        # Grietje
+      # Grietje
       - platform: state
         entity_id: binary_sensor.grietje_thuis
         from: 'on'
