@@ -1,3 +1,4 @@
+---
 # Slimme meter
 - platform: dsmr
   port: /dev/ttyUSB0

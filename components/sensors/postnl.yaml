@@ -1,5 +1,5 @@
 ---
-  # PostNL
+# PostNL
 - platform: postnl
   username: !secret username_postnl
   password: !secret password_postnl

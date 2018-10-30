@@ -1,3 +1,5 @@
+---
+# Group train
 trein_reizen:
   name: Treintijden Trajecten
   entities:

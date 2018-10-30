@@ -1,3 +1,5 @@
+---
+# HTML5 notity
 - platform: html5
   name: html_notify
   gcm_api_key: !secret html5_server_key

@@ -5,13 +5,13 @@
   name: 'Grietje Thuis'
   probability_threshold: 0.7
   observations:
-    # Wifi
+  # Wifi
     - entity_id: device_tracker.19216825
       prob_given_true: 0.8
       platform: 'state'
       to_state: 'home'
-    # Bluetooth
-    #- entity_id: device_tracker.moto_g_play
+  # Bluetooth
+    # - entity_id: device_tracker.moto_g_play
     #  prob_given_true: 0.8
     #  platform: 'state'
     #  to_state: 'home'
