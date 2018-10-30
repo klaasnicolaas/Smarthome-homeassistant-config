@@ -9,3 +9,4 @@ grafana:
   title: Grafana
   icon: mdi:chart-timeline
   url: !secret panel_iframe_grafana_url
+  

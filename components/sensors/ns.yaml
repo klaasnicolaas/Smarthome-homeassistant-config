@@ -1,3 +1,5 @@
+---
+
 # Nederlandse Spoorwegen #
 - platform: nederlandse_spoorwegen
   email: !secret ns_email
