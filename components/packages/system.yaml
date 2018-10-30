@@ -33,9 +33,9 @@ homeassistant:
     ## Binary Sensor
     ################################################
 
-  # binary_sensor.db_large:
-    # <<: *customize
-    # friendly_name: Database groot
+    # binary_sensor.db_large:
+    #   <<: *customize
+    #   friendly_name: Database groot
 
     binary_sensor.home_assistant:
       <<: *customize
@@ -208,9 +208,9 @@ binary_sensor:
         value_template: '{{ states.sensor.cpu_temperature.state | float > 65 }}'
         friendly_name: 'CPU heet'
 # - platform: template
-  # sensors:
-    # db_large:
-      # value_template: '{{ states.sensor.homeassistant_v2db.state | float > 5000 }}'
+#   sensors:
+#     db_large:
+#       value_template: '{{ states.sensor.homeassistant_v2db.state | float > 5000 }}'
   ##### Uptime robot
   - platform: uptimerobot
     api_key: !secret uptime_robot_key
@@ -390,7 +390,7 @@ alert:
     notifiers:
       - telegram_klaas
 
-# db_large:
+  # db_large:
 # name: Database Large
 # entity_id: binary_sensor.db_large
 # state: 'on'
