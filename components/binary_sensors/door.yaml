@@ -11,4 +11,3 @@
       friendly_name: Voordeur
       value_template: >
         {{ states.sensor.fibaro__door_sensor__hal_begane_grond_access_control.state < '23' }}
-        
