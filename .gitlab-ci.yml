@@ -47,6 +47,43 @@ shellcheck:
         exit 1
       fi
 
+yamllint:
+  <<: *preflight
+  image: sdesbure/yamllint
+  before_script:
+    - yamllint --version
+  script:
+    - yamllint .
+
+jsonlint:
+  <<: *preflight
+  image: sahsu/docker-jsonlint
+  before_script:
+    - jsonlint --version || true
+  script:
+    - |
+      for file in $(find . -type f -name "*.json"); do
+        if ! jsonlint -q $file; then
+          export FAILED=1
+        else
+          echo "$file OK"
+        fi
+      done
+      if [ "${FAILED}" = "1" ]; then
+        exit 1
+      fi
+
+markdownlint:
+  <<: *preflight
+  image:
+    name: ruby:alpine
+    entrypoint: [""]
+  before_script:
+    - gem install mdl
+    - mdl --version
+  script:
+    - mdl --style all --warnings .
+
 # Test jobs
 latest:
   <<: *test
