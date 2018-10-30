@@ -65,7 +65,7 @@ homeassistant:
 ## Input Select
 ################################################
 input_select:
-  #Aanwezigheids opties Klaas
+  # Aanwezigheids opties Klaas
   klaas_status_dropdown:
     name: Klaas
     options:
@@ -75,8 +75,8 @@ input_select:
       - Weg
       - Lang Weg
     initial: Thuis
-    
-    #Aanwezigheids opties Grietje
+
+    # Aanwezigheids opties Grietje
   grietje_status_dropdown:
     name: Grietje
     options:
@@ -102,7 +102,7 @@ sensor:
 
 ################################################
 ## Group
-################################################ 
+################################################
 group:
   personen_status:
     name: Personen Status

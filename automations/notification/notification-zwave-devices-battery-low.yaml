@@ -14,7 +14,7 @@
     data:
       message: 'Batterij van de voordeur sensor is bijna leeg, Percentage: {{ states.sensor.zwave_battery_front_door.state }}%'
 
-# Battery Low Alert - Smoke sensor | begane grond     
+# Battery Low Alert - Smoke sensor | begane grond
 - alias: 'Battery Low Alert - Smoke sensor | begane grond'
   hide_entity: true
   trigger:
@@ -28,7 +28,7 @@
     data:
       message: 'Batterij van de rookmelder op de begane grond is bijna leeg, Percentage: {{ states.sensor.zwave_battery_smoke_sensor_begane_grond.state }}%'
 
-# Battery Low Alert - Smoke sensor | kamer zolder     
+# Battery Low Alert - Smoke sensor | kamer zolder
 - alias: 'Battery Low Alert - Smoke sensor | kamer zolder'
   hide_entity: true
   trigger:

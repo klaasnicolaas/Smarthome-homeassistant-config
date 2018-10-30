@@ -10,30 +10,30 @@
       to: 'home'
   condition:
     condition: and
-    conditions: 
+    conditions:
       # Het moet na 16:00 zijn
-    - condition: time
-      after: '16:00:00'
+      - condition: time
+        after: '16:00:00'
       # Trigger mag alleen gebeuren 3 uur voor zonsondergang
-    - condition: sun
-      before: sunset
-      before_offset: "-03:00:00"
+      - condition: sun
+        before: sunset
+        before_offset: "-03:00:00"
       # Een van onze telefoons moeten thuis zijn
-    - condition: state
-      entity_id: group.all_devices
-      state: 'home'
+      - condition: state
+        entity_id: group.all_devices
+        state: 'home'
       # De temperatuur moet boven 18 graden zijn
-    - condition: numeric_state
-      entity_id: sensor.br_temperature
-      above: 18.0
+      - condition: numeric_state
+        entity_id: sensor.br_temperature
+        above: 18.0
       # Het moet een werkdag zijn
-    - condition: state
-      entity_id: binary_sensor.workday_sensor
-      state: 'on'
+      - condition: state
+        entity_id: binary_sensor.workday_sensor
+        state: 'on'
   action:
     - service: homeassistant.turn_on
       entity_id: switch.fibaro__wall_plug_1_switch
-      
+
 
 # Garden Fontain - Turns off 3 hours before sunset and if people are home (doordeweeks)
 - alias: 'Waterornament uit - doordeweeks'
@@ -42,7 +42,7 @@
     - platform: sun
       event: sunset
       offset: '-03:00:00'
-  condition: 
+  condition:
       # het moet een werkdag zijn
     - condition: state
       entity_id: binary_sensor.workday_sensor

@@ -1,3 +1,4 @@
+---
 ## LOVELACE UI ##
 
 resources:
@@ -27,8 +28,8 @@ views:
           column_width: 30%
           title: Wie is thuis?
           show_state: false
-#          show_name: false
-      
+          # show_name: false
+
       # Laat zien welke lampen aan staan in huis
       - type: entity-filter
         title: Welke lichten staan aan?
@@ -47,9 +48,9 @@ views:
             tap_action: toggle
           - entity: light.vliering_voor__zolder_auto
             tap_action: toggle
-#          - entity: switch.....
-#            name: Hall
-#            tap_action: toggle
+          # - entity: switch.....
+            # name: Hall
+            # tap_action: toggle
         state_filter:
           - "on"
         card:
@@ -57,7 +58,7 @@ views:
           title: Welke lichten staan aan?
           column_width: 50%
           show_state: false
-          
+
       # Laat devices met een bijna lege batterij zien
       - type: entity-filter
         entities:
@@ -73,19 +74,19 @@ views:
           type: glance
           title: Batterij bijna leeg
           column_width: 30%
-          
+
       # Philips TV
       - type: media-control
         entity: media_player.32pfs640212
-        
+
       # Google home mini - slaapkamer 
       - type: media-control
         entity: media_player.slaapkamer_zolder__mini
-        
+
       # Google home mini - woonkamer 
       - type: media-control
         entity: media_player.woonkamer__mini
-        
+
       # Device tracker kaart
       - type: map
         entities:
@@ -95,7 +96,7 @@ views:
           - zone.school
           - zone.station_alkmaar
           - device_tracker.ce10160afb463b3504
-          
+
       # Agenda
       - type: "custom:calendar-card"
         name: "Agenda"
@@ -105,7 +106,7 @@ views:
           - calendar.feestdagen_in_nederland
           - calendar.prive_agenda
           - calendar.rooster_klaas
-    
+
   ################################## Begane grond ##################################
   - title: Begane grond
     cards:
@@ -114,18 +115,18 @@ views:
         title: Trappengang | Begane grond
         entities:
           - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
-         
+
       # Laat zien of voordeur openstaat en wat de temperatuur is
       - type: entities
         title: Hal | Begane grond
         entities:
           - binary_sensor.sensor_voordeur
           - sensor.fibaro__door_sensor__hal_begane_grond_temperature
-         
+
   ################################## Eerste verdieping ##################################
   - title: Eerste verdieping
     cards:
-    
+
   ################################## Zolder ##################################
   - title: Zolder
     cards:
@@ -137,7 +138,7 @@ views:
             tap_action: toggle
           - entity: sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
         column_width: 50%
-        
+
       # Toont lampen in de slaapkamer
       - type: entities
         title: Slaapkamer lampen
@@ -146,14 +147,14 @@ views:
           - switch.lamp_slaapkamer__zolder
           - switch.led_bureau__zolder
           - switch.led_slaapkamer__zolder
-          
+
       # Toont lampen op de vliering
       - type: entities
         title: Vliering
         entities:
           - light.yeelight_ct2_7c49eb19d5f5
           - light.yeelight_ct2_7c49eb19d785
-          
+
       # Een grafiek van de temperatuur op de slaapkamer
       - type: history-graph
         title: Temperatuur grafiek
@@ -161,7 +162,7 @@ views:
         refresh_interval: 3600
         entities:
           - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
-    
+
   ################################## Tuin ##################################
   - title: Tuin
     cards:
@@ -171,7 +172,7 @@ views:
         show_header_toggle: false
         entities:
           - switch.fibaro__wall_plug_1_switch
-    
+
   ################################## Temperaturen in huis ##################################
   - icon: mdi:temperature-celsius
     title: Temperaturen grafiek
@@ -188,7 +189,7 @@ views:
           - entity: sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
             name: Slaapkamer | zolder
         column_width: 50%
-        
+
       # Toont de temperaturen in huis
       - type: entities
         title: Temperaturen in huis
@@ -196,7 +197,7 @@ views:
           - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
           - sensor.fibaro__door_sensor__hal_begane_grond_temperature
           - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
-    
+
   ################################## Automatisering ##################################
   - icon: mdi:home-automation
     title: Automatisering
@@ -206,7 +207,7 @@ views:
         title: Automatisering
         entities:
           - group.automatisering_view
-    
+
   ################################## Systeeminformatie ##################################
   - icon: mdi:server
     title: Systeeminformatie
@@ -220,7 +221,7 @@ views:
           - sensor.cpu_temperature
           - binary_sensor.cpu_high
           - binary_sensor.cpu_hot
-          
+
       # Toont informatie van home assistant
       - type: entities
         title: Home Assistant Info
@@ -231,7 +232,7 @@ views:
           - sensor.python_version
           - updater.updater
           - sensor.bad_login
-          
+
       # Toont informatie over het geheugen op de raspberry pi
       - type: entities
         title: Opslag
@@ -242,7 +243,7 @@ views:
           - sensor.homeassistantlog
           - sensor.ozw_logtxt
           - sensor.configurationyaml
-          
+
       # Toont informatie over de netwerk verbinding
       - type: entities
         title: Netwerk
@@ -252,7 +253,7 @@ views:
           - sensor.speedtest_upload
           - sensor.myipopendnscom
           - sensor.ssl_certificate_expiry
-          
+
       # Toont de batterij percentages van de Z-wave devices
       - type: glance
         title: Batterij Percentages
@@ -261,4 +262,3 @@ views:
           - sensor.zwave_battery_front_door
           - sensor.zwave_battery_smoke_sensor_begane_grond
           - sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
-          
