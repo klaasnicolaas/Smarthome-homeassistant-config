@@ -33,9 +33,9 @@ homeassistant:
     ## Binary Sensor
     ################################################
 
-   # binary_sensor.db_large:
-     # <<: *customize
-     # friendly_name: Database groot
+  # binary_sensor.db_large:
+    # <<: *customize
+    # friendly_name: Database groot
 
     binary_sensor.home_assistant:
       <<: *customize
@@ -289,7 +289,7 @@ input_text:
 group:
   host_view:
     name: Host
-    view: yes
+    view: true
     entities:
       - sensor.bad_login
       - group.host_performance
@@ -312,7 +312,7 @@ group:
     entities:
       - sensor.disk_use_percent_
       - sensor.disk_free_
-#      - sensor.homeassistant_v2db
+     # - sensor.homeassistant_v2db
       - sensor.homeassistantlog
       - sensor.ozw_logtxt
       - sensor.configurationyaml
@@ -374,9 +374,9 @@ alert:
     name: Gebruik CPU is hoog
     entity_id: binary_sensor.cpu_high
     state: 'on'
-    repeat: 5 # minutes
-    can_acknowledge: True
-    skip_first: False
+    repeat: 5  # minutes
+    can_acknowledge: true
+    skip_first: false
     notifiers:
       - telegram_klaas
 
@@ -384,13 +384,13 @@ alert:
     name: Temperatuur CPU is hoog
     entity_id: binary_sensor.cpu_hot
     state: 'on'
-    repeat: 5 # minutes
-    can_acknowledge: True
-    skip_first: False
+    repeat: 5  # minutes
+    can_acknowledge: true
+    skip_first: false
     notifiers:
       - telegram_klaas
 
-#  db_large:
+# db_large:
 #    name: Database Large
 #    entity_id: binary_sensor.db_large
 #    state: 'on'

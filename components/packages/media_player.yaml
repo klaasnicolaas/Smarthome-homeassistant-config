@@ -3,4 +3,5 @@
 #
 # https://www.home-assistant.io/components/media_player/
 #
+
 media_player: !include_dir_list ../media_players

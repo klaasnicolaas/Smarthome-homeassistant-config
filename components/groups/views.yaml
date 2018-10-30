@@ -1,4 +1,5 @@
-################################## VIEWS - TABS ##############################               
+---
+################################## VIEWS - TABS ##############################
 # Begane grond view
 begane_grond_view:
   name: Begane grond
@@ -27,7 +28,7 @@ slaapkamer_zolder_view:
     - scene.slaapkamer__zolder__on
     - scene.slaapkamer__zolder__off
 
-# Tuin 
+# Tuin
 tuin_view:
   name: Tuin
   view: true
