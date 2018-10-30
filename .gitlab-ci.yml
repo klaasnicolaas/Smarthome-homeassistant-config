@@ -5,8 +5,6 @@ stages:
 # Generic preflight template
 .preflight: &preflight
   stage: preflight
-  tags:
-    - preflight
 
 # Generic test template
 .test: &test
