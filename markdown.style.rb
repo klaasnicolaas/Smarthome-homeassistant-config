@@ -1,1 +1,1 @@
-rule: "MD013", :code_blocks => false, :tables => false
+rule "MD013", :code_blocks => false, :tables => false
