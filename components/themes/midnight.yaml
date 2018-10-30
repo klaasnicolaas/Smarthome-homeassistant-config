@@ -1,5 +1,4 @@
 ---
-
 midnight:
   # Main colors
   primary-color: '#5294E2'
@@ -67,4 +66,3 @@ midnight:
   # Google colors
   google-red-500: '#E45E65'
   google-green-500: '#39E949'
-  

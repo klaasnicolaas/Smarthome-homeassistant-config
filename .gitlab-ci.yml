@@ -78,7 +78,7 @@ markdownlint:
     - gem install mdl
     - mdl --version
   script:
-    - mdl --style all --warnings --ignore TODO.md.
+    - mdl --style all --warnings .
 
 # Test jobs
 latest:
