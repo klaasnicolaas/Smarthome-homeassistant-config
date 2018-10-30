@@ -50,7 +50,7 @@ views:
             tap_action: toggle
         # - entity: switch
         # name: Hall
-          # tap_action: toggle
+        # tap_action: toggle
         state_filter:
           - "on"
         card:

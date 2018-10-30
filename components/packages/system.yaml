@@ -391,18 +391,18 @@ alert:
       - telegram_klaas
 
 # db_large:
-  # name: Database Large
-  # entity_id: binary_sensor.db_large
-  # state: 'on'
-  # repeat: # minutes
-    # - 15
-    # - 30
-    # - 60
-    # - 120
-  # can_acknowledge: true
-  # skip_first: false
-  # notifiers:
-    # - telegram_klaas
+# name: Database Large
+# entity_id: binary_sensor.db_large
+# state: 'on'
+# repeat: # minutes
+# - 15
+# - 30
+# - 60
+# - 120
+# can_acknowledge: true
+# skip_first: false
+# notifiers:
+# - telegram_klaas
 
   maintenance_mode_alert:
     name: Onderhouds Mode staat al aan voor een lange tijd
