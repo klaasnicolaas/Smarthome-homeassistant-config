@@ -5,6 +5,6 @@ test:
   stage: test
   image: homeassistant/amd64-homeassistant
   before_script:
-    - cp travis_secrets.yaml secrest.yaml
+    - cp travis_secrets.yaml secrets.yaml
   script:
     - hass --script check_config -c .
