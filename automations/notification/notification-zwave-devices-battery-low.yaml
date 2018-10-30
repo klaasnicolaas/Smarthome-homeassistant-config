@@ -1,7 +1,8 @@
+---
 ################# LOW Battery warning #####################
 # Battery Low Alert - Front Door
 - alias: 'Battery Low Alert - Front Door'
-  hide_entity: True
+  hide_entity: true
   trigger:
     platform: numeric_state
     entity_id: sensor.zwave_battery_front_door
@@ -15,13 +16,13 @@
 
 # Battery Low Alert - Smoke sensor | begane grond     
 - alias: 'Battery Low Alert - Smoke sensor | begane grond'
-  hide_entity: True
+  hide_entity: true
   trigger:
     platform: numeric_state
     entity_id: sensor.zwave_battery_smoke_sensor_begane_grond
     below: 10
     for:
-      seconds: 30    
+      seconds: 30
   action:
     service: notify.telegram_klaas
     data:
@@ -29,7 +30,7 @@
 
 # Battery Low Alert - Smoke sensor | kamer zolder     
 - alias: 'Battery Low Alert - Smoke sensor | kamer zolder'
-  hide_entity: True
+  hide_entity: true
   trigger:
     platform: numeric_state
     entity_id: sensor.zwave_battery_smoke_sensor_slaapkamer_zolder

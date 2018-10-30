@@ -1,3 +1,4 @@
+---
 # Als ik thuis kom en mijn pc staat nog uit, zet hem dan aan.
 - alias: Turn on pc when arrive
   initial_state: 'on'

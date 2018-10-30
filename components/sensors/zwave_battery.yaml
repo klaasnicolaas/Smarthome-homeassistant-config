@@ -1,3 +1,5 @@
+---
+# Zwave battery sensors
 - platform: template
   sensors:
     zwave_battery_smoke_sensor_begane_grond:

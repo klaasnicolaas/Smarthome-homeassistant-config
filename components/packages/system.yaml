@@ -6,7 +6,7 @@ homeassistant:
   customize_glob:
     weblink.*:
       icon: mdi:web
-  
+
   customize:
     ################################################
     ## Node Anchors
@@ -27,14 +27,14 @@ homeassistant:
     input_text.github_message:
       <<: *customize
       icon: mdi:pencil
-    
+
     ################################################
     ## Binary Sensor
     ################################################
 
-#    binary_sensor.db_large:
-#      <<: *customize
-#      friendly_name: Database groot
+   # binary_sensor.db_large:
+     # <<: *customize
+     # friendly_name: Database groot
 
     binary_sensor.home_assistant:
       <<: *customize
@@ -71,7 +71,7 @@ homeassistant:
     sensor.ozw_logtxt:
       <<: *customize
       friendly_name: Home Assistant OZW Logbestand
-      
+
     sensor.configurationyaml:
       <<: *customize
       friendly_name: Home Assistant Configuration
@@ -94,15 +94,15 @@ homeassistant:
       <<: *customize
       friendly_name: Uptime sinds laatste start HA
       icon: mdi:clock
-      
+
     sensor.ha_installed_version:
       <<: *customize
       friendly_name: Hassbian geinstalleerde versie
-      
+
     sensor.ha_upstream:
       <<: *customize
       friendly_name: Hassbian nieuwste versie
-    
+
     sensor.python_version:
       <<: *customize
       friendly_name: Python geinstalleerde versie
@@ -144,7 +144,7 @@ homeassistant:
       friendly_name: Systeeminformatie
       icon: mdi:server
       order: 80
-    
+
     group.host_performance:
       <<: *customize
       friendly_name: Prestaties
@@ -159,28 +159,27 @@ homeassistant:
       <<: *customize
       friendly_name: Netwerk
       icon: mdi:network
-      
+
     ################################################
     ## Script
     ################################################
-    
+
     script.github_push:
       <<: *customize
       icon: mdi:github-circle
       friendly_name: Push to Github
-      
+
     script.quick_reboot:
       <<: *customize
       icon: mdi:server-network
       can_cancel: false
       friendly_name: Reboot Raspberry Pi
-      
+
     script.quick_restart:
       <<: *customize
       icon: mdi:home-assistant
       can_cancel: false
       friendly_name: Restart Homeassistant
-    
 
 ################################################
 ## Weblink
@@ -355,19 +354,16 @@ group:
       - script.github_push
       - weblink.github
       - weblink.router
-      
+
 ################################################
 ## Shell Command
 ################################################
 
 shell_command:
-    
-    github_push: /home/homeassistant/.homeassistant/extras/bash/send-to-github.sh "{{ states('input_text.github_message') }}"
-    
-    quick_restart: sudo systemctl restart home-assistant@homeassistant.service
-    
-    quick_reboot: sudo reboot
-    
+  github_push: /home/homeassistant/.homeassistant/extras/bash/send-to-github.sh "{{ states('input_text.github_message') }}"
+  quick_restart: sudo systemctl restart home-assistant@homeassistant.service
+  quick_reboot: sudo reboot
+
 ################################################
 ## Alert
 ################################################
@@ -382,7 +378,7 @@ alert:
     skip_first: False
     notifiers:
       - telegram_klaas
-  
+
   cpu_hot:
     name: Temperatuur CPU is hoog
     entity_id: binary_sensor.cpu_hot
@@ -392,7 +388,7 @@ alert:
     skip_first: False
     notifiers:
       - telegram_klaas
-  
+
 #  db_large:
 #    name: Database Large
 #    entity_id: binary_sensor.db_large
@@ -406,7 +402,7 @@ alert:
 #    skip_first: false
 #    notifiers:
 #      - telegram_klaas
-      
+
   maintenance_mode_alert:
     name: Onderhouds Mode staat al aan voor een lange tijd
     done_message: Maintenance Mode de-activated
@@ -422,7 +418,7 @@ alert:
 ################################################
 
 script:
-  github_push:    
+  github_push:
     alias: ' '
     sequence:
       - condition: template
@@ -433,7 +429,7 @@ script:
           notification_id: "Github_push_alert"
           title: "Github"
           message: "You have pushed your local files to github, you must merge the branches on github then sync the master branch here."
-          
+
   quick_restart:
     alias: ' '
     sequence:
@@ -441,7 +437,7 @@ script:
         entity_id: input_boolean.maintenance_mode
       - delay: 00:00:02
       - service: shell_command.quick_restart
-      
+
   quick_reboot:
     alias: ' '
     sequence:
