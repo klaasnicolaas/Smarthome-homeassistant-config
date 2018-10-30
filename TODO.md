@@ -1,4 +1,4 @@
-## ToDo list
+# ToDo list
 
 - [ ] Control lighting based on the sun and gps location
 - [ ] Turn off all devices (lights) when everyone leaves home
@@ -24,6 +24,7 @@
 - [ ] Convince everyone that Home Automation is the best!
 
 ## Big project - restructure folders, files and code
+
 - [x] Remap the google assistant cloud component
 - [x] Remap the lights component
 - [x] Remap the device tracker component
@@ -73,13 +74,14 @@
 - [x] Setup HTML5 push notifications
 - [x] Adding the chromecasts that are in the house
 
-- Analytics 
-	- [x] Reading the battery percentages of all Z-wave devices
-	- [x] Show info about up and download speed
-	- [x] Show info about the system version of Hassbian
-	- [x] Show info about installed python version
-	- [x] Show info about CPU performance
-	- [x] Show info about storage from some files and how many percent is still available on the micro sd card
-	- [x] Show info about how many days it will take until the SSL certificate expires
-	- [x] Show info about the battery percent of Z-wave devices
-	- [x] Show info about temperatures in the house
+## Analytics
+
+- [x] Reading the battery percentages of all Z-wave devices
+- [x] Show info about up and download speed
+- [x] Show info about the system version of Hassbian
+- [x] Show info about installed python version
+- [x] Show info about CPU performance
+- [x] Show info about storage from some files and how many percent is still available on the micro sd card
+- [x] Show info about how many days it will take until the SSL certificate expires
+- [x] Show info about the battery percent of Z-wave devices
+- [x] Show info about temperatures in the house
