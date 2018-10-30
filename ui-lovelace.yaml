@@ -48,7 +48,7 @@ views:
             tap_action: toggle
           - entity: light.vliering_voor__zolder_auto
             tap_action: toggle
-          # - entity: switch
+        # - entity: switch
           # name: Hall
           # tap_action: toggle
         state_filter:
