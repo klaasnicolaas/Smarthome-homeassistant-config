@@ -207,10 +207,10 @@ binary_sensor:
       cpu_hot:
         value_template: '{{ states.sensor.cpu_temperature.state | float > 65 }}'
         friendly_name: 'CPU heet'
-# - platform: template
-#   sensors:
-#     db_large:
-#       value_template: '{{ states.sensor.homeassistant_v2db.state | float > 5000 }}'
+  # - platform: template
+  #   sensors:
+  #     db_large:
+  #       value_template: '{{ states.sensor.homeassistant_v2db.state | float > 5000 }}'
   ##### Uptime robot
   - platform: uptimerobot
     api_key: !secret uptime_robot_key
@@ -391,18 +391,18 @@ alert:
       - telegram_klaas
 
   # db_large:
-# name: Database Large
-# entity_id: binary_sensor.db_large
-# state: 'on'
-# repeat: # minutes
-# - 15
-# - 30
-# - 60
-# - 120
-# can_acknowledge: true
-# skip_first: false
-# notifiers:
-# - telegram_klaas
+  # name: Database Large
+  # entity_id: binary_sensor.db_large
+  # state: 'on'
+  # repeat: # minutes
+  # - 15
+  # - 30
+  # - 60
+  # - 120
+  # can_acknowledge: true
+  # skip_first: false
+  # notifiers:
+  # - telegram_klaas
 
   maintenance_mode_alert:
     name: Onderhouds Mode staat al aan voor een lange tijd
