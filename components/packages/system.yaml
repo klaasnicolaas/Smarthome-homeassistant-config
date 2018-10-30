@@ -1,3 +1,4 @@
+---
 ################################################
 ## Packages System
 ################################################
@@ -467,6 +468,6 @@ automation:
 ################################################
 
 notify:
-    - name: telegram_klaas
-      platform: telegram
-      chat_id: !secret telegram_chat_id_klaas
+  - name: telegram_klaas
+    platform: telegram
+    chat_id: !secret telegram_chat_id_klaas

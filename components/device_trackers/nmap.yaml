@@ -5,7 +5,7 @@
 #
 
 platform: nmap_tracker
-track_new_devices: yes
+track_new_devices: true
 interval_seconds: 30
 consider_home: 180
 hosts:

@@ -5,7 +5,7 @@
 # https://www.home-assistant.io/components/light/
 #
 
-#- platform: mqtt
+# - platform: mqtt
 #  name: "Luxaflex Zolder"
 #  state_topic: "blind/zolder/state"
 #  command_topic: "blind/zolder/command"

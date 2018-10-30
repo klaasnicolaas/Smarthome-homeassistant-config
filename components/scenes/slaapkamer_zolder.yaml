@@ -1,10 +1,11 @@
+---
 ############### SCENES ######################
 - name: Slaapkamer - Zolder | ON
   entities:
-    switch.lamp_slaapkamer__zolder: on
-    switch.led_slaapkamer__zolder: on
-  
+    switch.lamp_slaapkamer__zolder: true
+    switch.led_slaapkamer__zolder: true
+
 - name: Slaapkamer - Zolder | OFF
   entities:
-    switch.lamp_slaapkamer__zolder: off
-    switch.led_slaapkamer__zolder: off
+    switch.lamp_slaapkamer__zolder: false
+    switch.led_slaapkamer__zolder: false
