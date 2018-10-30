@@ -6,9 +6,9 @@ automating control.
 
 ## Current Configuration
 
--   RaspberryPi 3B+ using the Hassbian installation -\>
+- RaspberryPi 3B+ using the Hassbian installation -\>
     (<https://home-assistant.io/docs/installation/hassbian/>).
--   Using also the Lovelace UI -\>
+- Using also the Lovelace UI -\>
     (<https://www.home-assistant.io/lovelace/>).
 
 ## Information
@@ -29,47 +29,40 @@ an RFX module for controlling devices that work on the 433mhz frequency
 band. Because the raspberry pi is hanging in the meter closet, the smart
 meter is also read via a P1 cable.
 
--   Raspberry PI 3B+
--   Aeotec USB Z-Stick - Z-Wave Plus -\>
-    (<https://aeotec.com/z-wave-usb-stick>)
--   RFXCOM RFXtrx433E -\>
-    (<http://www.rfxcom.com/store/Transceivers/14103>)
--   P1 cable -\> (<https://www.sossolutions.nl/slimme-meter-kabel>)
+- Raspberry PI 3B+
+- Aeotec USB Z-Stick - Z-Wave Plus -\>(<https://aeotec.com/z-wave-usb-stick>)
+- RFXCOM RFXtrx433E -\>(<http://www.rfxcom.com/store/Transceivers/14103>)
+- P1 cable -\> (<https://www.sossolutions.nl/slimme-meter-kabel>)
 
 ## Devices
 
--   FIBARO Smoke sensors
--   FIBARO Door sensors
--   FIBARO Motion sensors
--   FIBARO Wall plug
--   KlikAanKlikUit devices (CoCo)
--   DSMR (Smart meter)
--   Google Chromecast
--   Philips TV
--   Water fountain in the garden
--   Yeelights
--   Teclast P80 Pro
--   Google home (mini)
+- FIBARO Smoke sensors
+- FIBARO Door sensors
+- FIBARO Motion sensors
+- FIBARO Wall plug
+- KlikAanKlikUit devices (CoCo)
+- DSMR (Smart meter)
+- Google Chromecast
+- Philips TV
+- Water fountain in the garden
+- Yeelights
+- Teclast P80 Pro
+- Google home (mini)
 
 ## Apps
 
--   HomeAssist (for android) -\>
-    (<https://play.google.com/store/apps/details?id=com.axzae.homeassistant&hl=nl>)
--   Home Assistant (for iOS) -\>
-    (<https://www.home-assistant.io/docs/ecosystem/ios/>)
--   Home Assistant (As web app) -\>
-    (<https://www.home-assistant.io/docs/frontend/mobile/>)
+- HomeAssist (for android) -\>(<https://play.google.com/store/apps/details?id=com.axzae.homeassistant&hl=nl>)
+- Home Assistant (for iOS) -\>(<https://www.home-assistant.io/docs/ecosystem/ios/>)
+- Home Assistant (As web app) -\>(<https://www.home-assistant.io/docs/frontend/mobile/>)
 
-## Needing Help? 
+## Needing Help?
 
--   Home Assistant Homepage -(<https://home-assistant.io/>)
--   Home Assistant Forums -(<https://community.home-assistant.io/>)
--   Home Assistant Discord Chat -(<https://discord.gg/c5DvZ4e>)
--   Other Featured Home Assistant Configurations
-    -(<https://home-assistant.io/cookbook/>)
--   Home Assistant GitHub Source Repository
-    -(<https://github.com/home-assistant/home-assistant>)
--   Official Home Assistant Demo -(<https://home-assistant.io/demo/>)
+- Home Assistant Homepage -(<https://home-assistant.io/>)
+- Home Assistant Forums -(<https://community.home-assistant.io/>)
+- Home Assistant Discord Chat -(<https://discord.gg/c5DvZ4e>)
+- Other Featured Home Assistant Configurations-(<https://home-assistant.io/cookbook/>)
+- Home Assistant GitHub Source Repository-(<https://github.com/home-assistant/home-assistant>)
+- Official Home Assistant Demo -(<https://home-assistant.io/demo/>)
 
 [commits-shield]: https://img.shields.io/github/commit-activity/y/klaasnicolaas/smarthome-homeassistant-config.svg
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr
