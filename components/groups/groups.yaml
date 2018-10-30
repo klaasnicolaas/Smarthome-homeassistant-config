@@ -1,71 +1,71 @@
 ################################## GROUPS ####################################
 # Wake on LAN apparaten
 wol_apparaten:
-    name: Wake on LAN apparaten
-    entities:
-        - switch.computer_klaas
+  name: Wake on LAN apparaten
+  entities:
+    - switch.computer_klaas
 
 # Slimme meter
 meter_readings:
-    name: Slimme Meter
-    entities:
-        - sensor.gas_consumption
-        - sensor.hourly_gas_consumption
-        - sensor.power_consumption
-        - sensor.power_consumption_low
-        - sensor.power_consumption_normal
+  name: Slimme Meter
+  entities:
+    - sensor.gas_consumption
+    - sensor.hourly_gas_consumption
+    - sensor.power_consumption
+    - sensor.power_consumption_low
+    - sensor.power_consumption_normal
 
 # Slaapkamer zolder groep
 slaapkamer_zolder:
-    name: Slaapkamer | Zolder
-    entities:
-        - switch.lamp_slaapkamer__zolder
-        - switch.led_bureau__zolder
-        - switch.led_slaapkamer__zolder
-        - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+  name: Slaapkamer | Zolder
+  entities:
+    - switch.lamp_slaapkamer__zolder
+    - switch.led_bureau__zolder
+    - switch.led_slaapkamer__zolder
+    - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
 
 # Gang begane grond groep
 begane_grond_trappengang:
-    name: Trappengang | Begane grond
-    entities:
-        - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
-        
+  name: Trappengang | Begane grond
+  entities:
+    - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
+
 # Het weer
 omgeving:
-    name: Het Weer
-    entities:
-        - sun.sun
-        - sensor.br_humidity
-        - sensor.br_symbol
-        - sensor.br_temperature
-        - sensor.br_ground_temperature
-        - sensor.br_wind_speed
-        - sensor.br_precipitation
-        - sensor.buienradar_precipitation_forecast_average
-        - sensor.season
-        
+  name: Het Weer
+  entities:
+    - sun.sun
+    - sensor.br_humidity
+    - sensor.br_symbol
+    - sensor.br_temperature
+    - sensor.br_ground_temperature
+    - sensor.br_wind_speed
+    - sensor.br_precipitation
+    - sensor.buienradar_precipitation_forecast_average
+    - sensor.season
+
 # Hal begane grond groep
 begane_grond_hal:
-    name: Hal | Begane grond
-    entities:
-        - switch.deurbel
-        - binary_sensor.sensor_voordeur
-        - sensor.fibaro__door_sensor__hal_begane_grond_temperature
-        - binary_sensor.sensor_beweging_hal_begane_grond
-        - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
-        - sensor.fibaro__motion_sensor__hal_begane_grond_luminance
+  name: Hal | Begane grond
+  entities:
+    - switch.deurbel
+    - binary_sensor.sensor_voordeur
+    - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+    - binary_sensor.sensor_beweging_hal_begane_grond
+    - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
+    - sensor.fibaro__motion_sensor__hal_begane_grond_luminance
 
 # Temperaturen huis groep
 temperaturen:
-    name: Temperaturen
-    entities: 
-        - sensor.fibaro__door_sensor__hal_begane_grond_temperature
-        - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
-        - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
-        - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
-        
+  name: Temperaturen
+  entities:
+    - sensor.fibaro__door_sensor__hal_begane_grond_temperature
+    - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
+    - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
+    - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+
 # Tuin
 tuin:
-    name: Tuin
-    entities:
-        - switch.fibaro__wall_plug_1_switch
+  name: Tuin
+  entities:
+    - switch.fibaro__wall_plug_1_switch

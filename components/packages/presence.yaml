@@ -1,3 +1,4 @@
+---
 ################################################
 ## Packages Presence
 ################################################
@@ -11,55 +12,55 @@ homeassistant:
     package.node_anchors:
       customize: &customize
         package: 'presence'
-    
+
     ################################################
     ## Sensor
     ################################################
-    
+
     sensor.klaas_status:
       <<: *customize
       entity_picture: /local/klaas.jpg
-    
+
     sensor.grietje_status:
       <<: *customize
       entity_picture: /local/grietje.jpg
-    
+
     ################################################
     ## Input Select
     ################################################
-    
+
     input_select.klaas_status_dropdown:
       <<: *customize
       hidden: true
-    
+
     input_select.grietje_status_dropdown:
       <<: *customize
       hidden: true
-      
+
     ################################################
     ## Automation
     ################################################
-    
+
     automation.markeer_persoon_als_lang_weg:
       <<: *customize
       hidden: true
-    
+
     automation.markeer_persoon_als_net_aangekomen:
       <<: *customize
       hidden: true
-    
+
     automation.markeer_persoon_als_net_vertrokken:
       <<: *customize
       hidden: true
-    
+
     automation.markeer_persoon_als_thuis:
       <<: *customize
       hidden: true
-    
+
     automation.markeer_persoon_als_weg:
       <<: *customize
       hidden: true
-    
+
 ################################################
 ## Input Select
 ################################################
@@ -98,7 +99,7 @@ sensor:
       grietje_status:
         value_template: '{{ states.input_select.grietje_status_dropdown.state }}'
         friendly_name: 'Grietje'
- 
+
 ################################################
 ## Group
 ################################################ 
@@ -108,7 +109,7 @@ group:
     entities:
       - sensor.klaas_status
       - sensor.grietje_status
-      
+
 ################################################
 ## Automation
 ################################################
@@ -148,7 +149,7 @@ automation:
                 Net Aangekomen
               {% endif %}
             {% endif %}
-  
+
   - alias: Markeer persoon als thuis
     trigger:
       - platform: state

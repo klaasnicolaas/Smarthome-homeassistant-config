@@ -1,5 +1,5 @@
+---
 # package: speedtest.yaml
-
 homeassistant:
   customize:
     sensor.speedtest_download:
