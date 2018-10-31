@@ -27,5 +27,6 @@ server.pem
 home-assistant_v2.db-shm
 home-assistant_v2.db-wal
 google_calendars.yaml
+__pycache__
 
 # For security reasons
