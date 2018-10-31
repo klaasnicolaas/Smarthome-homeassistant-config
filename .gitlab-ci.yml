@@ -1,5 +1,5 @@
 ---
-image: docker:latest
+image: homeassistant/amd64-homeassistant
 
 stages:
   - preflight
@@ -17,11 +17,11 @@ stages:
   before_script:
     - python -m homeassistant --version
     - cp travis_secrets.yaml secrets.yaml
+    - touch ./home-assistant_v2.db
+    - touch ./home-assistant.log
+    - touch ./OZW_Log.txt
   script:
-    - |
-      python -m homeassistant \
-        --script check_config \
-        --info all
+    - hass --script check_config -c .
 
 # Preflight jobs
 shellcheck:
