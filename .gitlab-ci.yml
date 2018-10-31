@@ -3,7 +3,8 @@ image: docker:latest
 
 stages:
   - preflight
-  - test
+  - dev
+  - latest
 
 # Generic preflight template
 .preflight: &preflight
@@ -11,7 +12,7 @@ stages:
 
 # Generic test template
 .dev: &dev
-  stage: test
+  stage: dev
   variables:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
@@ -23,7 +24,7 @@ stages:
         --info all
 
 .latest: &latest
-   stage: test
+   stage: latest
    variables:
      PYTHONPATH: "/usr/src/app:$PYTHONPATH"
    before_script:
