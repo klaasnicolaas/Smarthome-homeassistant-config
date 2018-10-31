@@ -19,6 +19,7 @@ stages:
   script:
     - |
       python -m homeassistant \
+        --config ./homeassistant/ \
         --script check_config \
         --info all
 
