@@ -70,9 +70,11 @@ meter is also read via a P1 cable.
 [stars-shield]: https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg
 [ha-version-shield]: https://img.shields.io/badge/Home%20Assistant-0.80.0-blue.svg
 [uptime-shield]: https://img.shields.io/uptimerobot/status/m781145866-63b6526d17827ec6eebe586f.svg
+[gitlabci-shield]: https://gitlab.com/klaasnicolaas/Smarthome-homeassistant-config/badges/master/pipeline.svg
 
 [commits]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/commits/master
 [travis]: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config
 [stars]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/stargazers
 [home-assistant]: https://home-assistant.io
 [uptime-robot]: https://uptimerobot.com
+[gitlabci]: https://gitlab.com/klaasnicolaas/Smarthome-homeassistant-config/pipelines

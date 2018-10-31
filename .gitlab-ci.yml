@@ -3,8 +3,7 @@ image: docker:latest
 
 stages:
   - preflight
-  - dev
-  - latest
+  - test
 
 # Generic preflight template
 .preflight: &preflight
@@ -12,7 +11,7 @@ stages:
 
 # Generic test template
 .dev: &dev
-  stage: dev
+  stage: test
   variables:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
@@ -24,17 +23,17 @@ stages:
         --info all
 
 .latest: &latest
-   stage: latest
-   variables:
-     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
-   before_script:
-     - python -m homeassistant --version
-     - cp travis_secrets.yaml secrets.yaml
-     - touch ./home-assistant_v2.db
-     - touch ./home-assistant.log
-     - touch ./OZW_Log.txt
-   script:
-     - hass --script check_config --info all .
+  stage: test
+  variables:
+    PYTHONPATH: "/usr/src/app:$PYTHONPATH"
+  before_script:
+    - python -m homeassistant --version
+    - cp travis_secrets.yaml secrets.yaml
+    - touch ./home-assistant_v2.db
+    - touch ./home-assistant.log
+    - touch ./OZW_Log.txt
+  script:
+    - hass --script check_config --info all .
 
 # Preflight jobs
 shellcheck:
