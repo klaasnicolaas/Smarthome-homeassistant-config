@@ -1,4 +1,6 @@
 ---
+image: docker:latest
+
 stages:
   - preflight
   - test
@@ -10,14 +12,17 @@ stages:
 # Generic test template
 .test: &test
   stage: test
-  image: homeassistant/amd64-homeassistant
+  variables:
+    PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
-    - cp travis_secrets.yaml secrets.yaml
-    - touch ./home-assistant_v2.db
-    - touch ./home-assistant.log
-    - touch ./OZW_Log.txt
+    - python -m homeassistant --version
+    - cp -R ./.stubs/* ./config
   script:
-    - hass --script check_config --info all
+    - |
+      python -m homeassistant \
+        --config ./config/ \
+        --script check_config \
+        --info all
 
 # Preflight jobs
 shellcheck:
@@ -85,19 +90,19 @@ markdownlint:
 latest:
   <<: *test
   image:
-    name: homeassistant/.homeassistant:latest
+    name: homeassistant/home-assistant:latest
     entrypoint: [""]
 
 rc:
   <<: *test
   image:
-    name: homeassistant/.homeassistant:rc
+    name: homeassistant/home-assistant:rc
     entrypoint: [""]
   allow_failure: true
 
 dev:
   <<: *test
   image:
-    name: homeassistant/.homeassistant:dev
+    name: homeassistant/home-assistant:dev
     entrypoint: [""]
   allow_failure: true
