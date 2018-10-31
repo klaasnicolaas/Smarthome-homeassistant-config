@@ -1,4 +1,6 @@
 ---
+image: docker:latest
+
 stages:
   - preflight
   - test
@@ -88,19 +90,12 @@ markdownlint:
 latest:
   <<: *test
   image:
-    name: homeassistant/home-assistant:latest
+    name: homeassistant/amd64-homeassistant:latest
     entrypoint: [""]
-
-rc:
-  <<: *test
-  image:
-    name: homeassistant/home-assistant:rc
-    entrypoint: [""]
-  allow_failure: true
 
 dev:
   <<: *test
   image:
-    name: homeassistant/home-assistant:dev
+    name: homeassistant/amd64-homeassistant:dev
     entrypoint: [""]
   allow_failure: true
