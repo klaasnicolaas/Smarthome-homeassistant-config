@@ -10,7 +10,7 @@ stages:
   stage: preflight
 
 # Generic test template
-.test: &test
+.dev: &dev
   stage: test
   variables:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
@@ -21,6 +21,19 @@ stages:
       python -m homeassistant \
         --script check_config \
         --info all
+
+.latest: &latest
+   stage: test
+   variables:
+     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
+   before_script:
+     - python -m homeassistant --version
+     - cp travis_secrets.yaml secrets.yaml
+     - touch ./home-assistant_v2.db
+     - touch ./home-assistant.log
+     - touch ./OZW_Log.txt
+   script:
+     - hass --script check_config --info all .
 
 # Preflight jobs
 shellcheck:
@@ -86,13 +99,13 @@ markdownlint:
 
 # Test jobs
 latest:
-  <<: *test
+  <<: *latest
   image:
     name: homeassistant/amd64-homeassistant:latest
     entrypoint: [""]
 
 dev:
-  <<: *test
+  <<: *dev
   image:
     name: homeassistant/home-assistant:dev
     entrypoint: [""]
