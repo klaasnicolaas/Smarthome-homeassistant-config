@@ -16,11 +16,10 @@ stages:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
     - python -m homeassistant --version
-    - cp -R ./.stubs/* ./config
+    - cp travis_secrets.yaml secrets.yaml
   script:
     - |
       python -m homeassistant \
-        --config ./config/ \
         --script check_config \
         --info all
 
