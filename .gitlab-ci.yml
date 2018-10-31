@@ -12,17 +12,17 @@ stages:
 # Generic test template
 .test: &test
   stage: test
-  image: homeassistant/amd64-homeassistant
   variables:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
     - python -m homeassistant --version
-    - cp travis_secrets.yaml secrets.yaml
-    - touch ./home-assistant_v2.db
-    - touch ./home-assistant.log
-    - touch ./OZW_Log.txt
+    - cp -R ./* ./config
   script:
-    - hass --script check_config -c .
+    - |
+      python -m homeassistant \
+        --config ./config/ \
+        --script check_config \
+        --info all
 
 # Preflight jobs
 shellcheck:
@@ -96,6 +96,6 @@ latest:
 dev:
   <<: *test
   image:
-    name: homeassistant/amd64-homeassistant:dev
+    name: homeassistant/home-assistant:dev
     entrypoint: [""]
   allow_failure: true
