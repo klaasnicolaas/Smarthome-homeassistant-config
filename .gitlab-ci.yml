@@ -1,6 +1,4 @@
 ---
-image: homeassistant/amd64-homeassistant
-
 stages:
   - preflight
   - test
@@ -12,6 +10,7 @@ stages:
 # Generic test template
 .test: &test
   stage: test
+  image: homeassistant/amd64-homeassistant
   variables:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
