@@ -24,6 +24,7 @@ stages:
 
 .latest: &latest
   stage: test
+  image: homeassistant/amd64-homeassistant
   variables:
     PYTHONPATH: "/usr/src/app:$PYTHONPATH"
   before_script:
