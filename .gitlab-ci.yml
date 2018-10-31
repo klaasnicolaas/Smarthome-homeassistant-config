@@ -85,19 +85,19 @@ markdownlint:
 latest:
   <<: *test
   image:
-    name: homeassistant/home-assistant:latest
+    name: homeassistant/.homeassistant:latest
     entrypoint: [""]
 
 rc:
   <<: *test
   image:
-    name: homeassistant/home-assistant:rc
+    name: homeassistant/.homeassistant:rc
     entrypoint: [""]
   allow_failure: true
 
 dev:
   <<: *test
   image:
-    name: homeassistant/home-assistant:dev
+    name: homeassistant/.homeassistant:dev
     entrypoint: [""]
   allow_failure: true
