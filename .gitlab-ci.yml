@@ -17,7 +17,7 @@ stages:
     - touch ./home-assistant.log
     - touch ./OZW_Log.txt
   script:
-    - sudo -u homeassistant -H -s
+    - su -u homeassistant -H -s
     - source /srv/homeassistant/bin/activate
     - hass --script check_config --info all
 
