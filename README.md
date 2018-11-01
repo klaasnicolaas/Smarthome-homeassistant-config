@@ -13,7 +13,7 @@ automating control.
 
 ## Information
 
-| [![Travis CI][travis-shield]][travis] | [![GitHub Last Commit][last-commit-shield]][commits]|
+| [![Travis CI][travis-shield]][travis] [![Gitlab CI][gitlabci-shield]][gitlabci] | [![GitHub Last Commit][last-commit-shield]][commits]|
 |:---:|:---:|
 | This shows whether the configuration in this repo is valid | This shows how up to date this repo is |
 | [![GitHub Stars][stars-shield]][stars] | [![HA Version][ha-version-shield]][home-assistant] |

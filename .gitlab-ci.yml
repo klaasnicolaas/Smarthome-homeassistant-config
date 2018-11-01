@@ -20,7 +20,7 @@ stages:
   script:
     - |
       python -m homeassistant \
-        --script check_config \
+        --script check_config -c \
         --info all
 
 .latest: &latest

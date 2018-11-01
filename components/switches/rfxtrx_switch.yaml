@@ -5,7 +5,7 @@
 #
 
 platform: rfxtrx
-automatic_add: true
+automatic_add: false
 devices:
   0b11000600fde6d201030070:
     name: Lamp slaapkamer | Zolder

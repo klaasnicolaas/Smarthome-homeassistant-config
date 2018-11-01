@@ -275,3 +275,6 @@ group.all_automations:
 
 sensor.season:
   friendly_name: Seizoen
+
+light.yeelight_ct2_7c49eb19d785:
+  hidden: true
