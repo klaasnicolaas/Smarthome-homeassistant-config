@@ -1,4 +1,8 @@
 ---
+# A dark theme by Marcel Hoffs
+#
+# https://community.home-assistant.io/t/midnight-theme/28598?
+#
 midnight:
   # Main colors
   primary-color: '#5294E2'
