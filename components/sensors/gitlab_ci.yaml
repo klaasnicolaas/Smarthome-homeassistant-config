@@ -1,0 +1,5 @@
+---
+# Gitlab CI sensor
+- platform: gitlab_ci
+  gitlab_id: 9133431
+  token: !secret gitlab_ci_token
