@@ -1,0 +1,11 @@
+---
+# Give a notification if there is a stable update.
+- alias: Notify - Stable version
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: sensor.ha_version_hassbian_stable
+  action:
+    - service: notify.telegram_klaas
+      data:
+        message: 'Stable update beschikbaar voor Home Assistant, versie: {{ states.sensor.ha_version_hassbian_stable.state }}'

@@ -1,0 +1,13 @@
+---
+# Give a notification if there is a beta update, but not equal to that of the stable.
+- alias: Notify - Beta version
+  initial_state: 'on'
+  trigger:
+    - platform: state
+      entity_id: sensor.ha_version_hassbian_beta
+  action:
+    - condition: template
+      value_template: "{{ states.sensor.ha_version_hassbian_stable.state != states.sensor.ha_version_hassbian_beta.state }}"
+    - service: notify.telegram_klaas
+      data:
+        message: 'Beta update beschikbaar voor Home Assistant, versie: {{ states.sensor.ha_version_hassbian_beta.state }}'
