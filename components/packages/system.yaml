@@ -103,6 +103,7 @@ homeassistant:
     sensor.ha_upstream:
       <<: *customize
       friendly_name: Hassbian nieuwste versie
+      hidden: true
 
     sensor.python_version:
       <<: *customize
@@ -330,7 +331,7 @@ group:
       - sensor.last_boot
       - binary_sensor.home_assistant
       - sensor.ha_installed_version
-      - sensor.ha_upstream
+      # - sensor.ha_upstream
       - sensor.ha_version_hassbian_beta
       - sensor.ha_version_hassbian_stable
       - sensor.python_version
@@ -455,19 +456,6 @@ script:
 ################################################
 ## Automation
 ################################################
-
-automation:
-  - alias: 'Update Available Notification'
-    initial_state: true
-    hide_entity: true
-    trigger:
-      - platform: state
-        entity_id: sensor.ha_upstream
-    action:
-      - delay: '00:05:00'
-      - service: notify.telegram_klaas
-        data:
-          message: 'Update voor Home Assistant beschikbaar, versie: {{ states.sensor.ha_upstream.state }}'
 
 ################################################
 ## Notify
