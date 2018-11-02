@@ -1,0 +1,17 @@
+---
+# Enables a custom component called "versions".
+# It is a sensor that fetches the version number of current Home Assistant releases.
+#
+# https://github.com/custom-components/sensor.versions
+#
+# Fetch beta version of HA
+- platform: versions
+  installation: hassbian
+  branch: beta
+  image: raspberrypi3-64
+
+# Fetch stable version of HA
+- platform: versions
+  installation: hassbian
+  branch: stable
+  image: raspberrypi3-64
