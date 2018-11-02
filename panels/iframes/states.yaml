@@ -1,6 +1,6 @@
 ---
-# At this moment I still use the old environment 
-# but in this way I can quickly switch to the lovelace UI for when I work at it
+# At this moment I still use the old environment
+# but in this way I can quickly switch from the Lovelace UI to the old state environment
 #
 # https://bonani.tech/lovelace-accessing-home-assistant-states-page-with-just-one-click/
 #
