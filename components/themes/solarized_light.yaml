@@ -20,7 +20,7 @@ solarized-light:
   # Background colors
   primary-background-color: '#fdf6e3'                                             # Settings background
   secondary-background-color: '#eee8d5'                                           # Main card UI background
-  divider-color: 'rgba(0, 0, 0, .12)'                                             # Divider 
+  divider-color: 'rgba(0, 0, 0, .12)'                                             # Divider
 
   # Table rows
   table-row-background-color: '#fdf6e3'                                           # Table row
