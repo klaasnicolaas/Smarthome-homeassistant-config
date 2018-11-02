@@ -336,8 +336,6 @@ group:
       - sensor.python_version
       - updater.updater
       - sensor.bad_login
-      - sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_finished_at
-      - sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_state
   host_batterij_zwave:
     name: Batterij Percentages
     entities:
@@ -352,9 +350,15 @@ group:
       - input_boolean.maintenance_mode
       - script.quick_restart
       - script.quick_reboot
+      # Github
       - sensor.latest_github_commit
       - input_text.github_message
       - script.github_push
+      # Gitlab CI
+      - sensor.gitlab_ci_status
+      # Travis CI
+      - sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_finished_at
+      - sensor.klaasnicolaassmarthomehomeassistantconfig_last_build_state
       - weblink.github
       - weblink.router
 
