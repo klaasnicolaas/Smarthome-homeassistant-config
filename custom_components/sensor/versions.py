@@ -1,108 +1,93 @@
 """
-Sensor that can displaying the current Home Assistant versions.
+A platform which allows you to get information about new versions.
 
-For more details about this platform, please refer to the documentation at
-https://home-assistant.io/components/sensor.version/
+For more details about this component, please refer to the documentation at
+https://github.com/custom-components/sensor.versions
 """
-import logging
 from datetime import timedelta
-
 import voluptuous as vol
-
-import homeassistant.helpers.config_validation as cv
-from homeassistant.helpers.aiohttp_client import async_get_clientsession
-from homeassistant.components.sensor import PLATFORM_SCHEMA
-from homeassistant.const import CONF_NAME, CONF_SOURCE
 from homeassistant.helpers.entity import Entity
-from homeassistant.util import Throttle
+import homeassistant.helpers.config_validation as cv
+from homeassistant.components.sensor import (PLATFORM_SCHEMA)
 
-REQUIREMENTS = ['pyhaversion==2.0.1']
+__version__ = '0.3.0'
 
-_LOGGER = logging.getLogger(__name__)
+REQUIREMENTS = ['pyhaversion==1.0.0']
 
-CONF_BETA = 'beta'
+CONF_INSTALLATION = 'installation'
+CONF_BRANCH = 'branch'
 CONF_IMAGE = 'image'
+CONF_NAME = 'name'
 
-DEFAULT_IMAGE = 'default'
-DEFAULT_NAME = "Home Assistant Version"
-DEFAULT_SOURCE = 'local'
+SCAN_INTERVAL = timedelta(seconds=300)
 
-ICON = 'mdi:package-up'
-
-TIME_BETWEEN_UPDATES = timedelta(minutes=5)
+PLATFORM_NAME = 'versions'
 
 PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
-    vol.Optional(CONF_BETA, default=False): cv.boolean,
-    vol.Optional(CONF_IMAGE, default=DEFAULT_IMAGE): cv.string,
-    vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
-    vol.Optional(CONF_SOURCE, default=DEFAULT_SOURCE): cv.string,
+    vol.Optional(CONF_INSTALLATION, default='venv'): cv.string,
+    vol.Optional(CONF_BRANCH, default='stable'): cv.string,
+    vol.Optional(CONF_IMAGE, default='default'): cv.string,
+    vol.Optional(CONF_NAME, default='none'): cv.string,
 })
 
 
-async def async_setup_platform(
-        hass, config, async_add_entities, discovery_info=None):
-    """Set up the Version sensor platform."""
-    from pyhaversion import Version
-    beta = config.get(CONF_BETA)
-    image = config.get(CONF_IMAGE).lower()
+def setup_platform(hass, config, add_devices, discovery_info=None):
+    """Create the sensor."""
+    installation = config.get(CONF_INSTALLATION)
+    branch = config.get(CONF_BRANCH)
+    image = config.get(CONF_IMAGE)
     name = config.get(CONF_NAME)
-    source = config.get(CONF_SOURCE).lower()
-
-    session = async_get_clientsession(hass)
-    if beta:
-        branch = 'beta'
-    else:
-        branch = 'stable'
-    haversion = VersionData(Version(hass.loop, session, branch, image), source)
-
-    async_add_entities([VersionSensor(haversion, name)], True)
+    add_devices([HomeAssistantVersion(installation, branch, image, name)])
 
 
-class VersionSensor(Entity):
-    """Representation of a Home Assistant version sensor."""
+class HomeAssistantVersion(Entity):
+    """Representation of a Sensor."""
 
-    def __init__(self, haversion, name):
-        """Initialize the Version sensor."""
-        self.haversion = haversion
-        self._name = name
+    def __init__(self, installation, branch, image, name):
+        """Initialize the sensor."""
+        self._installation = installation
+        self._branch = branch
+        self._image = image
         self._state = None
+        self._attributes = None
+        self._name = name
+        self.update()
 
-    async def async_update(self):
-        """Get the latest version information."""
-        await self.haversion.async_update()
+    def update(self):
+        """Update sensor value."""
+        import pyhaversion
+        if self._installation == 'venv' or self._installation == 'hassbian':
+            source = 'pip'
+        else:
+            source = self._installation
+        if self._branch == 'rc':
+            branch = 'beta'
+        else:
+            branch = self._branch
+        data = pyhaversion.get_version_number(source, branch, self._image)
+        self._state = data['homeassistant']
+        self._attributes = data
 
     @property
     def name(self):
         """Return the name of the sensor."""
-        return self._name
+        if self._name == 'none':
+            name = 'HA version ' + self._installation + ' ' + self._branch
+        else:
+            name = self._name
+        return name
 
     @property
     def state(self):
         """Return the state of the sensor."""
-        return self.haversion.api.version
+        return self._state
+
+    @property
+    def icon(self):
+        """Return the icon of the sensor."""
+        return 'mdi:package-up'
 
     @property
     def device_state_attributes(self):
-        """Return attributes for the sensor."""
-        return self.haversion.api.version_data
-
-
-class VersionData:
-    """Get the latest data and update the states."""
-
-    def __init__(self, api, source):
-        """Initialize the data object."""
-        self.api = api
-        self.source = source
-
-    @Throttle(TIME_BETWEEN_UPDATES)
-    async def async_update(self):
-        """Get the latest version information."""
-        if self.source == 'pypi':
-            await self.api.get_pypi_version()
-        elif self.source == 'hassio':
-            await self.api.get_hassio_version()
-        elif self.source == 'docker':
-            await self.api.get_docker_version()
-        else:
-            await self.api.get_local_version()
+        """Return the attributes of the sensor."""
+        return self._attributes
