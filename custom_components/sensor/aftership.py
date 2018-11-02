@@ -2,7 +2,7 @@
 A component which allows you to get information about pending parcels.
 
 For more details about this component, please refer to the documentation at
-https://github.com/custom-components/sensor.aftership
+https://github.com/HalfDecent/HA-Custom_components/ruter
 """
 import logging
 import voluptuous as vol
@@ -38,7 +38,6 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend({
 
 _LOGGER = logging.getLogger(__name__)
 
-
 def setup_platform(hass, config, add_devices, discovery_info=None):
     """Set up the sensor platform"""
     api_key = config.get(CONF_API_KEY)
@@ -53,7 +52,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
         tracking_number = call.data[TRACKING_NUMBER]
 
         _aftership = AfterShip()
-        result = _aftership.add_tracking(api_key, slug, title, tracking_number)
+        _aftership.add_tracking(api_key, slug, title, tracking_number)
 
         if not result['success']:
             _LOGGER.debug("Created Aftership tracking")
@@ -62,7 +61,6 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
 
     hass.services.register(DOMAIN, SERVICE_NEW_TRACKING, handle_new_tracking,
                            schema=NEW_TRACKING_SERVICE_SCHEMA)
-
 
 class AftershipSensor(Entity):
     """The sensor class"""
@@ -76,15 +74,14 @@ class AftershipSensor(Entity):
         self.hass.data[DATA] = {}
         self.update()
 
+
     def update(self):
         """Update the sensor"""
         base_link = 'https://track.aftership.com/'
         result = self._aftership.get_trackings(self._api_key)
-        if 'count' not in str(result['data']):
-            self._state = 0
+        if not result['success']:
             return False
         else:
-            _LOGGER.warning(result)
             self.hass.data[DATA] = {}
             data = result['data']
             self._state = data['count']
@@ -102,8 +99,7 @@ class AftershipSensor(Entity):
                 parcel_data['slug'] = parcel['slug']
                 parcel_data['last_update'] = parcel['updated_at']
                 parcel_data['tracking_number'] = parcel['tracking_number']
-                link = parcel['slug'] + '/' + parcel['tracking_number']
-                parcel_data['link'] = base_link + link
+                parcel_data['link'] = base_link + parcel['slug'] + '/' + parcel['tracking_number']
                 self.hass.data[DATA][parcel['tracking_number']] = parcel_data
 
     @property
