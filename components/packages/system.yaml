@@ -81,11 +81,6 @@ homeassistant:
       <<: *customize
       friendly_name: Processortemperatuur
 
-    sensor.bad_login:
-      <<: *customize
-      friendly_name: Mislukte inlogpogingen
-      icon: mdi:alert
-
     sensor.myip:
       <<: *customize
       friendly_name: Publiek IP-adres
@@ -145,7 +140,6 @@ homeassistant:
       <<: *customize
       friendly_name: Systeeminformatie
       icon: mdi:server
-      order: 80
 
     group.host_performance:
       <<: *customize
@@ -182,6 +176,14 @@ homeassistant:
       icon: mdi:home-assistant
       can_cancel: false
       friendly_name: Restart Homeassistant
+
+    ################################################
+    ## Switch
+    ################################################
+
+    switch.debug:
+      <<: *customize
+      icon: mdi:bug
 
 ################################################
 ## Weblink
@@ -255,7 +257,7 @@ sensor:
     scan_interval: 86400
   ###### Latest github Commit
   - platform: command_line
-    command: "python /home/homeassistant/.homeassistant/extras/shell/latest_commit.py"
+    command: "python /home/homeassistant/.homeassistant/python_scripts/latest_commit.py"
     name: 'Latest Github Commit'
     scan_interval: 60
   ###### Home Assistant updates
@@ -292,7 +294,6 @@ group:
     name: Host
     view: true
     entities:
-      - sensor.bad_login
       - group.host_performance
       - group.host_storage
       - group.host_network
@@ -335,8 +336,9 @@ group:
       - sensor.ha_version_hassbian_beta
       - sensor.ha_version_hassbian_stable
       - sensor.python_version
-      - updater.updater
-      - sensor.bad_login
+      # - updater.updater
+      - sensor.automation_on
+      - sensor.automation_all
   host_batterij_zwave:
     name: Batterij Percentages
     entities:
@@ -349,6 +351,7 @@ group:
     control: hidden
     entities:
       - input_boolean.maintenance_mode
+      - switch.debug
       - script.quick_restart
       - script.quick_reboot
       # Github
