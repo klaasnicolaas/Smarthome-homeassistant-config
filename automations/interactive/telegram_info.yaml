@@ -1,0 +1,51 @@
+---
+- alias: Telegram - Reply with Menu
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/menu'
+  action:
+    service: telegram_bot.send_message
+    data_template:
+      target: "{{ trigger.event.data.user_id }}"
+      message: "Commando's zijn..."
+      keyboard: ["/status", "/zwave-batterij"]
+
+- alias: Telegram - Reply with System Status
+  initial_state: true
+  # hide_entity: true
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/status'
+  action:
+    service: telegram_bot.send_message
+    data_template:
+      target: "{{ trigger.event.data.user_id }}"
+      message: "Systeem is online!
+
+      De laatste reboot was op {{ states('sensor.last_boot') }}."
+
+      keyboard: ["/menu"]
+
+- alias: Telegram - Reply with percentage zwave devices
+  initial_state: true
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/zwave-batterij'
+  action:
+    service: telegram_bot.send_message
+    data_template:
+      target: "{{ trigger.event.data.user_id }}"
+      message: "Batterij percentage van de Z-Wave apparaten -
+      
+        Deur sensor - Hal begane grond: {{states.sensor.zwave_battery_door_sensor_hal_begane_grond.state}}%
+        Motion sensor - Hal begane grond: {{states.sensor.zwave_battery_motion_sensor_hal_begane_grond.state}}%
+        Smoke sensor - Begane grond: {{states.sensor.zwave_battery_smoke_sensor_begane_grond.state}}%
+        Smoke sensor - Slaapkamer zolder: {{states.sensor.zwave_battery_smoke_sensor_slaapkamer_zolder.state}}%"
+      keyboard: ["/menu"]
