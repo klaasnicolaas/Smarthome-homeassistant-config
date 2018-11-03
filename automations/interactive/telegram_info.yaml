@@ -43,7 +43,7 @@
     data_template:
       target: "{{ trigger.event.data.user_id }}"
       message: "Batterij percentage van de Z-Wave apparaten -
-      
+
         Deur sensor - Hal begane grond: {{states.sensor.zwave_battery_door_sensor_hal_begane_grond.state}}%
         Motion sensor - Hal begane grond: {{states.sensor.zwave_battery_motion_sensor_hal_begane_grond.state}}%
         Smoke sensor - Begane grond: {{states.sensor.zwave_battery_smoke_sensor_begane_grond.state}}%
