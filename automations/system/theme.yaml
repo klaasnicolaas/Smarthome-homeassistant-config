@@ -1,5 +1,5 @@
 ---
-- alias: 'Set HA theme for day and night'
+- alias: System - Set HA theme for day and night
   trigger:
     - platform: homeassistant
       event: start
