@@ -1,6 +1,6 @@
 ---
 - alias: System - Check automations status
-  initial_state: on
+  initial_state: true
   trigger:
     - platform: homeassistant
       event: start
