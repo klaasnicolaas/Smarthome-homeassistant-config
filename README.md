@@ -16,10 +16,12 @@ automating control.
 | [![Travis CI][travis-shield]][travis] [![Gitlab CI][gitlabci-shield]][gitlabci] | [![GitHub Last Commit][last-commit-shield]][commits]|
 |:---:|:---:|
 | This shows whether the configuration in this repo is valid | This shows how up to date this repo is |
-| [![GitHub Stars][stars-shield]][stars] | [![HA Version][ha-version-shield]][home-assistant] |
-| Please :star: this repo if you find it useful, like these people have | This is the version that I am currently running with Home Assistant |
+| [![GitHub issues][issues-shield]][issues] | [![HA Version][ha-version-shield]][home-assistant] |
+| I now use the issues as a TODO list | This is the version that I am currently running with Home Assistant |
 | [![Uptime Robot status][uptime-shield]][uptime-robot] | [![GitHub Activity][commits-shield]][commits] |
 | I use Uptime Robot to monitor my instance from outside in case of crashes | Shows how active I am with this repo annually |
+| [![GitHub Stars][stars-shield]][stars] | [![Buy Me A Fanta][paypal-shield]][paypal] |
+| Please :star: this repo if you find it useful, like these people have | If this config was very helpfull, you could buy a fanta :tropical_drink: for me :simple_smile: |
 
 ## Hardware
 
@@ -71,6 +73,8 @@ meter is also read via a P1 cable.
 [ha-version-shield]: https://img.shields.io/badge/Home%20Assistant-0.80.0-blue.svg
 [uptime-shield]: https://img.shields.io/uptimerobot/status/m781145866-63b6526d17827ec6eebe586f.svg
 [gitlabci-shield]: https://gitlab.com/klaasnicolaas/Smarthome-homeassistant-config/badges/master/pipeline.svg
+[paypal-shield]: https://img.shields.io/badge/BuyMeAFanta-Paypal-orange.svg
+[issues-shield]: https://img.shields.io/github/issues/klaasnicolaas/Smarthome-homeassistant-config.svg
 
 [commits]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/commits/master
 [travis]: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config
@@ -78,3 +82,5 @@ meter is also read via a P1 cable.
 [home-assistant]: https://home-assistant.io
 [uptime-robot]: https://uptimerobot.com
 [gitlabci]: https://gitlab.com/klaasnicolaas/Smarthome-homeassistant-config/pipelines
+[paypal]: https://www.paypal.me/dexterfpv
+[issues]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/issues
