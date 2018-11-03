@@ -5,6 +5,6 @@
 # https://www.home-assistant.io/components/updater/
 #
 
-updater:
-  # I'm also reporting a list of components that I'm using.
-  include_used_components: true
+# updater:
+# I'm also reporting a list of components that I'm using.
+#include_used_components: true
