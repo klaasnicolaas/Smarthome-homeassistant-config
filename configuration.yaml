@@ -28,6 +28,8 @@ websocket_api:
 logger:
   default: info
 
+python_script:
+
 ################################## COVERS ##################################
 # cover:
 #  - platform: mqtt
