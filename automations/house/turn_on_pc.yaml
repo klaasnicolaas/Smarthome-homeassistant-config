@@ -1,6 +1,6 @@
 ---
 # Als ik thuis kom en mijn pc staat nog uit, zet hem dan aan.
-- alias: Turn on pc when arrive
+- alias: House - Turn on pc when arrive
   initial_state: 'on'
   trigger:
     - platform: state
