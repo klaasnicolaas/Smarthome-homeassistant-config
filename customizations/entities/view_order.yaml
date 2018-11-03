@@ -1,0 +1,31 @@
+---
+#
+# Got the inspiration from here: https://github.com/lolouk44/homeassistant/blob/master/customizations/groups.yaml
+#
+
+group.begane_grond_view:
+  order: 2
+
+group.eerste_verdieping_view:
+  order: 3
+
+group.slaapkamer_zolder_view:
+  order: 4
+
+group.tuin_view:
+  order: 5
+
+group.reizen_view:
+  order: 6
+
+group.temperaturen_view:
+  order: 7
+
+group.automatisering_view:
+  order: 8
+
+group.host_view:
+  order: 9
+
+group.debug:
+  order: 100
