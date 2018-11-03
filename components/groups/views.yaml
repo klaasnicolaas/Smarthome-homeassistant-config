@@ -63,4 +63,10 @@ automatisering_view:
   entities:
     - group.all_automations
 
+debug:
+  icon: mdi:bug
+  entities:
+    - group.catchall
+    - group.deaditems
+
 ################################################################################
