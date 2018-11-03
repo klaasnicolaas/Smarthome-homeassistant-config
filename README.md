@@ -21,7 +21,7 @@ automating control.
 | [![Uptime Robot status][uptime-shield]][uptime-robot] | [![GitHub Activity][commits-shield]][commits] |
 | I use Uptime Robot to monitor my instance from outside in case of crashes | Shows how active I am with this repo annually |
 | [![GitHub Stars][stars-shield]][stars] | [![Buy Me A Fanta][paypal-shield]][paypal] |
-| Please :star: this repo if you find it useful, like these people have | If this config was very helpfull, you could buy a fanta :tropical_drink: for me :simple_smile: |
+| Please :star: this repo if you find it useful, like these people have | If this config was very helpfull, you could buy a fanta :tropical_drink: for me :smile: |
 
 ## Hardware
 
