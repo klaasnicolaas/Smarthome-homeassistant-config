@@ -4,6 +4,8 @@ trein_reizen:
   name: Treintijden Trajecten
   entities:
     - sensor.alkmaar__leiden
-    - sensor.schiphol_airport__leiden
     - sensor.leiden__alkmaar
+    - sensor.schiphol_airport__leiden
     - sensor.leiden__schiphol_airport
+    - sensor.alkmaar__amsterdam_sloterdijk
+    - sensor.amsterdam_sloterdijk__alkmaar
