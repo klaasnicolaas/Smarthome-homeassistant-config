@@ -1,0 +1,55 @@
+---
+# Slimme meter #######################################################
+sensor.gas_consumption:
+  friendly_name: Gas verbruik
+
+sensor.hourly_gas_consumption:
+  friendly_name: Gas verbruik per uur
+
+sensor.power_consumption:
+  friendly_name: Stroom verbruik
+
+sensor.power_consumption_low:
+  friendly_name: Stroom verbruik | Laag tarief
+
+sensor.power_consumption_normal:
+  friendly_name: Stroom verbuik | Hoog tarief
+
+sensor.power_consumption_phase_l2:
+  hidden: true
+
+sensor.power_consumption_phase_l3:
+  hidden: true
+
+sensor.power_tariff:
+  hidden: true
+
+sensor.voltage_sags_phase_l2:
+  hidden: true
+
+sensor.voltage_sags_phase_l3:
+  hidden: true
+
+sensor.voltage_swells_phase_l2:
+  hidden: true
+
+sensor.voltage_swells_phase_l3:
+  hidden: true
+
+sensor.power_production:
+  hidden: true
+
+sensor.power_production_low:
+  hidden: true
+
+sensor.power_production_normal:
+  hidden: true
+
+sensor.power_production_phase_l1:
+  hidden: true
+
+sensor.power_production_phase_l2:
+  hidden: true
+
+sensor.power_production_phase_l3:
+  hidden: true
