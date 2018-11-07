@@ -6,10 +6,8 @@ automating control.
 
 ## Current Configuration
 
-- RaspberryPi 3B+ using the Hassbian installation -\>
-    (<https://home-assistant.io/docs/installation/hassbian/>).
-- Using also the Lovelace UI -\>
-    (<https://www.home-assistant.io/lovelace/>).
+- RaspberryPi 3B+ using the [Hassbian installation](<https://home-assistant.io/docs/installation/hassbian/>).
+- Using also the [Lovelace UI](<https://www.home-assistant.io/lovelace/>) (still in a beta).
 
 ## Information
 
@@ -32,39 +30,66 @@ band. Because the raspberry pi is hanging in the meter closet, the smart
 meter is also read via a P1 cable.
 
 - Raspberry PI 3B+
-- Aeotec USB Z-Stick - Z-Wave Plus -\>(<https://aeotec.com/z-wave-usb-stick>)
-- RFXCOM RFXtrx433E -\>(<http://www.rfxcom.com/store/Transceivers/14103>)
-- P1 cable -\> (<https://www.sossolutions.nl/slimme-meter-kabel>)
+- [Aeotec USB Z-Stick](<https://aeotec.com/z-wave-usb-stick>) - Z-Wave Plus
+- [RFXCOM RFXtrx433E](<http://www.rfxcom.com/store/Transceivers/14103>)
+- [P1 cable](<https://www.sossolutions.nl/slimme-meter-kabel>)
 
 ## Devices
+
+A house with Home Assistant can not work without a lot of devices, below a brief summary of some of these. In the future I still have plans to expand it.
+
+### Sensors
 
 - FIBARO Smoke sensors
 - FIBARO Door sensors
 - FIBARO Motion sensors
 - FIBARO Wall plug
-- KlikAanKlikUit devices (CoCo)
 - DSMR (Smart meter)
+
+There are many more sensors that I use, but I have not had the time to put them here.
+
+### Switches
+
+- KlikAanKlikUit devices (CoCo)
+
+### Lights
+
+- Yeelights
+
+### Media
+
 - Google Chromecast
 - Philips TV
-- Water fountain in the garden
-- Yeelights
-- Teclast P80 Pro
+
+### Interfaces
+
 - Google home (mini)
+- Teclast P80 Pro (wall tablet)
+
+### Other Hardware
+
+- Water fountain in the garden
+- Doorbel
 
 ## Apps
 
-- HomeAssist (for android) -\>(<https://play.google.com/store/apps/details?id=com.axzae.homeassistant&hl=nl>)
-- Home Assistant (for iOS) -\>(<https://www.home-assistant.io/docs/ecosystem/ios/>)
-- Home Assistant (As web app) -\>(<https://www.home-assistant.io/docs/frontend/mobile/>)
+Nothing is better than being able to control your own smart home from your phone or tablet.
+- [HomeAssist](<https://play.google.com/store/apps/details?id=com.axzae.homeassistant&hl=nl>) (for android)
+- [Home Assistant](<https://www.home-assistant.io/docs/ecosystem/ios/>) (for iOS)
+- [Home Assistant](<https://www.home-assistant.io/docs/frontend/mobile/>) (As web app)
 
 ## Needing Help?
 
-- Home Assistant Homepage -(<https://home-assistant.io/>)
-- Home Assistant Forums -(<https://community.home-assistant.io/>)
-- Home Assistant Discord Chat -(<https://discord.gg/c5DvZ4e>)
-- Other Featured Home Assistant Configurations-(<https://home-assistant.io/cookbook/>)
-- Home Assistant GitHub Source Repository-(<https://github.com/home-assistant/home-assistant>)
-- Official Home Assistant Demo -(<https://home-assistant.io/demo/>)
+- [Home Assistant Homepage](<https://home-assistant.io/>)
+- [Home Assistant Forums](<https://community.home-assistant.io/>)
+- [Home Assistant Discord Chat](<https://discord.gg/c5DvZ4e>)
+- [Other Featured Home Assistant Configurations](https://home-assistant.io/cookbook/>)
+- [Home Assistant GitHub Source Repository](<https://github.com/home-assistant/home-assistant>)
+- [Official Home Assistant Demo](<https://home-assistant.io/demo/>)
+
+## Useful Links:
+
+- This will be updated soon.
 
 [commits-shield]: https://img.shields.io/github/commit-activity/y/klaasnicolaas/smarthome-homeassistant-config.svg
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr
