@@ -1,13 +1,8 @@
 # Smart Home - Home Assistant
 
-Home Assistant is a home automation platform running on Python 3. It is
-able to track and control all devices at home and offer a platform for
-automating control.
+You will probably think, what is Home Assistant!? Well Home Assistant is a home automation platform running on Python 3. It is able to track and control all devices at home and offer a platform for automating control.
 
-## Current Configuration
-
-- RaspberryPi 3B+ using the [Hassbian installation](<https://home-assistant.io/docs/installation/hassbian/>).
-- Using also the [Lovelace UI](<https://www.home-assistant.io/lovelace/>) (still in a beta).
+To inspire others I have set up this github and update it regularly with new code. Be free to use code from this repo for your own Home Assistant environment, keep in mind that you can not always copy everything line by line. If you can not get out, you can always contact me.
 
 ## Information
 
@@ -21,59 +16,24 @@ automating control.
 | [![GitHub Stars][stars-shield]][stars] | [![Buy Me A Fanta][paypal-shield]][paypal] |
 | Please :star: this repo if you find it useful, like these people have | If this config was very helpfull, you could buy a fanta :tropical_drink: for me :smile: |
 
-## Hardware
+## Current Configuration
 
-I use a raspberry pi 3rd generation to run home assistant. In addition,
-I use a Z-wave stick to control devices that use the z-wave protocol and
-an RFX module for controlling devices that work on the 433mhz frequency
-band. Because the raspberry pi is hanging in the meter closet, the smart
-meter is also read via a P1 cable.
+I use a raspberry pi 3rd generation to run home assistant. In addition, I use a Z-wave stick to control devices that use the z-wave protocol and an RFX module for controlling devices that work on the 433mhz frequency band. Because the raspberry pi is hanging in the meter closet, the smart meter is also read via a P1 cable.
 
-- Raspberry PI 3B+
+- RaspberryPi 3B+ using the [Hassbian installation](<https://home-assistant.io/docs/installation/hassbian/>).
 - [Aeotec USB Z-Stick](<https://aeotec.com/z-wave-usb-stick>) - Z-Wave Plus
 - [RFXCOM RFXtrx433E](<http://www.rfxcom.com/store/Transceivers/14103>)
 - [P1 cable](<https://www.sossolutions.nl/slimme-meter-kabel>)
+- Using also the [Lovelace UI](<https://www.home-assistant.io/lovelace/>) (still in a beta).
 
-## Devices
+## My House
 
-A house with Home Assistant can not work without a lot of devices, below a brief summary of some of these. In the future I still have plans to expand it.
+Curious about what kind of integrations I have in my Home Assistant system? [Check out this list][components].
 
-### Sensors
-
-- FIBARO Smoke sensors
-- FIBARO Door sensors
-- FIBARO Motion sensors
-- FIBARO Wall plug
-- DSMR (Smart meter)
-
-There are many more sensors that I use, but I have not had the time to put them here.
-
-### Switches
-
-- KlikAanKlikUit devices (CoCo)
-
-### Lights
-
-- Yeelights
-
-### Media
-
-- Google Chromecast
-- Philips TV
-
-### Interfaces
-
-- Google home (mini)
-- Teclast P80 Pro (wall tablet)
-
-### Other Hardware
-
-- Water fountain in the garden
-- Doorbel
-
-## Apps
+## Apps to control
 
 Nothing is better than being able to control your own smart home from your phone or tablet.
+
 - [HomeAssist](<https://play.google.com/store/apps/details?id=com.axzae.homeassistant&hl=nl>) (for android)
 - [Home Assistant](<https://www.home-assistant.io/docs/ecosystem/ios/>) (for iOS)
 - [Home Assistant](<https://www.home-assistant.io/docs/frontend/mobile/>) (As web app)
@@ -109,3 +69,4 @@ Nothing is better than being able to control your own smart home from your phone
 [gitlabci]: https://gitlab.com/klaasnicolaas/Smarthome-homeassistant-config/pipelines
 [paypal]: https://www.paypal.me/dexterfpv
 [issues]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/issues
+[components]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/tree/master/extras/github_resources/components.md
