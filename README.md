@@ -28,7 +28,7 @@ I use a raspberry pi 3rd generation to run home assistant. In addition, I use a 
 
 ## My House
 
-Curious about what kind of integrations I have in my Home Assistant system? [Check out this list][components] (Last update: 9 November 2018).
+Curious about what kind of integrations I have in my Home Assistant system? I made a very usefull list: [Check it out][components] (Last update: 9 November 2018).
 
 ## Apps to control
 
