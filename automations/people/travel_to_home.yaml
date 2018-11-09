@@ -12,6 +12,7 @@
       weekday:
         - mon
         - wed
+        - thu
     - condition: zone
       entity_id: device_tracker.ce10160afb463b3504
       zone: zone.station_leiden
