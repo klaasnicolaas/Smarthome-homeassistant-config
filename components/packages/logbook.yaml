@@ -7,13 +7,20 @@
 #
 
 logbook:
+  include:
+    domains:
+      - switch
+      - light
+      - media_player
+      - input_boolean
+      - input_select
   exclude:
     domains:
       - updater
-    entities:
-      - sensor.br_ground_temperature
-      - sensor.br_humidity
-      - sensor.br_precipitation
-      - sensor.br_symbol
-      - sensor.br_temperature
-      - sensor.br_wind_speed
+      - sun
+      - sensor
+      - script
+      - zone
+      - group
+      - device_tracker
+      - weather
