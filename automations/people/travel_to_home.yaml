@@ -11,6 +11,7 @@
       after: '11:00:00'
       weekday:
         - mon
+        - tue
         - wed
         - thu
     - condition: zone
