@@ -3,17 +3,17 @@
 foscam_making_snapshot:
   alias: "Foscam Making Snapshot"
   sequence:
-  - service: camera.snapshot
-    data:
-      entity_id: camera.camera_voordeur
-      filename: "/home/homeassistant/.homeassistant/www/cam_captures/voordeur_{{ now ().year }}_{{ now ().month }}_{{ now ().day }}_{{ now ().hour }}_{{ now ().minute }}.jpg"
-  - delay:
-      seconds: 2
-  - service: notify.telegram_klaas
-    data:
-      title: Foscam voordeur foto
-      message: "Iemand staat voor de deur"
+    - service: camera.snapshot
       data:
-        photo:
-          - file: "/home/homeassistant/.homeassistant/www/cam_captures/voordeur_{{ now ().year }}_{{ now ().month }}_{{ now ().day }}_{{ now ().hour }}_{{ now ().minute }}.jpg"
-            caption: Foto van voordeur
+        entity_id: camera.camera_voordeur
+        filename: "/home/homeassistant/.homeassistant/www/cam_captures/voordeur_{{ now ().year }}_{{ now ().month }}_{{ now ().day }}_{{ now ().hour }}_{{ now ().minute }}.jpg"
+    - delay:
+        seconds: 2
+    - service: notify.telegram_klaas
+      data:
+        title: Foscam voordeur foto
+        message: "Iemand staat voor de deur"
+        data:
+          photo:
+            - file: "/home/homeassistant/.homeassistant/www/cam_captures/voordeur_{{ now ().year }}_{{ now ().month }}_{{ now ().day }}_{{ now ().hour }}_{{ now ().minute }}.jpg"
+              caption: Foto van voordeur
