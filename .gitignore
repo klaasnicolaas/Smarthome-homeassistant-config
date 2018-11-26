@@ -1,4 +1,4 @@
-# Other
+# Extensions
 *.uuid
 *.conf
 *.db
@@ -10,14 +10,21 @@
 *.log
 *.backup
 *.mp3
+
+# Folders
 .cloud
 .HA_VERSION
+.storage
+.google.token
 www
 zones
 deps
 tmp
-.storage
-.google.token
+__pycache__
+tensorflow
+
+# Files
+google_calendars.yaml
 secrets.yaml
 known_devices.yaml
 entity_registry.yaml
@@ -26,7 +33,8 @@ smartyone_nl.pem
 server.pem
 home-assistant_v2.db-shm
 home-assistant_v2.db-wal
-google_calendars.yaml
-__pycache__
+image_processing.yaml
 
 # For security reasons
+cameras
+camera.yaml
