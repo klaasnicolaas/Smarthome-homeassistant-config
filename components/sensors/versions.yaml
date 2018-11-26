@@ -4,14 +4,17 @@
 #
 # https://github.com/custom-components/sensor.versions
 #
+# THE NEW WAY
 # Fetch beta version of HA
-- platform: versions
-  installation: hassbian
-  branch: beta
+- platform: version
+  name: Hassbian Beta versie
+  beta: true
   image: raspberrypi3-64
+  source: pypi
 
 # Fetch stable version of HA
-- platform: versions
-  installation: hassbian
-  branch: stable
+- platform: version
+  name: Hassbian Stable versie
+  beta: false
   image: raspberrypi3-64
+  source: pypi
