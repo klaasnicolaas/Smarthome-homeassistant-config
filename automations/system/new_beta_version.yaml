@@ -4,10 +4,10 @@
   initial_state: 'on'
   trigger:
     - platform: state
-      entity_id: sensor.ha_version_hassbian_beta
+      entity_id: sensor.hassbian_beta_versie
   action:
     - condition: template
-      value_template: "{{ states.sensor.ha_version_hassbian_stable.state != states.sensor.ha_version_hassbian_beta.state }}"
+      value_template: "{{ states.sensor.hassbian_stable_versie.state != states.sensor.hassbian_beta_versie.state }}"
     - service: notify.telegram_klaas
       data:
-        message: 'Beta update beschikbaar voor Home Assistant, versie: {{ states.sensor.ha_version_hassbian_beta.state }}'
+        message: 'Beta update beschikbaar voor Home Assistant, versie: {{ states.sensor.hassbian_beta_versie.state }}'

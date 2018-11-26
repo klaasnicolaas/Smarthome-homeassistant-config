@@ -333,8 +333,8 @@ group:
       - binary_sensor.home_assistant
       - sensor.ha_installed_version
       # - sensor.ha_upstream
-      - sensor.ha_version_hassbian_beta
-      - sensor.ha_version_hassbian_stable
+      - sensor.hassbian_beta_versie
+      - sensor.hassbian_stable_versie
       - sensor.python_version
       # - updater.updater
       - sensor.automation_on
