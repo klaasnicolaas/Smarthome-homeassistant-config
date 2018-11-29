@@ -54,6 +54,7 @@ switch.deurbel:
 
 group.all_automations:
   hidden: false
+  control: hidden
 
 sensor.season:
   friendly_name: Seizoen
