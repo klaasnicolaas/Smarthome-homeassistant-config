@@ -6,7 +6,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.zwave_battery_front_door
-    below: 10
+    below: 15
     for:
       seconds: 30
   action:
@@ -20,7 +20,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.zwave_battery_smoke_sensor_begane_grond
-    below: 10
+    below: 15
     for:
       seconds: 30
   action:
@@ -34,7 +34,7 @@
   trigger:
     platform: numeric_state
     entity_id: sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
-    below: 10
+    below: 15
     for:
       seconds: 30
   action:
