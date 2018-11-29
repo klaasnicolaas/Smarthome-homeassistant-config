@@ -42,11 +42,11 @@ switch.computer_klaas:
   icon: mdi:desktop-classic
 
 # AUTOMATION ####################################################
-automation.telegram_bot_send_message_if_voordeur_is_open:
-  friendly_name: Telegram - voordeur
+automation.telegram_send_message_if_voordeur_is_open__night_mode:
+  friendly_name: Telegram - voordeur (Night mode)
 
-automation.telegram_bot_send_message_if_voordeur_is_open__vakantie_mode:
-  friendly_name: Telegram - voordeur (vakantie mode)
+automation.telegram_send_message_if_voordeur_is_open__nobody_home:
+  friendly_name: Telegram - voordeur (Nobody Home mode)
 
 #  #############
 switch.deurbel:
