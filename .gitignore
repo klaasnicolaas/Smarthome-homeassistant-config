@@ -22,6 +22,7 @@ deps
 tmp
 __pycache__
 tensorflow
+security
 
 # Files
 google_calendars.yaml
