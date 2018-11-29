@@ -6,7 +6,7 @@
   probability_threshold: 0.9
   observations:
     # Wifi
-    - entity_id: device_tracker.samsunggalaxys7edgelan
+    - entity_id: device_tracker.19216802
       prob_given_true: 0.9
       prob_given_false: 0.2
       platform: 'state'
@@ -18,7 +18,7 @@
     #  platform: 'state'
     #  to_state: 'home'
     # GPS
-    - entity_id: device_tracker.ce10160afb463b3504
+    - entity_id: device_tracker.2779d988391c7ece
       prob_given_true: 0.9
       prob_given_false: 0.1
       platform: 'state'

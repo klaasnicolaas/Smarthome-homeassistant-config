@@ -5,7 +5,7 @@
 #  trigger:
 #    platform: numeric_state
 #    entity_id:
-#    - device_tracker.ce10160afb463b3504
+#    - device_tracker.2779d988391c7ece
 #    value_template: '{{ state.attributes.battery }}'
 #    below: 25
 #  action:

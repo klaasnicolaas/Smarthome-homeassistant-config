@@ -18,9 +18,9 @@ views:
       - type: entity-filter
         title: Wie is thuis?
         entities:
-          - device_tracker.samsunggalaxys7edgelan
+          - device_tracker.19216802
           - device_tracker.19216825
-          - device_tracker.ce10160afb463b3504
+          - device_tracker.2779d988391c7ece
         state_filter:
           - home
         card:
@@ -95,7 +95,7 @@ views:
           - zone.schiphol_airport
           - zone.school
           - zone.station_alkmaar
-          - device_tracker.ce10160afb463b3504
+          - device_tracker.2779d988391c7ece
 
       # Agenda
       - type: "custom:calendar-card"
