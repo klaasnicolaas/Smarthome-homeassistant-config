@@ -1,7 +1,7 @@
 ---
 # Give a notification if there is a beta update, but not equal to that of the stable.
 - alias: Notify - Beta version
-  initial_state: 'on'
+  initial_state: true
   trigger:
     - platform: state
       entity_id: sensor.hassbian_beta_versie

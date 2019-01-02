@@ -1,6 +1,7 @@
 ---
 # Als ik van school naar huis ga stuur dan een bericht hoelaat ik thuis kom.
-- alias: Travel from school to home
+- alias: Telegram - Travel from school to home
+  initial_state: true
   trigger:
     - platform: zone
       entity_id: device_tracker.2779d988391c7ece

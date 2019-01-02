@@ -54,6 +54,7 @@ sensor:
 automation:
   - alias: Rain Alarm
     hide_entity: true
+    initial_state: true
     trigger:
       - platform: state
         entity_id: sensor.buienradar_precipitation_forecast_average

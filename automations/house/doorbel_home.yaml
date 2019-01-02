@@ -1,7 +1,7 @@
 ---
 # Als er op de deurbel word gedrukt, stuur dan een telegram bericht en als we thuis zijn ook een spraak bericht.
 - alias: House - Deurbel Melding Wel Thuis
-  initial_state: 'on'
+  initial_state: true
   trigger:
     - platform: event
       event_type: button_pressed
