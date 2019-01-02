@@ -36,12 +36,12 @@ omgeving:
   name: Het Weer
   entities:
     - sun.sun
-    - sensor.br_humidity
-    - sensor.br_symbol
-    - sensor.br_temperature
-    - sensor.br_ground_temperature
-    - sensor.br_wind_speed
-    - sensor.br_precipitation
+    - sensor.buienradar_humidity
+    - sensor.buienradar_symbol
+    - sensor.buienradar_temperature
+    - sensor.buienradar_ground_temperature
+    - sensor.buienradar_wind_speed
+    - sensor.buienradar_precipitation
     - sensor.buienradar_precipitation_forecast_average
     - sensor.season
 

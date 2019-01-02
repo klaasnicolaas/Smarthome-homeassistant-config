@@ -233,12 +233,12 @@ sensor:
       - type: last_boot
   - platform: command_line
     name: CPU Temperature
-    command: "/bin/cat /sys/class/thermal/thermal_zone0/temp"
+    command: "/bin/cat /sys/class/thermal/thermal_zone2/temp"
     unit_of_measurement: "°C"
     value_template: '{{ value | multiply(0.001) | round(1) }}'
   - platform: filesize
     file_paths:
-      # - !secret filesize_homeassistant_db
+      - !secret filesize_homeassistant_db
       - !secret filesize_homeassistant_log
       - !secret filesize_ozw_log
       - !secret filesize_configuration
@@ -256,10 +256,10 @@ sensor:
     command: python3 --version
     scan_interval: 86400
   ###### Latest github Commit
-  - platform: command_line
-    command: "python /home/homeassistant/.homeassistant/python_scripts/latest_commit.py"
-    name: 'Latest Github Commit'
-    scan_interval: 60
+  #- platform: command_line
+  #  command: "python config/python_scripts/latest_commit.py"
+  #  name: 'Latest Github Commit'
+  #  scan_interval: 60
   ###### Home Assistant updates
   - platform: scrape
     name: HA upstream
@@ -314,7 +314,7 @@ group:
     entities:
       - sensor.disk_use_percent_
       - sensor.disk_free_
-      # - sensor.homeassistant_v2db
+      - sensor.homeassistant_v2db
       - sensor.homeassistantlog
       - sensor.ozw_logtxt
       - sensor.configurationyaml
@@ -333,8 +333,8 @@ group:
       - binary_sensor.home_assistant
       - sensor.ha_installed_version
       # - sensor.ha_upstream
-      - sensor.hassbian_beta_versie
-      - sensor.hassbian_stable_versie
+      - sensor.hassio_beta_versie
+      - sensor.hassio_stable_versie
       - sensor.python_version
       # - updater.updater
       - sensor.automation_on
@@ -371,7 +371,7 @@ group:
 ################################################
 
 shell_command:
-  github_push: /home/homeassistant/.homeassistant/extras/bash/send-to-github.sh "{{ states('input_text.github_message') }}"
+  github_push: /config/extras/bash/send-to-github.sh "{{ states('input_text.github_message') }}"
   quick_restart: sudo systemctl restart home-assistant@homeassistant.service
   quick_reboot: sudo reboot
 

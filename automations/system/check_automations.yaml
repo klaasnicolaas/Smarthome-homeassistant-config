@@ -12,3 +12,4 @@
     # - delay: 00:00:30
     - service: python_script.all_automations_counter
     - service: python_script.on_automations_counter
+    # - service: python_script.latest_commit

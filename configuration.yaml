@@ -1,7 +1,7 @@
 ---
 homeassistant:
   # Name of the location where Home Assistant is running
-  name: Smart Home
+  name: Home
   # Location required to calculate the time the sun rises and sets
   latitude: !secret homeassistant_latitude
   longitude: !secret homeassistant_longitude
@@ -28,6 +28,7 @@ websocket_api:
 logger:
   default: info
 
+# To include python scripts
 python_script:
 
 ################################## COVERS ##################################
