@@ -1,2 +1,2 @@
 rules "~MD026", "~MD013"
-style "/home/homeassistant/.homeassistant/extras/markdown/markdown.style.rb"
+style "/config/extras/markdown/markdown.style.rb"
