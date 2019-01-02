@@ -72,6 +72,14 @@ There are many more sensors that I use, but I have not had the time to put them 
 |:---|:---:|:---:|:---:|
 |Water fountain in the garden|
 
+## Host Hardware
+
+|Device|Where to Buy|
+|:---|:---:|
+|Intel Baby Canyon NUC7i5BNH|
+|16GB Ram (2x 8GB)|
+|Samsung 840 evo 500GB|
+
 [rfxtrx-switch-docs]: https://www.home-assistant.io/components/switch.rfxtrx/
 [yeelight-wifi-bulb-docs]: https://www.home-assistant.io/components/light.yeelight/
 [cast-docs]: https://www.home-assistant.io/components/cast/

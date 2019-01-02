@@ -18,9 +18,12 @@ To inspire others I have set up this github and update it regularly with new cod
 
 ## Current Configuration
 
-I use a raspberry pi 3rd generation to run home assistant. In addition, I use a Z-wave stick to control devices that use the z-wave protocol and an RFX module for controlling devices that work on the 433mhz frequency band. Because the raspberry pi is hanging in the meter closet, the smart meter is also read via a P1 cable.
+Recently I switched from a raspberry pi 3B+ to an Intel NUC. I noticed that the Pi for my house was no longer powerful enough to run all processes. That is why I invested in an Intel NUC at Christmas 2018, which is now smoothly running after a long transition in the 2018-2019 Christmas holiday. I also switched from hassbian to [hass.io][hassio] in docker.
 
-- RaspberryPi 3B+ using the [Hassbian installation](<https://home-assistant.io/docs/installation/hassbian/>).
+So now I use an Intel NUC to run home assistant. In addition, I use a Z-wave stick to control devices that use the z-wave protocol and an RFX module for controlling devices that work on the 433mhz frequency band. Because the Intel NUC is hanging in the meter closet, the smart meter is also read via a P1 cable.
+
+- [Intel Baby Canyon NUC7i5BNH][intel-nuc] - Inside it 16GB Ram, 500GB SSD and running [Ubuntu Server LTS][ubuntu-server].
+- Using the [Hass.io installation][hassio-install].
 - [Aeotec USB Z-Stick](<https://aeotec.com/z-wave-usb-stick>) - Z-Wave Plus
 - [RFXCOM RFXtrx433E](<http://www.rfxcom.com/store/Transceivers/14103>)
 - [P1 cable](<https://www.sossolutions.nl/slimme-meter-kabel>)
@@ -28,7 +31,7 @@ I use a raspberry pi 3rd generation to run home assistant. In addition, I use a 
 
 ## My House
 
-Curious about what kind of integrations I have in my Home Assistant system? I made a very usefull list for others: [Check it out][components] (Last update: 9 November 2018).
+Curious about what kind of integrations I have in my Home Assistant system? I made a very usefull list for others: [Check it out][components] (Last update: 2 Januari 2019).
 
 ## Apps to control
 
@@ -55,7 +58,7 @@ Nothing is better than being able to control your own smart home from your phone
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr
 [travis-shield]: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master
 [stars-shield]: https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg
-[ha-version-shield]: https://img.shields.io/badge/Home%20Assistant-0.83.0-blue.svg
+[ha-version-shield]: https://img.shields.io/badge/Home%20Assistant-0.84.6-blue.svg
 [uptime-shield]: https://img.shields.io/uptimerobot/status/m781145866-63b6526d17827ec6eebe586f.svg
 [gitlabci-shield]: https://gitlab.com/klaasnicolaas/Smarthome-homeassistant-config/badges/master/pipeline.svg
 [paypal-shield]: https://img.shields.io/badge/BuyMeAFanta-Paypal-orange.svg
@@ -70,3 +73,8 @@ Nothing is better than being able to control your own smart home from your phone
 [paypal]: https://www.paypal.me/dexterfpv
 [issues]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/issues
 [components]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/tree/master/extras/github_resources/components.md
+
+[intel-nuc]: https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc7i5bnh.html
+[ubuntu-server]: https://www.ubuntu.com/download/server
+[hassio-install]: https://www.home-assistant.io/hassio/installation/#alternative-install-on-generic-linux-server
+[hassio]: https://www.home-assistant.io/hassio/
