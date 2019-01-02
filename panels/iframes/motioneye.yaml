@@ -1,0 +1,5 @@
+---
+motioneye:
+  title: motionEye
+  icon: mdi:cctv
+  url: !secret panel_iframe_motioneye

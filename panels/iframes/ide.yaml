@@ -1,0 +1,5 @@
+---
+ide:
+  title: IDE
+  icon: mdi:code-braces
+  url: !secret panel_iframe_ide
