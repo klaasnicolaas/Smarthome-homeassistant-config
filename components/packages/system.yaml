@@ -256,7 +256,7 @@ sensor:
     command: python3 --version
     scan_interval: 86400
   ###### Latest github Commit
-  #- platform: command_line
+  # - platform: command_line
   #  command: "python config/python_scripts/latest_commit.py"
   #  name: 'Latest Github Commit'
   #  scan_interval: 60

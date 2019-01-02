@@ -182,7 +182,7 @@ automation:
               input_select.grietje_status_dropdown
             {% endif %}
           option: Thuis
-  
+
   - alias: Markeer persoon als net vertrokken
     initial_state: true
     trigger:
@@ -206,7 +206,7 @@ automation:
               input_select.grietje_status_dropdown
             {% endif %}
           option: Net Vertrokken
-  
+
   - alias: Markeer persoon als weg
     initial_state: true
     trigger:
@@ -230,7 +230,7 @@ automation:
               input_select.grietje_status_dropdown
             {% endif %}
           option: Weg
-  
+
   - alias: Markeer persoon als lang weg
     initial_state: true
     trigger:

@@ -1,6 +1,6 @@
 ---
 # first test to turn on a light with the cube
-#- alias: 'Cube Light - Turn on'
+# - alias: 'Cube Light - Turn on'
 #  trigger:
 #    platform: mqtt
 #    topic: home/zolder/switch/set
