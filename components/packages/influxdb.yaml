@@ -1,0 +1,29 @@
+---
+# For storing a lot a data and importing it in Grafana,
+# I use the InfluxDB Community Hass.io add-ons for this.
+#
+# https://github.com/hassio-addons/addon-influxdb
+# https://github.com/hassio-addons/addon-grafana
+# https://www.home-assistant.io/components/influxdb/
+#
+influxdb:
+
+  # This is the Hass.io add-on slug, allowing a direct connection to the addon.
+  host: a0d7b954-influxdb
+  port: 8086
+
+  # The database name to store all the metrics in
+  database: homeassistant
+
+  # Authentication credentials
+  username: !secret influxdb_username
+  password: !secret influxdb_password
+
+  # Max number of retries in case of a failure
+  max_retries: 3
+
+  # I like to specify (whitelist) each thing I'd like to put
+  # into InfluxDB, to keep the database as clean as possible.
+  include:
+    domains:
+      - sensor
