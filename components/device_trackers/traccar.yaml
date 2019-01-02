@@ -1,0 +1,8 @@
+---
+platform: traccar
+host: localhost
+port: 8072
+ssl: true
+verify_ssl: false
+username: !secret traccar_username
+password: !secret traccar_password
