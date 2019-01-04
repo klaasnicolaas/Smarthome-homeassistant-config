@@ -60,18 +60,18 @@ The nice thing about using [hass.io][hassio] are the add-ons, which allows you t
 
 ## Switches
 
-|Device|HA Documentation|On My Github|Where to Buy|
-|:---|:---:|:---:|:---:|
-|KlikAanKlikUit devices (CoCo)|[RFXtrx Switch][rfxtrx-switch-docs]|[RFXtrx Switch YAML][rfxtrx-switch-github]|
-|Doorbel|[RFXtrx Switch][rfxtrx-switch-docs] (use fire-event)|[RFXtrx Switch YAML][rfxtrx-switch-github]|
+|Nr.|Device|HA Documentation|On My Github|Where to Buy|
+|:---:|:---|:---:|:---:|:---:|
+|1.|Wall Plug (ACD3-1000R) - KlikAanKlikUit (CoCo) |[RFXtrx Switch][rfxtrx-switch-docs]|[RFXtrx Switch YAML][rfxtrx-switch-github]|
+|2.|Mini Built-in Switch (AWMR-230) - KlikAanKlikUit (CoCo) |[RFXtrx Switch][rfxtrx-switch-docs]|[RFXtrx Switch YAML][rfxtrx-switch-github]|
 
 ---
 
 ## Lights
 
-|Device|HA Documentation|On My Github|Where to Buy|
-|:---|:---:|:---:|:---:|
-|Yeelights|[YeeLight Docs][yeelight-wifi-bulb-docs]|[YeeLight YAML][yeelight-github]|[Banggood][yeelight-banggood]|
+|Nr.|Device|HA Documentation|On My Github|Where to Buy|
+|:---:|:---|:---:|:---:|:---:|
+|1.|Yeelights|[YeeLight Docs][yeelight-wifi-bulb-docs]|[YeeLight YAML][yeelight-github]|[Banggood][yeelight-banggood]|
 
 ---
 
@@ -100,6 +100,7 @@ The nice thing about using [hass.io][hassio] are the add-ons, which allows you t
 |Device|HA Documentation|On My Github|Where to Buy|
 |:---|:---:|:---:|:---:|
 |Water fountain in the garden|
+| Doorbel (ACDB-7000AC) - KlikAanKlikUit (CoCo) |[RFXtrx Switch][rfxtrx-switch-docs] (use fire-event)|[RFXtrx Switch YAML][rfxtrx-switch-github]|
 
 ---
 
