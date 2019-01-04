@@ -1,6 +1,6 @@
 ---
 # This adds an iframe panel to Home Assistant with a dashboard created in Grafana.
-#Saves a number of clicks to get to the desired dashboard. :)
+# Saves a number of clicks to get to the desired dashboard. :)
 #
 useage:
   title: Verbruik
