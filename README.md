@@ -31,7 +31,7 @@ So now I use an Intel NUC to run home assistant. In addition, I use a Z-wave sti
 
 ## My House
 
-Curious about what kind of integrations I have in my Home Assistant system? I made a very usefull list for others: [Check it out][components] (Last update: 2 Januari 2019).
+Curious about what kind of integrations I have in my Home Assistant system? I made a very usefull list for others: [Check it out][components] (Last update: 3 Januari 2019).
 
 ## Apps to control
 
