@@ -14,26 +14,26 @@ If one of the links no longer works, let me know!
 
 ## Sensors
 
-|Device|HA Documentation|On My Github|
-|:---|:---:|:---:|
-|FIBARO Smoke sensors|
-|FIBARO Door sensors|
-|FIBARO Motion sensors|
-|FIBARO Wall plug|
-|DSMR (Smart meter)|[DSMR Docs][dsmr-docs]|[DSMR YAML][dsmr-github]|
-|Aftership||[Aftership YAML][aftership-yaml] - [Aftership Python File][aftership-python]|
-|Buienradar|[Buienradar Docs][buienradar-docs]|[Buienradar YAML][buienradar-github]|
-|Cert Expiry|[Cert Expiry Docs][cert-expiry-docs]|[Cert Expiry YAML][cert-expiry-github]|
-|Command Line|
-|DNS ip|[DNS IP Docs][dns-ip-docs]|[DNS IP YAML][dnsip-github]|
-|Filesize|[Filesize Docs][filesize-docs]|[Filesize YAML][filesize-github]|
-|Nederlandse Spoorwegen|[Nederlandse Spoorwegen Docs][ns-docs]|[NS YAML][ns-github]|
-|PostNL|[PostNL Docs][postnl-docs]|[PostNL YAML][postnl-github]|
-|Speedtest|[Speedtest Docs][speedtest-docs]|[Speedtest YAML][speedtest-github]|
-|Versions|[Versions Docs][versions-docs]|[Versions YAML][versions-github]|
-|Template|
-|Travis Ci|[Travis Ci Docs][travis-ci-docs]|[Travis Ci YAML][travis-github]|
-|Gitlab Ci|[Github Ci Docs][github-ci-docs]|[Gitlab Ci YAML][gitlab-github]|
+|Nr.|Device|HA Documentation|On My Github|
+|:---:|:---|:---:|:---:|
+|1.|FIBARO Smoke sensors|
+|2.|FIBARO Door sensors|
+|3.|FIBARO Motion sensors|
+|4.|FIBARO Wall plug|
+|5.|DSMR (Smart meter)|[DSMR Docs][dsmr-docs]|[DSMR YAML][dsmr-github]|
+|6.|Aftership||[Aftership YAML][aftership-yaml] - [Aftership Python File][aftership-python]|
+|7.|Buienradar|[Buienradar Docs][buienradar-docs]|[Buienradar YAML][buienradar-github]|
+|8.|Cert Expiry|[Cert Expiry Docs][cert-expiry-docs]|[Cert Expiry YAML][cert-expiry-github]|
+|9.|Command Line|
+|10.|DNS ip|[DNS IP Docs][dns-ip-docs]|[DNS IP YAML][dnsip-github]|
+|11.|Filesize|[Filesize Docs][filesize-docs]|[Filesize YAML][filesize-github]|
+|12.|Nederlandse Spoorwegen|[Nederlandse Spoorwegen Docs][ns-docs]|[NS YAML][ns-github]|
+|13.|PostNL|[PostNL Docs][postnl-docs]|[PostNL YAML][postnl-github]|
+|14.|Speedtest|[Speedtest Docs][speedtest-docs]|[Speedtest YAML][speedtest-github]|
+|15.|Versions|[Versions Docs][versions-docs]|[Versions YAML][versions-github]|
+|16.|Template|
+|17.|Travis Ci|[Travis Ci Docs][travis-ci-docs]|[Travis Ci YAML][travis-github]|
+|18.|Gitlab Ci|[Github Ci Docs][github-ci-docs]|[Gitlab Ci YAML][gitlab-github]|
 
 There are many more sensors that I use, but I have not had the time to put them here.
 
@@ -46,15 +46,15 @@ The nice thing about using [hass.io][hassio] are the add-ons, which allows you t
 - **Documentation** column leads to the page on the community forum.
 - **Github** column to the repository of the add-on.
 
-|Device|Documentation|Github Page|
-|:---|:---:|:---:|
-|Grafana|[Community Page][grafana-community]|[Github][grafana-github]
-|IDE|[Community Page][ide-community]|[Github][ide-github]
-|InfluxDB|[Community Page][influxdb-community]|[Github][influxdb-github]
-|SSH & Web Terminal|[Community Page][ssh-web-terminal-community]|[Github][ssh-web-terminal-github]
-|Samba Share|[Add-on Page][samba-share-homeassistant]
-|Traccar|[Community Page][traccar-community]|[Github][traccar-github]
-|MotionEye|[Community Page][motioneye-community]|[Github][motioneye-github]
+|Nr.|Device|Documentation|Github Page|
+|:---:|:---|:---:|:---:|
+|1.|Grafana|[Community Page][grafana-community]|[Github][grafana-github]
+|2.|IDE|[Community Page][ide-community]|[Github][ide-github]
+|3.|InfluxDB|[Community Page][influxdb-community]|[Github][influxdb-github]
+|4.|SSH & Web Terminal|[Community Page][ssh-web-terminal-community]|[Github][ssh-web-terminal-github]
+|5.|Samba Share|[Add-on Page][samba-share-homeassistant]
+|6.|Traccar|[Community Page][traccar-community]|[Github][traccar-github]
+|7.|MotionEye|[Community Page][motioneye-community]|[Github][motioneye-github]
 
 ---
 
