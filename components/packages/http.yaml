@@ -25,6 +25,7 @@ http:
     - !secret intern_ip_1
     - !secret intern_ip_2
     - !secret intern_ip_3
+    - !secret intern_ip_4
     - 127.0.0.1
 
   # Enables additional IP filtering.
