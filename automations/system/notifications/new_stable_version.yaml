@@ -4,8 +4,8 @@
   initial_state: true
   trigger:
     - platform: state
-      entity_id: sensor.hassbian_stable_versie
+      entity_id: sensor.hassio_stable_versie
   action:
     - service: notify.telegram_klaas
       data:
-        message: 'Stable update beschikbaar voor Home Assistant, versie: {{ states.sensor.hassbian_stable_versie.state }}'
+        message: 'Stable update beschikbaar voor Home Assistant, versie: {{ states.sensor.hassio_stable_versie.state }}'
