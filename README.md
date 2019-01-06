@@ -33,6 +33,10 @@ So now I use an Intel NUC to run home assistant. In addition, I use a Z-wave sti
 
 Curious about what kind of integrations I have in my Home Assistant system? I made a very usefull list for others: [Check it out][components] (Last update: 4 Januari 2019).
 
+## Back-ups
+
+Every Sunday at 3:00 am an [automation makes a snapshot][backup-github] of my installation. In the past it happened that the sd card of my Pi became corrupt and I lost everything. That's why this backup is also made locally on my Synology NAS automatically and this is fully automated. (Inspired by: [@adonno][adonno-github])
+
 ## Apps to control
 
 Nothing is better than being able to control your own smart home from your phone or tablet.
@@ -78,3 +82,5 @@ Nothing is better than being able to control your own smart home from your phone
 [ubuntu-server]: https://www.ubuntu.com/download/server
 [hassio-install]: https://www.home-assistant.io/hassio/installation/#alternative-install-on-generic-linux-server
 [hassio]: https://www.home-assistant.io/hassio/
+[adonno-github]: https://github.com/adonno/Home-AssistantConfig
+[backup-github]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/blob/master/automations/system/auto_backup.yaml
