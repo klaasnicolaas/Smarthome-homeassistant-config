@@ -62,8 +62,8 @@ The nice thing about using [hass.io][hassio] are the add-ons, which allows you t
 
 |Nr.|Device|HA Documentation|On My Github|Where to Buy|
 |:---:|:---|:---:|:---:|:---:|
-|1.|Wall Plug (ACD3-1000R) - KlikAanKlikUit (CoCo) |[RFXtrx Switch][rfxtrx-switch-docs]|[RFXtrx Switch YAML][rfxtrx-switch-github]|
-|2.|Mini Built-in Switch (AWMR-230) - KlikAanKlikUit (CoCo) |[RFXtrx Switch][rfxtrx-switch-docs]|[RFXtrx Switch YAML][rfxtrx-switch-github]|
+|1.|Wall Plug (ACD3-1000R) - CoCo |[RFXtrx Switch][rfxtrx-switch-docs]|[RFXtrx Switch YAML][rfxtrx-switch-github]|
+|2.|Mini Built-in Switch (AWMR-230) - CoCo |[RFXtrx Switch][rfxtrx-switch-docs]|[RFXtrx Switch YAML][rfxtrx-switch-github]|
 
 ---
 
@@ -111,6 +111,14 @@ The nice thing about using [hass.io][hassio] are the add-ons, which allows you t
 |Intel Baby Canyon NUC7i5BNH|
 |16GB Ram (2x 8GB)|
 |Samsung 840 evo 500GB|
+
+---
+
+## Terms
+
+Here I will name some terms / abbreviations.
+
+- Coco = Click on Click off (in dutch: KlikaanKlikuit).
 
 [rfxtrx-switch-docs]: https://www.home-assistant.io/components/switch.rfxtrx/
 [yeelight-wifi-bulb-docs]: https://www.home-assistant.io/components/light.yeelight/
