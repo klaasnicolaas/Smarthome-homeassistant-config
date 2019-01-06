@@ -9,7 +9,7 @@
   condition:
     - condition: time
       weekday:
-      - sun
+        - sun
   action:
     - service: hassio.snapshot_full
       data_template:
