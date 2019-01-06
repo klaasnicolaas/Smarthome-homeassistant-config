@@ -34,30 +34,18 @@ light.yeelight_ct2_7c49eb19d5f5:
   friendly_name: Vliering achter | Zolder
   hidden: true
 
-# light.yeelight_ct2_7c49eb19d785:
-#    friendly_name: Vliering voor | Zolder
+light.yeelight_ct2_7c49eb19d785:
+  friendly_name: Vliering voor | Zolder
+  hidden: true
 
 # WAKE ON LAN ####################################################
 switch.computer_klaas:
   icon: mdi:desktop-classic
 
-# AUTOMATION ####################################################
-automation.telegram_send_message_if_voordeur_is_open__night_mode:
-  friendly_name: Telegram - voordeur (Night mode)
-
-automation.telegram_send_message_if_voordeur_is_open__nobody_home:
-  friendly_name: Telegram - voordeur (Nobody Home mode)
-
-#  #############
-switch.deurbel:
-  icon: mdi:doorbell-video
-
+# ####################################################
 group.all_automations:
   hidden: false
   control: hidden
 
 sensor.season:
   friendly_name: Seizoen
-
-light.yeelight_ct2_7c49eb19d785:
-  hidden: true
