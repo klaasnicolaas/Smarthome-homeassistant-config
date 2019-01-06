@@ -77,40 +77,40 @@ The nice thing about using [hass.io][hassio] are the add-ons, which allows you t
 
 ## Media
 
-|Device|HA Documentation|On My Github|Where to Buy|
-|:---|:---:|:---:|:---:|
-|Google Chromecast|[Cast Docs][cast-docs]|[Cast YAML][cast-github]|
-|Philips TV|[Cast Docs][cast-docs]|[Cast YAML][cast-github]|
+|Nr.|Device|HA Documentation|On My Github|Where to Buy|
+|:---:|:---|:---:|:---:|:---:|
+|1.|Google Chromecast|[Cast Docs][cast-docs]|[Cast YAML][cast-github]|
+|2.|Philips TV|[Cast Docs][cast-docs]|[Cast YAML][cast-github]|
 
 ---
 
 ## Interfaces
 
-|Device|HA Documentation|On My Github|Where to Buy|
-|:---|:---:|:---:|:---:|
-|Google home (mini)|[Google Assistant Docs][google-assistant-docs]|
-|Teclast P80 Pro (wall tablet)|
-|Lovelace UI|[Lovelace UI Docs][lovelace-ui-docs]|[Lovelace UI YAML][lovelace-ui-github]|
-|Home Assistant Cloud|[Nabu Casa Docs][nabu-casa-docs]||[Nabu Casa][nabu-casa-buy] (price: $5 per month)
+|Nr.|Device|HA Documentation|On My Github|Where to Buy|
+|:---:|:---|:---:|:---:|:---:|
+|1.|Google home (mini)|[Google Assistant Docs][google-assistant-docs]|
+|2.|Teclast P80 Pro (wall tablet)|
+|3.|Lovelace UI|[Lovelace UI Docs][lovelace-ui-docs]|[Lovelace UI YAML][lovelace-ui-github]|
+|4.|Home Assistant Cloud|[Nabu Casa Docs][nabu-casa-docs]||[Nabu Casa][nabu-casa-buy] (price: $5 per month)
 
 ---
 
 ## Other Hardware
 
-|Device|HA Documentation|On My Github|Where to Buy|
-|:---|:---:|:---:|:---:|
-|Water fountain in the garden|
-| Doorbel (ACDB-7000AC) - KlikAanKlikUit (CoCo) |[RFXtrx Switch][rfxtrx-switch-docs] (use fire-event)|[RFXtrx Switch YAML][rfxtrx-switch-github]|
+|Nr.|Device|HA Documentation|On My Github|Where to Buy|
+|:---:|:---|:---:|:---:|:---:|
+|1.|Water fountain in the garden|
+|2.| Doorbel (ACDB-7000AC) - CoCo |[RFXtrx Switch][rfxtrx-switch-docs] (use fire-event)|[RFXtrx Switch YAML][rfxtrx-switch-github]|
 
 ---
 
 ## Host Hardware
 
-|Device|Where to Buy|
-|:---|:---:|
-|Intel Baby Canyon NUC7i5BNH|
-|16GB Ram (2x 8GB)|
-|Samsung 840 evo 500GB|
+|Nr.|Device|Where to Buy|
+|:---:|:---|:---:|
+|1.|Intel Baby Canyon NUC7i5BNH|
+|2.|16GB Ram (2x 8GB)|
+|3.|Samsung 840 evo 500GB|
 
 ---
 
