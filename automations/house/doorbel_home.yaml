@@ -11,13 +11,28 @@
       entity_id: binary_sensor.klaas_thuis
       state: 'on'
   action:
+    # Play a thing dong sound through the speakers
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.slaapkamer_zolder__mini
+        media_content_id: http://www.orangefreesounds.com/wp-content/uploads/2014/11/Doorbell-sound-ding-dong.mp3
+        media_content_type: music
+    # Play a thing dong sound through the speakers
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.slaapkamer_zolder__mini
+        media_content_id: http://www.orangefreesounds.com/wp-content/uploads/2014/11/Doorbell-sound-ding-dong.mp3
+        media_content_type: music
+    - delay: '00:00:01'
+    # Play a typed text through the speakers
     - service: tts.google_say
       entity_id: media_player.slaapkamer_zolder__mini
       data:
-        message: 'Ding dong, er staat iemand bij de voordeur'
+        message: 'Er staat iemand bij de voordeur'
         cache: true
+    # Play a typed text through the speakers
     - service: tts.google_say
       entity_id: media_player.woonkamer__mini
       data:
-        message: 'Ding dong, er staat iemand bij de voordeur'
+        message: 'Er staat iemand bij de voordeur'
         cache: true
