@@ -22,13 +22,15 @@ recorder:
       - calendar
       - media_player
       - sun
+      - camera
     entities:
-      - sensor.br_ground_temperature
-      - sensor.br_humidity
-      - sensor.br_precipitation
-      - sensor.br_symbol
-      - sensor.br_temperature
-      - sensor.br_wind_speed
+      - sensor.buienradar_ground_temperature
+      - sensor.buienradar_humidity
+      - sensor.buienradar_precipitation
+      - sensor.buienradar_symbol
+      - sensor.buienradar_temperature
+      - sensor.buienradar_wind_speed
+      - sensor.buienradar_symbol
       - sensor.external_ip
       - zone.home
       - zone.huis_marlene
@@ -40,3 +42,4 @@ recorder:
       - sensor.myip
       - sensor.power_consumption_phase_l2
       - sensor.power_consumption_phase_l3
+      - input_text.github_message
