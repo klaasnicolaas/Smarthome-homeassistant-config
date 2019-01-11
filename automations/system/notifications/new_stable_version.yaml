@@ -6,6 +6,7 @@
     - platform: state
       entity_id: sensor.hassio_stable_versie
   action:
+    - delay: 06:00:00
     - service: notify.telegram_klaas
       data:
         message: 'Stable update beschikbaar voor Home Assistant, versie: {{ states.sensor.hassio_stable_versie.state }}'
