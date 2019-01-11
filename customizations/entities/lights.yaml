@@ -1,6 +1,6 @@
 ---
 # Lampen #######################################################
-light.vliering_achter__zolder_manual:
+light.vliering_achter_zolder_manual:
   icon: mdi:ceiling-light
-light.vliering_voor__zolder_manual:
+light.vliering_voor_zolder_manual:
   icon: mdi:ceiling-light

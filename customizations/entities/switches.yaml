@@ -1,12 +1,12 @@
 ---
 # Schakelaars #######################################################
-switch.lamp_slaapkamer__zolder:
+switch.lamp_slaapkamer_zolder:
   icon: mdi:spotlight-beam
 
-switch.led_bureau__zolder:
+switch.led_bureau_zolder:
   icon: mdi:led-strip
 
-switch.led_slaapkamer__zolder:
+switch.led_slaapkamer_zolder:
   icon: mdi:led-strip
 
 switch.deurbel:

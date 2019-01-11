@@ -18,15 +18,15 @@ slaapkamer_zolder_view:
   name: Zolder
   view: true
   entities:
-    - switch.lamp_slaapkamer__zolder
-    - switch.led_bureau__zolder
-    - switch.led_slaapkamer__zolder
+    - switch.lamp_slaapkamer_zolder
+    - switch.led_bureau_zolder
+    - switch.led_slaapkamer_zolder
     - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
-    - light.vliering_achter__zolder_manual
-    - light.vliering_voor__zolder_manual
+    - light.vliering_achter_zolder_manual
+    - light.vliering_voor_zolder_manual
     - switch.computer_klaas
-    - scene.slaapkamer__zolder__on
-    - scene.slaapkamer__zolder__off
+    - scene.slaapkamer_zolder__on
+    - scene.slaapkamer_zolder__off
 
 # Tuin
 tuin_view:
