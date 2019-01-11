@@ -15,14 +15,14 @@
     - service: media_player.play_media
       data:
         entity_id: media_player.slaapkamer_zolder__mini
-        media_content_id: http://www.orangefreesounds.com/wp-content/uploads/2014/11/Doorbell-sound-ding-dong.mp3
-        media_content_type: music
+        media_content_id: !secret play_ding_dong
+        media_content_type: 'audio/mp3'
     # Play a thing dong sound through the speakers
     - service: media_player.play_media
       data:
         entity_id: media_player.slaapkamer_zolder__mini
-        media_content_id: http://www.orangefreesounds.com/wp-content/uploads/2014/11/Doorbell-sound-ding-dong.mp3
-        media_content_type: music
+        media_content_id: !secret play_ding_dong
+        media_content_type: 'audio/mp3'
     - delay: '00:00:01'
     # Play a typed text through the speakers
     - service: tts.google_say
