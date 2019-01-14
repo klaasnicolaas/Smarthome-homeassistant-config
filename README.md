@@ -50,7 +50,7 @@ Nothing is better than being able to control your own smart home from your phone
 - [Home Assistant Homepage](<https://home-assistant.io/>)
 - [Home Assistant Forums](<https://community.home-assistant.io/>)
 - [Home Assistant Discord Chat](<https://discord.gg/c5DvZ4e>)
-- [Other Featured Home Assistant Configurations](https://home-assistant.io/cookbook/>)
+- [Other Featured Home Assistant Configurations](<https://home-assistant.io/cookbook/>)
 - [Home Assistant GitHub Source Repository](<https://github.com/home-assistant/home-assistant>)
 - [Official Home Assistant Demo](<https://home-assistant.io/demo/>)
 
