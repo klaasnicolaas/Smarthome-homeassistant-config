@@ -16,6 +16,7 @@
 .HA_VERSION
 .storage
 .google.token
+.vscode
 www
 zones
 deps
@@ -32,6 +33,7 @@ entity_registry.yaml
 ip_bans.yaml
 smartyone_nl.pem
 server.pem
+settings.json
 home-assistant_v2.db-shm
 home-assistant_v2.db-wal
 image_processing.yaml
