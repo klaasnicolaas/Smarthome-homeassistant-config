@@ -13,7 +13,7 @@
   action:
     - service: hassio.snapshot_full
       data_template:
-        name: Automated Backup {{ now().strftime('%Y-%m-%d') }}
+        name: Automated Backup {{ now().strftime('%Y-%m-%d') }} running HA version {{ states.sensor.ha_installed_version.state }}
     - service: notify.telegram_klaas
       data:
-        message: "Backup is gemaakt met de naam: Automated Backup {{ now().strftime('%Y-%m-%d') }}"
+        message: "Backup is gemaakt met de naam: Automated Backup {{ now().strftime('%Y-%m-%d') }} running HA version {{ states.sensor.ha_installed_version.state }}"
