@@ -1,6 +1,6 @@
 ---
 # FIBARO SMOKE SENSOR | Zolder #############################################
-binary_sensor.fibaro__smoke_sensor__slaapkamer_zolder_sensor:
+binary_sensor.fibaro_smoke_sensor_slaapkamer_zolder_sensor:
   friendly_name: Rookmelder | Zolder
 
 sensor.fibaro_smoke_sensor_slaapkamer_zolder_alarm_level:
