@@ -4,10 +4,8 @@
   trigger:
     - platform: homeassistant
       event: start
-    - platform: time
+    - platform: time_pattern
       hours: '/1'
-      minutes: 00
-      seconds: 00
   action:
     # - delay: 00:00:30
     - service: python_script.all_automations_counter
