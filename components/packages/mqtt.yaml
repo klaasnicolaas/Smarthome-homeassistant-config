@@ -1,0 +1,11 @@
+---
+# Connects to my MQTT broker, for which I use the Community add-on:
+# "MQTT Server & Web Client".
+#
+# https://github.com/hassio-addons/addon-mqtt/blob/master/README.md
+#
+mqtt:
+  broker: a0d7b954-mqtt
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  client_id: home-assistant
