@@ -8,10 +8,10 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_smoke
+    entity_id: sensor.fibaro_smoke_sensor_gang_begane_grond_smoke
   condition:
     - condition: state
-      entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_smoke
+      entity_id: sensor.fibaro_smoke_sensor_gang_begane_grond_smoke
       state: '3'
   action:
     - service: notify.telegram_thuis
@@ -25,10 +25,10 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke
+    entity_id: sensor.fibaro_smoke_sensor_slaapkamer_zolder_smoke
   condition:
     - condition: state
-      entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke
+      entity_id: sensor.fibaro_smoke_sensor_slaapkamer_zolder_smoke
       state: '3'
   action:
     - service: notify.telegram_thuis
@@ -45,7 +45,7 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_smoke
+    entity_id: sensor.fibaro_smoke_sensor_gang_begane_grond_smoke
     from: '3'
   action:
     service: notify.telegram_thuis
@@ -59,7 +59,7 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke
+    entity_id: sensor.fibaro_smoke_sensor_slaapkamer_zolder_smoke
     from: '3'
   action:
     service: notify.telegram_thuis
@@ -76,10 +76,10 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_heat_2
+    entity_id: sensor.fibaro_smoke_sensor_gang_begane_grond_heat_2
   condition:
     - condition: state
-      entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_heat_2
+      entity_id: sensor.fibaro_smoke_sensor_gang_begane_grond_heat_2
       state: '255'
   action:
     - service: notify.telegram_thuis
@@ -93,10 +93,10 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat_2
+    entity_id: sensor.fibaro_smoke_sensor_slaapkamer_zolder_heat_2
   condition:
     - condition: state
-      entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat_2
+      entity_id: sensor.fibaro_smoke_sensor_slaapkamer_zolder_heat_2
       state: '255'
   action:
     - service: notify.telegram_thuis
@@ -113,7 +113,7 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: sensor.fibaro__smoke_sensor__gang_begane_grond_heat_2
+    entity_id: sensor.fibaro_smoke_sensor_gang_begane_grond_heat_2
     from: '255'
   action:
     service: notify.telegram_thuis
@@ -127,7 +127,7 @@
   initial_state: true
   trigger:
     platform: state
-    entity_id: sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat_2
+    entity_id: sensor.fibaro_smoke_sensor_slaapkamer_zolder_heat_2
     from: '255'
   action:
     service: notify.telegram_thuis

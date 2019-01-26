@@ -21,12 +21,12 @@ slaapkamer_zolder_view:
     - switch.lamp_slaapkamer_zolder
     - switch.led_bureau_zolder
     - switch.led_slaapkamer_zolder
-    - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+    - sensor.fibaro_smoke_sensor_slaapkamer_zolder_temperature
     - light.vliering_achter_zolder_manual
     - light.vliering_voor_zolder_manual
     - switch.computer_klaas
-    - scene.slaapkamer_zolder__on
-    - scene.slaapkamer_zolder__off
+    - scene.slaapkamer_zolder_on
+    - scene.slaapkamer_zolder_off
 
 # Tuin
 tuin_view:
@@ -34,7 +34,6 @@ tuin_view:
   view: true
   entities:
     # - group.tuin
-    - switch.fibaro__wall_plug_1_switch
 
 reizen_view:
   name: Reizen
@@ -50,10 +49,10 @@ temperaturen_view:
   icon: mdi:temperature-celsius
   entities:
     - group.temperaturen
-    - sensor.fibaro__door_sensor__hal_begane_grond_temperature
-    - sensor.fibaro__motion_sensor__hal_begane_grond_temperature
-    - sensor.fibaro__smoke_sensor__gang_begane_grond_temperature
-    - sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature
+    - sensor.fibaro_door_sensor_hal_begane_grond_temperature
+    - sensor.fibaro_motion_sensor_hal_begane_grond_temperature
+    - sensor.fibaro_smoke_sensor_gang_begane_grond_temperature
+    - sensor.fibaro_smoke_sensor_slaapkamer_zolder_temperature
 
 # Automatisering
 automatisering_view:

@@ -7,4 +7,4 @@
 #    payload: 'on'
 #  action:
 #    - service: switch.turn_on
-#      entity_id: switch.lamp_slaapkamer__zolder
+#      entity_id: switch.lamp_slaapkamer_zolder

@@ -3,7 +3,7 @@
 - platform: template
   sensors:
     zwave_battery_smoke_sensor_begane_grond:
-      value_template: '{{ states.zwave.fibaro__smoke_sensor__gang_begane_grond.attributes.battery_level }}'
+      value_template: '{{ states.zwave.fibaro_smoke_sensor_gang_begane_grond.attributes.battery_level }}'
       friendly_name: Smoke sensor | begane grond
       unit_of_measurement: "%"
       device_class: battery
@@ -11,7 +11,7 @@
 - platform: template
   sensors:
     zwave_battery_smoke_sensor_slaapkamer_zolder:
-      value_template: '{{ states.zwave.fibaro__smoke_sensor__slaapkamer_zolder.attributes.battery_level }}'
+      value_template: '{{ states.zwave.fibaro_smoke_sensor_slaapkamer_zolder.attributes.battery_level }}'
       friendly_name: Smoke sensor | slaapkamer zolder
       unit_of_measurement: "%"
       device_class: battery
@@ -19,7 +19,7 @@
 - platform: template
   sensors:
     zwave_battery_door_sensor_hal_begane_grond:
-      value_template: '{{ states.zwave.fibaro__door_sensor__hal_begane_grond.attributes.battery_level }}'
+      value_template: '{{ states.zwave.fibaro_door_sensor_hal_begane_grond.attributes.battery_level }}'
       friendly_name: Door sensor | begane grond
       unit_of_measurement: "%"
       device_class: battery
@@ -27,7 +27,7 @@
 - platform: template
   sensors:
     zwave_battery_motion_sensor_hal_begane_grond:
-      value_template: '{{ states.zwave.fibaro__motion_sensor__hal_begane_grond.attributes.battery_level }}'
+      value_template: '{{ states.zwave.fibaro_motion_sensor_hal_begane_grond.attributes.battery_level }}'
       friendly_name: Motion sensor | begane grond
       unit_of_measurement: "%"
       device_class: battery
