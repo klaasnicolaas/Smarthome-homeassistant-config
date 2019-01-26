@@ -4,7 +4,7 @@ switch.fibaro_wall_plug_1_switch:
   friendly_name: Waterornament - Tuin
   icon: mdi:water-pump
 
-sensor.fibaro_wall_plug__1_alarm_level_2:
+sensor.fibaro_wall_plug_1_alarm_level_2:
   hidden: true
 
 sensor.fibaro_wall_plug_1_alarm_level:
