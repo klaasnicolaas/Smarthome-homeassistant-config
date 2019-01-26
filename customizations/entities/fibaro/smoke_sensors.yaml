@@ -3,78 +3,78 @@
 binary_sensor.fibaro__smoke_sensor__slaapkamer_zolder_sensor:
   friendly_name: Rookmelder | Zolder
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_alarm_level:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_alarm_level:
   hidden: true
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_alarm_type:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_alarm_type:
   hidden: true
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_burglar:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_burglar:
   hidden: true
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_general:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_general:
   hidden: true
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_heat:
   hidden: true
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_heat_2:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_heat_2:
   hidden: true
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_power_management:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_power_management:
   hidden: true
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_smoke:
   hidden: true
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_smoke_2:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_smoke_2:
   hidden: true
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_sourcenodeid:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_sourcenodeid:
   hidden: true
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_system:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_system:
   hidden: true
 
-sensor.fibaro__smoke_sensor__slaapkamer_zolder_temperature:
+sensor.fibaro_smoke_sensor_slaapkamer_zolder_temperature:
   friendly_name: Temperatuur - Slaapkamer | Zolder
 
 # FIBARO SMOKE SENSOR | Begane grond ######################################33
-binary_sensor.fibaro__smoke_sensor__gang_begane_grond_sensor:
+binary_sensor.fibaro_smoke_sensor_gang_begane_grond_sensor:
   friendly_name: Rookmelder | Begane grond
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_alarm_level:
+sensor.fibaro_smoke_sensor_gang_begane_grond_alarm_level:
   hidden: true
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_alarm_type:
+sensor.fibaro_smoke_sensor_gang_begane_grond_alarm_type:
   hidden: true
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_burglar:
+sensor.fibaro_smoke_sensor_gang_begane_grond_burglar:
   hidden: true
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_general:
+sensor.fibaro_smoke_sensor_gang_begane_grond_general:
   hidden: true
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_heat:
+sensor.fibaro_smoke_sensor_gang_begane_grond_heat:
   hidden: true
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_heat_2:
+sensor.fibaro_smoke_sensor_gang_begane_grond_heat_2:
   hidden: true
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_power_management:
+sensor.fibaro_smoke_sensor_gang_begane_grond_power_management:
   hidden: true
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_smoke:
+sensor.fibaro_smoke_sensor_gang_begane_grond_smoke:
   hidden: true
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_smoke_2:
+sensor.fibaro_smoke_sensor_gang_begane_grond_smoke_2:
   hidden: true
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_sourcenodeid:
+sensor.fibaro_smoke_sensor_gang_begane_grond_sourcenodeid:
   hidden: true
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_system:
+sensor.fibaro_smoke_sensor_gang_begane_grond_system:
   hidden: true
 
-sensor.fibaro__smoke_sensor__gang_begane_grond_temperature:
+sensor.fibaro_smoke_sensor_gang_begane_grond_temperature:
   friendly_name: Temperatuur - Trappengang | Begane grond

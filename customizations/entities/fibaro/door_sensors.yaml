@@ -1,25 +1,25 @@
 ---
 # FIBARO DOOR SENSOR ####################################################
-binary_sensor.fibaro__door_sensor__hal_begane_grond_sensor:
+binary_sensor.fibaro_door_sensor_hal_begane_grond_sensor:
   friendly_name: Deur sensor - Hal | Begane grond
 
-sensor.fibaro__door_sensor__hal_begane_grond_alarm_level:
+sensor.fibaro_door_sensor_hal_begane_grond_alarm_level:
   hidden: true
 
-sensor.fibaro__door_sensor__hal_begane_grond_alarm_type:
+sensor.fibaro_door_sensor_hal_begane_grond_alarm_type:
   hidden: true
 
-sensor.fibaro__door_sensor__hal_begane_grond_burglar:
+sensor.fibaro_door_sensor_hal_begane_grond_burglar:
   hidden: true
 
-sensor.fibaro__door_sensor__hal_begane_grond_heat:
+sensor.fibaro_door_sensor_hal_begane_grond_heat:
   hidden: true
 
-sensor.fibaro__door_sensor__hal_begane_grond_power_management:
+sensor.fibaro_door_sensor_hal_begane_grond_power_management:
   hidden: true
 
-sensor.fibaro__door_sensor__hal_begane_grond_sourcenodeid:
+sensor.fibaro_door_sensor_hal_begane_grond_sourcenodeid:
   hidden: true
 
-sensor.fibaro__door_sensor__hal_begane_grond_temperature:
+sensor.fibaro_door_sensor_hal_begane_grond_temperature:
   friendly_name: Temperatuur (deur sensor) - Hal | Begane grond

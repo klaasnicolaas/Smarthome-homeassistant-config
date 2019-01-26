@@ -1,26 +1,26 @@
 ---
 # FIBARO WALL PLUG ######################################################
-switch.fibaro__wall_plug_1_switch:
+switch.fibaro_wall_plug_1_switch:
   friendly_name: Waterornament - Tuin
   icon: mdi:water-pump
 
-sensor.fibaro__wall_plug__1_alarm_level_2:
+sensor.fibaro_wall_plug__1_alarm_level_2:
   hidden: true
 
-sensor.fibaro__wall_plug_1_alarm_level:
+sensor.fibaro_wall_plug_1_alarm_level:
   hidden: true
 
-sensor.fibaro__wall_plug_1_alarm_type:
+sensor.fibaro_wall_plug_1_alarm_type:
   hidden: true
 
-sensor.fibaro__wall_plug__1_alarm_type_2:
+sensor.fibaro_wall_plug_1_alarm_type_2:
   hidden: true
 
-sensor.fibaro__wall_plug__1_exporting_2:
+sensor.fibaro_wall_plug_1_exporting_2:
   hidden: true
 
-sensor.fibaro__wall_plug__1_power_management_2:
+sensor.fibaro_wall_plug_1_power_management_2:
   hidden: true
 
-sensor.fibaro__wall_plug__1_sourcenodeid_2:
+sensor.fibaro_wall_plug_1_sourcenodeid_2:
   hidden: true

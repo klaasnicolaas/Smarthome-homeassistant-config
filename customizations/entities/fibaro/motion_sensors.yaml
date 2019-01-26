@@ -1,22 +1,22 @@
 ---
 # FIBARO MOTION SENSOR ####################################################
-binary_sensor.fibaro__motion_sensor__hal_begane_grond_sensor:
+binary_sensor.fibaro_motion_sensor_hal_begane_grond_sensor:
   friendly_name: Bewegings sensor - Hal | Begane grond
 
-sensor.fibaro__motion_sensor__hal_begane_grond_temperature:
+sensor.fibaro_motion_sensor_hal_begane_grond_temperature:
   friendly_name: Temperatuur (bewegings sensor) - Hal | Begane grond
 
-sensor.fibaro__motion_sensor__hal_begane_grond_luminance:
+sensor.fibaro_motion_sensor_hal_begane_grond_luminance:
   friendly_name: Lichtsterkte (bewegings sensor) - Hal | Begane grond
 
-sensor.fibaro__motion_sensor__hal_begane_grond_sourcenodeid:
+sensor.fibaro_motion_sensor_hal_begane_grond_sourcenodeid:
   hidden: true
 
-sensor.fibaro__motion_sensor__hal_begane_grond_general:
+sensor.fibaro_motion_sensor_hal_begane_grond_general:
   hidden: true
 
-sensor.fibaro__motion_sensor__hal_begane_grond_alarm_type:
+sensor.fibaro_motion_sensor_hal_begane_grond_alarm_type:
   hidden: true
 
-sensor.fibaro__motion_sensor__hal_begane_grond_alarm_level:
+sensor.fibaro_motion_sensor_hal_begane_grond_alarm_level:
   hidden: true
