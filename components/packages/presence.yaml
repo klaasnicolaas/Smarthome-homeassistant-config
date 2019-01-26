@@ -159,6 +159,7 @@ automation:
         to: 'Net Aangekomen'
         for:
           minutes: 5
+          seconds: 0
       - platform: state
         entity_id: input_select.grietje_status_dropdown
         to: 'Net Aangekomen'
@@ -215,11 +216,13 @@ automation:
         to: 'Net Vertrokken'
         for:
           minutes: 5
+          seconds: 0
       - platform: state
         entity_id: input_select.grietje_status_dropdown
         to: 'Net Vertrokken'
         for:
           minutes: 5
+          seconds: 0
     action:
       - service: input_select.select_option
         data_template:
@@ -239,11 +242,15 @@ automation:
         to: 'Weg'
         for:
           hours: 24
+          minutes: 0
+          seconds: 0
       - platform: state
         entity_id: input_select.grietje_status_dropdown
         to: 'Weg'
         for:
           hours: 24
+          minutes: 0
+          seconds: 0
     action:
       - service: input_select.select_option
         data_template:
