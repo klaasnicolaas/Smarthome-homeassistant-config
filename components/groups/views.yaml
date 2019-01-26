@@ -28,13 +28,6 @@ slaapkamer_zolder_view:
     - scene.slaapkamer_zolder_on
     - scene.slaapkamer_zolder_off
 
-# Tuin
-tuin_view:
-  name: Tuin
-  view: true
-  entities:
-    # - group.tuin
-
 reizen_view:
   name: Reizen
   view: true

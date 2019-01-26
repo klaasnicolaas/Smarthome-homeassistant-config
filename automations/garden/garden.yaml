@@ -1,6 +1,6 @@
 ---
 # Garden Fontain - Turns on op zonnige dagen na 16:00 of als ik of mams thuis is na 16:00 (doordeweeks)
-#- alias: 'Waterornament aan - doordeweeks'
+# - alias: 'Waterornament aan - doordeweeks'
 #  initial_state: false
 #  trigger:
 #    # Starten als het 4 uur is of als iemand thuis komt
@@ -36,7 +36,7 @@
 #      entity_id: switch.fibaro_wall_plug_1_switch
 
 # Garden Fontain - Turns off 3 hours before sunset and if people are home (doordeweeks)
-#- alias: 'Waterornament uit - doordeweeks'
+# - alias: 'Waterornament uit - doordeweeks'
 #  initial_state: false
 #  trigger:
 #    - platform: sun
