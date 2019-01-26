@@ -157,11 +157,11 @@ automation:
       - platform: state
         entity_id: input_select.klaas_status_dropdown
         to: 'Net Aangekomen'
-        for: '00:05:00'
+        for: "00:05:00"
       - platform: state
         entity_id: input_select.grietje_status_dropdown
         to: 'Net Aangekomen'
-        for: '00:05:00'
+        for: "00:05:00"
       - platform: state
         entity_id: input_select.klaas_status_dropdown
         from: 'Net Vertrokken'
@@ -211,11 +211,11 @@ automation:
       - platform: state
         entity_id: input_select.klaas_status_dropdown
         to: 'Net Vertrokken'
-        for: '00:05:00'
+        for: "00:05:00"
       - platform: state
         entity_id: input_select.grietje_status_dropdown
         to: 'Net Vertrokken'
-        for: '00:05:00'
+        for: "00:05:00"
     action:
       - service: input_select.select_option
         data_template:
@@ -233,11 +233,11 @@ automation:
       - platform: state
         entity_id: input_select.klaas_status_dropdown
         to: 'Weg'
-        for: '24:00:00'
+        for: "24:00:00"
       - platform: state
         entity_id: input_select.grietje_status_dropdown
         to: 'Weg'
-        for: '24:00:00'
+        for: "24:00:00"
     action:
       - service: input_select.select_option
         data_template:

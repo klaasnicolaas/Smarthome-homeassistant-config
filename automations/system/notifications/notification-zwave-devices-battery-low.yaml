@@ -8,7 +8,7 @@
     platform: numeric_state
     entity_id: sensor.zwave_battery_front_door
     below: 15
-    for: '00:00:30'
+    for: "00:00:30"
   action:
     service: notify.telegram_klaas
     data:
@@ -22,7 +22,7 @@
     platform: numeric_state
     entity_id: sensor.zwave_battery_smoke_sensor_begane_grond
     below: 15
-    for: '00:00:30'
+    for: "00:00:30"
   action:
     service: notify.telegram_klaas
     data:
@@ -36,7 +36,7 @@
     platform: numeric_state
     entity_id: sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
     below: 15
-    for: '00:00:30'
+    for: "00:00:30"
   action:
     service: notify.telegram_klaas
     data:
