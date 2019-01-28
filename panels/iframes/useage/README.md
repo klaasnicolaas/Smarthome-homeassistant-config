@@ -17,55 +17,55 @@ Also pay attention to the 2 price variables in the code called:
 
 This must be replaced with a value that you pay for your gas and energy bill, in order to generate the right calculations for you.
 
-#### Section 1, 3 & 11
+## Section 1, 3 & 11
 
 ```sql
 SELECT sum("value")  / 10000 FROM "m3" WHERE ("entity_id" = 'gas_consumption') AND $timeFilter GROUP BY time(1d) fill(null)
 ```
 
-#### Section 2
+## Section 2
 
 ```sql
 SELECT sum("value")  / 1000 FROM "kW" WHERE ("entity_id" = 'power_consumption') AND $timeFilter GROUP BY time(1h) fill(none)
 ```
 
-#### Section 4 & 11
+## Section 4 & 11
 
 ```sql
 SELECT sum("value")  * GAS_PRICE / 10000 FROM "m3" WHERE ("entity_id" = 'gas_consumption') AND $timeFilter GROUP BY time(1d) fill(null)
 ```
 
-#### Section 5
+## Section 5
 
 ```sql
 SELECT sum("value")  * GAS_PRICE / 10000 FROM "m3" WHERE ("entity_id" = 'gas_consumption') AND $timeFilter GROUP BY time(30d) fill(null)
 ```
 
-#### Section 6
+## Section 6
 
 ```sql
 SELECT sum("value")  * GAS_PRICE / 10000 FROM "m3" WHERE ("entity_id" = 'gas_consumption') AND $timeFilter GROUP BY time(7d) fill(null)
 ```
 
-#### Section 7 & 12
+## Section 7 & 12
 
 ```sql
 SELECT sum("value")  / 1000 FROM "kW" WHERE ("entity_id" = 'power_consumption') AND $timeFilter GROUP BY time(1d) fill(null)
 ```
 
-#### Section 8 & 12
+## Section 8 & 12
 
 ```sql
 SELECT sum("value")  * POWER_PRICE / 1000 FROM "kW" WHERE ("entity_id" = 'power_consumption') AND $timeFilter GROUP BY time(1d) fill(null)
 ```
 
-#### Section 9
+## Section 9
 
 ```sql
 SELECT sum("value")  * POWER_PRICE / 1000 FROM "kW" WHERE ("entity_id" = 'power_consumption') AND $timeFilter GROUP BY time(30d) fill(null)
 ```
 
-#### Section 10
+## Section 10
 
 ```sql
 SELECT sum("value")  * POWER_PRICE / 1000 FROM "kW" WHERE ("entity_id" = 'power_consumption') AND $timeFilter GROUP BY time(7d) fill(null)
