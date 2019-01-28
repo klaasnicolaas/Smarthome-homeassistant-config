@@ -27,11 +27,15 @@ So now I use an Intel NUC to run home assistant. In addition, I use a Z-wave sti
 - [Aeotec USB Z-Stick](<https://aeotec.com/z-wave-usb-stick>) - Z-Wave Plus
 - [RFXCOM RFXtrx433E](<http://www.rfxcom.com/store/Transceivers/14103>)
 - [P1 cable](<https://www.sossolutions.nl/slimme-meter-kabel>)
-- Using also the [Lovelace UI](<https://www.home-assistant.io/lovelace/>) (still in a beta).
+- Using also the [Lovelace UI](<https://www.home-assistant.io/lovelace/>) (Is in progress).
 
 ## My House
 
 Curious about what kind of integrations I have in my Home Assistant system? I made a very usefull list for others: [Check it out][components] (Last update: 6 Januari 2019).
+
+## Grafana gas/energy consumption dashboard
+
+I have built my own dashboard in grafana for my gas and energy consumption, which I can call through an iframe panel in Home Assistant. If you want to know more about this, [take a look here][useage-dashboard].
 
 ## Back-ups
 
@@ -44,6 +48,8 @@ Nothing is better than being able to control your own smart home from your phone
 - [HomeAssist](<https://play.google.com/store/apps/details?id=com.axzae.homeassistant&hl=nl>) (for android)
 - [Home Assistant](<https://www.home-assistant.io/docs/ecosystem/ios/>) (for iOS)
 - [Home Assistant](<https://www.home-assistant.io/docs/frontend/mobile/>) (As web app)
+
+---
 
 ## Needing Help?
 
@@ -108,3 +114,4 @@ SOFTWARE.
 [hassio]: https://www.home-assistant.io/hassio/
 [adonno-github]: https://github.com/adonno/Home-AssistantConfig
 [backup-github]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/blob/master/automations/system/auto_backup.yaml
+[useage-dashboard]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/tree/master/panels/iframes/consumption
