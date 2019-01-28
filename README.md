@@ -1,8 +1,6 @@
 # Smart Home = Home Assistant
 
-<p align="center">
-  <img src="/extras/img/header.png"/>
-</p>
+![header](/extras/img/header.png "header")
 
 You will probably think, what is Home Assistant!? Well Home Assistant is a home automation platform running on Python 3. It is able to track and control all devices at home and offer a platform for automating control.
 
