@@ -1,8 +1,8 @@
-# Grafana Useage Dashboard
+# Grafana gas/energy consumption dashboard
 
 ![Dashboard][dashboard]
 
-Since some of you would like to know how you can just build a usage dashboard like what I have. I decided to share my SQL code with everyone so that it might be easier for everyone to build the same dashboard.
+Since some of you would like to know how you can just build a consumption dashboard like what I have. I decided to share my SQL code with everyone so that it might be easier for everyone to build the same dashboard.
 
 To make this dashboard I used the [InfluxDB][influxdb-addon] and [Grafana][grafana-addon] plugin from the [hass.io][hassio] add-on store.
 
