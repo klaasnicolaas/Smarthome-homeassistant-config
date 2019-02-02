@@ -8,7 +8,7 @@
     # Wifi
     - entity_id: device_tracker.19216802
       prob_given_true: 0.9
-      prob_given_false: 0.2
+      prob_given_false: 0.3
       platform: 'state'
       to_state: 'home'
     # Bluetooth
@@ -17,8 +17,15 @@
     #  prob_given_false: 0.3
     #  platform: 'state'
     #  to_state: 'home'
-    # GPS
+    ##### GPS #####
+    # GPSLogger
     - entity_id: device_tracker.2779d988391c7ece
+      prob_given_true: 0.9
+      prob_given_false: 0.1
+      platform: 'state'
+      to_state: 'home'
+    # Traccar
+    - entity_id: device_tracker.telefoon_klaas
       prob_given_true: 0.9
       prob_given_false: 0.1
       platform: 'state'
