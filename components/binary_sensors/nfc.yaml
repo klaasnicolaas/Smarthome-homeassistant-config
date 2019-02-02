@@ -1,0 +1,12 @@
+---
+#########################################################
+# MQTT binary sensors that can read a NFC tag/card etc. #
+#########################################################
+- platform: mqtt
+  name: 'NFC Tag 1'
+  state_topic: 'D0C62B/sensor/living_room/Tag1/state'
+  availability_topic: 'D0C62B/availability'
+- platform: mqtt
+  name: 'NFC Tag 2'
+  state_topic: 'D0C62B/sensor/living_room/Tag2/state'
+  availability_topic: 'D0C62B/availability'
