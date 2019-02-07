@@ -7,6 +7,7 @@ On this page you will find in addition to all the components that I use a refere
 - The Home Assistant documentation (**HA Documentation**)
 - The code that is used in my configuration (**On My Github**)
 - References to stores (**Where to Buy**) where you can buy it yourself, if it is a physical product.
+- Shows which IoT (Internet f Things) class it belongs to, you can find more about these classes [here][iot-class].
 
 References to stores will mainly be Dutch webshops, because I live in this wonderful little country with its famous cheese, weed :no_smoking:, clogs :shoe:, windmills and tulips :tulip:.
 
@@ -14,26 +15,26 @@ If one of the links no longer works, let me know!
 
 ## Sensors
 
-|Nr.|Device|HA Documentation|On My Github|
-|:---:|:---|:---:|:---:|
-|1.|FIBARO Smoke sensors|
-|2.|FIBARO Door sensors|
-|3.|FIBARO Motion sensors|
-|4.|FIBARO Wall plug|
-|5.|DSMR (Smart meter)|[DSMR Docs][dsmr-docs]|[DSMR YAML][dsmr-github]|
-|6.|Aftership||[Aftership YAML][aftership-yaml] - [Aftership Python File][aftership-python]|
-|7.|Buienradar|[Buienradar Docs][buienradar-docs]|[Buienradar YAML][buienradar-github]|
-|8.|Cert Expiry|[Cert Expiry Docs][cert-expiry-docs]|[Cert Expiry YAML][cert-expiry-github]|
-|9.|Command Line|
-|10.|DNS ip|[DNS IP Docs][dns-ip-docs]|[DNS IP YAML][dnsip-github]|
-|11.|Filesize|[Filesize Docs][filesize-docs]|[Filesize YAML][filesize-github]|
-|12.|Nederlandse Spoorwegen|[Nederlandse Spoorwegen Docs][ns-docs]|[NS YAML][ns-github]|
-|13.|PostNL|[PostNL Docs][postnl-docs]|[PostNL YAML][postnl-github]|
-|14.|Speedtest|[Speedtest Docs][speedtest-docs]|[Speedtest YAML][speedtest-github]|
-|15.|Versions|[Versions Docs][versions-docs]|[Versions YAML][versions-github]|
+|Nr.|Device|HA Documentation|On My Github|IoT Class|
+|:---:|:---|:---:|:---:|:---:|
+|1.|FIBARO Smoke sensors|||Local Push|
+|2.|FIBARO Door sensors|||Local Push|
+|3.|FIBARO Motion sensors|||Local Push|
+|4.|FIBARO Wall plug|||Local Push|
+|5.|DSMR (Smart meter)|[DSMR Docs][dsmr-docs]|[DSMR YAML][dsmr-github]|Local Push|
+|6.|Aftership||[Aftership YAML][aftership-yaml] - [Aftership Python File][aftership-python]|Cloud Polling|
+|7.|Buienradar|[Buienradar Docs][buienradar-docs]|[Buienradar YAML][buienradar-github]|Cloud Polling|
+|8.|Cert Expiry|[Cert Expiry Docs][cert-expiry-docs]|[Cert Expiry YAML][cert-expiry-github]|Depends|
+|9.|Command Line|||Local Polling|
+|10.|DNS ip|[DNS IP Docs][dns-ip-docs]|[DNS IP YAML][dnsip-github]|Cloud Polling|
+|11.|Filesize|[Filesize Docs][filesize-docs]|[Filesize YAML][filesize-github]|Local Polling|
+|12.|Nederlandse Spoorwegen|[Nederlandse Spoorwegen Docs][ns-docs]|[NS YAML][ns-github]|Cloud Polling|
+|13.|PostNL|[PostNL Docs][postnl-docs]|[PostNL YAML][postnl-github]|Cloud Polling|
+|14.|Speedtest|[Speedtest Docs][speedtest-docs]|[Speedtest YAML][speedtest-github]|Cloud Polling|
+|15.|Versions|[Versions Docs][versions-docs]|[Versions YAML][versions-github]|Local Pushing|
 |16.|Template|
-|17.|Travis Ci|[Travis Ci Docs][travis-ci-docs]|[Travis Ci YAML][travis-github]|
-|18.|Gitlab Ci|[Github Ci Docs][github-ci-docs]|[Gitlab Ci YAML][gitlab-github]|
+|17.|Travis Ci|[Travis Ci Docs][travis-ci-docs]|[Travis Ci YAML][travis-github]|Cloud Polling|
+|18.|Gitlab Ci|[Github Ci Docs][github-ci-docs]|[Gitlab Ci YAML][gitlab-github]|Cloud Polling|
 
 There are many more sensors that I use, but I have not had the time to put them here.
 
@@ -69,18 +70,18 @@ The nice thing about using [hass.io][hassio] are the add-ons, which allows you t
 
 ## Lights
 
-|Nr.|Device|HA Documentation|On My Github|Where to Buy|
-|:---:|:---|:---:|:---:|:---:|
-|1.|Yeelights|[YeeLight Docs][yeelight-wifi-bulb-docs]|[YeeLight YAML][yeelight-github]|[Banggood][yeelight-banggood]|
+|Nr.|Device|HA Documentation|On My Github|Where to Buy|IoT Class|
+|:---:|:---|:---:|:---:|:---:|:---:|
+|1.|Yeelights|[YeeLight Docs][yeelight-wifi-bulb-docs]|[YeeLight YAML][yeelight-github]|[Banggood][yeelight-banggood]|Local Polling|
 
 ---
 
 ## Media
 
-|Nr.|Device|HA Documentation|On My Github|Where to Buy|
-|:---:|:---|:---:|:---:|:---:|
-|1.|Google Chromecast|[Cast Docs][cast-docs]|[Cast YAML][cast-github]|
-|2.|Philips TV|[Cast Docs][cast-docs]|[Cast YAML][cast-github]|
+|Nr.|Device|HA Documentation|On My Github|Where to Buy|IoT Class|
+|:---:|:---|:---:|:---:|:---:|:---:|
+|1.|Google Chromecast|[Cast Docs][cast-docs]|[Cast YAML][cast-github]||Local Polling|
+|2.|Philips TV|[Cast Docs][cast-docs]|[Cast YAML][cast-github]||Local Polling|
 
 ---
 
@@ -137,6 +138,7 @@ Here I will name some terms / abbreviations.
 [versions-docs]:https://www.home-assistant.io/components/sensor.version/
 [cert-expiry-docs]:https://www.home-assistant.io/components/sensor.cert_expiry/
 [dns-ip-docs]:https://www.home-assistant.io/components/sensor.dnsip/
+[iot-class]: https://www.home-assistant.io/blog/2016/02/12/classifying-the-internet-of-things/#classifiers
 
 [grafana-community]: https://community.home-assistant.io/t/community-hass-io-add-on-grafana/54674
 [ide-community]: https://community.home-assistant.io/t/community-hass-io-add-on-ide-based-on-cloud9/33810
