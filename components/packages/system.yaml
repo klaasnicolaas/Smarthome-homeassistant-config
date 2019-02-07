@@ -130,7 +130,7 @@ homeassistant:
 
     sensor.last_boot:
       <<: *customize
-      friendly_name: Laatste (re)boot Raspberry Pi
+      friendly_name: Laatste (re)boot Intel Nuc
 
     ################################################
     ## Group
@@ -169,7 +169,7 @@ homeassistant:
       <<: *customize
       icon: mdi:server-network
       can_cancel: false
-      friendly_name: Reboot Raspberry Pi
+      friendly_name: Reboot Intel Nuc
 
     script.quick_restart:
       <<: *customize
@@ -355,7 +355,6 @@ group:
       - script.quick_restart
       - script.quick_reboot
       # Github
-      - sensor.latest_github_commit
       - input_text.github_message
       - script.github_push
       # Gitlab CI
