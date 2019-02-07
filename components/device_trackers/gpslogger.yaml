@@ -5,4 +5,3 @@
 #
 
 platform: gpslogger
-password: !secret device_tracker_password
