@@ -1,0 +1,18 @@
+---
+#
+# Costumize my ping binary sensors.
+#
+binary_sensor.foscam:
+  icon: mdi:cctv
+binary_sensor.google_mini_slaapkamer:
+  icon: mdi:google-home
+binary_sensor.google_mini_woonkamer:
+  icon: mdi:google-home
+binary_sensor.hp_printer:
+  icon: mdi:printer
+binary_sensor.synology_nas:
+  icon: mdi:nas
+binary_sensor.tp_link_router:
+  icon: mdi:router-wireless
+binary_sensor.tp_link_switch:
+  icon: mdi:switch
