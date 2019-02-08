@@ -1,0 +1,39 @@
+---
+#
+# Binary sensors that pings devices in our network.
+#
+
+# Nas
+- platform: ping
+  host: !secret ping_nas
+  name: Synology Nas
+
+# Switch
+- platform: ping
+  host: !secret ping_switch
+  name: TP-Link Switch
+
+# Router
+- platform: ping
+  host: !secret intern_ip_2
+  name: TP-Link Router
+
+# Google Home Mini Bedroom
+- platform: ping
+  host: !secret google_mini_slaapkamer
+  name: Google Mini Slaapkamer
+
+# Google Home Mini Living room
+- platform: ping
+  host: !secret google_mini_woonkamer
+  name: Google Mini Woonkamer
+
+# Foscam
+- platform: ping
+  host: !secret foscam_ip_1
+  name: Foscam
+
+# Printer
+- platform: ping
+  host: !secret ping_printer
+  name: HP Printer
