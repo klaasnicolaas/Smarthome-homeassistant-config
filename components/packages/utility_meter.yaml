@@ -1,0 +1,41 @@
+---
+#
+# See also: https://www.home-assistant.io/components/utility_meter/
+#
+utility_meter:
+  # Dagelijks Laag
+  daily_energy_offpeak:
+    source: sensor.power_consumption_low
+    cycle: daily
+  # Dagelijks Hoog
+  daily_energy_peak:
+    source: sensor.power_consumption_normal
+    cycle: daily
+  # Wekelijks Laag
+  weekly_energy_offpeak:
+    source: sensor.power_consumption_low
+    cycle: weekly
+  # Wekelijks Hoog
+  weekly_energy_peak:
+    source: sensor.power_consumption_normal
+    cycle: weekly
+  # Maandelijks Laag
+  monthly_energy_offpeak:
+    source: sensor.power_consumption_low
+    cycle: monthly
+  # Maandelijks Hoog
+  monthly_energy_peak:
+    source: sensor.power_consumption_normal
+    cycle: monthly
+  # Dagelijks Gas
+  daily_gas:
+    source: sensor.hourly_gas_consumption
+    cycle: daily
+  # Wekelijks Gas
+  weekly_gas:
+    source: sensor.hourly_gas_consumption
+    cycle: weekly
+  # Maandelijks gas
+  monthly_gas:
+    source: sensor.hourly_gas_consumption
+    cycle: monthly
