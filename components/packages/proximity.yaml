@@ -1,0 +1,15 @@
+---
+#
+# How for am I from home
+# https://www.home-assistant.io/components/proximity/
+#
+proximity:
+  home:
+    ignored_zones:
+      - zone.hogeschool_leiden
+    devices:
+      # Traccar
+      - device_tracker.telefoon_klaas
+      # GPSLogger
+      - device_tracker.2779d988391c7ece
+    tolerance: 50
