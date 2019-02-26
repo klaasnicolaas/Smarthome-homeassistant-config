@@ -1,0 +1,50 @@
+---
+#####################
+# Temperature sensors
+#####################
+#
+# Z-wave
+# De slaapkamer op zolder
+- platform: template
+  sensors:
+    slaapkamer_temperature:
+      value_template: '{{ states.sensor.fibaro_smoke_sensor_slaapkamer_zolder_temperature.state }}'
+      friendly_name: Slaapkamer | Zolder
+      unit_of_measurement: "°C"
+      device_class: temperature
+
+# De door sensor bij de voordeur
+- platform: template
+  sensors:
+    voordeur_temperature:
+      value_template: '{{ states.sensor.fibaro_door_sensor_hal_begane_grond_temperature.state }}'
+      friendly_name: Voordeur | Begane grond
+      unit_of_measurement: "°C"
+      device_class: temperature
+
+# de sensor in de hal
+- platform: template
+  sensors:
+    hal_temperature:
+      value_template: '{{ states.sensor.fibaro_motion_sensor_hal_begane_grond_temperature.state }}'
+      friendly_name: Hal | Begane grond
+      unit_of_measurement: "°C"
+      device_class: temperature
+
+# de sensor in de gang
+- platform: template
+  sensors:
+    gang_temperature:
+      value_template: '{{ states.sensor.fibaro_smoke_sensor_gang_begane_grond_temperature.state }}'
+      friendly_name: Gang | Begane grond
+      unit_of_measurement: "°C"
+      device_class: temperature
+
+# de sensor van buiten
+- platform: template
+  sensors:
+    buiten_temperature:
+      value_template: '{{ states.sensor.dark_sky_temperature.state }}'
+      friendly_name: Buiten
+      unit_of_measurement: "°C"
+      device_class: temperature
