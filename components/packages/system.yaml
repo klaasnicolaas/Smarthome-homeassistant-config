@@ -93,12 +93,7 @@ homeassistant:
 
     sensor.ha_installed_version:
       <<: *customize
-      friendly_name: Hassbian geinstalleerde versie
-
-    sensor.ha_upstream:
-      <<: *customize
-      friendly_name: Hassbian nieuwste versie
-      hidden: true
+      friendly_name: Hassio geinstalleerde versie
 
     sensor.python_version:
       <<: *customize
@@ -255,19 +250,14 @@ sensor:
     name: Python Version
     command: python3 --version
     scan_interval: 86400
-  ###### Latest github Commit
-  # - platform: command_line
-  #  command: "python config/python_scripts/latest_commit.py"
-  #  name: 'Latest Github Commit'
-  #  scan_interval: 60
-  ###### Home Assistant updates
-  - platform: scrape
-    name: HA upstream
-    resource: https://pypi.org/project/homeassistant/#history
-    select: 'a[href^="/project/homeassistant/0"]'
   ##### Travis Ci
   - platform: travisci
     api_key: !secret travisci_key
+  ##### Github
+  - platform: github
+    access_token: !secret github_access_token
+    repositories:
+      - path: 'klaasnicolaas/Smarthome-homeassistant-config'
 ################################################
 ## Input boolean
 ################################################
@@ -332,7 +322,6 @@ group:
       - sensor.last_boot
       - binary_sensor.home_assistant
       - sensor.ha_installed_version
-      # - sensor.ha_upstream
       - sensor.hassio_beta_versie
       - sensor.hassio_stable_versie
       - sensor.python_version
