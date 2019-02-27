@@ -13,7 +13,9 @@
   action:
     - service: hassio.snapshot_full
       data_template:
-        name: Automated Backup {{ now().strftime('%Y-%m-%d') }} running HA version {{ states.sensor.ha_installed_version.state }}
+        name: Backup {{ now().strftime('%Y-%m-%d') }} running HA version {{ states('sensor.ha_installed_version') }}
     - service: notify.telegram_klaas
-      data:
-        message: "Backup is gemaakt met de naam: Automated Backup {{ now().strftime('%Y-%m-%d') }} running HA version {{ states.sensor.ha_installed_version.state }}"
+      data_template:
+        title: Hass.io Backup!
+        message: >-
+          'Backup is gemaakt met de naam: Backup {{ now().strftime('%Y-%m-%d') }} running HA version {{ states('sensor.ha_installed_version') }}'
