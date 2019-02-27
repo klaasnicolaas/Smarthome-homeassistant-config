@@ -11,10 +11,10 @@ title: Home Control
 resources: !include_dir_list lovelace/resources
 views:
   - !include lovelace/views/home.yaml
+  - !include lovelace/views/security.yaml
   - !include lovelace/views/ground_floor.yaml
   - !include lovelace/views/loft.yaml
   - !include lovelace/views/media.yaml
   - !include lovelace/views/temperatures.yaml
   - !include lovelace/views/automation.yaml
-  - !include lovelace/views/security.yaml
   - !include lovelace/views/system_information.yaml
