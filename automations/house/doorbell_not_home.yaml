@@ -1,5 +1,7 @@
 ---
-# Als er op de deurbel word gedrukt, stuur dan een telegram bericht en als we thuis zijn ook een spraak bericht.
+#
+# If you press the doorbell, send a telegram message when we are not at home.
+#
 - alias: House - Deurbel Melding Niet Thuis
   initial_state: true
   trigger:
@@ -13,4 +15,9 @@
   action:
     - service: notify.telegram_klaas
       data:
-        message: 'Iemand staat voor de deur!'
+        title: Deurbel
+        message: 'Ding dong! Iemand staat voor de deur!'
+        data:
+          attachment:
+            content-type: jpeg
+            url: http://tiptag.com.ar/wp-content/uploads/2018/06/timbre1.jpg
