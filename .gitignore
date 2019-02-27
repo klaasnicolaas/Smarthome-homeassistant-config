@@ -10,6 +10,7 @@
 *.log
 *.backup
 *.mp3
+*.spotify-token-cache
 
 # Folders
 .cloud
