@@ -13,7 +13,7 @@ http:
   base_url: !secret http_base_url
 
   # Sets a port number to use for Home Assistant to use (default 8123).
-  server_port: !secret http_server_port
+  # server_port: !secret http_server_port
 
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
