@@ -12,6 +12,6 @@
     - service: notify.telegram_klaas
       data_template:
         title: Upgrade time!
-        message: >- 
+        message: >-
           'Beta update beschikbaar voor Hass.io!'
           'Versie: {{ states('sensor.hassio_beta_versie') }} is zojuist gereleased.'
