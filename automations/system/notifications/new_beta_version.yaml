@@ -7,8 +7,11 @@
       entity_id: sensor.hassio_beta_versie
   condition:
     - condition: template
-      value_template: "{{ states.sensor.hassio_stable_versie.state != states.sensor.hassio_beta_versie.state }}"
+      value_template: "{{ states('sensor.hassio_stable_versie') != states('sensor.hassio_beta_versie') }}"
   action:
     - service: notify.telegram_klaas
-      data:
-        message: 'Beta update beschikbaar voor Home Assistant, versie: {{ states.sensor.hassio_beta_versie.state }}'
+      data_template:
+        title: Upgrade time!
+        message: >- 
+          'Beta update beschikbaar voor Hass.io!'
+          'Versie: {{ states('sensor.hassio_beta_versie') }} is zojuist gereleased.'

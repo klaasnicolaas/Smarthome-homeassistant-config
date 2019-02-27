@@ -7,5 +7,8 @@
       entity_id: sensor.hassio_stable_versie
   action:
     - service: notify.telegram_klaas
-      data:
-        message: 'Stable update beschikbaar voor Home Assistant, versie: {{ states.sensor.hassio_stable_versie.state }}'
+      data_template:
+        title: Upgrade time!
+        message: >-
+          'Er is een nieuwe stable versie voor Hass.io!'
+          'Versie: {{ states('sensor.hassio_stable_versie') }} is zojuist gereleased.'
