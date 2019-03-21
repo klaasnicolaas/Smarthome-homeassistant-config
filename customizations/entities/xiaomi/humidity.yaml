@@ -1,0 +1,9 @@
+---
+#
+#
+#
+sensor.humidity_xiaomi_sensor_1:
+  friendly_name: Vochtigheid - Badkamer | Eerste verdieping
+
+sensor.humidity_xiaomi_sensor_2:
+  friendly_name: Vochtigheid - Woonkamer | Begane grond
