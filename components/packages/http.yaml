@@ -6,9 +6,6 @@
 #
 
 http:
-  # Protects Home Assistant with a password.
-  api_password: !secret http_api_password
-
   # Contains the URL that Home Assistant is available on the internet.
   base_url: !secret http_base_url
 
@@ -17,16 +14,6 @@ http:
 
   ssl_certificate: !secret ssl_certificate
   ssl_key: !secret ssl_key
-
-  # List of trusted networks, consisting of IP addresses or networks,
-  # that are allowed to bypass password protection when accessing
-  # Home Assistant.
-  trusted_networks:
-    - !secret intern_ip_1
-    - !secret intern_ip_2
-    - !secret intern_ip_3
-    - !secret intern_ip_4
-    - 127.0.0.1
 
   # Enables additional IP filtering.
   ip_ban_enabled: false
