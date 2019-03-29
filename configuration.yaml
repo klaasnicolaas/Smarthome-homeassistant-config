@@ -19,6 +19,19 @@ homeassistant:
   packages: !include_dir_named components/packages
   # Whitelist #
   whitelist_external_dirs: !secret whitelist_dir_config
+  # Auth Providers #
+  auth_providers:
+    - type: homeassistant
+    - type: trusted_networks
+      # List of trusted networks, consisting of IP addresses or networks,
+      # that are allowed to bypass password protection when accessing
+      # Home Assistant.
+      trusted_networks:
+        - !secret intern_ip_1
+        - !secret intern_ip_2
+        - !secret intern_ip_3
+        - !secret intern_ip_4
+        - 127.0.0.1
 
 # Enables configuration UI
 config:
