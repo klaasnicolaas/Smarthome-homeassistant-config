@@ -1,0 +1,137 @@
+---
+################################## Home ##################################
+id: home
+title: Thuis
+path: home
+icon: mdi:home-assistant
+cards:
+  - !include ../cards/compact_custom_header_main.yaml
+  # Person status
+  - cards:
+    - image: /local/klaas-overlay.jpg
+      elements:
+        - style:
+            color: white
+            top: 93%
+            left: 20%
+          type: state-label
+          entity: sensor.klaas_status
+        - style:
+            color: white
+            top: 93%
+            left: 90%
+          type: state-label
+          entity: sensor.battery_phone_klaas
+        - style:
+            color: white
+            top: 92%
+            left: 75%
+          type: state-icon
+          entity: sensor.battery_phone_klaas
+        - style:
+            color: white
+            top: 93%
+            left: 55%
+          type: state-label
+          entity: proximity.home
+      type: picture-elements
+    - image: /local/grietje-overlay.jpg
+      elements:
+        - style:
+            color: white
+            top: 93%
+            left: 20%
+          type: state-label
+          entity: sensor.grietje_status
+      type: picture-elements
+    type: horizontal-stack
+  # Windy
+  - type: iframe
+    url: 'https://embed.windy.com/embed2.html?lat=52.434&lon=5.339&zoom=7&level=surface&overlay=wind&menu=&message=&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=&detailLat=52.201&detailLon=6.805&metricWind=default&metricTemp=default&radarRange=-1'
+    aspect_ratio: 90%
+    # Darksky
+  - type: custom:weather-card
+    entity: weather.dark_sky
+    icons: "/local/lovelace/cards/weather/icons/"
+  # Treintijden
+  - type: entities
+    title: Treintijden
+    show_header_toggle: false
+    entities:
+      - sensor.alkmaar_leiden
+      - sensor.leiden_alkmaar
+      - type: divider
+      - sensor.schiphol_airport_leiden
+      - sensor.leiden_schiphol_airport
+      - type: divider
+      - sensor.alkmaar_amsterdam_sloterdijk
+      - sensor.amsterdam_sloterdijk_alkmaar
+  # Twitch
+  - cards:
+    - type: picture-entity
+      image: /local/twitch/frenck-1.png
+      entity: sensor.frenck
+    - image: /local/marlene-overlay.jpg
+      elements:
+        - style:
+            color: white
+            top: 93%
+            left: 20%
+          type: state-label
+          entity: device_tracker.telefoon_marlene
+        - style:
+            color: white
+            top: 93%
+            left: 90%
+          type: state-label
+          entity: sensor.battery_phone_marlene
+        - style:
+            color: white
+            top: 92%
+            left: 75%
+          type: state-icon
+          entity: sensor.battery_phone_marlene
+      type: picture-elements
+    type: horizontal-stack
+  # DSMR
+  # Daily
+  - cards:
+    - type: custom:mini-graph-card
+      name: Stroom verbruik
+      icon: mdi:flash-outline
+      entities:
+        - entity: sensor.daily_energy_offpeak
+          name: Laag
+        - entity: sensor.daily_energy_peak
+          name: Hoog
+      decimals: 3
+    - type: custom:mini-graph-card
+      name: Gas verbruik
+      icon: mdi:gas-cylinder
+      entities:
+        - entity: sensor.daily_gas
+    type: horizontal-stack
+
+  # Power and Gas use at the moment
+  - cards:
+    - type: gauge
+      entity: sensor.power_consumption
+      max: 3
+    - type: gauge
+      entity: sensor.hourly_gas_consumption
+      max: 1
+    type: horizontal-stack
+
+  # Filter on lights
+  - type: entity-filter
+    card:
+      title: Lampen die aan staan
+    entities:
+      - light.vliering_achter_zolder_manual
+      - light.vliering_voor_zolder_manual
+      - switch.led_bureau_zolder
+      - switch.lamp_slaapkamer_zolder
+      - switch.led_slaapkamer_zolder
+    state_filter:
+      - "on"
+    show_empty: false

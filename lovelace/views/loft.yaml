@@ -1,0 +1,83 @@
+---
+################################## Zolder ##################################
+id: loft
+title: Zolder
+path: loft
+icon: mdi:triangle-outline
+cards:
+  - !include ../cards/compact_custom_header.yaml
+
+  # Toont lampen op de vliering
+  - type: glance
+    entities:
+      - entity: binary_sensor.door_window_sensor_xiaomi_1
+        name: Raam slaapkamer
+      - entity: scene.slaapkamer_zolder_on
+        name: Slaapkamer Aan
+        icon: mdi:lightbulb-on-outline
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.slaapkamer_zolder_on
+      - entity: scene.slaapkamer_zolder_off
+        name: Slaapkamer Uit
+        icon: mdi:lightbulb-on-outline
+        tap_action:
+          action: call-service
+          service: scene.turn_on
+          service_data:
+            entity_id: scene.slaapkamer_zolder_off
+  - cards:
+    - type: entity-button
+      entity: light.vliering_voor_zolder_manual
+      tap_action:
+        action: toggle
+      name: Vliering voor
+    - type: entity-button
+      entity: switch.computer_klaas
+      tap_action:
+        action: toggle
+    - type: entity-button
+      entity: light.vliering_achter_zolder_manual
+      tap_action:
+        action: toggle
+      name: Vliering achter
+    type: horizontal-stack
+
+  # Toont lampen in de slaapkamer
+  - type: entities
+    title: Slaapkamer lampen
+    show_header_toggle: true
+    entities:
+      - switch.lamp_slaapkamer_zolder
+      - switch.led_bureau_zolder
+      - switch.led_slaapkamer_zolder
+
+  # Een grafiek van de temperatuur op de slaapkamer
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.fibaro_smoke_sensor_slaapkamer_zolder_temperature
+    name: Slaapkamer | Zolder
+    location_icon: left
+    location_state: center
+    show:
+      fill: false
+      extrema: true
+    heigt: 75
+    animate: true
+    hour24: true
+    line_color: var(--primary-color)
+    color_thresholds:
+      - value: 21
+        color: "#e45e65"
+      - value: 14
+        color: "#e29b52"
+      - value: 10
+        color: "#5294e2"
+
+  # Toont de camera
+  - type: picture-entity
+    entity: camera.camera_zolder
+    show_name: false
+    show_state: false

@@ -1,0 +1,153 @@
+---
+################################## Temperaturen ##################################
+id: temperatures
+icon: mdi:temperature-celsius
+title: Temperaturen
+path: temperature
+cards:
+  - !include ../cards/compact_custom_header.yaml
+  # Toont met een grafiek de temperaturen in huis
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.fibaro_smoke_sensor_gang_begane_grond_temperature
+    name: Trappengang | Begane grond
+    hours_to_show: 48
+    points_per_hour: 0.3
+    location_icon: left
+    location_state: center
+    show:
+      fill: false
+      extrema: true
+    heigt: 75
+    animate: true
+    hour24: true
+    line_color: var(--primary-color)
+    color_thresholds:
+      - value: 21
+        color: "#e45e65"
+      - value: 14
+        color: "#e29b52"
+      - value: 10
+        color: "#5294e2"
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.fibaro_smoke_sensor_slaapkamer_zolder_temperature
+    name: Slaapkamer | Zolder
+    hours_to_show: 48
+    points_per_hour: 0.3
+    location_icon: left
+    location_state: center
+    show:
+      fill: false
+      extrema: true
+    heigt: 75
+    animate: true
+    hour24: true
+    line_color: var(--primary-color)
+    color_thresholds:
+      - value: 21
+        color: "#e45e65"
+      - value: 14
+        color: "#e29b52"
+      - value: 10
+        color: "#5294e2"
+  # Woonkamer
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.temperature_xiaomi_sensor_1
+        name: Temperatuur
+    name: Badkamer | Eerste verdieping
+    hours_to_show: 48
+    points_per_hour: 0.3
+    location_icon: left
+    location_state: center
+    show:
+      fill: false
+      extrema: true
+    heigt: 75
+    animate: true
+    hour24: true
+    line_color: var(--primary-color)
+    color_thresholds:
+      - value: 21
+        color: "#e45e65"
+      - value: 14
+        color: "#e29b52"
+      - value: 10
+        color: "#5294e2"
+  # Eerste verdieping
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.temperature_xiaomi_sensor_2
+        name: Temperatuur
+    name: Woonkamer | Begane grond
+    hours_to_show: 48
+    points_per_hour: 0.3
+    location_icon: left
+    location_state: center
+    show:
+      fill: false
+      extrema: true
+    heigt: 75
+    animate: true
+    hour24: true
+    line_color: var(--primary-color)
+    color_thresholds:
+      - value: 21
+        color: "#e45e65"
+      - value: 14
+        color: "#e29b52"
+      - value: 10
+        color: "#5294e2"
+  # Vochtigheid in huis
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.humidity_xiaomi_sensor_1
+        name: Badkamer
+      - entity: sensor.humidity_xiaomi_sensor_2
+        name: Woonkamer
+    name: Vochtigheid in huis
+    hours_to_show: 48
+    points_per_hour: 0.3
+    location_icon: left
+    location_state: center
+    show:
+      fill: false
+      extrema: true
+    heigt: 75
+    animate: true
+    hour24: true
+    line_color: var(--primary-color)
+    color_thresholds:
+      - value: 75
+        color: "#e45e65"
+      - value: 50
+        color: "#e29b52"
+      - value: 25
+        color: "#5294e2"
+  # Hal | Begane grond
+  - type: custom:mini-graph-card
+    entities:
+      - entity: sensor.fibaro_door_sensor_hal_begane_grond_temperature
+        name: Door sensor
+      - entity: sensor.fibaro_motion_sensor_hal_begane_grond_temperature
+        name: Motion sensor
+    name: Hal | Begane grond
+    hours_to_show: 48
+    points_per_hour: 0.3
+    location_icon: left
+    location_state: center
+    show:
+      fill: false
+      extrema: true
+    heigt: 75
+    animate: true
+    hour24: true
+    line_color: var(--primary-color)
+    color_thresholds:
+      - value: 21
+        color: "#e45e65"
+      - value: 14
+        color: "#e29b52"
+      - value: 10
+        color: "#5294e2"

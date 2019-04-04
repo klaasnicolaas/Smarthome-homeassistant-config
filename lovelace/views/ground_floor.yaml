@@ -1,0 +1,83 @@
+---
+################################## Ground Floor ##################################
+id: ground_floor
+title: Begane grond
+path: groundfloor
+icon: mdi:sofa
+cards:
+  - !include ../cards/compact_custom_header.yaml
+  # Een aantal entities
+  - type: glance
+    entities:
+      - name: Deurbel
+        entity: switch.deurbel
+      - name: Voordeur
+        entity: binary_sensor.sensor_voordeur
+      - name: Bewegingsmelder | Hal
+        entity: binary_sensor.sensor_beweging_hal_begane_grond
+      - name: Lux sensor
+        entity: sensor.fibaro_motion_sensor_hal_begane_grond_luminance
+    columns: 4
+    show_state: true
+
+  # Toont met een grafiek de temperaturen in huis
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.fibaro_smoke_sensor_gang_begane_grond_temperature
+    name: Gang | Begane grond
+    location_icon: left
+    location_state: center
+    show:
+      fill: false
+      extrema: true
+    heigt: 75
+    animate: true
+    hour24: true
+    line_color: var(--primary-color)
+    color_thresholds:
+      - value: 21
+        color: "#e45e65"
+      - value: 14
+        color: "#e29b52"
+      - value: 10
+        color: "#5294e2"
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.fibaro_door_sensor_hal_begane_grond_temperature
+    name: Hal | Door sensor
+    location_icon: left
+    location_state: center
+    show:
+      fill: false
+      extrema: true
+    heigt: 75
+    animate: true
+    hour24: true
+    line_color: var(--primary-color)
+    color_thresholds:
+      - value: 21
+        color: "#e45e65"
+      - value: 14
+        color: "#e29b52"
+      - value: 10
+        color: "#5294e2"
+  - type: custom:mini-graph-card
+    entities:
+      - sensor.fibaro_motion_sensor_hal_begane_grond_temperature
+    name: Hal | Motion sensor
+    location_icon: left
+    location_state: center
+    show:
+      fill: false
+      extrema: true
+    heigt: 75
+    animate: true
+    hour24: true
+    line_color: var(--primary-color)
+    color_thresholds:
+      - value: 21
+        color: "#e45e65"
+      - value: 14
+        color: "#e29b52"
+      - value: 10
+        color: "#5294e2"

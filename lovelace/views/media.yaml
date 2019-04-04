@@ -1,0 +1,27 @@
+---
+################################## Media Players ##################################
+id: media
+title: Mediaspelers
+path: media
+icon: mdi:airplay
+cards:
+  - !include ../cards/compact_custom_header.yaml
+  # Spotify player
+  - cards:
+    - type: custom:mini-media-player
+      entity: media_player.spotify
+      artwork: cover
+    # Google home media players
+    - type: custom:mini-media-player
+      entity: media_player.slaapkamer_zolder_mini
+      artwork: cover
+    - type: custom:mini-media-player
+      entity: media_player.woonkamer_mini
+      artwork: cover
+    - type: custom:mini-media-player
+      entity: media_player.tv_slaapkamer
+      artwork: cover
+    - type: custom:mini-media-player
+      entity: media_player.philips_tv
+      artwork: cover
+    type: vertical-stack

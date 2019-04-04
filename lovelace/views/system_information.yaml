@@ -1,0 +1,168 @@
+---
+################################## Systeeminformatie ##################################
+id: system_information
+title: Systeeminformatie
+icon: mdi:server
+path: system
+cards:
+  - !include ../cards/compact_custom_header.yaml
+  # Toont de batterij percentages van de Z-wave devices
+  - type: glance
+    title: Batterij Percentages
+    entities:
+      - sensor.zwave_battery_door_sensor_hal_begane_grond
+      - sensor.zwave_battery_motion_sensor_hal_begane_grond
+      - sensor.zwave_battery_smoke_sensor_begane_grond
+      - sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
+      - sensor.xiaomi_cube_1_battery
+      - sensor.xiaomi_sensor_1_battery
+      - sensor.xiaomi_sensor_2_battery
+      - sensor.xiaomi_window_sensor_1_battery
+    columns: 2
+
+  # Toont sensoren van de intel nuc
+  - type: entities
+    title: Alerts
+    show_header_toggle: false
+    entities:
+      - binary_sensor.cpu_high
+      - binary_sensor.cpu_hot
+
+  # Toont de NFC Tags
+  - type: glance
+    entities:
+      - name: NFC Tag 1
+        icon: mdi:nfc
+        entity: binary_sensor.nfc_tag_1
+      - name: NFC Tag 2
+        icon: mdi:nfc
+        entity: binary_sensor.nfc_tag_2
+    columns: 2
+
+  # Toon gauge charts
+  - cards:
+    - type: gauge
+      entity: sensor.processor_use
+    - type: gauge
+      entity: sensor.memory_use_percent
+    - type: gauge
+      entity: sensor.cpu_temperature
+    type: horizontal-stack
+
+  - type: glance
+    entities:
+      - name: Router
+        entity: binary_sensor.tp_link_router
+      - name: Switch
+        entity: binary_sensor.tp_link_switch
+      - name: Ping
+        entity: sensor.speedtest_ping
+      - name: Download
+        entity: sensor.speedtest_download
+      - name: Upload
+        entity: sensor.speedtest_upload
+
+  - type: glance
+    entities:
+      - name: Foscam
+        entity: binary_sensor.foscam
+      - name: Slaapkamer
+        entity: binary_sensor.google_mini_slaapkamer
+      - name: Woonkamer
+        entity: binary_sensor.google_mini_woonkamer
+      - name: HP Printer
+        entity: binary_sensor.hp_printer
+      - name: Synology NAS
+        entity: binary_sensor.synology_nas
+    columns: 3
+    show_state: false
+
+  # Toont informatie over de Zwave Nodes
+  - type: entities
+    title: Zwave Nodes
+    show_header_toggle: false
+    entities:
+      - zwave.aeotec_zw090_zstick_gen5_eu
+      - zwave.aeotec_zw117_range_extender_6
+      - zwave.fibaro_door_sensor_hal_begane_grond
+      - zwave.fibaro_motion_sensor_hal_begane_grond
+      - zwave.fibaro_smoke_sensor_gang_begane_grond
+      - zwave.fibaro_smoke_sensor_slaapkamer_zolder
+
+  # Toont informatie van home assistant
+  - type: entities
+    title: Home Assistant Info
+    show_header_toggle: false
+    entities:
+      - sensor.last_boot
+      - binary_sensor.home_assistant
+      - type: divider
+      - sensor.ha_installed_version
+      - sensor.hassio_beta_versie
+      - sensor.hassio_stable_versie
+      - sensor.python_version
+      - type: divider
+      - sensor.automation_on
+      - sensor.automation_all
+
+  # Toont onderhoud dashboard
+  - type: entities
+    title: Onderhoud
+    show_header_toggle: false
+    entities:
+      - input_boolean.maintenance_mode
+      - switch.debug
+      - script.quick_restart
+      - script.quick_reboot
+      - type: divider
+      # Github
+      - sensor.github_config_stars
+      - sensor.github_commit_message
+      - type: divider
+      # Gitlab CI
+      - sensor.gitlab_ci_status
+      - type: divider
+      # Travis CI
+      - sensor.klaasnicolaas_smarthome_homeassistant_config_last_build_finished_at
+      - sensor.klaasnicolaas_smarthome_homeassistant_config_last_build_state
+      - type: divider
+      - type: weblink
+        name: Github - Home Assistant config
+        url: https://github.com/klaasnicolaas/Smarthome-homeassistant-config
+      - type: weblink
+        name: Router - TP Link
+        url: !secret weblink_router
+
+  # Toont informatie over het geheugen op de intel nuc
+  - type: entities
+    title: Opslag
+    show_header_toggle: false
+    entities:
+      - sensor.disk_use_percent
+      - sensor.disk_free
+      - type: divider
+      - sensor.home_assistant_v2_db
+      - sensor.home_assistant_log
+      - sensor.ozw_log_txt
+      - sensor.configuration_yaml
+
+  # Toont informatie over de netwerk verbinding
+  - type: entities
+    title: Netwerk
+    show_header_toggle: false
+    entities:
+      - sensor.myip
+      - sensor.ssl_certificate_expiry
+
+  # Toont informatie over de Google Homes
+  - type: entities
+    title: Google Home
+    show_header_toggle: false
+    entities:
+      - sensor.slaapkamer_zolder_mini_alarm
+      - sensor.slaapkamer_zolder_mini_timer
+      - type: divider
+      - sensor.woonkamer_mini_alarm
+      - sensor.woonkamer_mini_timer
+
+  - type: custom:tracker-card
