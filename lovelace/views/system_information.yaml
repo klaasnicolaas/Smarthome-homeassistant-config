@@ -40,14 +40,14 @@ cards:
     columns: 2
 
   # Toon gauge charts
-  - cards:
-    - type: gauge
-      entity: sensor.processor_use
-    - type: gauge
-      entity: sensor.memory_use_percent
-    - type: gauge
-      entity: sensor.cpu_temperature
-    type: horizontal-stack
+  - type: horizontal-stack
+    cards:
+      - type: gauge
+        entity: sensor.processor_use
+      - type: gauge
+        entity: sensor.memory_use_percent
+      - type: gauge
+        entity: sensor.cpu_temperature
 
   - type: glance
     entities:

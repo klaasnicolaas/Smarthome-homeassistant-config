@@ -28,22 +28,22 @@ cards:
           service: scene.turn_on
           service_data:
             entity_id: scene.slaapkamer_zolder_off
-  - cards:
-    - type: entity-button
-      entity: light.vliering_voor_zolder_manual
-      tap_action:
-        action: toggle
-      name: Vliering voor
-    - type: entity-button
-      entity: switch.computer_klaas
-      tap_action:
-        action: toggle
-    - type: entity-button
-      entity: light.vliering_achter_zolder_manual
-      tap_action:
-        action: toggle
-      name: Vliering achter
-    type: horizontal-stack
+  - type: horizontal-stack
+    cards:
+      - type: entity-button
+        entity: light.vliering_voor_zolder_manual
+        tap_action:
+          action: toggle
+        name: Vliering voor
+      - type: entity-button
+        entity: switch.computer_klaas
+        tap_action:
+          action: toggle
+      - type: entity-button
+        entity: light.vliering_achter_zolder_manual
+        tap_action:
+          action: toggle
+        name: Vliering achter
 
   # Toont lampen in de slaapkamer
   - type: entities
