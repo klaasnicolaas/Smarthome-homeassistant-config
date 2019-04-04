@@ -94,7 +94,7 @@ SOFTWARE.
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr
 [travis-shield]: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master
 [stars-shield]: https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg
-[ha-version-shield]: https://img.shields.io/badge/Home%20Assistant-0.90.0-blue.svg
+[ha-version-shield]: https://img.shields.io/badge/Home%20Assistant-0.91.0-blue.svg
 [uptime-shield]: https://img.shields.io/uptimerobot/status/m781145866-63b6526d17827ec6eebe586f.svg
 [gitlabci-shield]: https://gitlab.com/klaasnicolaas/Smarthome-homeassistant-config/badges/master/pipeline.svg
 [paypal-shield]: https://img.shields.io/badge/BuyMeAFanta-Paypal-orange.svg
