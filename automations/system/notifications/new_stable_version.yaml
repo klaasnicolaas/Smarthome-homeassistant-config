@@ -6,9 +6,19 @@
     - platform: state
       entity_id: sensor.hassio_stable_versie
   action:
+    # Telegram
     - service: notify.telegram_klaas
       data_template:
         title: Upgrade time!
         message: >-
-          'Er is een nieuwe stable versie voor Hass.io!'
-          'Versie: {{ states('sensor.hassio_stable_versie') }} is zojuist gereleased.'
+          "Er is een nieuwe stable versie voor Hass.io!
+          Versie: {{ states('sensor.hassio_stable_versie') }} is zojuist gereleased."
+    # HTML5
+    - service: notify.html_notify
+      data_template:
+        title: "Hassio {{ states('sensor.hassio_stable_versie') }} is released!"
+        message: >-
+          Er is een nieuwe stable versie voor jouw favoriete domotica platform
+        data:
+          url: "https://www.home-assistant.io/blog/"
+          tag: 'release'
