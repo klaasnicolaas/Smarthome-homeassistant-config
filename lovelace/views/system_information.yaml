@@ -141,7 +141,7 @@ cards:
       - sensor.disk_use_percent
       - sensor.disk_free
       - type: divider
-      - sensor.home_assistant_v2_db
+      # - sensor.home_assistant_v2_db
       - sensor.home_assistant_log
       - sensor.ozw_log_txt
       - sensor.configuration_yaml
