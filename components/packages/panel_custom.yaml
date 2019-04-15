@@ -7,4 +7,4 @@
 # https://www.home-assistant.io/components/panel_custom/
 #
 
-panel_custom: !include_dir_merge_named ../../panels/custom
+panel_custom: !include_dir_merge_list ../../panels/custom
