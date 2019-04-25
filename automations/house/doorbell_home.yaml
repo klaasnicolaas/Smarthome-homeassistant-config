@@ -27,13 +27,13 @@
         media_content_type: 'audio/mp3'
     - delay: '00:00:01'
     # Play a typed text through the speakers
-    - service: tts.google_say
+    - service: tts.google_translate_say
       entity_id: media_player.slaapkamer_zolder_mini
       data:
         message: 'Er staat iemand bij de voordeur'
         cache: true
     # Play a typed text through the speakers
-    - service: tts.google_say
+    - service: tts.google_translate_say
       entity_id: media_player.woonkamer_mini
       data:
         message: 'Er staat iemand bij de voordeur'

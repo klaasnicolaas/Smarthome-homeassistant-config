@@ -19,7 +19,7 @@
       before: '23:59:00'
       after: '08:00:00'
   action:
-    - service: tts.google_say
+    - service: tts.google_translate_say
       entity_id: media_player.slaapkamer_zolder_mini
       data:
         message: 'Je telefoon is 100% opgeladen'
