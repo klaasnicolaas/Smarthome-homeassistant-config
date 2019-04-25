@@ -8,12 +8,12 @@
 - platform: version
   name: Hassio Beta versie
   beta: true
-  image: default
+  image: qemux86-64
   source: hassio
 
 # Fetch stable version of HA
 - platform: version
   name: Hassio Stable versie
   beta: false
-  image: default
+  image: qemux86-64
   source: hassio
