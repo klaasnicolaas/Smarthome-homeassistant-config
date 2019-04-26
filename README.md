@@ -6,7 +6,7 @@ You will probably think, what is Home Assistant!? Well Home Assistant is a home 
 
 To inspire others I have set up this github and update it regularly with new code. Be free to use code from this repo for your own Home Assistant environment, keep in mind that you can not always copy everything line by line. If you can not get out, you can always contact me.
 
-## Information
+## Status Information
 
 | [![Travis CI][travis-shield]][travis] [![Gitlab CI][gitlabci-shield]][gitlabci] | [![GitHub Last Commit][last-commit-shield]][commits]|
 |:---:|:---:|
@@ -29,7 +29,7 @@ So now I use an Intel NUC to run home assistant. In addition, I use a Z-wave sti
 - [Aeotec USB Z-Stick](<https://aeotec.com/z-wave-usb-stick>) - Z-Wave Plus
 - [RFXCOM RFXtrx433E](<http://www.rfxcom.com/store/Transceivers/14103>)
 - [P1 cable](<https://www.sossolutions.nl/slimme-meter-kabel>)
-- Using also the [Lovelace UI](<https://www.home-assistant.io/lovelace/>) (Is in progress).
+- Using also the [Lovelace UI](<https://www.home-assistant.io/lovelace/>)
 
 ## My House
 
@@ -61,10 +61,6 @@ Nothing is better than being able to control your own smart home from your phone
 - [Other Featured Home Assistant Configurations](<https://home-assistant.io/cookbook/>)
 - [Home Assistant GitHub Source Repository](<https://github.com/home-assistant/home-assistant>)
 - [Official Home Assistant Demo](<https://home-assistant.io/demo/>)
-
-## Useful Links:
-
-- This will be updated soon.
 
 ## License
 
