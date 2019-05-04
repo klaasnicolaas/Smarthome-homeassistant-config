@@ -20,7 +20,7 @@ cards:
       - sensor.xiaomi_window_sensor_1_battery
     columns: 2
 
-  # Toont sensoren van de intel nuc
+  # Show alerts that can appear
   - type: entities
     title: Alerts
     show_header_toggle: false
@@ -95,7 +95,7 @@ cards:
     show_header_toggle: false
     entities:
       - sensor.last_boot
-      - binary_sensor.home_assistant
+      - binary_sensor.home_assistant_home
       - type: divider
       - sensor.ha_installed_version
       - sensor.hassio_beta_versie

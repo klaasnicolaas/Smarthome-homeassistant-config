@@ -155,11 +155,6 @@ homeassistant:
     ## Script
     ################################################
 
-    script.github_push:
-      <<: *customize
-      icon: mdi:github-circle
-      friendly_name: Push to Github
-
     script.quick_reboot:
       <<: *customize
       icon: mdi:server-network
@@ -170,7 +165,7 @@ homeassistant:
       <<: *customize
       icon: mdi:home-assistant
       can_cancel: false
-      friendly_name: Restart Homeassistant
+      friendly_name: Restart Home Assistant
 
     ################################################
     ## Switch
@@ -205,10 +200,6 @@ binary_sensor:
       cpu_hot:
         value_template: '{{ states.sensor.cpu_temperature.state | float > 65 }}'
         friendly_name: 'CPU heet'
-  # - platform: template
-  #   sensors:
-  #     db_large:
-  #       value_template: '{{ states.sensor.homeassistant_v2_db.state | float > 5000 }}'
   ##### Uptime robot
   - platform: uptimerobot
     api_key: !secret uptime_robot_key
@@ -267,14 +258,6 @@ input_boolean:
     name: Onderhouds Mode
     icon: mdi:auto-fix
 
-################################################
-## Input text
-################################################
-
-input_text:
-  github_message:
-    name: Commit Message
-    initial: Push from local
 ################################################
 ## Group
 ################################################
@@ -343,9 +326,6 @@ group:
       - switch.debug
       - script.quick_restart
       - script.quick_reboot
-      # Github
-      - input_text.github_message
-      - script.github_push
       # Gitlab CI
       - sensor.gitlab_ci_status
       # Travis CI
@@ -353,15 +333,6 @@ group:
       - sensor.klaasnicolaas_smarthome_homeassistant_config_last_build_state
       - weblink.github
       - weblink.router
-
-################################################
-## Shell Command
-################################################
-
-shell_command:
-  github_push: /config/extras/bash/send-to-github.sh "{{ states('input_text.github_message') }}"
-  quick_restart: sudo systemctl restart home-assistant@homeassistant.service
-  quick_reboot: sudo reboot
 
 ################################################
 ## Alert
@@ -417,25 +388,13 @@ alert:
 ################################################
 
 script:
-  github_push:
-    alias: ' '
-    sequence:
-      - condition: template
-        value_template: "{{ not is_state('input_text.github_message' , '' ) }}"
-      - service: shell_command.github_push
-      - service: persistent_notification.create
-        data:
-          notification_id: "Github_push_alert"
-          title: "Github"
-          message: "You have pushed your local files to github, you must merge the branches on github then sync the master branch here."
-
   quick_restart:
     alias: ' '
     sequence:
       - service: homeassistant.turn_on
         entity_id: input_boolean.maintenance_mode
       - delay: 00:00:02
-      - service: shell_command.quick_restart
+      - service: homeassistant.restart
 
   quick_reboot:
     alias: ' '
@@ -443,10 +402,7 @@ script:
       - service: homeassistant.turn_on
         entity_id: input_boolean.maintenance_mode
       - delay: 00:00:02
-      - service: shell_command.quick_reboot
-################################################
-## Automation
-################################################
+      - service: hassio.host_reboot
 
 ################################################
 ## Notify
