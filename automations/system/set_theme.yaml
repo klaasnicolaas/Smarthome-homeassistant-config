@@ -17,6 +17,6 @@
     - service_template: frontend.set_theme
       data_template:
         name: >
-          {% if is_state ('sun.sun' , 'below_horizon') %} midnight
-          {% elif is_state ('input_boolean.maintenance_mode' , 'on') %} darkorange
+          {% if is_state ('input_boolean.maintenance_mode' , 'on') %} darkorange
+          {% elif is_state ('sun.sun' , 'below_horizon') %} midnight
           {% else %} default {% endif %}
