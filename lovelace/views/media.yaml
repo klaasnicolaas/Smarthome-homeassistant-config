@@ -22,3 +22,7 @@ cards:
       - type: custom:mini-media-player
         entity: media_player.philips_tv
         artwork: cover
+      # Twitch
+      - type: picture-entity
+        image: /local/twitch/frenck-1.png
+        entity: sensor.frenck
