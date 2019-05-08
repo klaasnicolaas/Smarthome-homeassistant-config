@@ -122,36 +122,3 @@
             Laag
           {% endif %}
         {% endif %}
-
-- platform: template
-  sensors:
-    # Entity that shows the phone battery percentage
-    battery_phone_marlene:
-      value_template: '{{ state_attr("device_tracker.telefoon_marlene","battery_level") | round(0)}}'
-      friendly_name: Telefoon batterij | Marlene
-      unit_of_measurement: '%'
-      device_class: battery
-      icon_template: >-
-        {% set battery_level = state_attr("device_tracker.telefoon_marlene","battery_level")|int('unknown') %}
-        {% set battery_round = (battery_level|int / 10)|int * 10 %}
-        {% set charging = is_state("binary_sensor.phone_battery_increase_marlene","on") %}
-        {% set discharging = is_state("binary_sensor.phone_battery_decrease_marlene","on") %}
-        {% if battery_level == 'unkown'%}
-          mdi:battery-unknown
-        {% else %}
-          {% if charging %}
-            {% if battery_round > 0 %}
-              mdi:battery-charging-{{ battery_round }}
-            {% else %}
-             mdi:battery-charging-outline
-            {% endif %}
-          {% else %}
-            {% if battery_round >= 100 %}
-              mdi:battery
-            {% elif battery_round > 0 %}
-              mdi:battery-{{ battery_round }}
-            {% else %}
-              mdi:battery-alert
-            {% endif %}
-          {% endif %}
-        {% endif %}

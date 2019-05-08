@@ -9,8 +9,3 @@
     phone_battery_decrease_klaas:
       entity_id: sensor.battery_phone_klaas
       invert: true
-    phone_battery_increase_marlene:
-      entity_id: sensor.battery_phone_marlene
-    phone_battery_decrease_marlene:
-      entity_id: sensor.battery_phone_marlene
-      invert: true
