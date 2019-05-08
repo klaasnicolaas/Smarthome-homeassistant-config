@@ -1,0 +1,8 @@
+---
+# Custom icons for the system automations
+automation.system_check_automations_status:
+  icon: mdi:eye-check-outline
+automation.system_make_weekly_hassio_backup:
+  icon: mdi:cloud-upload-outline
+automation.system_set_ha_theme:
+  icon: mdi:theme-light-dark

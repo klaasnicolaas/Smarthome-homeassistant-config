@@ -1,0 +1,10 @@
+---
+# Custom icons for the house automations
+automation.house_deurbel_melding_niet_thuis:
+  icon: mdi:bell-ring-outline
+automation.house_deurbel_melding_wel_thuis:
+  icon: mdi:bell-ring-outline
+automation.house_turn_on_pc_when_arrive:
+  icon: mdi:power
+automation.house_notify_when_phone_is_fully_charged:
+  icon: mdi:battery-charging-outline

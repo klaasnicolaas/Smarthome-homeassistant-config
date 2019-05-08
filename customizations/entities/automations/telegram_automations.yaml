@@ -1,0 +1,18 @@
+---
+# Custom icons for the Telegram automations
+automation.telegram_bot_that_reply_pong_to_ping:
+  icon: mdi:telegram
+automation.telegram_reply_with_menu:
+  icon: mdi:telegram
+automation.telegram_reply_with_percentage_zwave_devices:
+  icon: mdi:telegram
+automation.telegram_reply_with_system_status:
+  icon: mdi:telegram
+automation.telegram_send_message_after_motion_night_mode:
+  icon: mdi:telegram
+automation.telegram_send_message_if_voordeur_is_open_night_mode:
+  icon: mdi:telegram
+automation.telegram_send_message_if_voordeur_is_open_nobody_home:
+  icon: mdi:telegram
+automation.telegram_travel_from_school_to_home:
+  icon: mdi:telegram

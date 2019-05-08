@@ -1,0 +1,6 @@
+---
+# Custom icons for the notify automations
+automation.notify_beta_version:
+  icon: mdi:message-outline
+automation.notify_stable_version:
+  icon: mdi:message-outline
