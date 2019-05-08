@@ -75,7 +75,7 @@ input_select:
       - Weg
       - Lang Weg
 
-    # Aanwezigheids opties Grietje
+  # Aanwezigheids opties Grietje
   grietje_status_dropdown:
     name: Grietje
     options:
