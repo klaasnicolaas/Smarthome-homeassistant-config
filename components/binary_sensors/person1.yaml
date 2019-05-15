@@ -24,9 +24,3 @@
       prob_given_false: 0.1
       platform: 'state'
       to_state: 'home'
-    # Traccar
-    - entity_id: device_tracker.telefoon_klaas
-      prob_given_true: 0.9
-      prob_given_false: 0.1
-      platform: 'state'
-      to_state: 'home'
