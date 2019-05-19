@@ -33,7 +33,7 @@ cards:
     title: System Automations
     show_header_toggle: false
     entities:
-      - automation.system_check_automations_status
+      - automation.system_perform_system_checks
       - automation.system_make_weekly_hassio_backup
       - automation.system_set_ha_theme
 

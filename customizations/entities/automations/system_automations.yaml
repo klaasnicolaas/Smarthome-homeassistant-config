@@ -1,6 +1,6 @@
 ---
 # Custom icons for the system automations
-automation.system_check_automations_status:
+automation.system_perform_system_checks:
   icon: mdi:eye-check-outline
 automation.system_make_weekly_hassio_backup:
   icon: mdi:cloud-upload-outline

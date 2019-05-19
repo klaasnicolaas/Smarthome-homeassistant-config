@@ -1,5 +1,8 @@
 ---
-- alias: System - Check automations status
+#
+# Perform checks for sensor and custom updater
+#
+- alias: System - Perform system checks
   initial_state: true
   trigger:
     - platform: homeassistant
@@ -7,7 +10,6 @@
     - platform: time_pattern
       hours: '/1'
   action:
-    # - delay: 00:00:30
     - service: python_script.all_automations_counter
     - service: python_script.on_automations_counter
-    # - service: python_script.latest_commit
+    - service: custom_updater.check_all
