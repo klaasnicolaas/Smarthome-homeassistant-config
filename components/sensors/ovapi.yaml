@@ -1,0 +1,8 @@
+---
+# https://github.com/Paul-dH/Home-Assisant-Sensor-OvApi
+#
+- platform: ovapi
+  name: Bushalte_kanaalkade_1
+  stop_code: amrkan
+  route_code: 36001170
+  show_future_departures: 4

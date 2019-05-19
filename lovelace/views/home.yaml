@@ -108,3 +108,23 @@ cards:
     state_filter:
       - "on"
     show_empty: false
+
+  - card:
+      columns: 5
+      entities:
+        - entity: sensor.bushalte_kanaalkade_1
+          icon: mdi:bus
+        - entity: sensor.bushalte_kanaalkade_1_future_1
+          icon: mdi:x
+        - entity: sensor.bushalte_kanaalkade_1_future_2
+          icon: mdi:x
+        - entity: sensor.bushalte_kanaalkade_1_future_3
+          icon: mdi:x
+        - entity: sensor.bushalte_kanaalkade_1_future_4
+          icon: mdi:x
+      show_header_toggle: false
+      show_name: false
+      title: Bushalte kanaalkade -> station
+      type: glance
+    cards: null
+    type: custom:card-modder
