@@ -1,6 +1,0 @@
----
-# Panel iframe for MQTT Web UI
-mqtt:
-  title: MQTT
-  icon: mdi:code-brackets
-  url: !secret panel_iframe_mqtt
