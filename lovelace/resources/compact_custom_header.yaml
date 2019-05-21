@@ -2,5 +2,5 @@
 #
 # https://github.com/maykar/compact-custom-header
 #
-url: /local/lovelace/cards/compact-header/compact-custom-header.js?track=true
+url: /community_plugin/compact-custom-header/compact-custom-header.js
 type: module
