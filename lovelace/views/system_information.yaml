@@ -27,6 +27,7 @@ cards:
     entities:
       - binary_sensor.cpu_high
       - binary_sensor.cpu_hot
+      - binary_sensor.potential_breaking_changes
 
   # Toont de NFC Tags
   - type: glance
@@ -49,18 +50,54 @@ cards:
       - type: gauge
         entity: sensor.cpu_temperature
 
-  - type: glance
-    entities:
-      - name: Router
-        entity: binary_sensor.tp_link_router
-      - name: Switch
-        entity: binary_sensor.tp_link_switch
-      - name: Ping
-        entity: sensor.speedtest_ping
-      - name: Download
-        entity: sensor.speedtest_download
-      - name: Upload
-        entity: sensor.speedtest_upload
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.speedtest_ping
+            height: 20
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              #extrema: true
+              fill: true
+              graph: bar
+
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.speedtest_download
+            height: 50
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              extrema: true
+              fill: true
+            color_thresholds:
+              - value: 150
+                color: "#bf4040"
+
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.speedtest_upload
+            height: 50
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            points_per_hour: 1
+            show:
+              extrema: true
+              fill: true
+            color_thresholds:
+              - value: 13
+                color: "#bf4040"
 
   - type: glance
     entities:
@@ -74,7 +111,11 @@ cards:
         entity: binary_sensor.hp_printer
       - name: Synology NAS
         entity: binary_sensor.synology_nas
-    columns: 3
+      - name: Router
+        entity: binary_sensor.tp_link_router
+      - name: Switch
+        entity: binary_sensor.tp_link_switch
+    columns: 4
     show_state: false
 
   # Toont informatie over de Zwave Nodes
@@ -104,6 +145,170 @@ cards:
       - type: divider
       - sensor.automation_on
       - sensor.automation_all
+      - type: divider
+      - sensor.potential_breaking_changes
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: horizontal-stack
+            cards:
+              - type: custom:bar-card
+                title: Cameras
+                entity: sensor.camera_count
+                title_position: inside
+                align: center
+                padding: 4px
+                card_style: 
+                  border-radius: 5px
+                max: 10
+                severity:
+                - value: 1
+                  color: '#bf4040'
+                - value: 8
+                  color: '#1db954'
+                - value: 10
+                  color: '#bf9540'
+
+              - type: custom:bar-card
+                title: Lights
+                entity: sensor.lights_count
+                title_position: inside
+                align: center
+                padding: 4px
+                card_style: 
+                  border-radius: 5px
+                max: 30
+                severity:
+                - value: 1
+                  color: '#bf4040'
+                - value: 30
+                  color: '#1db954'
+                - value: 40
+                  color: '#bf9540'
+
+              - type: custom:bar-card
+                title: Tracked Devices
+                entity: sensor.tracker_count
+                title_position: inside
+                align: center 
+                padding: 4px
+                card_style: 
+                  border-radius: 5px
+                max: 88
+                severity:
+                - value: 1
+                  color: '#bf4040'
+                - value: 87
+                  color: '#1db954'
+                - value: 100
+                  color: '#bf9540'
+
+          - type: horizontal-stack
+            cards:
+              - type: custom:bar-card
+                title: Automations
+                entity: sensor.automation_count
+                title_position: inside
+                align: center
+                padding: 4px
+                card_style: 
+                  border-radius: 5px
+                max: 400
+                severity:
+                - value: 1
+                  color: '#bf4040'
+                - value: 300
+                  color: '#1db954'
+                - value: 400
+                  color: '#bf9540'
+
+              - type: custom:bar-card
+                title: Binary Sensors
+                entity: sensor.binary_sensor_count
+                title_position: inside
+                align: center
+                padding: 4px
+                card_style: 
+                  border-radius: 5px
+                max: 200
+                severity:
+                - value: 1
+                  color: '#bf4040'
+                - value: 150
+                  color: '#1db954'
+                - value: 200
+                  color: '#bf9540'
+
+          - type: horizontal-stack
+            cards:
+              - type: custom:bar-card
+                title: Media Players
+                entity: sensor.media_player_count
+                title_position: inside
+                align: center
+                padding: 4px
+                card_style: 
+                  border-radius: 5px
+                max: 20
+                severity:
+                - value: 1
+                  color: '#bf4040'
+                - value: 16
+                  color: '#1db954'
+                - value: 30
+                  color: '#bf9540'
+
+              - type: custom:bar-card
+                title: Scripts
+                entity: sensor.script_count
+                title_position: inside
+                align: center 
+                padding: 4px
+                card_style: 
+                  border-radius: 5px
+                max: 35
+                severity:
+                - value: 1
+                  color: '#bf4040'
+                - value: 34
+                  color: '#1db954'
+                - value: 40
+                  color: '#bf9540'
+
+          - type: horizontal-stack
+            cards:
+              - type: custom:bar-card
+                title: Sensors
+                entity: sensor.sensor_count
+                title_position: inside
+                align: center
+                padding: 4px
+                card_style: 
+                  border-radius: 5px
+                max: 786
+                severity:
+                - value: 1
+                  color: '#bf4040'
+                - value: 785
+                  color: '#1db954'
+                - value: 800
+                  color: '#bf9540'
+
+              - type: custom:bar-card
+                title: Switches
+                entity: sensor.switch_count
+                title_position: inside
+                align: center 
+                padding: 4px
+                card_style: 
+                  border-radius: 5px
+                max: 65
+                severity:
+                - value: 1
+                  color: '#bf4040'
+                - value: 64
+                  color: '#1db954'
+                - value: 70
+                  color: '#bf9540'
 
   # Toont onderhoud dashboard
   - type: entities
@@ -164,5 +369,3 @@ cards:
       - type: divider
       - sensor.woonkamer_mini_alarm
       - sensor.woonkamer_mini_timer
-
-  - type: custom:tracker-card
