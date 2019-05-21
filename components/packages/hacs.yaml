@@ -1,0 +1,6 @@
+---
+#
+# https://github.com/custom-components/hacs
+#
+hacs:
+  token: !secret github_hacs_token
