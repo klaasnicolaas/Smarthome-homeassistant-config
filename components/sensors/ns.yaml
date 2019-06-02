@@ -16,9 +16,3 @@
     - name: Leiden - Schiphol Airport
       from: Ledn
       to: Shl
-    - name: Alkmaar - Amsterdam Sloterdijk
-      from: Amr
-      to: Ass
-    - name: Amsterdam Sloterdijk - Alkmaar
-      from: Ass
-      to: Amr
