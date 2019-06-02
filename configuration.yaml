@@ -35,9 +35,6 @@ config:
 
 websocket_api:
 
-logger:
-  default: info
-
 # To include python scripts
 python_script:
 
