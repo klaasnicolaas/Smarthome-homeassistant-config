@@ -2,20 +2,21 @@
 # pylint: disable=broad-except
 import logging
 from aiohttp import web
-from custom_components.hacs.blueprints import HacsViewBase
+from ...blueprints import HacsViewBase
 
 _LOGGER = logging.getLogger('custom_components.hacs.frontend')
 
 LOVELACE_EXAMLE_URL = """
 <pre id="LovelaceExample" class="yaml">
-  - url: /community_plugin/{name}/{name}.js
+  - url: /community_plugin/{}/{}.js
 </pre>
+<i>HACS could not determine the type of this element, look at the documentation in the repository.</i>
 """
 
 LOVELACE_EXAMLE_URL_TYPE = """
 <pre id="LovelaceExample" class="yaml">
-  - url: /community_plugin/{name}/{name}.js
-    type: {type}
+  - url: /community_plugin/{}/{}.js
+    type: {}
 </pre>
 """
 
@@ -105,7 +106,7 @@ class HacsRepositoryView(HacsViewBase):
                 for author in repository.authors:
                     if "@" in author:
                         author = author.split("@")[-1]
-                    authors += "<a href='https://github.com/{author}' target='_blank' style='margin: 2'> @{author}</a>".format(author=author)
+                    authors += "<a href='https://github.com/{author}' target='_blank' style='color: var(--primary-color) !important; margin: 2'> @{author}</a>".format(author=author)
                 authors += "</p>"
             else:
                 authors = ""
@@ -124,9 +125,9 @@ class HacsRepositoryView(HacsViewBase):
                 """.format(repository.local_path)
             else:
                 if repository.javascript_type is None:
-                    llnote = LOVELACE_EXAMLE_URL.format(name=repository.name)
+                    llnote = LOVELACE_EXAMLE_URL.format(repository.name, repository.name.replace("lovelace-", ""))
                 else:
-                    llnote = LOVELACE_EXAMLE_URL_TYPE.format(name=repository.name, type=repository.javascript_type)
+                    llnote = LOVELACE_EXAMLE_URL_TYPE.format(repository.name, repository.name.replace("lovelace-", ""), repository.javascript_type)
                 note = """
                     </br><i>
                         When installed, this will be located in '{}',
@@ -159,7 +160,7 @@ class HacsRepositoryView(HacsViewBase):
                         name = repository.name.split("lovelace-")[-1]
                     else:
                         name = repository.name
-                    open_plugin = "<a href='/community_plugin/{}/{}.js' target='_blank'>OPEN PLUGIN</a>".format(repository.name, name)
+                    open_plugin = "<a href='/community_plugin/{}/{}.js' target='_blank' style='color: var(--primary-color) !important'>OPEN PLUGIN</a>".format(repository.name, name)
             else:
                 open_plugin = ""
 
@@ -167,42 +168,42 @@ class HacsRepositoryView(HacsViewBase):
             content = self.base_content
 
             if repository.version_installed is not None:
-                 inst_ver = "<p><b>Installed version:</b> {}</p>".format(repository.version_installed)
+                inst_ver = "<p><b>Installed version:</b> {}</p>".format(repository.version_installed)
             else:
                 inst_ver = ""
 
             if repository.last_release_tag is not None:
-                 last_ver = "<p><b>Available version:</b> {}</p>".format(repository.last_release_tag)
+                last_ver = "<p><b>Available version:</b> {}</p>".format(repository.last_release_tag)
             else:
                 last_ver = ""
 
             if repository.last_updated is not None:
-                 last_up = "<p><b>Last updated:</b> {}</p>".format(repository.last_updated)
+                last_up = "<p><b>Last updated:</b> {}</p>".format(repository.last_updated)
             else:
                 last_up = ""
 
             if repository.pending_update:
-                changelog = "<a href='https://github.com/{}/releases' target='_blank'>CHANGELOG</a>".format(repository.repository_name)
+                changelog = "<a href='https://github.com/{}/releases' target='_blank' style='color: var(--primary-color) !important'>CHANGELOG</a>".format(repository.repository_name)
             else:
                 changelog = ""
 
             if repository.installed:
-                uninstall = "<a href='{}/repository_uninstall/{}' style='float: right; color: #a70000; font-weight: bold;' onclick='ShowProgressBar()'>UNINSTALL</a>".format(self.url_path['api'], repository.repository_id)
+                uninstall = "<a href='{}/repository_uninstall/{}' style='float: right; color: var(--google-red-500) !important; font-weight: bold;' onclick='ShowProgressBar()'>UNINSTALL</a>".format(self.url_path['api'], repository.repository_id)
             else:
                 uninstall = ""
 
             content += """
                 {}
                 {}
-                <div class='container''>
+                <div class='hacs-overview-container'>
                     <div class="row">
                         <div class="col s12">
-                            <div class="card blue-grey darken-1">
-                                <div class="card-content white-text">
+                            <div class="card hacscolor">
+                                <div class="card-content">
                                     <span class="card-title">
-                                        {}
+                                        <b>{}</b>
                                         <a href="{}/repository_update_repository/{}"
-                                                style="float: right; color: #ffab40;" onclick="ShowProgressBar()">
+                                                style="float: right; color: var(--primary-color);" onclick="ShowProgressBar()">
                                             <i name="reload" class="fa fa-sync"></i>
                                         </a>
                                     </span>
@@ -217,11 +218,11 @@ class HacsRepositoryView(HacsViewBase):
                                 </div>
                                 <div class="card-action">
                                     <a href="{}/repository_install/{}"
-                                        onclick="ShowProgressBar()">
+                                        onclick="ShowProgressBar()" style='color: var(--primary-color) !important'>
                                         {}
                                     </a>
                                     {}
-                                    <a href='https://github.com/{}' target='_blank'>repository</a>
+                                    <a href='https://github.com/{}' target='_blank' style='color: var(--primary-color) !important'>repository</a>
                                     {}
                                     {}
                                 </div>
@@ -231,8 +232,8 @@ class HacsRepositoryView(HacsViewBase):
                     </div>
                 </div>
             """.format(custom_message, pending_restart, repository.name, self.url_path["api"], repository.repository_id,
-                repository.description, inst_ver, last_ver, last_up, info, authors, note, self.url_path["api"],
-                repository.repository_id, main_action, changelog, repository.repository_name, open_plugin, uninstall)
+                       repository.description, inst_ver, last_ver, last_up, info, authors, note, self.url_path["api"],
+                       repository.repository_id, main_action, changelog, repository.repository_name, open_plugin, uninstall)
 
         except Exception as exception:
             _LOGGER.error(exception)
