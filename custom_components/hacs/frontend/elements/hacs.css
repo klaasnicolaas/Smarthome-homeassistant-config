@@ -29,6 +29,7 @@
   width: 95%;
   margin-left: 2.5%;
   margin-right: 2.5%;
+  display: flow-root;
 }
 
 .hacs-content {
@@ -155,6 +156,42 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) {
   -webkit-box-shadow: 0 1px 0 0 var(--primary-color);
   box-shadow: 0 1px 0 0 var(--primary-color);
 }
+
+.dropdown-list-item {
+  color: var(--primary-color) !important;
+  background-color: var(--paper-card-background-color) !important;
+}
+
+a.dropdown-list-item:hover {
+  opacity: 0.95;
+}
+
+.card-action a:hover {
+  opacity: 0.6 !important;
+}
+
+.codeinfo {
+  opacity: 0.6 !important;
+}
+
+.repository-select {
+  display: initial !important;
+  margin-left: 1%;
+  width: 20%;
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--primary-text-color);
+}
+
+.repository-list-badge {
+  background-color: var(--primary-color);
+  margin-right: 1%;
+  padding: 0 4 2 4;
+  color: var(--primary-text-color);
+  -moz-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+}
+
 
 /* color vars*/
 :root {
