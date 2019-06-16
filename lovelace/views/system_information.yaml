@@ -6,6 +6,117 @@ icon: mdi:server
 path: system
 cards:
   - !include ../cards/compact_custom_header.yaml
+
+  - type: custom:vertical-stack-in-card
+    title: Hassio Server
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: custom:card-modder
+                card:
+                  type: picture
+                  image: /local/images/hassio.jpg
+                style:
+                  border-radius: 5px
+
+          - type: vertical-stack
+            cards:
+              - type: custom:bar-card
+                title_position: inside
+                entity: sensor.ha_installed_version
+                title: Hassio Versie
+                align: center
+                padding: 5px
+                max: 60
+                card_style:
+                  border-radius: 5px
+
+              - type: custom:bar-card
+                title_position: inside
+                entity: sensor.ha_restart_time
+                title: Restart Time
+                align: center
+                padding: 5px
+                max: 400
+                card_style:
+                  border-radius: 5px
+
+              - type: custom:bar-card
+                title_position: inside
+                entity: sensor.potential_breaking_changes
+                title: Breaking Changes
+                align: center
+                padding: 5px
+                max: 400
+                card_style:
+                  border-radius: 5px
+
+      - type: custom:bar-card
+        align: split
+        show_icon: true
+        padding: 4px
+        columns: 2
+        card_style:
+          border-radius: 5px
+        entities:
+          - entity: sensor.disk_use_percent
+            title: Opslag
+          - entity: sensor.memory_use_percent
+            title: RAM
+
+      - type: custom:bar-card
+        align: split
+        show_icon: true
+        padding: 4px
+        columns: 2
+        card_style:
+          border-radius: 5px
+        entities:
+          - entity: sensor.processor_use
+            title: CPU
+          - entity: sensor.cpu_temperature
+            title: Temp
+            icon: mdi:thermometer
+
+      - type: custom:bar-card
+        align: split
+        show_icon: true
+        padding: 4px
+        columns: 2
+        card_style:
+          border-radius: 5px
+        entities:
+          - entity: sensor.swap_use_percent
+            title: SWAP
+          - entity: sensor.db_size
+            title: DB
+            max: 3000
+
+      - type: custom:bar-card
+        align: split
+        show_icon: true
+        padding: 4px
+        columns: 2
+        card_style:
+          border-radius: 5px
+        entities:
+          - entity: sensor.home_assistant_log
+            title: Log size
+          - entity: sensor.time_online
+            title: Uptime
+
+      - type: custom:bar-card
+        title_position: inside
+        entity: sensor.disk_free
+        max: 500
+        align: center
+        direction: right-reverse
+        padding: 5px
+        card_style:
+          border-radius: 5px
+
   # Toont de batterij percentages van de Z-wave devices
   - type: glance
     title: Batterij Percentages
@@ -27,7 +138,6 @@ cards:
     entities:
       - binary_sensor.cpu_high
       - binary_sensor.cpu_hot
-      - binary_sensor.potential_breaking_changes
 
   # Toont de NFC Tags
   - type: glance
@@ -40,16 +150,6 @@ cards:
         entity: binary_sensor.nfc_tag_2
     columns: 2
 
-  # Toon gauge charts
-  - type: horizontal-stack
-    cards:
-      - type: gauge
-        entity: sensor.processor_use
-      - type: gauge
-        entity: sensor.memory_use_percent
-      - type: gauge
-        entity: sensor.cpu_temperature
-
   - type: vertical-stack
     cards:
       - type: horizontal-stack
@@ -61,7 +161,7 @@ cards:
             line_width: 2
             font_size: 70
             hours_to_show: 168
-            points_per_hour: 1
+            points_per_hour: 0.3
             show:
               # extrema: true
               fill: true
@@ -76,7 +176,7 @@ cards:
             line_width: 2
             font_size: 70
             hours_to_show: 168
-            points_per_hour: 1
+            points_per_hour: 0.3
             show:
               extrema: true
               fill: true
@@ -91,7 +191,7 @@ cards:
             line_width: 2
             font_size: 70
             hours_to_show: 168
-            points_per_hour: 1
+            points_per_hour: 0.3
             show:
               extrema: true
               fill: true
@@ -138,15 +238,12 @@ cards:
       - sensor.last_boot
       - binary_sensor.home_assistant_home
       - type: divider
-      - sensor.ha_installed_version
       - sensor.hassio_beta_versie
       - sensor.hassio_stable_versie
       - sensor.python_version
       - type: divider
       - sensor.automation_on
-      - sensor.automation_all
-      - type: divider
-      - sensor.potential_breaking_changes
+      - sensor.hacs
       - type: custom:vertical-stack-in-card
         cards:
           - type: horizontal-stack
@@ -337,19 +434,6 @@ cards:
       - type: weblink
         name: Router - TP Link
         url: !secret weblink_router
-
-  # Toont informatie over het geheugen op de intel nuc
-  - type: entities
-    title: Opslag
-    show_header_toggle: false
-    entities:
-      - sensor.disk_use_percent
-      - sensor.disk_free
-      - type: divider
-      # - sensor.home_assistant_v2_db
-      - sensor.home_assistant_log
-      - sensor.ozw_log_txt
-      - sensor.configuration_yaml
 
   # Toont informatie over de netwerk verbinding
   - type: entities

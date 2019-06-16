@@ -217,6 +217,7 @@ sensor:
       - type: disk_free
         arg: /
       - type: last_boot
+      - type: swap_use_percent
   - platform: command_line
     name: CPU Temperature
     command: "/bin/cat /sys/class/thermal/thermal_zone2/temp"
@@ -249,6 +250,24 @@ sensor:
     access_token: !secret github_access_token
     repositories:
       - path: 'klaasnicolaas/Smarthome-homeassistant-config'
+  ##### UpTime
+  - platform: uptime
+    name: Time Online
+  ##### MariaDB Size
+  - platform: sql
+    db_url: !secret mariadb_addon
+    queries:
+      - name: DB size
+        query: 'SELECT table_schema "database", Round(Sum(data_length + index_length) / 1024 / 1024, 1) "value" FROM information_schema.tables WHERE table_schema="HA_Recorder" GROUP BY table_schema;'
+        column: 'value'
+        unit_of_measurement: MB
+  ##### Restart time
+  - platform: command_line
+    name: HA Restart Time
+    command: "/bin/cat /config/home-assistant.log | /bin/grep 'Home Assistant initialized in' | /usr/bin/awk '{print $10}' | /bin/sed 's/[^0-9.]//g'"
+    scan_interval: 60
+    unit_of_measurement: "sec"
+
 ################################################
 ## Input boolean
 ################################################

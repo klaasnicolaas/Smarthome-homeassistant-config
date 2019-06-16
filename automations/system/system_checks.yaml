@@ -2,13 +2,11 @@
 #
 # Perform checks for sensor and custom updater
 #
-- alias: System - Perform system checks
-  initial_state: true
+- alias: '[System] - Perform system checks'
   trigger:
     - platform: homeassistant
       event: start
     - platform: time_pattern
       hours: '/1'
   action:
-    - service: python_script.all_automations_counter
     - service: python_script.on_automations_counter
