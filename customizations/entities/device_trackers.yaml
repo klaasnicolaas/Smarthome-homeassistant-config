@@ -1,0 +1,6 @@
+---
+# Customize device tracker entities
+#
+device_tracker.2779d988391c7ece:
+  name: Klaas - GPSLogger
+  picture: /local/klaas.jpg

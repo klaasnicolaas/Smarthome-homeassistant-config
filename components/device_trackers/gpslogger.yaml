@@ -1,7 +1,0 @@
----
-# For tracking specific devices.
-#
-# https://www.home-assistant.io/components/device_tracker.gpslogger/
-#
-
-platform: gpslogger
