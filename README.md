@@ -8,7 +8,7 @@ To inspire others I have set up this github and update it regularly with new cod
 
 ## Status Information
 
-| [![Travis CI][travis-shield]][travis] [![Gitlab CI][gitlabci-shield]][gitlabci] | [![GitHub Last Commit][last-commit-shield]][commits]|
+| [![Gitlab CI][gitlabci-shield]][gitlabci] | [![GitHub Last Commit][last-commit-shield]][commits]|
 |:---:|:---:|
 | This shows whether the configuration in this repo is valid | This shows how up to date this repo is |
 | [![GitHub issues][issues-shield]][issues] | [![HA Version][ha-version-shield]][home-assistant] |
@@ -88,7 +88,6 @@ SOFTWARE.
 
 [commits-shield]: https://img.shields.io/github/commit-activity/y/klaasnicolaas/smarthome-homeassistant-config.svg
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr
-[travis-shield]: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config.svg?branch=master
 [stars-shield]: https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg
 [ha-version-shield]: https://img.shields.io/badge/Home%20Assistant-0.94.3-blue.svg
 [uptime-shield]: https://img.shields.io/uptimerobot/status/m781145866-63b6526d17827ec6eebe586f.svg
@@ -97,7 +96,6 @@ SOFTWARE.
 [issues-shield]: https://img.shields.io/github/issues/klaasnicolaas/Smarthome-homeassistant-config.svg
 
 [commits]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/commits/master
-[travis]: https://travis-ci.org/klaasnicolaas/Smarthome-homeassistant-config
 [stars]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/stargazers
 [home-assistant]: https://home-assistant.io
 [uptime-robot]: https://uptimerobot.com

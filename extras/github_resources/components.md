@@ -33,8 +33,7 @@ If one of the links no longer works, let me know!
 |14.|Speedtest|[Speedtest Docs][speedtest-docs]|[Speedtest YAML][speedtest-github]|Cloud Polling|
 |15.|Versions|[Versions Docs][versions-docs]|[Versions YAML][versions-github]|Local Pushing|
 |16.|Template|
-|17.|Travis Ci|[Travis Ci Docs][travis-ci-docs]|[Travis Ci YAML][travis-github]|Cloud Polling|
-|18.|Gitlab Ci|[Github Ci Docs][github-ci-docs]|[Gitlab Ci YAML][gitlab-github]|Cloud Polling|
+|17.|Gitlab Ci|[Github Ci Docs][github-ci-docs]|[Gitlab Ci YAML][gitlab-github]|Cloud Polling|
 
 There are many more sensors that I use, but I have not had the time to put them here.
 
@@ -54,8 +53,7 @@ The nice thing about using [hass.io][hassio] are the add-ons, which allows you t
 |3.|InfluxDB|[Community Page][influxdb-community]|[Github][influxdb-github]
 |4.|SSH & Web Terminal|[Community Page][ssh-web-terminal-community]|[Github][ssh-web-terminal-github]
 |5.|Samba Share|[Add-on Page][samba-share-homeassistant]
-|6.|Traccar|[Community Page][traccar-community]|[Github][traccar-github]
-|7.|MotionEye|[Community Page][motioneye-community]|[Github][motioneye-github]
+|6.|MotionEye|[Community Page][motioneye-community]|[Github][motioneye-github]
 
 ---
 
@@ -133,7 +131,6 @@ Here I will name some terms / abbreviations.
 [ns-docs]: https://www.home-assistant.io/components/sensor.nederlandse_spoorwegen/
 [postnl-docs]: https://www.home-assistant.io/components/sensor.postnl/
 [speedtest-docs]: https://www.home-assistant.io/components/sensor.speedtest/
-[travis-ci-docs]: https://www.home-assistant.io/components/sensor.travisci/
 [github-ci-docs]: https://www.home-assistant.io/components/sensor.gitlab_ci/
 [versions-docs]:https://www.home-assistant.io/components/sensor.version/
 [cert-expiry-docs]:https://www.home-assistant.io/components/sensor.cert_expiry/
@@ -145,14 +142,12 @@ Here I will name some terms / abbreviations.
 [influxdb-community]: https://community.home-assistant.io/t/community-hass-io-add-on-influxdb/54491
 [ssh-web-terminal-community]: https://community.home-assistant.io/t/community-hass-io-add-on-ssh-web-terminal/33820
 [samba-share-homeassistant]: https://www.home-assistant.io/addons/samba/
-[traccar-community]: https://community.home-assistant.io/t/community-hass-io-add-on-traccar/81407
 [motioneye-community]: https://community.home-assistant.io/t/community-hass-io-add-on-motioneye/71826
 
 [grafana-github]: https://github.com/hassio-addons/addon-grafana
 [ide-github]: https://github.com/hassio-addons/addon-ide
 [influxdb-github]: https://github.com/hassio-addons/addon-influxdb
 [ssh-web-terminal-github]: https://github.com/hassio-addons/addon-ssh
-[traccar-github]: https://github.com/hassio-addons/addon-traccar
 [motioneye-github]: https://github.com/hassio-addons/addon-motioneye
 
 [lovelace-ui-github]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/blob/master/ui-lovelace.yaml
@@ -170,7 +165,6 @@ Here I will name some terms / abbreviations.
 [dnsip-github]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/blob/master/components/packages/system.yaml#L245
 [cert-expiry-github]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/blob/master/components/packages/system.yaml#L247
 [ns-github]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/blob/master/components/sensors/ns.yaml
-[travis-github]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/blob/master/components/packages/system.yaml#L269
 [gitlab-github]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/blob/master/components/sensors/gitlab_ci.yaml
 
 [nabu-casa-buy]: https://www.nabucasa.com/

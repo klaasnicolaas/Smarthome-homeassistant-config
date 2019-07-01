@@ -99,14 +99,6 @@ homeassistant:
       <<: *customize
       friendly_name: Python geinstalleerde versie
 
-    sensor.klaasnicolaas_smarthome_homeassistant_config_last_build_state:
-      <<: *customize
-      friendly_name: Travis Ci laatste build status
-
-    sensor.klaasnicolaas_smarthome_homeassistant_config_last_build_finished_at:
-      <<: *customize
-      friendly_name: Travis Ci laatste build datum
-
     sensor.klaasnicolaas_smarthome_homeassistant_config_last_build_duration:
       <<: *customize
       hidden: true
@@ -242,9 +234,6 @@ sensor:
     name: Python Version
     command: python3 --version
     scan_interval: 86400
-  ##### Travis Ci
-  - platform: travisci
-    api_key: !secret travisci_key
   ##### Github
   - platform: github
     access_token: !secret github_access_token
@@ -347,9 +336,6 @@ group:
       - script.quick_reboot
       # Gitlab CI
       - sensor.gitlab_ci_status
-      # Travis CI
-      - sensor.klaasnicolaas_smarthome_homeassistant_config_last_build_finished_at
-      - sensor.klaasnicolaas_smarthome_homeassistant_config_last_build_state
       - weblink.github
       - weblink.router
 

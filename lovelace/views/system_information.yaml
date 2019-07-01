@@ -422,10 +422,6 @@ cards:
       # Gitlab CI
       - sensor.gitlab_ci_status
       - type: divider
-      # Travis CI
-      - sensor.klaasnicolaas_smarthome_homeassistant_config_last_build_finished_at
-      - sensor.klaasnicolaas_smarthome_homeassistant_config_last_build_state
-      - type: divider
       - type: weblink
         name: Github - Home Assistant config
         url: https://github.com/klaasnicolaas/Smarthome-homeassistant-config
