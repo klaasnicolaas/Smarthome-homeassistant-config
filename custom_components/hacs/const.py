@@ -1,8 +1,8 @@
 """Constants for HACS"""
-VERSION = "0.8.0"
+VERSION = "0.10.0"
 NAME_LONG = "HACS (Home Assistant Community Store)"
 NAME_SHORT = "HACS"
-STORAGE_VERSION = "1"
+STORAGE_VERSION = "3"
 STORENAME = "hacs"
 PROJECT_URL = "https://github.com/custom-components/hacs/"
 CUSTOM_UPDATER_LOCATIONS = [
@@ -12,15 +12,7 @@ CUSTOM_UPDATER_LOCATIONS = [
 GENERIC_ERROR = "Possible error codes: 1D10T, PICNIC, B0110CK5."
 ISSUE_URL = "{}issues".format(PROJECT_URL)
 DOMAIN_DATA = "{}_data".format(NAME_SHORT.lower())
-BLACKLIST = [
-    "custom-cards/boilerplate-card",
-    "custom-cards/custom-card-helpers",
-    "custom-cards/information",
-    "custom-cards/tracker-card",
-    "custom-components/blueprint",
-    "custom-components/information",
-    "custom-components/custom_updater",
-]
+
 ELEMENT_TYPES = ["integration", "plugin"]
 IFRAME = {
     "title": "Community",
@@ -36,6 +28,8 @@ CUSTOM_UPDATER_WARNING = """
 This cannot be used with custom_updater.
 To use this you need to remove custom_updater form {}
 """
+
+NOT_SUPPORTED_HA_VERSION = "You have version '{}' of Home Assistant, but version '{}' of '{}' require version '{}' of Home Assistant, install and upgrades are disabled for this integration untill you upgrade Home Assistant."
 
 STARTUP = """
 -------------------------------------------------------------------
@@ -66,26 +60,3 @@ ERROR = [
     "If we knew what it was we were doing, it would not be called research, would it?",
     "Wait a minute, Doc. Ah… Are you telling me you built a time machine… out of a DeLorean?",
 ]
-
-
-################################
-##  Extra default repositories #
-################################
-
-DEFAULT_REPOSITORIES = {
-    "integration": ["StyraHem/ShellyForHASS", "isabellaalstrom/sensor.krisinformation"],
-    "plugin": [
-        "maykar/compact-custom-header",
-        "maykar/lovelace-swipe-navigation",
-        "peternijssen/lovelace-postnl-card",
-        "nervetattoo/simple-thermostat",
-        "nervetattoo/banner-card",
-        "kalkih/mini-media-player",
-        "kalkih/mini-graph-card",
-        "finity69x2/fan-control-entity-row",
-        "thomasloven/lovelace-card-mod",
-        "thomasloven/lovelace-markdown-mod",
-        "thomasloven/lovelace-slider-entity-row",
-        "isabellaalstrom/krisinfo-card",
-    ],
-}

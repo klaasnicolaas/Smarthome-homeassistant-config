@@ -30,7 +30,6 @@ from .const import (
     ELEMENT_TYPES,
     VERSION,
     IFRAME,
-    BLACKLIST,
 )
 
 from .frontend.views import (
@@ -47,12 +46,22 @@ from .frontend.views import (
 DOMAIN = "{}".format(NAME_SHORT.lower())
 
 # TODO: Remove this when minimum HA version is > 0.93
-REQUIREMENTS = ["aiofiles", "backoff"]
+REQUIREMENTS = ["aiofiles==0.4.0", "backoff==1.8.0", "packaging==19.0"]
 
 _LOGGER = logging.getLogger("custom_components.hacs")
 
 CONFIG_SCHEMA = vol.Schema(
-    {DOMAIN: vol.Schema({vol.Required("token"): cv.string})}, extra=vol.ALLOW_EXTRA
+    {
+        DOMAIN: vol.Schema(
+            {
+                vol.Required("token"): cv.string,
+                vol.Optional("appdaemon", default=False): cv.boolean,
+                vol.Optional("python_script", default=False): cv.boolean,
+                vol.Optional("theme", default=False): cv.boolean,
+            }
+        )
+    },
+    extra=vol.ALLOW_EXTRA,
 )
 
 
@@ -61,6 +70,19 @@ async def async_setup(hass, config):  # pylint: disable=unused-argument
     _LOGGER.info(STARTUP)
     config_dir = hass.config.path()
     github_token = config[DOMAIN]["token"]
+
+    if config[DOMAIN]["appdaemon"]:
+        ELEMENT_TYPES.append("appdaemon")
+    if config[DOMAIN]["python_script"]:
+        ELEMENT_TYPES.append("python_script")
+    if config[DOMAIN]["theme"]:
+        ELEMENT_TYPES.append("theme")
+
+    # Print DEV warning
+    if VERSION == "DEV":
+        _LOGGER.error(
+            "You are running a DEV version of HACS, this is not intended for regular use."
+        )
 
     # Configure HACS
     await configure_hacs(hass, github_token, config_dir)
@@ -133,6 +155,7 @@ async def configure_hacs(hass, github_token, hass_config_dir):
         github_token, hass.loop, async_create_clientsession(hass)
     )
 
+    hacs.hacs_github = await hacs.aiogithub.get_repo("custom-components/hacs")
+
     hacs.hass = hass
     hacs.config_dir = hass_config_dir
-    hacs.blacklist = BLACKLIST
