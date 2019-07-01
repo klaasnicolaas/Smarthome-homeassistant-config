@@ -7,3 +7,4 @@
 discovery:
   ignore:
     - google_cast
+    - yeelight
