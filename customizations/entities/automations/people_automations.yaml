@@ -1,0 +1,6 @@
+---
+# Custom icons for the people automations
+automation.people_notify_when_phone_is_fully_charged:
+  icon: mdi:battery-charging-outline
+automation.people_travel_from_school_to_home:
+  icon: mdi:account-outline

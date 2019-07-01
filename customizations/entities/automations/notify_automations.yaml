@@ -4,3 +4,9 @@ automation.notify_beta_version:
   icon: mdi:message-outline
 automation.notify_stable_version:
   icon: mdi:message-outline
+automation.notify_battery_low_alert_front_door:
+  icon: mdi:message-outline
+automation.notify_battery_low_alert_smoke_sensor_begane_grond:
+  icon: mdi:message-outline
+automation.notify_battery_low_alert_smoke_sensor_kamer_zolder:
+  icon: mdi:message-outline

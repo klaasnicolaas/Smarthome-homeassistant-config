@@ -1,6 +1,5 @@
 ---
-- alias: Telegram - Reply with Menu
-  initial_state: true
+- alias: '[Telegram] - Reply with Menu'
   trigger:
     platform: event
     event_type: telegram_command
@@ -13,8 +12,7 @@
       message: "Commando's zijn..."
       keyboard: ["/status", "/zwave-batterij"]
 
-- alias: Telegram - Reply with System Status
-  initial_state: true
+- alias: '[Telegram] - Reply with System Status'
   # hide_entity: true
   trigger:
     platform: event
@@ -31,8 +29,7 @@
 
       keyboard: ["/menu"]
 
-- alias: Telegram - Reply with percentage zwave devices
-  initial_state: true
+- alias: '[Telegram] - Reply with percentage zwave devices'
   trigger:
     platform: event
     event_type: telegram_command

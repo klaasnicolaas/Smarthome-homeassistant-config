@@ -1,7 +1,6 @@
 ---
 # Als ik thuis kom en mijn pc staat nog uit, zet hem dan aan.
-- alias: House - Turn on pc when arrive
-  initial_state: true
+- alias: '[House] - Turn on pc when arrive'
   trigger:
     - platform: state
       entity_id: sensor.klaas_status

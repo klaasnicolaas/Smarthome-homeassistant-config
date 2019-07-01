@@ -41,6 +41,7 @@ home-assistant_v2.db-wal
 image_processing.yaml
 alarm_control_panel.yaml
 security.yaml
+security_automations.yaml
 
 # For security reasons
 cameras

@@ -1,8 +1,7 @@
 ---
 # Makes a backup of hassio every Sunday at 3:00 am so that I can store it on my NAS.
 #
-- alias: System - Make weekly Hassio backup
-  initial_state: true
+- alias: '[System] - Make weekly Hassio backup'
   trigger:
     - platform: time
       at: '03:00:00'

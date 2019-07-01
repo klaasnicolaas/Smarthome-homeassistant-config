@@ -6,42 +6,53 @@ title: Automatisering
 path: automations
 cards:
   # Notify
-  - type: entities
-    title: Notify Automations
-    show_header_toggle: false
-    entities:
-      - automation.notify_beta_version
-      - automation.notify_stable_version
+  - type: custom:monster-card
+    card:
+      type: entities
+      title: Notify Automations
+      show_header_toggle: false
+    filter:
+      include:
+        - entity_id: automation.notify*
+      exclude:
+        - entity_id: automation.notify_fibaro*
 
   # Telegram
-  - type: entities
-    title: Telegram Automations
-    show_header_toggle: false
-    entities:
-      - automation.telegram_bot_that_reply_pong_to_ping
-      - automation.telegram_reply_with_menu
-      - automation.telegram_reply_with_percentage_zwave_devices
-      - automation.telegram_reply_with_system_status
-      - automation.telegram_send_message_after_motion_night_mode
-      - automation.telegram_send_message_if_voordeur_is_open_night_mode
-      - automation.telegram_send_message_if_voordeur_is_open_nobody_home
-      - automation.telegram_travel_from_school_to_home
+  - type: custom:monster-card
+    card:
+      type: entities
+      title: Telegram Automations
+      show_header_toggle: false
+    filter:
+      include:
+        - entity_id: automation.telegram*
 
   # System
-  - type: entities
-    title: System Automations
-    show_header_toggle: false
-    entities:
-      - automation.system_perform_system_checks
-      - automation.system_make_weekly_hassio_backup
-      - automation.system_set_ha_theme
+  - type: custom:monster-card
+    card:
+      type: entities
+      title: System Automations
+      show_header_toggle: false
+    filter:
+      include:
+        - entity_id: automation.system*
 
   # House
-  - type: entities
-    title: House Automations
-    show_header_toggle: false
-    entities:
-      - automation.house_deurbel_melding_niet_thuis
-      - automation.house_deurbel_melding_wel_thuis
-      - automation.house_turn_on_pc_when_arrive
-      - automation.house_notify_when_phone_is_fully_charged
+  - type: custom:monster-card
+    card:
+      type: entities
+      title: House Automations
+      show_header_toggle: false
+    filter:
+      include:
+        - entity_id: automation.house*
+
+  # People
+  - type: custom:monster-card
+    card:
+      type: entities
+      title: People Automations
+      show_header_toggle: false
+    filter:
+      include:
+        - entity_id: automation.people*

@@ -1,7 +1,6 @@
 ---
 # Give a notification if there is a stable update.
-- alias: Notify - Stable version
-  initial_state: true
+- alias: '[Notify] - Stable version'
   trigger:
     - platform: state
       entity_id: sensor.hassio_stable_versie
