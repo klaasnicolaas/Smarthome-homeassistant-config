@@ -5,7 +5,6 @@ icon: mdi:temperature-celsius
 title: Temperaturen
 path: temperature
 cards:
-  - !include ../cards/compact_custom_header.yaml
   # Toont met een grafiek de temperaturen in huis
   - type: custom:mini-graph-card
     entities:
@@ -13,8 +12,6 @@ cards:
     name: Trappengang | Begane grond
     hours_to_show: 48
     points_per_hour: 0.3
-    location_icon: left
-    location_state: center
     show:
       fill: false
       extrema: true
@@ -35,8 +32,6 @@ cards:
     name: Slaapkamer | Zolder
     hours_to_show: 48
     points_per_hour: 0.3
-    location_icon: left
-    location_state: center
     show:
       fill: false
       extrema: true
@@ -45,11 +40,11 @@ cards:
     hour24: true
     line_color: var(--primary-color)
     color_thresholds:
-      - value: 21
+      - value: 28
         color: "#e45e65"
-      - value: 14
+      - value: 20
         color: "#e29b52"
-      - value: 10
+      - value: 15
         color: "#5294e2"
   # Woonkamer
   - type: custom:mini-graph-card
@@ -59,8 +54,6 @@ cards:
     name: Badkamer | Eerste verdieping
     hours_to_show: 48
     points_per_hour: 0.3
-    location_icon: left
-    location_state: center
     show:
       fill: false
       extrema: true
@@ -83,8 +76,6 @@ cards:
     name: Woonkamer | Begane grond
     hours_to_show: 48
     points_per_hour: 0.3
-    location_icon: left
-    location_state: center
     show:
       fill: false
       extrema: true
@@ -109,8 +100,6 @@ cards:
     name: Vochtigheid in huis
     hours_to_show: 48
     points_per_hour: 0.3
-    location_icon: left
-    location_state: center
     show:
       fill: false
       extrema: true
@@ -135,8 +124,6 @@ cards:
     name: Hal | Begane grond
     hours_to_show: 48
     points_per_hour: 0.3
-    location_icon: left
-    location_state: center
     show:
       fill: false
       extrema: true

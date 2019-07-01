@@ -5,7 +5,6 @@ title: Mediaspelers
 path: media
 icon: mdi:airplay
 cards:
-  - !include ../cards/compact_custom_header.yaml
   # Spotify player
   - type: vertical-stack
     cards:

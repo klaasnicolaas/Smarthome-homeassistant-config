@@ -5,7 +5,6 @@ title: Begane grond
 path: groundfloor
 icon: mdi:sofa
 cards:
-  - !include ../cards/compact_custom_header.yaml
   # Een aantal entities
   - type: glance
     entities:

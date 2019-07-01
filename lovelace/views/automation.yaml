@@ -5,7 +5,6 @@ icon: mdi:home-automation
 title: Automatisering
 path: automations
 cards:
-  - !include ../cards/compact_custom_header.yaml
   # Notify
   - type: entities
     title: Notify Automations

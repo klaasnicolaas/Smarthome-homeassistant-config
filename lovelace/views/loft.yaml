@@ -5,8 +5,6 @@ title: Zolder
 path: loft
 icon: mdi:triangle-outline
 cards:
-  - !include ../cards/compact_custom_header.yaml
-
   # Toont lampen op de vliering
   - type: glance
     entities:
