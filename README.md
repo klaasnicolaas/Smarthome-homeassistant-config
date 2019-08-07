@@ -6,6 +6,8 @@ You will probably think, what is Home Assistant!? Well Home Assistant is a home 
 
 To inspire others I have set up this github and update it regularly with new code. Be free to use code from this repo for your own Home Assistant environment, keep in mind that you can not always copy everything line by line. If you can not get out, you can always contact me.
 
+This is by the way not my first [Home Assistant][home-assistant] configuration that you can find on Github. Since this year I have a second Home Assistant installation, you can read all about it on the website [www.student-techlife.com](https://student-techlife.com) and you can find the [configuration/repository][student-techlife] here on Github.
+
 ## Status Information
 
 | [![Gitlab CI][gitlabci-shield]][gitlabci] | [![GitHub Last Commit][last-commit-shield]][commits]|
@@ -66,7 +68,7 @@ Nothing is better than being able to control your own smart home from your phone
 
 MIT License
 
-Copyright (c) 2018 Klaas Schoute
+Copyright (c) 2019 Klaas Schoute
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -89,7 +91,7 @@ SOFTWARE.
 [commits-shield]: https://img.shields.io/github/commit-activity/y/klaasnicolaas/smarthome-homeassistant-config.svg
 [last-commit-shield]: https://img.shields.io/github/last-commit/klaasnicolaas/Smarthome-homeassistant-config.svg?color=blue&style=plasticr
 [stars-shield]: https://img.shields.io/github/stars/klaasnicolaas/Smarthome-homeassistant-config.svg
-[ha-version-shield]: https://img.shields.io/badge/Home%20Assistant-0.95.4-blue.svg
+[ha-version-shield]: https://img.shields.io/badge/Home%20Assistant-0.97.0-blue.svg
 [uptime-shield]: https://img.shields.io/uptimerobot/status/m781145866-63b6526d17827ec6eebe586f.svg
 [gitlabci-shield]: https://gitlab.com/klaasnicolaas/Smarthome-homeassistant-config/badges/master/pipeline.svg
 [paypal-shield]: https://img.shields.io/badge/BuyMeAFanta-Paypal-orange.svg
@@ -111,3 +113,4 @@ SOFTWARE.
 [adonno-github]: https://github.com/adonno/Home-AssistantConfig
 [backup-github]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/blob/master/automations/system/auto_backup.yaml
 [useage-dashboard]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/tree/master/panels/iframes/consumption
+[student-techlife]: https://github.com/klaasnicolaas/Student-homeassistant-config
