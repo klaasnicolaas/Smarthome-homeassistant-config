@@ -30,8 +30,8 @@ homeassistant:
         - !secret intern_ip_1
         - !secret intern_ip_2
 
-# Enables configuration UI
-config:
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
 
 websocket_api:
 
