@@ -19,24 +19,11 @@
   grid-gap: 10px;
 }
 
-.hacs-grid-badge {
-  float: right;
-  transform: rotate(45deg);
-  font-size: 12px;
-  width: 50px;
-  text-align: center;
-  transform-origin: 50px 37px;
-}
-
-.hacs-table-badge {
-  margin-left: 5px;
-  font-size: 12px;
-}
-
 .hacs-overview-container {
   width: 95%;
   margin-left: 2.5%;
   margin-right: 2.5%;
+  margin-bottom: 10px;
   display: inline-block;
 }
 
@@ -63,21 +50,46 @@
 .hacs-card {
   height: 100%;
   background-color: var(--paper-card-background-color) !important;
-  padding: 12px;
+  padding: 3px;
+  line-height: 1;
 }
 
 .overview {
   height: 100%;
 }
 
+.progressbar {
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  margin-bottom: 20px;
+}
+
 .hacs-card-title {
-  font-size: large;
+  font-size: medium;
   color: var(--primary-text-color);
 }
 
+tr.hacs-table-row.repository {
+  border-bottom: 0px;
+  display: table-row-group;
+}
+
+td.repository {
+  width: 50%;
+  padding: 0px;
+}
+td.repository.text {
+  padding-left: 12px;
+}
+
+
+select.hacs-select.repository {
+  width: 100%;
+}
 .hacs-card-content {
   color: var(--secondary-text-color);
   font-style: italic;
+  font-size: small;
 }
 
 .card-status {
@@ -92,14 +104,14 @@
 }
 
 .installed {
-  color: var(--hacs-status-isntalled);
+  color: var(--hacs-status-installed);
 }
 
 .pending-restart {
   color: var(--hacs-status-pending-restart);
 }
 
-.pending-update {
+.pending-upgrade {
   color: var(--hacs-status-pending-update);
 }
 
@@ -145,10 +157,16 @@ a {
   background-color: var(--primary-color) !important;
 }
 
+.hacsadminbutton {
+  margin: 1%;
+  background-color: var(--primary-color) !important;
+}
+
 body {
   background-color: var(--primary-background-color) !important;
   color: var(--primary-text-color);
   overflow: hidden;
+  font-size: 14px;
 }
 
 input[type="text"]:not(.browser-default):focus:not([readonly]) {
@@ -164,6 +182,40 @@ input[type="text"]:not(.browser-default):focus:not([readonly]) {
 
 a.dropdown-list-item:hover {
   opacity: 0.95;
+}
+
+.actionlink {
+  color: var(--primary-color) !important
+}
+
+.uninstall {
+  float: right;
+  color: var(--google-red-500) !important;
+  font-weight: bold;
+}
+
+@media all and (max-width: 550px) {
+  select.hacs-select.custom_repository {
+    width: 100%;
+  }
+  input#custom_url {
+    width: 100% !important;
+  }
+
+  .actionlink {
+    width: 100%;
+    padding: 5px;
+    display: block;
+    font-size: x-large;
+    text-align: center;
+  }
+
+  .uninstall {
+    float: none;
+  }
+}
+.minigrid {
+  display: contents;
 }
 
 .card-action a:hover {
@@ -183,11 +235,12 @@ a.dropdown-list-item:hover {
   color: var(--primary-text-color);
 }
 
-.repository-list-badge {
-  background-color: var(--primary-color);
+.hacs-badge {
+  background-color: var(--hacs-badge-color);
   margin-right: 1%;
-  padding: 0 4 2 4;
-  color: var(--primary-text-color);
+  font-size: 12px;
+  padding: 0px 4px 2px 4px;
+  color: var(--hacs-badge-text-color);
   -moz-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
 }
@@ -199,9 +252,12 @@ tr.hacs-table-row:hover {
 
 /* color vars*/
 :root {
-  --hacs-status-isntalled: #126e15;
+  --hacs-status-installed: #126e15;
   --hacs-status-pending-restart: #a70000;
   --hacs-status-pending-update: #ffab40;
+  --hacs-status-default: var(--primary-text-color);
+  --hacs-badge-color: var(--primary-color);
+  --hacs-badge-text-color: var(--primary-text-color);
   --primary-color: #03a9f4;
   --primary-text-color: #000000;
   --secondary-text-color: #424141;
@@ -211,8 +267,29 @@ tr.hacs-table-row:hover {
   --google-red-500: #db4437;
 }
 
+/* hug screens*/
+@media all and (min-width: 2000px) {
+  .hacs-card-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* even bigger screens*/
+@media all and (min-width: 1500px) and (max-width: 1999px) {
+  .hacs-card-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* bigger screens*/
+@media all and (min-width: 1000px) and (max-width: 1499px) {
+  .hacs-card-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 /* big screens */
-@media all and (min-width: 550px) {
+@media all and (min-width: 550px) and (max-width: 999px) {
   .hacs-card-container {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -239,6 +316,10 @@ tr.hacs-table-row:hover {
 @media all and (max-width: 550px) {
   body {
     overflow: scroll !important;
+  }
+
+  .minigrid {
+    display: grid;
   }
 
   .smal-hide {
