@@ -5,15 +5,14 @@ For more details about this component, please refer to
 https://github.com/custom-components/breaking_changes
 """
 import os
-from datetime import timedelta
+from datetime import timedelta, datetime
 import logging
-import requests
 import voluptuous as vol
 import homeassistant.helpers.config_validation as cv
 from homeassistant.const import EVENT_HOMEASSISTANT_START
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 from homeassistant.helpers import discovery
-from homeassistant.util import Throttle
+from integrationhelper import Throttle, WebClient
 from .const import (
     DOMAIN_DATA,
     DOMAIN,
@@ -25,16 +24,20 @@ from .const import (
     VERSION,
     CONF_NAME,
     DEFAULT_NAME,
+    INTERVAL,
 )
-
-REQUIREMENTS = ["pyhaversion"]
-
-MIN_TIME_BETWEEN_UPDATES = timedelta(minutes=1)
 
 _LOGGER = logging.getLogger(__name__)
 
 CONFIG_SCHEMA = vol.Schema(
-    {DOMAIN: vol.Schema({vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string})},
+    {
+        DOMAIN: vol.Schema(
+            {
+                vol.Optional(CONF_NAME, default=DEFAULT_NAME): cv.string,
+                vol.Optional("scan_interval"): cv.positive_int,
+            }
+        )
+    },
     extra=vol.ALLOW_EXTRA,
 )
 
@@ -46,6 +49,8 @@ async def async_setup(hass, config):
     startup = STARTUP.format(name=DOMAIN, version=VERSION, issueurl=ISSUE_URL)
     _LOGGER.info(startup)
 
+    throttle = Throttle()
+
     # Check that all required files are present
     file_check = await check_files(hass)
     if not file_check:
@@ -53,8 +58,12 @@ async def async_setup(hass, config):
 
     # Create DATA dict
     hass.data[DOMAIN_DATA] = {}
+    hass.data[DOMAIN_DATA]["throttle"] = throttle
     hass.data[DOMAIN_DATA]["components"] = ["homeassistant"]
     hass.data[DOMAIN_DATA]["potential"] = {}
+
+    if config[DOMAIN].get("scan_interval") is not None:
+        throttle.interval = timedelta(seconds=config[DOMAIN].get("scan_interval"))
 
     # Load platforms
     for platform in PLATFORMS:
@@ -73,30 +82,32 @@ async def async_setup(hass, config):
             hass.data[DOMAIN_DATA]["components"].append(component)
 
         _LOGGER.debug("Loaded components %s", hass.data[DOMAIN_DATA]["components"])
-        await update_data(
-            hass, no_throttle=True
-        )  # pylint: disable=unexpected-keyword-arg
+        await update_data(hass, throttle)  # pylint: disable=unexpected-keyword-arg
 
     hass.bus.async_listen_once(EVENT_HOMEASSISTANT_START, loaded_platforms(hass))
 
     return True
 
 
-@Throttle(MIN_TIME_BETWEEN_UPDATES)
-async def update_data(hass):
+async def update_data(hass, throttle):
     """Update data."""
+    if throttle.throttle:
+        return
+    throttle.set_last_run()
     if len(hass.data[DOMAIN_DATA]["components"]) == 1:
         return
-    from pyhaversion import Version
+    from pyhaversion import LocalVersion, PyPiVersion
 
     session = async_get_clientsession(hass)
-    haversion = Version(hass.loop, session)
+    webclient = WebClient(session)
+    localversion = LocalVersion(hass.loop, session)
+    pypiversion = PyPiVersion(hass.loop, session)
 
-    await haversion.get_local_version()
-    currentversion = haversion.version.split(".")[1]
+    await localversion.get_version()
+    currentversion = localversion.version.split(".")[1]
 
-    await haversion.get_pypi_version()
-    remoteversion = haversion.version.split(".")[1]
+    await pypiversion.get_version()
+    remoteversion = pypiversion.version.split(".")[1]
 
     if currentversion == remoteversion:
         _LOGGER.debug(
@@ -122,8 +133,7 @@ async def update_data(hass):
 
         for version in range(int(currentversion) + 1, int(remoteversion) + 1):
             versions.append(version)
-            request = requests.get(URL.format(version))
-            jsondata = request.json()
+            jsondata = await webclient.async_get_json(URL.format(version))
             _LOGGER.debug(jsondata)
             for platform in jsondata:
                 _LOGGER.debug(platform["component"])

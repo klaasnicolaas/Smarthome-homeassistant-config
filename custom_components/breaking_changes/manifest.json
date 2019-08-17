@@ -3,10 +3,12 @@
   "name": "Breaking Changes",
   "documentation": "https://github.com/custom-components/breaking_changes",
   "requirements": [
-    "pyhaversion"
+    "pyhaversion==3.0.2",
+    "integrationhelper==0.2.1"
   ],
   "dependencies": [],
   "codeowners": [
     "@ludeeus"
-  ]
+  ],
+  "homeassistant": "0.96.0"
 }
