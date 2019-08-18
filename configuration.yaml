@@ -38,11 +38,6 @@ websocket_api:
 # To include python scripts
 python_script:
 
-# HACS
-# https://github.com/custom-components/hacs
-hacs:
-  token: !secret github_hacs_token
-
 ################################## COVERS ##################################
 # cover:
 #  - platform: mqtt
