@@ -70,3 +70,6 @@ midnight:
   # Google colors
   google-red-500: '#E45E65'
   google-green-500: '#39E949'
+
+  # fix for device configuration screen
+  card-background-color: "var(--paper-card-background-color)"
