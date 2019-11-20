@@ -1,4 +1,3 @@
----
 slate:
   # Main colors
   primary-color: '#2980b9'
@@ -44,6 +43,10 @@ slate:
   paper-toggle-button-unchecked-button-color: 'var(--disabled-text-color)'
   paper-toggle-button-unchecked-bar-color: 'var(--disabled-text-color)'
   paper-toggle-button-unchecked-ink-color: 'var(--disabled-text-color)'
+  switch-checked-color: 'var(--paper-toggle-button-checked-button-color)'
+  switch-unchecked-color: 'var(--disabled-text-color)'
+  switch-unchecked-button-color: 'var(--disabled-text-color)'
+  switch-unchecked-track-color: 'var(--disabled-text-color)'
   # Sliders
   paper-slider-knob-color: '#2980b9'
   paper-slider-knob-start-color: '#2980b9'
