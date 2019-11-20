@@ -33,11 +33,20 @@
                     "theme": "Aktiver oppdagelse og sporing av temaer",
                     "token": "GitHub Personal Access Token"
                 },
-                "description": "Hvis du trenger hjelp med konfigurasjonen, ta en titt her: https:\/\/hacs.netlify.com\/installation\/configuration\/",
+                "description": "Hvis du trenger hjelp med konfigurasjonen, ta en titt her: https:\/\/hacs.xyz\/docs\/configuration\/start\/",
                 "title": "HACS (Home Assistant Community Store)"
             }
         },
         "title": "HACS (Home Assistant Community Store)"
+    },
+    "confirm": {
+        "add_to_lovelace": "Er du sikker på at du vil legge dette til i dine Lovelace resources?",
+        "continue": "Er du sikker på at du vil fortsette?",
+        "delete": "Er du sikker på at du vil fjerne \"{item}\"?",
+        "exsist": "{item} eksisterer",
+        "generic": "Er du sikker?",
+        "overwrite": "Å gjøre dette vil overskrive det.",
+        "uninstall": "Er du sikker på at du vil avinstallere \"{item}\"?"
     },
     "options": {
         "step": {
@@ -50,7 +59,15 @@
             }
         }
     },
+    "repository_banner": {
+        "integration_not_loaded": "Integrasjonen er ikke lastet inn i Home Assistant.",
+        "not_loaded": "Ikke lastet inn",
+        "plugin_not_loaded": "Denne pluginen er ikke lagt til i lovelace under \"resource\" delen av konfigurasjonen.",
+        "restart": "Du må restart Home Assistant",
+        "restart_pending": "Restart er nødvendig"
+    },
     "repository": {
+        "add_to_lovelace": "Legg til i Lovelace",
         "authors": "Laget av",
         "available": "Tilgjengelig",
         "back_to": "Tilbake til",
@@ -85,12 +102,16 @@
         "display": "Vise",
         "grid": "Nett",
         "hacs_repo": "HACS repo",
+        "hidden_repositories": "Gjemte repositories",
         "reload_data": "Last inn data på nytt",
         "save": "Lagre",
         "table": "Tabell",
+        "unhide": "Vis igjen",
         "upgrade_all": "Oppgradere alle"
     },
     "store": {
+        "clear_new": "Tøm nye repositories",
+        "new_repositories": "Nye repositories",
         "placeholder_search": "Skriv inn et søkeord ..."
     }
 }

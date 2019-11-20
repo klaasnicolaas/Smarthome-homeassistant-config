@@ -33,14 +33,20 @@
                     "theme": "Enable Themes discovery & tracking",
                     "token": "GitHub Personal Access Token"
                 },
-                "description": "If you need help with the configuration have a look here: https:\/\/hacs.netlify.com\/installation\/configuration\/",
+                "description": "If you need help with the configuration have a look here: https:\/\/hacs.xyz\/docs\/configuration\/start\/",
                 "title": "HACS (Home Assistant Community Store)"
             }
         },
         "title": "HACS (Home Assistant Community Store)"
     },
     "confirm": {
-        "delete": "Are you sure you want to delete '{item}'?"
+        "add_to_lovelace": "Are you sure you want to add this to your Lovelace resources?",
+        "continue": "Are you sure you want to continue?",
+        "delete": "Are you sure you want to delete \"{item}\"?",
+        "exsist": "{item} already exists",
+        "generic": "Are you sure?",
+        "overwrite": "Doing this will overwrite it.",
+        "uninstall": "Are you sure you want to uninstall \"{item}\"?"
     },
     "options": {
         "step": {
@@ -53,7 +59,15 @@
             }
         }
     },
+    "repository_banner": {
+        "integration_not_loaded": "This integration is not loaded in Home Assistant.",
+        "not_loaded": "Not loaded",
+        "plugin_not_loaded": "This plugin is not added to your Lovelace resources.",
+        "restart": "You need to restart Home Assistant.",
+        "restart_pending": "Restart pending"
+    },
     "repository": {
+        "add_to_lovelace": "Add to Lovelace",
         "authors": "Authors",
         "available": "Available",
         "back_to": "Back to",
@@ -88,12 +102,16 @@
         "display": "Display",
         "grid": "Grid",
         "hacs_repo": "HACS repo",
+        "hidden_repositories": "hidden repositories",
         "reload_data": "Reload data",
         "save": "Save",
         "table": "Table",
+        "unhide": "unhide",
         "upgrade_all": "Upgrade all"
     },
     "store": {
+        "clear_new": "Clear all new repositories",
+        "new_repositories": "New Repositories",
         "placeholder_search": "Please enter a search term..."
     }
 }
