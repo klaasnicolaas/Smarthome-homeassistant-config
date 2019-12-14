@@ -99,9 +99,6 @@ cards:
       - type: gauge
         entity: sensor.power_consumption
         max: 3
-    # - type: gauge
-    #  entity: sensor.hourly_gas_consumption
-    #  max: 1
 
   # Filter on lights
   - type: entity-filter
