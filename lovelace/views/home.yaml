@@ -5,7 +5,6 @@ title: Thuis
 path: home
 icon: mdi:home-assistant
 cards:
-  - !include ../cards/compact_custom_header_main.yaml
   # Person status
   - type: horizontal-stack
     cards:
@@ -45,27 +44,36 @@ cards:
             type: state-label
             entity: sensor.grietje_status
         type: picture-elements
-  # Windy
-  - type: iframe
-    url: 'https://embed.windy.com/embed2.html?lat=52.434&lon=5.339&zoom=7&level=surface&overlay=wind&menu=&message=&marker=&calendar=now&pressure=true&type=map&location=coordinates&detail=&detailLat=52.201&detailLon=6.805&metricWind=default&metricTemp=default&radarRange=-1'
-    aspect_ratio: 90%
     # Darksky
   - type: custom:weather-card
     entity: weather.dark_sky
     icons: "/local/lovelace/cards/weather/icons/"
-  # Treintijden
-  - type: entities
-    title: Treintijden
-    show_header_toggle: false
-    entities:
-      - sensor.alkmaar_leiden
-      - sensor.leiden_alkmaar
-      - type: divider
-      - sensor.schiphol_airport_leiden
-      - sensor.leiden_schiphol_airport
-      - type: divider
-      - sensor.alkmaar_amsterdam_sloterdijk
-      - sensor.amsterdam_sloterdijk_alkmaar
+  # Public transport
+  # Train
+  - type: vertical-stack
+    cards:
+      - type: entities
+        title: Treintijden
+        show_header_toggle: false
+        entities:
+          - sensor.alkmaar_leiden
+          - sensor.leiden_alkmaar
+          - type: divider
+          - sensor.schiphol_airport_leiden
+          - sensor.leiden_schiphol_airport
+      # Bus
+      - type: custom:auto-entities
+        card:
+          type: glance
+          title: Bushalte kanaalkade -> station
+          columns: 5
+          show_header_toggle: false
+          show_name: false
+        filter:
+          include:
+            - entity_id: sensor.bushalte_kanaalkade_1*
+          exclude:
+            - state: 'unknown'
   # DSMR
   # Daily
   - type: horizontal-stack
@@ -91,9 +99,9 @@ cards:
       - type: gauge
         entity: sensor.power_consumption
         max: 3
-      - type: gauge
-        entity: sensor.hourly_gas_consumption
-        max: 1
+      #- type: gauge
+      #  entity: sensor.hourly_gas_consumption
+      #  max: 1
 
   # Filter on lights
   - type: entity-filter
@@ -108,23 +116,3 @@ cards:
     state_filter:
       - "on"
     show_empty: false
-
-  - card:
-      columns: 5
-      entities:
-        - entity: sensor.bushalte_kanaalkade_1
-          icon: mdi:bus
-        - entity: sensor.bushalte_kanaalkade_1_future_1
-          icon: mdi:x
-        - entity: sensor.bushalte_kanaalkade_1_future_2
-          icon: mdi:x
-        - entity: sensor.bushalte_kanaalkade_1_future_3
-          icon: mdi:x
-        - entity: sensor.bushalte_kanaalkade_1_future_4
-          icon: mdi:x
-      show_header_toggle: false
-      show_name: false
-      title: Bushalte kanaalkade -> station
-      type: glance
-    cards: null
-    type: custom:card-modder

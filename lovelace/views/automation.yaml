@@ -6,7 +6,7 @@ title: Automatisering
 path: automations
 cards:
   # Notify
-  - type: custom:monster-card
+  - type: custom:auto-entities
     card:
       type: entities
       title: Notify Automations
@@ -18,7 +18,7 @@ cards:
         - entity_id: automation.notify_fibaro*
 
   # Telegram
-  - type: custom:monster-card
+  - type: custom:auto-entities
     card:
       type: entities
       title: Telegram Automations
@@ -28,7 +28,7 @@ cards:
         - entity_id: automation.telegram*
 
   # System
-  - type: custom:monster-card
+  - type: custom:auto-entities
     card:
       type: entities
       title: System Automations
@@ -38,7 +38,7 @@ cards:
         - entity_id: automation.system*
 
   # House
-  - type: custom:monster-card
+  - type: custom:auto-entities
     card:
       type: entities
       title: House Automations
@@ -48,7 +48,7 @@ cards:
         - entity_id: automation.house*
 
   # People
-  - type: custom:monster-card
+  - type: custom:auto-entities
     card:
       type: entities
       title: People Automations

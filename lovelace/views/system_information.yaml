@@ -5,230 +5,166 @@ title: Systeeminformatie
 icon: mdi:server
 path: system
 cards:
-  - type: custom:vertical-stack-in-card
-    title: Hassio Server
-    cards:
-      - type: horizontal-stack
-        cards:
-          - type: vertical-stack
-            cards:
-              - type: custom:card-modder
-                card:
-                  type: picture
-                  image: /local/images/hassio.jpg
-                style:
-                  border-radius: 5px
-
-          - type: vertical-stack
-            cards:
-              - type: custom:bar-card
-                title_position: inside
-                entity: sensor.ha_installed_version
-                title: Hassio Versie
-                align: center
-                padding: 5px
-                max: 60
-                card_style:
-                  border-radius: 5px
-
-              - type: custom:bar-card
-                title_position: inside
-                entity: sensor.ha_restart_time
-                title: Restart Time
-                align: center
-                padding: 5px
-                max: 400
-                card_style:
-                  border-radius: 5px
-
-              - type: custom:bar-card
-                title_position: inside
-                entity: sensor.potential_breaking_changes
-                title: Breaking Changes
-                align: center
-                padding: 5px
-                max: 400
-                card_style:
-                  border-radius: 5px
-
-      - type: custom:bar-card
-        align: split
-        show_icon: true
-        padding: 4px
-        columns: 2
-        card_style:
-          border-radius: 5px
-        entities:
-          - entity: sensor.disk_use_percent
-            title: Opslag
-          - entity: sensor.memory_use_percent
-            title: RAM
-
-      - type: custom:bar-card
-        align: split
-        show_icon: true
-        padding: 4px
-        columns: 2
-        card_style:
-          border-radius: 5px
-        entities:
-          - entity: sensor.processor_use
-            title: CPU
-          - entity: sensor.cpu_temperature
-            title: Temp
-            icon: mdi:thermometer
-
-      - type: custom:bar-card
-        align: split
-        show_icon: true
-        padding: 4px
-        columns: 2
-        card_style:
-          border-radius: 5px
-        entities:
-          - entity: sensor.swap_use_percent
-            title: SWAP
-          - entity: sensor.db_size
-            title: DB
-            max: 3000
-
-      - type: custom:bar-card
-        align: split
-        show_icon: true
-        padding: 4px
-        columns: 2
-        card_style:
-          border-radius: 5px
-        entities:
-          - entity: sensor.home_assistant_log
-            title: Log size
-          - entity: sensor.time_online
-            title: Uptime
-
-      - type: custom:bar-card
-        title_position: inside
-        entity: sensor.disk_free
-        max: 500
-        align: center
-        direction: right-reverse
-        padding: 5px
-        card_style:
-          border-radius: 5px
-
-  # Toont de batterij percentages van de Z-wave devices
-  - type: glance
-    title: Batterij Percentages
-    entities:
-      - sensor.zwave_battery_door_sensor_hal_begane_grond
-      - sensor.zwave_battery_motion_sensor_hal_begane_grond
-      - sensor.zwave_battery_smoke_sensor_begane_grond
-      - sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
-      - sensor.xiaomi_cube_1_battery
-      - sensor.xiaomi_sensor_1_battery
-      - sensor.xiaomi_sensor_2_battery
-      - sensor.xiaomi_window_sensor_1_battery
-    columns: 2
-
-  # Show alerts that can appear
-  - type: entities
-    title: Alerts
-    show_header_toggle: false
-    entities:
-      - binary_sensor.cpu_high
-      - binary_sensor.cpu_hot
-
-  # Toont de NFC Tags
-  - type: glance
-    entities:
-      - name: NFC Tag 1
-        icon: mdi:nfc
-        entity: binary_sensor.nfc_tag_1
-      - name: NFC Tag 2
-        icon: mdi:nfc
-        entity: binary_sensor.nfc_tag_2
-    columns: 2
-
+  # Hassio host server info
   - type: vertical-stack
     cards:
-      - type: horizontal-stack
+      - type: custom:vertical-stack-in-card
+        title: Hassio Server
         cards:
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.speedtest_ping
-            height: 20
-            line_width: 2
-            font_size: 70
-            hours_to_show: 168
-            points_per_hour: 0.3
-            show:
-              # extrema: true
-              fill: true
-              graph: bar
+          - type: horizontal-stack
+            cards:
+              - type: vertical-stack
+                cards:
+                  - type: picture
+                    image: /local/images/hassio.jpg
+                    style: |
+                      ha-card {
+                        margin: 10px
+                      }
 
-      - type: horizontal-stack
+              - type: vertical-stack
+                cards:
+                  - type: custom:bar-card
+                    title_position: inside
+                    entity: sensor.ha_installed_version
+                    title: Hassio Versie
+                    align: center
+                    padding: 5px
+                    max: 60
+                    card_style:
+                      border-radius: 5px
+
+                  - type: custom:bar-card
+                    title_position: inside
+                    entity: sensor.ha_restart_time
+                    title: Restart Time
+                    align: center
+                    padding: 5px
+                    max: 400
+                    card_style:
+                      border-radius: 5px
+
+                  - type: custom:bar-card
+                    title_position: inside
+                    entity: sensor.potential_breaking_changes
+                    title: Breaking Changes
+                    align: center
+                    padding: 5px
+                    max: 400
+                    card_style:
+                      border-radius: 5px
+
+          - type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 2
+            card_style:
+              border-radius: 5px
+            entities:
+              - entity: sensor.disk_use_percent
+                title: Opslag
+              - entity: sensor.memory_use_percent
+                title: RAM
+
+          - type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 2
+            card_style:
+              border-radius: 5px
+            entities:
+              - entity: sensor.processor_use
+                title: CPU
+              - entity: sensor.cpu_temperature
+                title: Temp
+                icon: mdi:thermometer
+
+          - type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 2
+            card_style:
+              border-radius: 5px
+            entities:
+              - entity: sensor.swap_use_percent
+                title: SWAP
+              - entity: sensor.db_size
+                title: DB
+                max: 3000
+
+          - type: custom:bar-card
+            align: split
+            show_icon: true
+            padding: 4px
+            columns: 2
+            card_style:
+              border-radius: 5px
+            entities:
+              - entity: sensor.home_assistant_log
+                title: Log size
+              - entity: sensor.ha_uptime
+                title: Uptime
+
+          - type: custom:bar-card
+            title_position: inside
+            entity: sensor.disk_free
+            max: 500
+            align: center
+            direction: right-reverse
+            padding: 5px
+            card_style:
+              border-radius: 5px
+      # Toont de batterij percentages van de Z-wave devices
+      - type: custom:vertical-stack-in-card
+        title: Batterij Status
         cards:
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.speedtest_download
-            height: 50
-            line_width: 2
-            font_size: 70
-            hours_to_show: 168
-            points_per_hour: 0.3
-            show:
-              extrema: true
-              fill: true
-            color_thresholds:
-              - value: 150
-                color: "#bf4040"
+          - type: custom:auto-entities
+            card:
+              type: custom:bar-card
+              attribute: battery_level
+              unit_of_measurement: "%"
+              severity:
+                - value: 50
+                  color: '#bf4040'
+                - value: 75
+                  color: '#bf9540'
+                - value: 100
+                  color: '#40bf40'
+              title_position: inside
+              padding: 2px
+              columns: 2
+            filter:
+              include:
+                - attributes:
+                    battery_level: "<=100"
+              exclude:
+                - entity_id: "*_humidity"
+                - entity_id: "*_pressure"
+                # - entity_id: "*_battery"
+                - domain: device_tracker
+      - type: glance
+        entities:
+          - name: Foscam
+            entity: binary_sensor.foscam
+          - name: Slaapkamer
+            entity: binary_sensor.google_mini_slaapkamer
+          - name: Woonkamer
+            entity: binary_sensor.google_mini_woonkamer
+          - name: HP Printer
+            entity: binary_sensor.hp_printer
+          - name: Synology NAS
+            entity: binary_sensor.synology_nas
+          - name: Router
+            entity: binary_sensor.tp_link_router
+          - name: Switch
+            entity: binary_sensor.tp_link_switch
+        columns: 4
+        show_state: false
 
-          - type: custom:mini-graph-card
-            entities:
-              - sensor.speedtest_upload
-            height: 50
-            line_width: 2
-            font_size: 70
-            hours_to_show: 168
-            points_per_hour: 0.3
-            show:
-              extrema: true
-              fill: true
-            color_thresholds:
-              - value: 13
-                color: "#bf4040"
-
-  - type: glance
-    entities:
-      - name: Foscam
-        entity: binary_sensor.foscam
-      - name: Slaapkamer
-        entity: binary_sensor.google_mini_slaapkamer
-      - name: Woonkamer
-        entity: binary_sensor.google_mini_woonkamer
-      - name: HP Printer
-        entity: binary_sensor.hp_printer
-      - name: Synology NAS
-        entity: binary_sensor.synology_nas
-      - name: Router
-        entity: binary_sensor.tp_link_router
-      - name: Switch
-        entity: binary_sensor.tp_link_switch
-    columns: 4
-    show_state: false
-
-  # Toont informatie over de Zwave Nodes
-  - type: entities
-    title: Zwave Nodes
-    show_header_toggle: false
-    entities:
-      - zwave.aeotec_zw090_zstick_gen5_eu
-      - zwave.aeotec_zw117_range_extender_6
-      - zwave.fibaro_door_sensor_hal_begane_grond
-      - zwave.fibaro_motion_sensor_hal_begane_grond
-      - zwave.fibaro_smoke_sensor_gang_begane_grond
-      - zwave.fibaro_smoke_sensor_slaapkamer_zolder
-
-  # Toont informatie van home assistant
+  # Show information about Home Assistant
   - type: entities
     title: Home Assistant Info
     show_header_toggle: false
@@ -236,8 +172,42 @@ cards:
       - sensor.last_boot
       - binary_sensor.home_assistant_home
       - type: divider
-      - sensor.hassio_beta_versie
-      - sensor.hassio_stable_versie
+      # Hassio
+      - entity: sensor.hassio_stable_versie
+        name: Hassio version
+        icon: mdi:home-assistant
+        type: custom:multiple-entity-row
+        hide_state: true
+        primary:
+          entity: sensor.hassio_beta_versie
+          name: Beta
+        secondary:
+          entity: sensor.hassio_stable_versie
+          name: Stable
+      # HassOS
+      - entity: sensor.hassos_version_stable
+        name: HassOS version
+        icon: mdi:server-security
+        type: custom:multiple-entity-row
+        hide_state: true
+        primary:
+          entity: sensor.hassos_version_beta
+          name: Beta
+        secondary:
+          entity: sensor.hassos_version_stable
+          name: Stable
+      # Supervisor
+      - entity: sensor.supervisor_version_stable
+        name: Supervisor version
+        icon: mdi:account-supervisor-circle
+        type: custom:multiple-entity-row
+        hide_state: true
+        primary:
+          entity: sensor.supervisor_version_beta
+          name: Beta
+        secondary:
+          entity: sensor.supervisor_version_stable
+          name: Stable
       - sensor.python_version
       - type: divider
       - sensor.automation_on
@@ -405,45 +375,140 @@ cards:
                   - value: 70
                     color: '#bf9540'
 
-  # Toont onderhoud dashboard
-  - type: entities
-    title: Onderhoud
-    show_header_toggle: false
-    entities:
-      - input_boolean.maintenance_mode
-      - switch.debug
-      - script.quick_restart
-      - script.quick_reboot
-      - type: divider
-      # Github
-      - sensor.github_config_stars
-      - sensor.github_commit_message
-      - type: divider
-      # Gitlab CI
-      - sensor.gitlab_ci_status
-      - type: divider
-      - type: weblink
-        name: Github - Home Assistant config
-        url: https://github.com/klaasnicolaas/Smarthome-homeassistant-config
-      - type: weblink
-        name: Router - TP Link
-        url: !secret weblink_router
+  # Show maintenance dashboard
+  - type: vertical-stack
+    cards:
+      - type: custom:vertical-stack-in-card
+        cards:
+          - type: entities
+            title: Onderhoud
+            show_header_toggle: false
+            entities:
+              - input_boolean.maintenance_mode
+              - type: divider
+          # Buttons
+          - type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                entity: script.hassio_reboot
+                color_type: icon
+                name: Hassio
+              - type: custom:button-card
+                entity: script.host_reboot
+                color_type: card
+                name: Host
+                lock: true
+              - type: custom:button-card
+                entity: script.host_shutdown
+                color_type: card
+                lock: true
+                name: Host Shutdown
+              - type: custom:button-card
+                entity: script.backup_now
+                color_type: icon
+                name: Snapshot
+          - type: entities
+            show_header_toggle: false
+            entities:
+              - type: divider
+              # Gitlab CI
+              - sensor.gitlab_ci_status
+              - type: divider
+              # Github
+              - sensor.github_config_stars
+              - sensor.github_commit_message
+              - type: divider
+              - type: weblink
+                name: Github - Home Assistant config
+                url: https://github.com/klaasnicolaas/Smarthome-homeassistant-config
+              - type: weblink
+                name: Router - TP Link
+                url: !secret weblink_router
+      # Show alerts that can appear
+      - type: entities
+        title: Alerts
+        show_header_toggle: false
+        entities:
+          - binary_sensor.cpu_high
+          - binary_sensor.cpu_hot
 
-  # Toont informatie over de netwerk verbinding
-  - type: entities
-    title: Netwerk
-    show_header_toggle: false
-    entities:
-      - sensor.myip
-      - sensor.ssl_certificate_expiry
+  # Show information about the internet connection
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.speedtest_ping
+            height: 20
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            points_per_hour: 0.3
+            show:
+              # extrema: true
+              fill: true
+              graph: bar
 
-  # Toont informatie over de Google Homes
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.speedtest_download
+            height: 50
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            points_per_hour: 0.3
+            show:
+              extrema: true
+              fill: true
+            color_thresholds:
+              - value: 150
+                color: "#bf4040"
+
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.speedtest_upload
+            height: 50
+            line_width: 2
+            font_size: 70
+            hours_to_show: 168
+            points_per_hour: 0.3
+            show:
+              extrema: true
+              fill: true
+            color_thresholds:
+              - value: 13
+                color: "#bf4040"
+
+      # External IP and SSL certificate
+      - type: entities
+        title: Netwerk
+        show_header_toggle: false
+        entities:
+          - sensor.myip
+          - sensor.ssl_certificate_expiry
+
+  # Toont de NFC Tags
+  - type: glance
+    entities:
+      - name: NFC Tag 1
+        icon: mdi:nfc
+        entity: binary_sensor.nfc_tag_1
+      - name: NFC Tag 2
+        icon: mdi:nfc
+        entity: binary_sensor.nfc_tag_2
+    columns: 2
+
+  # Toont informatie over de Zwave Nodes
   - type: entities
-    title: Google Home
+    title: Zwave Nodes
     show_header_toggle: false
     entities:
-      - sensor.slaapkamer_zolder_mini_alarm
-      - sensor.slaapkamer_zolder_mini_timer
-      - type: divider
-      - sensor.woonkamer_mini_alarm
-      - sensor.woonkamer_mini_timer
+      - zwave.aeotec_zw090_zstick_gen5_eu
+      - zwave.aeotec_zw117_range_extender_6
+      - zwave.fibaro_door_sensor_hal_begane_grond
+      - zwave.fibaro_motion_sensor_hal_begane_grond
+      - zwave.fibaro_smoke_sensor_gang_begane_grond
+      - zwave.fibaro_smoke_sensor_slaapkamer_zolder
