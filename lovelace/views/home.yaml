@@ -44,7 +44,7 @@ cards:
             type: state-label
             entity: sensor.grietje_status
         type: picture-elements
-    # Darksky
+  # Darksky
   - type: custom:weather-card
     entity: weather.dark_sky
     icons: "/local/lovelace/cards/weather/icons/"
@@ -99,9 +99,9 @@ cards:
       - type: gauge
         entity: sensor.power_consumption
         max: 3
-      #- type: gauge
-      #  entity: sensor.hourly_gas_consumption
-      #  max: 1
+    # - type: gauge
+    #  entity: sensor.hourly_gas_consumption
+    #  max: 1
 
   # Filter on lights
   - type: entity-filter
