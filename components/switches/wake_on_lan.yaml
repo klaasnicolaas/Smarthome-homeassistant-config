@@ -5,6 +5,6 @@
 #
 
 platform: wake_on_lan
-mac_address: !secret mac_addres_pc_klaas
+mac: !secret mac_addres_pc_klaas
 name: Computer Klaas
 host: !secret host_ip_pc_klaas
