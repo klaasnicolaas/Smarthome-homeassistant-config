@@ -49,9 +49,9 @@ Every Sunday at 3:00 am an [automation makes a snapshot][backup-github] of my in
 
 Nothing is better than being able to control your own smart home from your phone or tablet.
 
-- [HomeAssist](<https://play.google.com/store/apps/details?id=com.axzae.homeassistant&hl=nl>) (for android)
-- [Home Assistant](<https://www.home-assistant.io/docs/ecosystem/ios/>) (for iOS)
-- [Home Assistant](<https://www.home-assistant.io/docs/frontend/mobile/>) (As web app)
+- [Home Assistant - Android](<https://play.google.com/store/apps/details?id=io.homeassistant.companion.android>) (for android)
+- [Home Assistant - iOS](<https://www.home-assistant.io/docs/ecosystem/ios/>) (for iOS)
+- [Home Assistant - Web app](<https://www.home-assistant.io/docs/frontend/mobile/>) (As web app)
 
 ---
 
