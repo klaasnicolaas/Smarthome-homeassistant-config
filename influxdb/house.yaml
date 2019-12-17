@@ -1,0 +1,23 @@
+---
+# These are the house wide entities that I want
+# to store into InfluxDB.
+#
+# I like to specify (whitelist) each entity to store,
+# since that keeps my InfluxDB clean and small.
+#
+- sensor.power_consumption
+- sensor.gas_consumption
+- sensor.power_consumption_normal
+- sensor.power_consumption_low
+# Temperature
+- sensor.buienradar_ground_temperature
+- sensor.buienradar_temperature
+- sensor.buiten_temperature
+- sensor.fibaro_door_sensor_hal_begane_grond_temperature
+- sensor.fibaro_motion_sensor_hal_begane_grond_temperature
+- sensor.fibaro_smoke_sensor_gang_begane_grond_temperature
+- sensor.fibaro_smoke_sensor_slaapkamer_zolder_temperature
+- sensor.gang_temperature
+- sensor.hal_temperature
+- sensor.slaapkamer_temperature
+- sensor.voordeur_temperature

@@ -25,5 +25,4 @@ influxdb:
   # I like to specify (whitelist) each thing I'd like to put
   # into InfluxDB, to keep the database as clean as possible.
   include:
-    domains:
-      - sensor
+    entities: !include_dir_merge_list ../influxdb
