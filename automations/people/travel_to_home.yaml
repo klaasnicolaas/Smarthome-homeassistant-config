@@ -3,7 +3,7 @@
 - alias: '[People] - Travel from school to home'
   trigger:
     - platform: zone
-      entity_id: device_tracker.2779d988391c7ece
+      entity_id: device_tracker.ba52ad3a0d208bdc
       zone: zone.hogeschool_leiden
       event: leave
   condition:
@@ -15,7 +15,7 @@
         - wed
         - thu
     - condition: zone
-      entity_id: device_tracker.2779d988391c7ece
+      entity_id: device_tracker.ba52ad3a0d208bdc
       zone: zone.station_leiden
   action:
     - service: notify.telegram_klaas

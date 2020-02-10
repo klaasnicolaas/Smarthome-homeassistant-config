@@ -9,5 +9,5 @@ proximity:
       - zone.hogeschool_leiden
     devices:
       # GPSLogger
-      - device_tracker.2779d988391c7ece
+      - device_tracker.ba52ad3a0d208bdc
     tolerance: 50

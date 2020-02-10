@@ -19,7 +19,7 @@
     #  to_state: 'home'
     ##### GPS #####
     # GPSLogger
-    - entity_id: device_tracker.2779d988391c7ece
+    - entity_id: device_tracker.ba52ad3a0d208bdc
       prob_given_true: 0.9
       prob_given_false: 0.1
       platform: 'state'
