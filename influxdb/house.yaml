@@ -5,10 +5,17 @@
 # I like to specify (whitelist) each entity to store,
 # since that keeps my InfluxDB clean and small.
 #
+
+# Energy/gas consumption
 - sensor.power_consumption
 - sensor.gas_consumption
+- sensor.power_consumption
 - sensor.power_consumption_normal
 - sensor.power_consumption_low
+- sensor.voltage_phase_l1
+- sensor.power_consumption_phase_l1
+- sensor.daily_energy_peak
+
 # Temperature
 - sensor.buienradar_ground_temperature
 - sensor.buienradar_temperature
@@ -21,3 +28,24 @@
 - sensor.hal_temperature
 - sensor.slaapkamer_temperature
 - sensor.voordeur_temperature
+
+# Binary sensors
+- binary_sensor.fibaro_motion_sensor_hal_begane_grond_sensor
+- binary_sensor.fibaro_door_sensor_hal_begane_grond_sensor
+- binary_sensor.sensor_beweging_hal_begane_grond
+- binary_sensor.fibaro_smoke_sensor_slaapkamer_zolder_sensor
+- binary_sensor.fibaro_smoke_sensor_gang_begane_grond_sensor
+- binary_sensor.sensor_voordeur
+
+# Lume
+- sensor.fibaro_motion_sensor_hal_begane_grond_luminance
+
+# Switch
+- switch.computer_klaas
+- switch.lamp_slaapkamer_zolder
+- switch.led_bureau_zolder
+- switch.led_slaapkamer_zolder
+- switch.deurbel
+
+# Other sensors
+- sensor.buienradar_precipitation_forecast_average

@@ -1,0 +1,42 @@
+---
+# These are the system wide entities that I want
+# to store into InfluxDB.
+#
+# I like to specify (whitelist) each entity to store,
+# since that keeps my InfluxDB clean and small.
+#
+
+# Network devices
+- binary_sensor.foscam
+- binary_sensor.google_mini_slaapkamer
+- binary_sensor.google_mini_woonkamer
+- binary_sensor.synology_nas
+- binary_sensor.tp_link_router
+- binary_sensor.hp_printer
+
+# Binary template system sensors
+- binary_sensor.klaas_thuis
+- binary_sensor.grietje_thuis
+- binary_sensor.cpu_high
+- binary_sensor.cpu_hot
+- binary_sensor.nfc_tag_1
+- binary_sensor.nfc_tag_2
+
+# Device trackers
+- device_tracker.19216802
+- device_tracker.19216803
+- device_tracker.ba52ad3a0d208bdc
+
+# Alarm
+- alarm_control_panel.alarmsysteem
+
+# Input Boolean
+- input_boolean.maintenance_mode
+
+# Sensors
+- sensor.ha_installed_version
+- sensor.speedtest_ping
+- sensor.db_size
+- sensor.battery_phone_state_klaas
+- sensor.klaas_status
+- sensor.grietje_status
