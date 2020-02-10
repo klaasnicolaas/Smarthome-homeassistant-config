@@ -5,6 +5,7 @@
 - platform: template
   sensors:
     sensor_count:
+      entity_id: sensor.time
       friendly_name: 'Number of Sensors'
       value_template: >
         {%- set domains = ['sensor'] -%}
@@ -17,6 +18,7 @@
         {%- endfor -%}
 
     automation_count:
+      entity_id: sensor.time
       friendly_name: 'Number of Automations'
       value_template: >
         {%- set domains = ['automation'] -%}
@@ -29,6 +31,7 @@
         {%- endfor -%}
 
     script_count:
+      entity_id: sensor.time
       friendly_name: 'Number of Scripts'
       value_template: >
         {%- set domains = ['script'] -%}
@@ -41,6 +44,7 @@
         {%- endfor -%}
 
     switch_count:
+      entity_id: sensor.time
       friendly_name: 'Number of Switches'
       value_template: >
         {%- set domains = ['switch'] -%}
@@ -53,6 +57,7 @@
         {%- endfor -%}
 
     binary_sensor_count:
+      entity_id: sensor.time
       friendly_name: 'Number of Binary Sensors'
       value_template: >
         {%- set domains = ['binary_sensor'] -%}
@@ -65,6 +70,7 @@
         {%- endfor -%}
 
     lights_count:
+      entity_id: sensor.time
       friendly_name: 'Number of Lights'
       value_template: >
         {%- set domains = ['light'] -%}
@@ -77,6 +83,7 @@
         {%- endfor -%}
 
     tracker_count:
+      entity_id: sensor.time
       friendly_name: 'Number of Devices'
       value_template: >
         {%- set domains = ['device_tracker'] -%}
@@ -89,6 +96,7 @@
         {%- endfor -%}
 
     camera_count:
+      entity_id: sensor.time
       friendly_name: 'Number of Devices'
       value_template: >
         {%- set domains = ['camera'] -%}
@@ -101,6 +109,7 @@
         {%- endfor -%}
 
     media_player_count:
+      entity_id: sensor.time
       friendly_name: 'Number of Devices'
       value_template: >
         {%- set domains = ['media_player'] -%}
