@@ -36,39 +36,6 @@
       unit_of_measurement: "%"
       device_class: battery
 
-# Zigbee - Xiaomi
-- platform: template
-  sensors:
-    xiaomi_cube_1_battery:
-      value_template: '{{ state_attr("binary_sensor.cube_xiaomi_1","battery_level") }}'
-      friendly_name: Xiaomi cube
-      unit_of_measurement: "%"
-      device_class: battery
-
-- platform: template
-  sensors:
-    xiaomi_window_sensor_1_battery:
-      value_template: '{{ state_attr("binary_sensor.door_window_sensor_xiaomi_1","battery_level") }}'
-      friendly_name: Xiaomi window sensor | slaapkamer zolder
-      unit_of_measurement: "%"
-      device_class: battery
-
-- platform: template
-  sensors:
-    xiaomi_sensor_1_battery:
-      value_template: '{{ state_attr("sensor.temperature_xiaomi_sensor_1","battery_level") }}'
-      friendly_name: Xiaomi sensor | badkamer
-      unit_of_measurement: "%"
-      device_class: battery
-
-- platform: template
-  sensors:
-    xiaomi_sensor_2_battery:
-      value_template: '{{ state_attr("sensor.temperature_xiaomi_sensor_2","battery_level") }}'
-      friendly_name: Xiaomi sensor | woonkamer
-      unit_of_measurement: "%"
-      device_class: battery
-
 # Device Trackers
 - platform: template
   sensors:

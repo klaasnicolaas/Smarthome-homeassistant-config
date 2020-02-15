@@ -46,10 +46,10 @@ cards:
         color: "#e29b52"
       - value: 15
         color: "#5294e2"
-  # Woonkamer
+  # Bathroom
   - type: custom:mini-graph-card
     entities:
-      - entity: sensor.temperature_xiaomi_sensor_1
+      - entity: sensor.bathroom_temperature
         name: Temperatuur
     name: Badkamer | Eerste verdieping
     hours_to_show: 48
@@ -68,10 +68,10 @@ cards:
         color: "#e29b52"
       - value: 10
         color: "#5294e2"
-  # Eerste verdieping
+  # Livingroom
   - type: custom:mini-graph-card
     entities:
-      - entity: sensor.temperature_xiaomi_sensor_2
+      - entity: sensor.livingroom_temperature
         name: Temperatuur
     name: Woonkamer | Begane grond
     hours_to_show: 48
@@ -93,9 +93,9 @@ cards:
   # Vochtigheid in huis
   - type: custom:mini-graph-card
     entities:
-      - entity: sensor.humidity_xiaomi_sensor_1
+      - entity: sensor.bathroom_humidity
         name: Badkamer
-      - entity: sensor.humidity_xiaomi_sensor_2
+      - entity: sensor.livingroom_humidity
         name: Woonkamer
     name: Vochtigheid in huis
     hours_to_show: 48

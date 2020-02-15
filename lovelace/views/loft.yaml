@@ -8,7 +8,7 @@ cards:
   # Toont lampen op de vliering
   - type: glance
     entities:
-      - entity: binary_sensor.door_window_sensor_xiaomi_1
+      - entity: binary_sensor.sleepingroom_attic_window
         name: Raam slaapkamer
       - entity: scene.slaapkamer_zolder_on
         name: Slaapkamer Aan
