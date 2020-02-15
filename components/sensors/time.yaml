@@ -6,3 +6,8 @@
 - platform: time_date
   display_options:
     - 'time'
+
+# Date
+- platform: time_date
+  display_options:
+    - 'date'
