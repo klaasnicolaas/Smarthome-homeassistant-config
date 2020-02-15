@@ -41,12 +41,12 @@
   sensors:
     # Entity that shows the phone battery percentage
     battery_phone_klaas:
-      value_template: '{{ state_attr("device_tracker.ba52ad3a0d208bdc","battery_level") | round(0)}}'
+      value_template: '{{ state_attr("device_tracker.gps_logger_klaas","battery_level") | round(0)}}'
       friendly_name: Telefoon batterij | Klaas
       unit_of_measurement: '%'
       device_class: battery
       icon_template: >-
-        {% set battery_level = state_attr("device_tracker.ba52ad3a0d208bdc","battery_level")|int('unknown') %}
+        {% set battery_level = state_attr("device_tracker.gps_logger_klaas","battery_level")|int('unknown') %}
         {% set battery_round = (battery_level|int / 10)|int * 10 %}
         {% set charging = is_state("binary_sensor.phone_battery_increase_klaas","on") %}
         {% set discharging = is_state("binary_sensor.phone_battery_decrease_klaas","on") %}
@@ -74,7 +74,7 @@
     battery_phone_state_klaas:
       friendly_name: Telefoon batterij status | Klaas
       value_template: >-
-        {% set battery_level = state_attr("device_tracker.ba52ad3a0d208bdc","battery_level")|int('unknown') %}
+        {% set battery_level = state_attr("device_tracker.gps_logger_klaas","battery_level")|int('unknown') %}
         {% set battery_round = (battery_level|int / 10)|int * 10 %}
         {% set charging = is_state("binary_sensor.phone_battery_increase_klaas","on") %}
         {% set discharging = is_state("binary_sensor.phone_battery_decrease_klaas","on") %}
