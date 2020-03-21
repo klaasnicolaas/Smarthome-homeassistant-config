@@ -1,6 +1,5 @@
 ---
 - alias: '[Telegram] - Bot that reply pong to ping'
-  hide_entity: true
   trigger:
     platform: event
     event_type: telegram_command

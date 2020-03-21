@@ -13,7 +13,6 @@
       keyboard: ["/status", "/zwave-batterij"]
 
 - alias: '[Telegram] - Reply with System Status'
-  # hide_entity: true
   trigger:
     platform: event
     event_type: telegram_command

@@ -4,7 +4,6 @@
 ##########################################################
 ## Fibaro smoke sensor - gang - begane grond
 - alias: '[Notify] - Fibaro Sensor - gang - begane grond SMOKE DETECTION'
-  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.fibaro_smoke_sensor_gang_begane_grond_smoke
@@ -20,7 +19,6 @@
 
 ## Fibaro smoke sensor - slaapkamer - zolder
 - alias: '[Notify] - Fibaro Sensor - slaapkamer - zolder SMOKE DETECTION'
-  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.fibaro_smoke_sensor_slaapkamer_zolder_smoke
@@ -39,7 +37,6 @@
 ############################################################
 ## Fibaro smoke sensor - gang - begane grond
 - alias: '[Notify] - Fibaro Sensor - gang - begane grond NO SMOKE'
-  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.fibaro_smoke_sensor_gang_begane_grond_smoke
@@ -52,7 +49,6 @@
 
 ## Fibaro smoke sensor - slaapkamer - zolder
 - alias: '[Notify] - Fibaro Sensor - slaapkamer - zolder NO SMOKE'
-  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.fibaro_smoke_sensor_slaapkamer_zolder_smoke
@@ -68,7 +64,6 @@
 ##########################################################
 ## Fibaro Smoke (heat) sensor - gang - begane grond
 - alias: '[Notify] - Fibaro Sensor - gang - begane grond HEAT DETECTION'
-  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.fibaro_smoke_sensor_gang_begane_grond_heat_2
@@ -84,7 +79,6 @@
 
 ## Fibaro Smoke (heat) sensor - slaapkamer - zolder
 - alias: '[Notify] - Fibaro Sensor - slaapkamer - zolder HEAT DETECTION'
-  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.fibaro_smoke_sensor_slaapkamer_zolder_heat_2
@@ -103,7 +97,6 @@
 ###########################################################
 ## Fibaro Smoke (heat) sensor - gang - begane grond
 - alias: '[Notify] - Fibaro Sensor - gang - begane grond NO HEAT'
-  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.fibaro_smoke_sensor_gang_begane_grond_heat_2
@@ -116,7 +109,6 @@
 
 ## Fibaro Smoke (heat) sensor - slaapkamer - zolder
 - alias: '[Notify] - Fibaro Sensor - slaapkamer - zolder NO HEAT'
-  hide_entity: true
   trigger:
     platform: state
     entity_id: sensor.fibaro_smoke_sensor_slaapkamer_zolder_heat_2
