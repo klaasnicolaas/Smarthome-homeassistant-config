@@ -120,63 +120,33 @@ homeassistant:
       friendly_name: Laatste (re)boot Intel Nuc
 
     ################################################
-    ## Group
-    ################################################
-
-    group.host_view:
-      <<: *customize
-      friendly_name: Systeeminformatie
-      icon: mdi:server
-
-    group.host_performance:
-      <<: *customize
-      friendly_name: Prestaties
-      icon: mdi:memory
-
-    group.host_storage:
-      <<: *customize
-      friendly_name: Opslag
-      icon: mdi:harddisk
-
-    group.host_network:
-      <<: *customize
-      friendly_name: Netwerk
-      icon: mdi:network
-
-    ################################################
     ## Script
     ################################################
 
-    script.quick_reboot:
+    script.host_reboot:
       <<: *customize
-      icon: mdi:server-network
+      icon: mdi:rotate-3d-variant
       can_cancel: false
-      friendly_name: Reboot Intel Nuc
+      friendly_name: Reboot Intel NUC
 
-    script.quick_restart:
+    script.hassio_reboot:
       <<: *customize
-      icon: mdi:home-assistant
+      icon: mdi:rotate-3d-variant
       can_cancel: false
       friendly_name: Restart Home Assistant
 
-    ################################################
-    ## Switch
-    ################################################
-
-    switch.debug:
+    script.host_shutdown:
       <<: *customize
-      icon: mdi:bug
+      icon: mdi:power
+      can_cancel: false
+      friendly_name: Shutdown Intel NUC
 
-################################################
-## Weblink
-################################################
+    script.backup_now:
+      <<: *customize
+      icon: mdi:backup-restore
+      can_cancel: false
+      friendly_name: Make Snapshot
 
-weblink:
-  entities:
-    - name: Github
-      url: https://github.com/klaasnicolaas/Smarthome-homeassistant-config
-    - name: Router
-      url: !secret weblink_router
 ################################################
 ## Binary Sensor
 ################################################
@@ -190,7 +160,7 @@ binary_sensor:
   - platform: template
     sensors:
       cpu_hot:
-        value_template: '{{ states.sensor.cpu_temperature.state | float > 65 }}'
+        value_template: '{{ states.sensor.cpu_temperature.state | float > 70 }}'
         friendly_name: 'CPU heet'
   ##### Uptime robot
   - platform: uptimerobot
@@ -267,79 +237,6 @@ input_boolean:
     icon: mdi:auto-fix
 
 ################################################
-## Group
-################################################
-
-group:
-  host_view:
-    name: Host
-    view: true
-    entities:
-      - group.host_performance
-      - group.host_storage
-      - group.host_network
-      - group.host_info
-      - group.host_batterij_zwave
-      - group.host_maintenance
-  host_performance:
-    # Systeeminformatie
-    name: System Performance
-    entities:
-      - sensor.processor_use
-      - sensor.memory_use_percent
-      - sensor.cpu_temperature
-      - binary_sensor.cpu_high
-      - binary_sensor.cpu_hot
-  host_storage:
-    name: System Storage
-    entities:
-      - sensor.disk_use_percent
-      - sensor.disk_free
-      - sensor.home_assistant_v2_db
-      - sensor.home_assistant_log
-      - sensor.ozw_log_txt
-      - sensor.configuration_yaml
-  host_network:
-    name: Host Network
-    entities:
-      - sensor.speedtest_ping
-      - sensor.speedtest_download
-      - sensor.speedtest_upload
-      - sensor.myip
-      - sensor.ssl_certificate_expiry
-  host_info:
-    name: Home Assistant Info
-    entities:
-      - sensor.last_boot
-      - binary_sensor.home_assistant
-      - sensor.ha_installed_version
-      - sensor.hassio_beta_versie
-      - sensor.hassio_stable_versie
-      - sensor.python_version
-      # - updater.updater
-      - sensor.automation_on
-      - sensor.automation_all
-  host_batterij_zwave:
-    name: Batterij Percentages
-    entities:
-      - sensor.zwave_battery_door_sensor_hal_begane_grond
-      - sensor.zwave_battery_motion_sensor_hal_begane_grond
-      - sensor.zwave_battery_smoke_sensor_begane_grond
-      - sensor.zwave_battery_smoke_sensor_slaapkamer_zolder
-  host_maintenance:
-    name: Onderhoud
-    control: hidden
-    entities:
-      - input_boolean.maintenance_mode
-      - switch.debug
-      - script.quick_restart
-      - script.quick_reboot
-      # Gitlab CI
-      - sensor.gitlab_ci_status
-      - weblink.github
-      - weblink.router
-
-################################################
 ## Alert
 ################################################
 
@@ -358,7 +255,7 @@ alert:
     name: Temperatuur CPU is hoog
     entity_id: binary_sensor.cpu_hot
     state: 'on'
-    repeat: 5  # minutes
+    repeat: 120  # minutes
     can_acknowledge: true
     skip_first: false
     notifiers:
@@ -393,21 +290,34 @@ alert:
 ################################################
 
 script:
-  quick_restart:
-    alias: ' '
+  hassio_reboot:
+    alias: Hassio Reboot
     sequence:
       - service: homeassistant.turn_on
         entity_id: input_boolean.maintenance_mode
       - delay: 00:00:02
       - service: homeassistant.restart
 
-  quick_reboot:
-    alias: ' '
+  host_reboot:
+    alias: Host Reboot
     sequence:
       - service: homeassistant.turn_on
         entity_id: input_boolean.maintenance_mode
       - delay: 00:00:02
       - service: hassio.host_reboot
+
+  backup_now:
+    alias: New Snapshot
+    sequence:
+      - delay: 00:00:02
+      - service: automation.trigger
+        entity_id: automation.system_make_weekly_hassio_backup
+
+  host_shutdown:
+    alias: Host Shutdown
+    sequence:
+      - delay: 00:00:02
+      - service: hassio.host_shutdown
 
 ################################################
 ## Notify
