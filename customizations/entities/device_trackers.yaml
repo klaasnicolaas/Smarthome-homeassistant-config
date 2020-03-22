@@ -1,6 +1,0 @@
----
-# Customize device tracker entities
-#
-device_tracker.gps_logger_klaas:
-  friendly_name: Klaas - GPSLogger
-  picture: /local/klaas.jpg
