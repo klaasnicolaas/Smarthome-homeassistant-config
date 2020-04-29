@@ -43,7 +43,7 @@ If one of the links no longer works, let me know!
 ## Media
 
 |Nr.|Device|HA Documentation|On My Github|
-|:---:|:---|:---:|:---:|:---:|
+|:---:|:---|:---:|:---:|
 |1.|Google Chromecast|[Cast Docs][cast-docs]|[Cast YAML][cast-github]|
 |2.|Philips TV|[Cast Docs][cast-docs]|[Cast YAML][cast-github]|
 
@@ -62,7 +62,7 @@ If one of the links no longer works, let me know!
 ## Other Hardware
 
 |Nr.|Device|HA Documentation|On My Github|
-|:---:|:---|:---:|:---:|:---:|
+|:---:|:---|:---:|:---:|
 |1.| Water fountain in the garden |
 |2.| Doorbel (ACDB-7000AC) - CoCo |[RFXtrx Switch][rfxtrx-switch-docs] (use fire-event)|[RFXtrx Switch YAML][rfxtrx-switch-github]|
 
