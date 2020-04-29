@@ -2,7 +2,7 @@
 
 ![header](/extras/img/header.png "header")
 
-You will probably think, what is Home Assistant!? Well Home Assistant is a home automation platform running on Python 3. It is able to track and control all devices at home and offer a platform for automating control.
+You will probably think, what is Home Assistant!? Well Home Assistant is a open source home automation platform that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.
 
 To inspire others I have set up this github and update it regularly with new code. Be free to use code from this repo for your own Home Assistant environment, keep in mind that you can not always copy everything line by line. If you can not get out, you can always contact me.
 
@@ -22,20 +22,22 @@ This is by the way not my first [Home Assistant][home-assistant] configuration t
 
 ## Current Configuration
 
-Recently I switched from a raspberry pi 3B+ to an Intel NUC. I noticed that the Pi for my house was no longer powerful enough to run all processes. That is why I invested in an Intel NUC at Christmas 2018, which is now smoothly running after a long transition in the 2018-2019 Christmas holiday. I also switched from hassbian to [hass.io][hassio] in docker.
+Recently I switched from a raspberry pi 3B+ to an Intel NUC. I noticed that the Pi for my house was no longer powerful enough to run all processes. That is why I invested in an Intel NUC at Christmas 2018, which is now smoothly running after a long transition in the 2018-2019 Christmas holiday. I also switched from hassbian to [Home Assistant - Supervised][hassio] in docker.
 
-So now I use an Intel NUC to run home assistant. In addition, I use a Z-wave stick to control devices that use the z-wave protocol and an RFX module for controlling devices that work on the 433mhz frequency band. Because the Intel NUC is hanging in the meter closet, the smart meter is also read via a P1 cable.
+## My HA Server
+
+Below my server setup on which I run Home Assistant:
 
 - [Intel Baby Canyon NUC7i5BNH][intel-nuc] - Inside it 16GB Ram, 500GB SSD and running [Ubuntu Server LTS][ubuntu-server].
 - Using the [Hass.io installation][hassio-install].
 - [Aeotec USB Z-Stick](<https://aeotec.com/z-wave-usb-stick>) - Z-Wave Plus
+- [Deconz - Conbee 2](<https://phoscon.de/en/conbee2>)
 - [RFXCOM RFXtrx433E](<http://www.rfxcom.com/store/Transceivers/14103>)
 - [P1 cable](<https://www.sossolutions.nl/slimme-meter-kabel>)
-- Using also the [Lovelace UI](<https://www.home-assistant.io/lovelace/>)
 
-## My House
+### In House
 
-Curious about what kind of integrations I have in my Home Assistant system? I made a very usefull list for others: [Check it out][components] (Last update: 6 Januari 2019).
+Curious about what kind of hardware I have in my Home Assistant system? I have a list: [Check it out][hardware] (Last update: 30 April 2020).
 
 ## Grafana gas/energy consumption dashboard
 
@@ -104,7 +106,7 @@ SOFTWARE.
 [gitlabci]: https://gitlab.com/klaasnicolaas/Smarthome-homeassistant-config/pipelines
 [paypal]: https://www.paypal.me/dexterfpv
 [issues]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/issues
-[components]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/tree/master/extras/github_resources/components.md
+[hardware]: https://github.com/klaasnicolaas/Smarthome-homeassistant-config/tree/master/extras/github_resources/hardware.md
 
 [intel-nuc]: https://www.intel.com/content/www/us/en/products/boards-kits/nuc/kits/nuc7i5bnh.html
 [ubuntu-server]: https://www.ubuntu.com/download/server
