@@ -519,3 +519,39 @@ cards:
       - zwave.fibaro_motion_sensor_hal_begane_grond
       - zwave.fibaro_smoke_sensor_gang_begane_grond
       - zwave.fibaro_smoke_sensor_slaapkamer_zolder
+
+  - type: 'custom:bar-card'
+    title: HP Officejet Pro 8710
+    entities:
+      - entity: sensor.hp_officejet_pro_8710_black_ink
+        name: Black
+        color: black
+      - entity: sensor.hp_officejet_pro_8710_cyan_ink
+        name: Cyan
+        color: cyan
+      - entity: sensor.hp_officejet_pro_8710_magenta_ink
+        name: Magenta
+        color: magenta
+      - entity: sensor.hp_officejet_pro_8710_yellow_ink
+        name: Yellow
+        color: yellow
+    direction: up
+    positions:
+      value: outside
+      icon: 'off'
+      indicator: inside
+    height: 200px
+    stack: horizontal
+    style: |
+      bar-card-currentbar, bar-card-backgroundbar {
+        border-radius: 5px;
+      }
+      bar-card-value {
+        font-size: 15px;
+        font-weight: bold;
+      }
+      bar-card-name {
+        font-size: 17px;
+        font-weight: bold;
+        padding-top: 5px;
+      }
