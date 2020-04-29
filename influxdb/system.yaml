@@ -25,7 +25,7 @@
 # Device trackers
 - device_tracker.19216802
 - device_tracker.19216803
-- device_tracker.gps_logger_klaas
+- device_tracker.life360_klaas_schoute
 
 # Alarm
 - alarm_control_panel.alarmsysteem

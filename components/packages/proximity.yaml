@@ -8,6 +8,6 @@ proximity:
     ignored_zones:
       - zone.hogeschool_leiden
     devices:
-      # GPSLogger
-      - device_tracker.gps_logger_klaas
+      # Life 360
+      - device_tracker.life360_klaas_schoute
     tolerance: 50
