@@ -9,7 +9,7 @@ cards:
   - type: vertical-stack
     cards:
       - type: custom:mini-media-player
-        entity: media_player.spotify
+        entity: media_player.spotify_klaasnicolaas
         artwork: cover
       # Google home media players
       - type: custom:mini-media-player

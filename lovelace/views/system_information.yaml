@@ -17,9 +17,10 @@ cards:
                 cards:
                   - type: picture
                     image: /local/images/hassio.jpg
-                    style: |
+                    style: |-
                       ha-card {
-                        margin: 10px
+                        margin: 10px;
+                        box-shadow: none;
                       }
 
               - type: vertical-stack
@@ -27,7 +28,8 @@ cards:
                   - type: custom:bar-card
                     entity: sensor.ha_installed_version
                     name: Hassio Versie
-                    style: |
+                    max: 1
+                    style: |-
                       .card-content {
                         padding-left: 5px;
                         padding-bottom: 0px;
@@ -35,11 +37,14 @@ cards:
                       bar-card-currentbar, bar-card-backgroundbar {
                         border-radius: 5px;
                       }
-                    max: 1
+                      ha-card {
+                        box-shadow: none;
+                      }
                   - type: custom:bar-card
                     entity: sensor.ha_restart_time
                     name: Restart Time
-                    style: |
+                    max: 1
+                    style: |-
                       .card-content {
                         padding-left: 5px;
                         padding-bottom: 0px;
@@ -47,18 +52,23 @@ cards:
                       bar-card-currentbar, bar-card-backgroundbar {
                         border-radius: 5px;
                       }
-                    max: 1
+                      ha-card {
+                        box-shadow: none;
+                      }
                   - type: custom:bar-card
                     entity: sensor.potential_breaking_changes
                     name: Breaking Changes
-                    style: |
+                    max: 20
+                    style: |-
                       .card-content {
                         padding-left: 5px;
                       }
                       bar-card-currentbar, bar-card-backgroundbar {
                         border-radius: 5px;
                       }
-                    max: 20
+                      ha-card {
+                        box-shadow: none;
+                      }
 
           - type: custom:bar-card
             positions:
@@ -269,6 +279,10 @@ cards:
       - sensor.automation_on
       - sensor.hacs
       - type: custom:vertical-stack-in-card
+        style: |
+          ha-card {
+            box-shadow: none;
+          }
         cards:
           - type: horizontal-stack
             cards:
@@ -341,7 +355,7 @@ cards:
                   }
 
               - type: custom:bar-card
-                name: Devices
+                name: Trackers
                 entity: sensor.tracker_count
                 positions:
                   name: inside
@@ -721,6 +735,7 @@ cards:
       - zwave.fibaro_smoke_sensor_gang_begane_grond
       - zwave.fibaro_smoke_sensor_slaapkamer_zolder
 
+  # Show ink cardridges
   - type: 'custom:bar-card'
     title: HP Officejet Pro 8710
     entities:
