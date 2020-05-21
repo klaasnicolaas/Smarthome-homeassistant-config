@@ -136,26 +136,26 @@ cards:
       - type: custom:mini-graph-card
         name: Electricity
         entities:
-        - entity: sensor.dsmr_daily_power
-          name: Power_daily
-          show_state: true
-          show_graph: false
-          show_line: false
-          show_points: false
-          show_legend: false
-          show_fill: false
-        - entity: sensor.dsmr_hourly_power
-          name: Power
-          show_state: false
-          color: '#FFBF00'
-        - entity: sensor.dsmr_daily_power_cost
-          name: Cost
-          show_state: true
-          show_graph: false
-          show_line: false
-          show_points: false
-          show_legend: false
-          show_fill: false
+          - entity: sensor.dsmr_daily_power
+            name: Power_daily
+            show_state: true
+            show_graph: false
+            show_line: false
+            show_points: false
+            show_legend: false
+            show_fill: false
+          - entity: sensor.dsmr_hourly_power
+            name: Power
+            show_state: false
+            color: '#FFBF00'
+          - entity: sensor.dsmr_daily_power_cost
+            name: Cost
+            show_state: true
+            show_graph: false
+            show_line: false
+            show_points: false
+            show_legend: false
+            show_fill: false
         line_color: var(--icon-color-amber)
         icon: mdi:flash
         aggregate_func: max
