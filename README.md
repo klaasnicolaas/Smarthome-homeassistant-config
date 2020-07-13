@@ -4,7 +4,7 @@
 
 | ⚠️ This repository will be archived in the future due to a move, this config will no longer be maintained. Thanks for all the stars, help and brainstorms! |
 | :---: |
-| In the meantime, you can always take a look at my other <br> HA config repository and give it a ⭐ if you like. |
+| In the meantime, you can always take a look at my other HA config repository and give it a ⭐ if you like. |
 
 You will probably think, what is Home Assistant!? Well Home Assistant is a open source home automation platform that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.
 
