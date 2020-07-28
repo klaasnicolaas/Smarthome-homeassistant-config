@@ -2,8 +2,7 @@
 #
 # If you press the doorbell, let it know via the google home speakers.
 #
-- alias: House - Deurbel Melding Wel Thuis
-  initial_state: true
+- alias: '[House] - Deurbel Melding Wel Thuis'
   trigger:
     - platform: event
       event_type: button_pressed

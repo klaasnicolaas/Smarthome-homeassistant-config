@@ -2,8 +2,7 @@
 #
 # If you press the doorbell, send a telegram message when we are not at home.
 #
-- alias: House - Deurbel Melding Niet Thuis
-  initial_state: true
+- alias: '[House] - Deurbel Melding Niet Thuis'
   trigger:
     - platform: event
       event_type: button_pressed
@@ -16,8 +15,10 @@
     - service: notify.telegram_klaas
       data:
         title: Deurbel
-        message: 'Ding dong! Iemand staat voor de deur!'
         data:
-          attachment:
-            content-type: jpeg
-            url: http://tiptag.com.ar/wp-content/uploads/2018/06/timbre1.jpg
+          photo:
+            - url: http://tiptag.com.ar/wp-content/uploads/2018/06/timbre1.jpg
+    - service: notify.telegram_klaas
+      data:
+        title: Deurbel
+        message: 'Ding dong! Iemand staat voor de deur!'
