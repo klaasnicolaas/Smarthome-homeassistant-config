@@ -6,7 +6,7 @@
       unit_of_measurement: kWh
       value_template: "{{ states('sensor.dsmr_hourly_power_offpeak')|float + states('sensor.dsmr_hourly_power_peak')|float }}"
     dsmr_daily_power:
-      friendly_name:  Stroom per dag
+      friendly_name: Stroom per dag
       unit_of_measurement: kWh
       value_template: "{{ states('sensor.dsmr_daily_power_offpeak')|float + states('sensor.dsmr_daily_power_peak')|float }}"
     dsmr_weekly_power:

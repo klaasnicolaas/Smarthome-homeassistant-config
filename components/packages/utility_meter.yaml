@@ -47,5 +47,3 @@ utility_meter:
   dsmr_monthly_gas:
     source: sensor.gas_consumption
     cycle: monthly
-
-
