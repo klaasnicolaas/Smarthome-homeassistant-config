@@ -41,7 +41,6 @@
 - sensor.fibaro_motion_sensor_hal_begane_grond_luminance
 
 # Switch
-- switch.computer_klaas
 - switch.lamp_slaapkamer_zolder
 - switch.led_bureau_zolder
 - switch.led_slaapkamer_zolder
