@@ -11,7 +11,6 @@ logbook:
     domains:
       - switch
       - light
-      - media_player
       - input_boolean
       - input_select
   exclude:
@@ -24,3 +23,4 @@ logbook:
       - group
       - device_tracker
       - weather
+      - media_player
