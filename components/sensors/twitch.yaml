@@ -1,8 +1,0 @@
----
-#
-#
-#
-- platform: twitch
-  client_id: !secret twitch_client_id
-  channels:
-    - frenck
