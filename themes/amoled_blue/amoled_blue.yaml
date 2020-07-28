@@ -51,7 +51,6 @@ AMOLED Blue:
   card-background-color: "#000000"
   ha-card-border-radius: "10px"
   paper-dialog-background-color: var(--card-background-color)
-  paper-card-background-color: var(--card-background-color)
   paper-listbox-background-color: "#0D0D0D"
   # Switches
   switch-checked-button-color: "#5F9BEA"
