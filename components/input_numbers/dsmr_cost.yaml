@@ -1,0 +1,16 @@
+---
+energy_supplier_price_low_tarif:
+  min: 0.001
+  step: 0.001
+  max: 2
+  mode: box
+energy_supplier_price_normal_tarif:
+  min: 0.001
+  step: 0.001
+  max: 2
+  mode: box
+gas_supplier_price:
+  min: 0.001
+  step: 0.001
+  max: 2
+  mode: box

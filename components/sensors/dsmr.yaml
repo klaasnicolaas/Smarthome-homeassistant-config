@@ -1,0 +1,102 @@
+---
+- platform: template
+  sensors:
+    dsmr_hourly_power:
+      friendly_name: Stroom per uur
+      unit_of_measurement: kWh
+      value_template: "{{ states('sensor.dsmr_hourly_power_offpeak')|float + states('sensor.dsmr_hourly_power_peak')|float }}"
+    dsmr_daily_power:
+      friendly_name:  Stroom per dag
+      unit_of_measurement: kWh
+      value_template: "{{ states('sensor.dsmr_daily_power_offpeak')|float + states('sensor.dsmr_daily_power_peak')|float }}"
+    dsmr_weekly_power:
+      friendly_name: Stroom per week
+      unit_of_measurement: kWh
+      value_template: "{{ states('sensor.dsmr_weekly_power_offpeak')|float + states('sensor.dsmr_weekly_power_peak')|float }}"
+    dsmr_monthly_power:
+      friendly_name: Stroom per maand
+      unit_of_measurement: kWh
+      value_template: "{{ states('sensor.dsmr_monthly_power_offpeak')|float + states('sensor.dsmr_monthly_power_peak')|float }}"
+    dsmr_hourly_power_offpeak_cost:
+      friendly_name: Stroomkosten laag tarief | per uur
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_hourly_power_offpeak')|float * states('input_number.energy_supplier_price_low_tarif')|float }}"
+    dsmr_hourly_power_peak_cost:
+      friendly_name: Stroomkosten hoog tarief | per uur
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_hourly_power_peak')|float * states('input_number.energy_supplier_price_normal_tarif')|float }}"
+    dsmr_hourly_gas_cost:
+      friendly_name: Gaskosten | per uur
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_hourly_gas')|float * states('input_number.gas_supplier_price')|float }}"
+    dsmr_daily_power_offpeak_cost:
+      friendly_name: Stroomkosten laag tarief | per dag
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_daily_power_offpeak')|float * states('input_number.energy_supplier_price_low_tarif')|float }}"
+    dsmr_daily_power_peak_cost:
+      friendly_name: Stroomkosten hoog tarief | per dag
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_daily_power_peak')|float * states('input_number.energy_supplier_price_normal_tarif')|float }}"
+    dsmr_daily_gas_cost:
+      friendly_name: Gaskosten | per dag
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_daily_gas')|float * states('input_number.gas_supplier_price')|float }}"
+    dsmr_weekly_power_offpeak_cost:
+      friendly_name: Stroomkosten laag tarief | per week
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_weekly_power_offpeak')|float * states('input_number.energy_supplier_price_low_tarif')|float }}"
+    dsmr_weekly_power_peak_cost:
+      friendly_name: Stroomkosten hoog tarief | per week
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_weekly_power_peak')|float * states('input_number.energy_supplier_price_normal_tarif')|float }}"
+    dsmr_weekly_gas_cost:
+      friendly_name: Gaskosten | per week
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_weekly_gas')|float * states('input_number.gas_supplier_price')|float }}"
+    dsmr_monthly_power_offpeak_cost:
+      friendly_name: Stroomkosten laag tarief | per maand
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_monthly_power_offpeak')|float * states('input_number.energy_supplier_price_low_tarif')|float }}"
+    dsmr_monthly_power_peak_cost:
+      friendly_name: Stroomkosten hoog tarief | per maand
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_monthly_power_peak')|float * states('input_number.energy_supplier_price_normal_tarif')|float }}"
+    dsmr_monthly_gas_cost:
+      friendly_name: Gaskosten | per maand
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_monthly_gas')|float * states('input_number.gas_supplier_price')|float }}"
+    dsmr_hourly_power_cost:
+      friendly_name: Stroomkosten per uur
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_hourly_power_offpeak_cost')|float + states('sensor.dsmr_hourly_power_peak_cost')|float }}"
+    dsmr_daily_power_cost:
+      friendly_name: Stroomkosten per dag
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_daily_power_offpeak_cost')|float + states('sensor.dsmr_daily_power_peak_cost')|float }}"
+    dsmr_weekly_power_cost:
+      friendly_name: Stroomkosten per week
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_weekly_power_offpeak_cost')|float + states('sensor.dsmr_weekly_power_peak_cost')|float }}"
+    dsmr_monthly_power_cost:
+      friendly_name: Stroomkosten per maand
+      unit_of_measurement: €
+      value_template: "{{ states('sensor.dsmr_monthly_power_offpeak_cost')|float + states('sensor.dsmr_monthly_power_peak_cost')|float }}"
+    dsmr_current_electricity_cost:
+      friendly_name: Huidige Stroomkosten
+      unit_of_measurement: €/h
+      value_template: >-
+        {% if is_state('sensor.power_tariff', 'normal') %}
+          {{ (states('sensor.power_consumption')|float * states('input_number.energy_supplier_price_normal_tarif')|float)|round(2) }}
+        {% else %}
+          {{ (states('sensor.power_consumption')|float * states('input_number.energy_supplier_price_low_tarif')|float)|round(2) }}
+        {% endif %}
+    dsmr_current_electricity_watts:
+      friendly_name: Huidig Stroomgebruik
+      unit_of_measurement: Watt
+      value_template: >-
+        {{ (states('sensor.power_consumption')|float * 1000)|round(0) }}
+    dsmr_current_gas_cost:
+      friendly_name: Huidig Gaskosten
+      unit_of_measurement: €/h
+      value_template: >-
+        {{ ((states('sensor.hourly_gas_consumption')|float) * states('input_number.gas_supplier_price')|float)|round(2) }}

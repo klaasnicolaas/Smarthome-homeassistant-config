@@ -9,10 +9,10 @@ sensor.hourly_gas_consumption:
 sensor.power_consumption:
   friendly_name: Stroom verbruik
 
-sensor.power_consumption_low:
+sensor.energy_consumption_tarif_1:
   friendly_name: Stroom verbruik | Laag tarief
 
-sensor.power_consumption_normal:
+sensor.energy_consumption_tarif_2:
   friendly_name: Stroom verbuik | Hoog tarief
 
 sensor.power_consumption_phase_l2:
@@ -39,10 +39,10 @@ sensor.voltage_swells_phase_l3:
 sensor.power_production:
   hidden: true
 
-sensor.power_production_low:
+sensor.energy_production_tarif_1:
   hidden: true
 
-sensor.power_production_normal:
+sensor.energy_production_tarif_2:
   hidden: true
 
 sensor.power_production_phase_l1:

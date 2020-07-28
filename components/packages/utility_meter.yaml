@@ -3,39 +3,49 @@
 # See also: https://www.home-assistant.io/components/utility_meter/
 #
 utility_meter:
-  # Dagelijks Laag
-  daily_energy_offpeak:
-    source: sensor.power_consumption_low
+  # Stroom per uur
+  dsmr_hourly_power_offpeak:
+    source: sensor.energy_consumption_tarif_1
+    cycle: hourly
+  dsmr_hourly_power_peak:
+    source: sensor.energy_consumption_tarif_2
+    cycle: hourly
+  # Gas per uur
+  dsmr_hourly_gas:
+    source: sensor.gas_consumption
+    cycle: hourly
+  # Stroom per dag
+  dsmr_daily_power_offpeak:
+    source: sensor.energy_consumption_tarif_1
     cycle: daily
-  # Dagelijks Hoog
-  daily_energy_peak:
-    source: sensor.power_consumption_normal
+  dsmr_daily_power_peak:
+    source: sensor.energy_consumption_tarif_2
     cycle: daily
-  # Wekelijks Laag
-  weekly_energy_offpeak:
-    source: sensor.power_consumption_low
-    cycle: weekly
-  # Wekelijks Hoog
-  weekly_energy_peak:
-    source: sensor.power_consumption_normal
-    cycle: weekly
-  # Maandelijks Laag
-  monthly_energy_offpeak:
-    source: sensor.power_consumption_low
-    cycle: monthly
-  # Maandelijks Hoog
-  monthly_energy_peak:
-    source: sensor.power_consumption_normal
-    cycle: monthly
-  # Dagelijks Gas
-  daily_gas:
-    source: sensor.hourly_gas_consumption
+  # Gas per dag
+  dsmr_daily_gas:
+    source: sensor.gas_consumption
     cycle: daily
-  # Wekelijks Gas
-  weekly_gas:
-    source: sensor.hourly_gas_consumption
+  # Stroom per week
+  dsmr_weekly_power_offpeak:
+    source: sensor.energy_consumption_tarif_1
     cycle: weekly
-  # Maandelijks gas
-  monthly_gas:
-    source: sensor.hourly_gas_consumption
+  dsmr_weekly_power_peak:
+    source: sensor.energy_consumption_tarif_2
+    cycle: weekly
+  # Gas per week
+  dsmr_weekly_gas:
+    source: sensor.gas_consumption
+    cycle: weekly
+  # Strom per maand
+  dsmr_monthly_power_offpeak:
+    source: sensor.energy_consumption_tarif_1
     cycle: monthly
+  dsmr_monthly_power_peak:
+    source: sensor.energy_consumption_tarif_2
+    cycle: monthly
+  # Gas per maand
+  dsmr_monthly_gas:
+    source: sensor.gas_consumption
+    cycle: monthly
+
+
