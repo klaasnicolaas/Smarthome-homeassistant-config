@@ -2,7 +2,7 @@
 
 ![header](/extras/img/header.png "header")
 
-| ⚠️ This repository will be archived in the future due to a move, this config will no longer be maintained. Thanks for all the stars, help and brainstorms! |
+| ⚠️ This repository has been archived and will no longer be maintained. Thanks for all the stars, help and brainstorms! |
 | :---: |
 | In the meantime, you can always take a look at my other HA config repository and give it a ⭐ if you like. |
 
