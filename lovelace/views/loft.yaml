@@ -26,22 +26,6 @@ cards:
           service: scene.turn_on
           service_data:
             entity_id: scene.slaapkamer_zolder_off
-  - type: horizontal-stack
-    cards:
-      - type: entity-button
-        entity: light.vliering_voor_zolder_manual
-        tap_action:
-          action: toggle
-        name: Vliering voor
-      - type: entity-button
-        entity: switch.computer_klaas
-        tap_action:
-          action: toggle
-      - type: entity-button
-        entity: light.vliering_achter_zolder_manual
-        tap_action:
-          action: toggle
-        name: Vliering achter
 
   # Toont lampen in de slaapkamer
   - type: entities
@@ -73,9 +57,3 @@ cards:
         color: "#e29b52"
       - value: 10
         color: "#5294e2"
-
-  # Toont de camera
-  - type: picture-entity
-    entity: camera.camera_zolder
-    show_name: false
-    show_state: false
